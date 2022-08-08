@@ -2,9 +2,24 @@
 title: "Evaluaciones"
 ---
 
+# Ponderaciones
+
 La metodología de evaluación es la siguiente:
 
-| Tipo de evaluación                                               | Porcentaje que corresponde |
-|------------------------------------------------------------------|----------------------------|
-| Evaluaciones sumativas (3)                                       | 70%                        |
-| Talleres grupales e individuales. Presentaciones de informes (3) | 30%                        |
+| Tipo de evaluación                               | Porcentaje que corresponde |
+|--------------------------------------------------|----------------------|
+| Certamen 1 ($C_1$)                               | 20%                        |
+| Certamen 2 ($C_2$)                               | 20%                        |
+| Informe escrito de avance de proyecto ($P_1$)    | 20%                        |
+| Informe escrito y oral final de proyecto ($P_2$) | 40%                        |
+
+La nota final ($NF$) de la asignatura se calculará según:
+
+$$
+NF= 0.2*C_1+0.2*C_2+0.2*P_1+0.4*P_2
+$$
+
+# Requerimientos mínimos de aprobación
+
+1.  Promedio Certámenes ($C_1$ y $C_2$): $\overline{C}_{1,2}\geq 55$
+2.  Promedio Proyecto ($P_1$ y $P_2$): $\overline{P}_{1,2}\geq 55$

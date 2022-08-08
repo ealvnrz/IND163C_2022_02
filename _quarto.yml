@@ -2,18 +2,43 @@ project:
   type: website
 
 website:
-  title: "IND163C_2022_02"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
-
+  page-navigation: true
+  title: "IND163C - Análisis de Negocios (Business Analytics)"
+  sidebar:
+    background: "#D9E3E4"
+    logo: "images/ind163c_logo.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/ealvnrz/IND163C_2022_02
+        text: "Repositorio del curso"
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents:    
+      - section: "Información del curso"
+        contents:
+          - href: index.qmd
+            text: Descripción
+          - href: pages/programa.qmd
+            text: Programa
+          - href: pages/evaluaciones.qmd
+            text: Evaluaciones
+          - href: pages/calendario.qmd
+            text: Calendario
+           
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme:
+      light: [cosmo, theme.scss]
+      dark: [cosmo, theme-dark.scss]
+    mainfont: "Atkinson Hyperlegible"
+    code-copy: true
+    code-overflow: wrap
     toc: true
+    lang: es
+    
+freeze: auto
 
-editor: visual
 

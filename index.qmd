@@ -1,19 +1,19 @@
 ---
-title: "IEST 422: Control de Calidad"
+title: "IND163C - Análisis de Negocios (Business Analytics)"
 ---
 
 # Descripción del curso
 
-En este curso se estudian los fundamentos del control de la calidad y la aplicación de los métodos estadísticos de uso habitual en él, por lo cual se espera que al término del curso el alumno esté capacitado para aplicarlos en procesos relacionados con la producción de bienes y/o prestación de servicios.
+En este curso se estudian los fundamentos del análisis de información a través del desarrollo de aplicaciones Cloud (nube) mediante lenguajes de programación, vinculando áreas técnicas especializadas en Analytics con otras áreas de la organización, agregando valor al proceso de diagnóstico y toma de decisiones en tiempo real.
 
-Por su naturaleza aplicada y ser un curso de años superiores, se dará un especial énfasis en la aplicación de las herramientas a estudiar.
+A lo largo del curso se evalúan el uso de Analytics midiendo el impacto de esta herramienta a nivel individual y social, decidiendo de forma ética y socialmente responsable respecto del uso de la información
 
 # Horario de clases
 
-|            | Día    | Horario             | Lugar     |
-|------------|--------|---------------------|-----------|
-| Cátedra #1 | Jueves | 10:15 am - 11:45 am | A definir |
-| Cátedra #2 | Jueves | 12.00 pm - 13:13 pm | A definir |
+|            | Día     | Horario             | Lugar  |
+|------------|---------|---------------------|--------|
+| Cátedra #1 | Viernes | 09:35 am - 10:45 am | M401-H |
+| Cátedra #2 | Viernes | 10:55 am - 12:05 pm | M401-H |
 
 # Instructor
 
@@ -23,23 +23,36 @@ Prof. [Eloy Alvarado Narváez](https://ealvnrz.netlify.com/) es candidato a Doct
 
 # Pre-requisitos
 
-Oficialmente, el curso sólo requiere la aprobación de IEST 412: Muestreo II, pero a su vez se necesitará conocimiento general de teoría de probabilidad e inferencia.
+Oficialmente, el curso requiere la aprobación de MAT-042: Probabilidad y Estadística Industrial, ICN-321: Marketing e ICN-292: Sistemas de Información para la Gestión.
 
 ## Softwares
 
-Para la mayoría de las aplicaciones utilizaremos [R](https://www.r-project.org/), por lo que se sugiere utilizar un [IDE](https://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado) como [RStudio](https://www.rstudio.com/).
+Para la mayoría de las aplicaciones utilizaremos [R](https://www.r-project.org/) y [Python](https://www.python.org/), por lo que se sugiere utilizar un [IDE](https://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado) como [RStudio](https://www.rstudio.com/) o [Spyder](https://www.spyder-ide.org/).
 
 Para la entrega de informes y talleres que requieran uso de programación, se recomienda el uso de [Rmarkdown](https://rmarkdown.rstudio.com/), [Jupyter Notebook](https://jupyter.org/) o [$\LaTeX$](https://es.wikipedia.org/wiki/LaTeX) para la confección de documentos a entregar.
 
 # Bibliografía
 
+## Bibliografía principal
+
 La bibliografía principal del curso es:
 
-::: {layout-ncol=3}
-![Introduction to statistical quality control. Montgomery, Douglas C. 7th edition.](images/montgomery.jpg)
+::: {layout-ncol="3"}
+![Data Science For Business: What You Need to Know About Data Mining & Data-Analytic Thinking. Provost F., Fawcett, T.](images/ds.jpg)
 
-![Statistical Process Control, Theory and practice. Wetherill, G. Barrie, Brown, Don W.](images/sqc.jpg)
+![Think like a Data Scientist: Tackle the data science process step-by-step. Godsey B.](images/think.jpg)
 
-![Introduction to Statistical Process Control. Qiu, Peihua](images/sqc2.jpg)
+![Numsense! Data Science for the Layman: No Math Added. Ng, A, Soo K.](images/numsense.jpg)
+:::
 
+## Bibliografía secundaria y de profundización
+
+La bibliografía secundaria y de profundización de las distintas temáticas a estudiar del curso es:
+
+::: {layout-ncol="3"}
+![Machine Learning with R Expert techniques for predictive modeling. Lantz, Brett.](images/ml_r.jpg)
+
+![An Introduction to Statistical Learning with Applications in R. James, Gareth, Witten, Daniela, Hastie, Trevor, Tibshirani Robert.](images/intro_sl.jpg)
+
+![Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems. Géron, Aurélien.](images/hands_on.jpg)
 :::
