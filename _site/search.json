@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "IND163C - Análisis de Negocios (Business Analytics)",
@@ -19,6 +12,20 @@
     "title": "IND163C - Análisis de Negocios (Business Analytics)",
     "section": "Softwares",
     "text": "Softwares\nPara la mayoría de las aplicaciones utilizaremos R y Python, por lo que se sugiere utilizar un IDE como RStudio o Spyder.\nPara la entrega de informes y talleres que requieran uso de programación, se recomienda el uso de Rmarkdown, Jupyter Notebook o \\(\\LaTeX\\) para la confección de documentos a entregar."
+  },
+  {
+    "objectID": "index.html#bibliografía-principal",
+    "href": "index.html#bibliografía-principal",
+    "title": "IND163C - Análisis de Negocios (Business Analytics)",
+    "section": "Bibliografía principal",
+    "text": "Bibliografía principal\nLa bibliografía principal del curso es:\n\n\n\n\n\n\nData Science For Business: What You Need to Know About Data Mining & Data-Analytic Thinking. Provost F., Fawcett, T.\n\n\n\n\n\n\n\nThink like a Data Scientist: Tackle the data science process step-by-step. Godsey B.\n\n\n\n\n\n\n\nNumsense! Data Science for the Layman: No Math Added. Ng, A, Soo K."
+  },
+  {
+    "objectID": "index.html#bibliografía-secundaria-y-de-profundización",
+    "href": "index.html#bibliografía-secundaria-y-de-profundización",
+    "title": "IND163C - Análisis de Negocios (Business Analytics)",
+    "section": "Bibliografía secundaria y de profundización",
+    "text": "Bibliografía secundaria y de profundización\nLa bibliografía secundaria y de profundización de las distintas temáticas a estudiar del curso es:\n\n\n\n\n\n\nMachine Learning with R Expert techniques for predictive modeling. Lantz, Brett.\n\n\n\n\n\n\n\nAn Introduction to Statistical Learning with Applications in R. James, Gareth, Witten, Daniela, Hastie, Trevor, Tibshirani Robert.\n\n\n\n\n\n\n\nHands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems. Géron, Aurélien."
   },
   {
     "objectID": "pages/calendario.html",
@@ -40,26 +47,5 @@
     "title": "Programa del curso",
     "section": "",
     "text": "Introducción a Analytics\n\nDel sistema de información de marketing al analitycs ¿Qué es Analytics? ¿Para qué sirve? ¿En qué contexto es necesario?\nAnalitycs en el mundo y en Chile.\nImpacto social de Analytics en Chile y el mundo.\nComposición de perfiles de un área genérica de analitycs en una empresa nacional.\n\n\n\nConceptos Básicos\n\nEscuelas de probabilidad\nDistribuciones probabilistas\nTest de hipótesis e intervalos de confianza\nRegresión lineal\nEstimadores blandos y robustos\nTécnicas básicas de segmentación\nReglas de asociación\nÁrboles de decisión\nDeep learning, machine learning e inteligencia artificial.\n\n\n\nLenguajes de programación y aplicaciones en la nube\n\nIntroducción a bases de datos\nIntroducción a Python y R\nIntroducción a google cloud y aws.\n\n\n\nPlanificación de proyectos de analitycs y aplicaciones de negocios\n\nAplicaciones transversales a la empresa."
-  },
-  {
-    "objectID": "index.html#bibliografía-principal",
-    "href": "index.html#bibliografía-principal",
-    "title": "IND163C - Análisis de Negocios (Business Analytics)",
-    "section": "Bibliografía principal",
-    "text": "Bibliografía principal\nLa bibliografía principal del curso es:\n\n\n\n\n\n\nData Science For Business: What You Need to Know About Data Mining & Data-Analytic Thinking. Provost F., Fawcett, T.\n\n\n\n\n\n\n\nThink like a Data Scientist: Tackle the data science process step-by-step. Godsey B.\n\n\n\n\n\n\n\nNumsense! Data Science for the Layman: No Math Added. Ng, A, Soo K."
-  },
-  {
-    "objectID": "index.html#bibliografía-secundaria-y-de-pronfundización",
-    "href": "index.html#bibliografía-secundaria-y-de-pronfundización",
-    "title": "IND163C - Análisis de Negocios (Business Analytics)",
-    "section": "Bibliografía secundaria y de pronfundización",
-    "text": "Bibliografía secundaria y de pronfundización\nLa bibliografía secundaria y de profundización de las distintas temáticas a estudiar del curso es:\n\n\n\n\n\n\nData Science For Business: What You Need to Know About Data Mining & Data-Analytic Thinking. Provost F., Fawcett, T.\n\n\n\n\n\n\n\nThink like a Data Scientist: Tackle the data science process step-by-step. Godsey B.\n\n\n\n\n\n\n\nNumsense! Data Science for the Layman: No Math Added. Ng, A, Soo K."
-  },
-  {
-    "objectID": "index.html#bibliografía-secundaria-y-de-profundización",
-    "href": "index.html#bibliografía-secundaria-y-de-profundización",
-    "title": "IND163C - Análisis de Negocios (Business Analytics)",
-    "section": "Bibliografía secundaria y de profundización",
-    "text": "Bibliografía secundaria y de profundización\nLa bibliografía secundaria y de profundización de las distintas temáticas a estudiar del curso es:\n\n\n\n\n\n\nMachine Learning with R Expert techniques for predictive modeling. Lantz, Brett.\n\n\n\n\n\n\n\nAn Introduction to Statistical Learning with Applications in R. James, Gareth, Witten, Daniela, Hastie, Trevor, Tibshirani Robert.\n\n\n\n\n\n\n\nHands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems. Géron, Aurélien."
   }
 ]
