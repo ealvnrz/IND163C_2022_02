@@ -1,7 +1,7 @@
 ---
 title: "Análisis de Negocios"
 subtitle: "IND 163 - 2022/02"
-author: "Eloy Alvarado Narváez"
+author: "Eloy Alvarado Narv?ez"
 institute: "Universidad Técnica Federico Santa María"
 date: 19/08/22
 format: 
