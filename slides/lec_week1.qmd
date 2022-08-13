@@ -1,0 +1,254 @@
+---
+title: "Análisis de Negocios"
+subtitle: "IND 163 - 2022/02"
+author: "Eloy Alvarado Narváez"
+institute: "Universidad Técnica Federico Santa María"
+date: 19/08/22
+format: 
+  revealjs:
+    theme: slides.scss
+    touch: true
+incremental: true
+slide-number: true
+lang: es
+highlight-style: github
+width: 1600
+height: 900
+logo: images/logo_usm.png
+transition: fade
+footer: "IND 163 - Semana 1"
+execute:
+  freeze: auto
+---
+
+# Bienvenida y presentación
+
+## ¿De qué trata el curso?
+
+A lo largo del curso analizaremos los fundamentos del análisis de datos mediante el uso de lenguajes de programación con el fin de agregar al valor al proceso de diagnóstico y toma de decisiones en tiempo real.
+
+Con el fin de tener mayor claridad de lo que han estudiado
+
+::: box1
+-   ¿Qué herramientas computacionales han visto en cursos anteriores?
+-   ¿Hasta qué vieron en el curso MAT042: Probabilidad y Estadística?
+-   ¿Han tenido alguna experiencia trabajando con R o Python en el análisis de datos?
+:::
+
+## Horario de clases
+
+|            | Día     | Horario             | Lugar  |
+|------------|---------|---------------------|--------|
+| Cátedra #1 | Viernes | 09:35 am - 10:45 am | M401-H |
+| Cátedra #2 | Viernes | 10:55 am - 12:05 pm | M401-H |
+
+### Página del curso
+
+Utilizaremos el Aula USM y el sitio <https://ind163c-2022-02.netlify.app/>. **Ambas páginas tendrán la misma información**, sin embargo, para efectos de entrega de informes el medio oficial será el aula USM.
+
+## ¿Qué necesitaremos a lo largo del curso? {auto-animate="true"}
+
+::: {layout-ncol="2"}
+![](images/week1/r_logo.png){.fragment width="400px"}
+
+![](images/week1/python_logo.png){.fragment width="400px"}
+:::
+
+::: fragment
+Adicionalmente, se recomienda utilizar un [IDE](https://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado) como [RStudio](https://www.rstudio.com/) o [Spyder](https://www.spyder-ide.org/).
+:::
+
+## Bibliografía principal
+
+::: {layout="[30,-5,30,-5,30]"}
+![Data Science For Business: What You Need to Know About Data Mining & Data-Analytic Thinking. Provost F., Fawcett, T.](images/week1/ds.jpg)
+
+![Think like a Data Scientist: Tackle the data science process step-by-step. Godsey B.](images/week1/think.jpg)
+
+![Numsense! Data Science for the Layman: No Math Added. Ng, A, Soo K.](images/week1/numsense.jpg)
+:::
+
+## Bibliografía secundaria y de profundización
+
+::: {layout="[30,-5,30,-5,30]"}
+![Machine Learning with R Expert techniques for predictive modeling. Lantz, Brett.](images/week1/ml_r.jpg)
+
+![An Introduction to Statistical Learning with Applications in R. James, Gareth, Witten, Daniela, Hastie, Trevor, Tibshirani Robert.](images/week1/intro_sl.jpg)
+
+![Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems. Géron, Aurélien.](images/week1/hands_on.jpg)
+:::
+
+# Programa oficial
+
+El programa oficial del curso está disponible [**acá**](/documents/IND163C_AN.pdf "Programa IND 163C")
+
+## Introducción a Analytics
+
+1.  Del sistema de información de marketing al analytics ¿Qué es Analytics? ¿Para qué sirve? ¿En qué contexto es necesario?
+2.  Analytics en el mundo y en Chile.
+3.  Impacto social de Analytics en Chile y el mundo.
+4.  Composición de perfiles de un área genérica de analytics en una empresa nacional.
+
+## Conceptos Básicos
+
+1.  Escuelas de probabilidad
+2.  Distribuciones probabilistas
+3.  Test de hipótesis e intervalos de confianza
+4.  Regresión lineal
+5.  Estimadores blandos y robustos
+6.  Técnicas básicas de segmentación
+7.  Reglas de asociación
+8.  Árboles de decisión
+9.  Deep learning, machine learning e inteligencia artificial.
+
+## Lenguajes de programación y aplicaciones en la nube
+
+1.  Introducción a bases de datos
+2.  Introducción a Python y R
+3.  Introducción a Google Cloud y AWS.
+
+## Planificación de proyectos de analytics y aplicaciones de negocios
+
+1.  Aplicaciones transversales a la empresa.
+
+## Ponderaciones
+
+La metodología de evaluación es la siguiente:
+
+| Tipo de evaluación                               | Porcentaje que corresponde |
+|-----------------------------------------------|-------------------------|
+| Certamen 1 ($C_1$)                               | 20%                        |
+| Certamen 2 ($C_2$)                               | 20%                        |
+| Informe escrito de avance de proyecto ($P_1$)    | 20%                        |
+| Informe escrito y oral final de proyecto ($P_2$) | 40%                        |
+
+La nota final ($NF$) de la asignatura se calculará según:
+
+$$
+NF= 0.2*C_1+0.2*C_2+0.2*P_1+0.4*P_2
+$$
+
+## Requerimientos mínimos de aprobación
+
+1.  Promedio Certámenes ($C_1$ y $C_2$): $\overline{C}_{1,2}\geq 55$
+2.  Promedio Proyecto ($P_1$ y $P_2$): $\overline{P}_{1,2}\geq 55$
+
+## Metodología del curso
+
+-   Antes de cada sesión, se mandará una lectura de preparación para la sesión
+
+-   El enfoque principal será aplicado, pero sin dejar de lado los fundamentos matemáticos
+
+-   Se pondrá a disposición material adicional para estudiar:
+
+    -   Ejemplos y ejercicios teóricos
+    -   Códigos
+
+-   El curso será autocontenido, pero requiere al menos conocimiento básico de probabilidad y estadística.
+
+## Organización del curso
+
+```{mermaid}
+%%{init: {'theme': 'neutral' } }%%
+flowchart 
+  A(Introducción a \n Analytics) --> B(Knitr)
+  B(Probabilidad y \n Estadística) --> C(Aprendizaje \n Estadístico)
+  C --> D( Lenguajes de &nbsp;\n programación &nbsp;)
+  D --> C
+  D --> E( Aplicaciones a la \n Empresa)
+```
+
+## Ayudantía
+
+-   Ayudante: Nicolás Cárdenas
+-   Horario a definir
+
+# ¿Preguntas?
+
+# Introducción al Analytics
+
+## Analytics
+
+-   ¿Qué noción tienen sobre **analytics**?
+-   ¿Dé que sirve en la empresa? ¿Algún ejemplo?
+-   ¿En qué contexto es necesario?
+-   ¿Cómo afecta el uso de **analytics** en Chile y en el mundo?
+-   ¿Cuál es su impacto social?
+
+## Data Analytics
+
+-   El avance tecnológico ha permitido la recolección de **datos** dentro y fuera de la empresa
+-   Esta disponibilidad de **datos** ha fomentado la creación de metodologías para extraer **información** de los datos
+-   La gran mayoría de las empresas tienen equipos especializados en extraer la mayor cantidad de **información** útil para la empresa
+-   Antiguamente, la industria exploraba los conjuntos de datos disponibles de manera *más o menos* manual, pero debido al incremento del volumen de datos, esto ya no es posible.
+-   En la actualidad, el proceso de **descubrir** información relevante en los conjuntos de datos disponibles, se le llama **data mining**
+
+## Data mining
+
+-   La aplicación más frecuente de las técnicas de **data mining** están en **marketing**. Por ejemplo:
+    -   Marketing dirigido
+    -   Publicidad online
+    -   Recomendaciones de compra
+-   En el sector financiero, es frecuente encontrar estas técnicas en la creación de puntajes crediticios e identificación de fraude
+-   Muchas empresas han generado una ventaja comparativa utilizando **Data Science** estratégicamente
+
+## Ejemplo
+
+-   En una empresa de telecomunicaciones se tiene un problema de retención de clientes
+-   Muchos de estos clientes se van a la competencia
+-   A este fenómeno se le conoce como **CHURN** o tasa de cancelación de clientes.
+-   Tenemos dos formas de abordar la problemática:
+    -   Atraer nuevos clientes
+    -   Mantener a los clientes actuales
+-   En general, atraer nuevos clientes es más caro que mantener a los actuales
+-   ¿Cómo podemos identificar clientes que son más propenso a cambiar de compañía?
+
+## Automatización de decisiones
+
+La automatización de decisiones en una empresa o **DDD** (Data-driven decision-making), hace referencia a la práctica de basar las decisiones en el análisis de datos en vez de la intuición. [Brynjolfsson, Hitt, & Kim, 2011](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1819486) realizaron un estudio que analizó el rendimiento de distintas empresas, evaluando cada una de estas mediante un índice **DDD** que cuantificaba cuan predominante eran las decisiones basadas en el análisis de datos.
+
+. . .
+
+Los autores mostraron estadísticamente que mientras más decisiones basadas en el análisis de datos, más productiva era la empresa. Más aún, las diferencias entre las empresas con un alto y bajo nivel de índice **DDD** eran notablemente grandes.
+
+## Procesamiento de datos y "Big Data"
+
+Actualmente, dentro de las empresas existen varias áreas que trabajan con datos. No obstante, no todas ellas recaen dentro de lo que conocemos como **Data Science**. En general, llamamos ciencia de datos a los análisis posteriores al acceso de datos, por lo que el almacenamiento y procesamiento de datos (en el sentido ingenieril) no sería llamado **Data Science**. Sin embargo, el trabajo hecho por los Ingenieros de Datos es fundamental para el correcto ejercicio del análisis de negocios.
+
+. . .
+
+El concepto **Big Data** hace referencia al volumen gigante de datos disponibles, y particularmente, a las tecnologías asociadas que permiten su almacenamiento y correcto acceso, como por ejemplo [Hadoop](https://hadoop.apache.org/) o [MongoDB](https://www.mongodb.com/). Estas tecnologías son cruciales para tener acceso a los datos que se analizarán. Este tipo de tecnología (y sus alternativas) ya son estándar en la industria.
+
+## Área de analytics
+
+Existen distintas formas de segmentar un área de analytics en una empresa, pero por lo general, se adecuan al proceso general de minería de datos CRISP-DM (Cross Industry Standard Process for Data Mining)
+
+![](images/week1/crisp.png){fig-align="center" width="600"}
+
+## Roles frecuentes
+
+Entre los roles más frecuentes en el área de analytics de una empresa están:
+
+-   BI Analyst
+-   Data Engineer
+-   Software Engineer
+-   Data Scientist
+-   Machine Learning Researcher/Engineer
+-   Product Owner
+
+## Habilidades de algunos de estos roles
+
+![](images/week1/roles.png){fig-align="center"}
+
+## Manejando un equipo de Data Science
+
+Es posible ver un proceso de minería de datos como un proceso de desarollo de software, aplicando las metodologías usuales en aquellas áreas (*Agile/Scrum*). Pero dependiendo del rubro de la empresa, será una mezcla entre las metodologías ágiles de desarrollo de software y el proceso CRISP-DM.
+
+![](images/week1/agile.png){fig-align="center"}
+
+## Herramientas del análisis de negocios
+
+-   Estadística
+-   *Database Querying*
+-   *Data Warehousing*
+-   *Machine Learning*

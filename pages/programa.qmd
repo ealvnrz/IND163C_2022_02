@@ -12,7 +12,7 @@ El programa oficial del curso está disponible [**acá**](/documents/IND163C_AN.
 qué contexto es necesario?
 2. Analitycs en el mundo y en Chile.
 3. Impacto social de Analytics en Chile y el mundo. 
-4. Composición de perfiles de un área genérica de analitycs en una empresa
+4. Composición de perfiles de un área genérica de analytics en una empresa
 nacional.
 
 # Conceptos Básicos

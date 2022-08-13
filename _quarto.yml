@@ -27,7 +27,10 @@ website:
             text: Evaluaciones
           - href: pages/calendario.qmd
             text: Calendario
-           
+      - section: "Material"
+        contents:
+          - href: pages/week1.qmd
+            text: "Semana 1"
 format:
   html:
     theme:
