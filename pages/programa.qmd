@@ -10,7 +10,7 @@ El programa oficial del curso está disponible [**acá**](/documents/IND163C_AN.
 
 1. Del sistema de información de marketing al analitycs ¿Qué es Analytics? ¿Para qué sirve? ¿En
 qué contexto es necesario?
-2. Analitycs en el mundo y en Chile.
+2. Analytics en el mundo y en Chile.
 3. Impacto social de Analytics en Chile y el mundo. 
 4. Composición de perfiles de un área genérica de analytics en una empresa
 nacional.
@@ -31,7 +31,7 @@ nacional.
 
 1. Introducción a bases de datos
 2. Introducción a Python y R
-3. Introducción a google cloud y aws.
+3. Introducción a Google Cloud y AWS.
 
 # Planificación de proyectos de analitycs y aplicaciones de negocios
 

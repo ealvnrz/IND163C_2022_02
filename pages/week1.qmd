@@ -14,3 +14,8 @@ Leer el [**programa del curso**](/documents/IND163C_AN.pdf "Programa IND 163C")
 ```{=html}
 <iframe class="slide-deck" src="../slides/lec_week1.html" height="630" width="900"></iframe>
 ```
+
+## Material adicional
+
+- Leer Capítulo 1, Data Science For Business: What You Need to Know About Data Mining & Data-Analytic Thinking.
+- Leer Capítulo 1 y 2, Think like a Data Scientist: Tackle the data science process step-by-step.

@@ -32,7 +32,7 @@
     "href": "pages/calendario.html",
     "title": "Calendario",
     "section": "",
-    "text": "Semana\nFecha\nPreparación\nPresentación\nMaterial adicional\nCertamen\nTrabajo Final\n\n\n\n\n1\n19/08\n📖\n🖥️\n\n\n\n\n\n2\n26/08\n\n🖥️\n\n\n\n\n\n3\n02/09\n\n🖥️\n\n\n\n\n\n4\n09/09\n\n🖥️\n\n\n\n\n\n5\n16/09\n\n🖥️\n\n\n\n\n\n6\n30/09\n\n🖥️\n\n\n\n\n\n7\n07/10\n\n🖥️\n\n\n\n\n\n8\n14/10\n\n🖥️\n\n\n\n\n\n9\n21/10\n\n🖥️\n\n\n\n\n\n10\n28/10\n\n🖥️\n\n\n\n\n\n11\n04/11\n\n🖥️\n\n\n\n\n\n12\n11/11\n\n🖥️\n\n\n\n\n\n13\n18/11\n\n🖥️\n\n\n\n\n\n14\n25/11\n\n🖥️\n\n\n\n\n\n15\n02/12\n\n🖥️\n\n\n\n\n\n16\n09/12\n\n🖥️\n\n\n\n\n\n17\n16/12\n\n🖥️\n\n📝\n📔"
+    "text": "Semana\nFecha\nPreparación\nPresentación\nMaterial adicional\nCertamen\nTrabajo Final\n\n\n\n\n1\n19/08\n📖\n🖥️\n📋\n\n\n\n\n2\n26/08\n📖\n🖥️\n📋\n\n\n\n\n3\n02/09\n📖\n🖥️\n📋\n\n\n\n\n4\n09/09\n📖\n🖥️\n📋\n\n\n\n\n5\n16/09\n📖\n🖥️\n📋\n\n\n\n\n6\n30/09\n📖\n🖥️\n📋\n📝\n\n\n\n7\n07/10\n📖\n🖥️\n📋\n\n\n\n\n8\n14/10\n📖\n🖥️\n📋\n\n\n\n\n9\n21/10\n📖\n🖥️\n📋\n\n\n\n\n10\n28/10\n📖\n🖥️\n📋\n\n\n\n\n11\n04/11\n📖\n🖥️\n📋\n📝\n📔\n\n\n12\n11/11\n📖\n🖥️\n📋\n\n\n\n\n13\n18/11\n📖\n🖥️\n📋\n\n\n\n\n14\n25/11\n📖\n🖥️\n📋\n\n📔\n\n\n15\n02/12\n📖\n🖥️\n📋\n\n\n\n\n16\n09/12\n📖\n🖥️\n📋\n\n\n\n\n17\n16/12\n📖\n🖥️\n📋\n\n📔"
   },
   {
     "objectID": "pages/evaluaciones.html",
@@ -46,231 +46,259 @@
     "href": "pages/programa.html",
     "title": "Programa del curso",
     "section": "",
-    "text": "Introducción a Analytics\n\nDel sistema de información de marketing al analitycs ¿Qué es Analytics? ¿Para qué sirve? ¿En qué contexto es necesario?\nAnalitycs en el mundo y en Chile.\nImpacto social de Analytics en Chile y el mundo.\nComposición de perfiles de un área genérica de analytics en una empresa nacional.\n\n\n\nConceptos Básicos\n\nEscuelas de probabilidad\nDistribuciones probabilistas\nTest de hipótesis e intervalos de confianza\nRegresión lineal\nEstimadores blandos y robustos\nTécnicas básicas de segmentación\nReglas de asociación\nÁrboles de decisión\nDeep learning, machine learning e inteligencia artificial.\n\n\n\nLenguajes de programación y aplicaciones en la nube\n\nIntroducción a bases de datos\nIntroducción a Python y R\nIntroducción a google cloud y aws.\n\n\n\nPlanificación de proyectos de analitycs y aplicaciones de negocios\n\nAplicaciones transversales a la empresa."
+    "text": "Introducción a Analytics\n\nDel sistema de información de marketing al analitycs ¿Qué es Analytics? ¿Para qué sirve? ¿En qué contexto es necesario?\nAnalytics en el mundo y en Chile.\nImpacto social de Analytics en Chile y el mundo.\nComposición de perfiles de un área genérica de analytics en una empresa nacional.\n\n\n\nConceptos Básicos\n\nEscuelas de probabilidad\nDistribuciones probabilistas\nTest de hipótesis e intervalos de confianza\nRegresión lineal\nEstimadores blandos y robustos\nTécnicas básicas de segmentación\nReglas de asociación\nÁrboles de decisión\nDeep learning, machine learning e inteligencia artificial.\n\n\n\nLenguajes de programación y aplicaciones en la nube\n\nIntroducción a bases de datos\nIntroducción a Python y R\nIntroducción a Google Cloud y AWS.\n\n\n\nPlanificación de proyectos de analitycs y aplicaciones de negocios\n\nAplicaciones transversales a la empresa."
   },
   {
-    "objectID": "slides/week1.html#de-qué-trata-el-curso",
-    "href": "slides/week1.html#de-qué-trata-el-curso",
-    "title": "Análisis de Negocios",
-    "section": "¿De qué trata el curso?",
-    "text": "¿De qué trata el curso?\nA lo largo del curso analizaremos los fundamentos del análisis de datos mediante el uso de lenguajes de programación con el fin de agregar al valor al proceso de diagnóstico y toma de decisiones en tiempo real.\nCon el fin de tener mayor claridad de lo que han estudiado\n\n\n¿Qué herramientas computacionales han visto en cursos anteriores?\n¿Hasta qué vieron en el curso MAT042: Probabilidad y Estadística?\n¿Han tenido alguna experiencia trabajando con R o Python en el análisis de datos?"
+    "objectID": "pages/week1.html",
+    "href": "pages/week1.html",
+    "title": "Semana 1",
+    "section": "",
+    "text": "Leer el programa del curso"
   },
   {
-    "objectID": "slides/week1.html#horario-de-clases",
-    "href": "slides/week1.html#horario-de-clases",
-    "title": "Análisis de Negocios",
-    "section": "Horario de clases",
-    "text": "Horario de clases\n\n\n\n\nDía\nHorario\nLugar\n\n\n\n\nCátedra #1\nViernes\n09:35 am - 10:45 am\nM401-H\n\n\nCátedra #2\nViernes\n10:55 am - 12:05 pm\nM401-H\n\n\n\nPágina del curso\nUtilizaremos el Aula USM y el sitio https://ind163c-2022-02.netlify.app/. Ambas páginas tendrán la misma información, sin embargo, para efectos de entrega de informes el medio oficial será el aula USM."
+    "objectID": "pages/week1.html#presentación",
+    "href": "pages/week1.html#presentación",
+    "title": "Semana 1",
+    "section": "Presentación",
+    "text": "Presentación\nVer presentación en pantalla completa"
   },
   {
-    "objectID": "slides/week1.html#qué-necesitaremos-a-lo-largo-del-curso",
-    "href": "slides/week1.html#qué-necesitaremos-a-lo-largo-del-curso",
-    "title": "Análisis de Negocios",
-    "section": "¿Qué necesitaremos a lo largo del curso?",
-    "text": "¿Qué necesitaremos a lo largo del curso?\n\n\n\n\n\n\n\n\n\n\n\nAdicionalmente, se recomienda utilizar un IDE como RStudio o Spyder."
+    "objectID": "pages/week1.html#material-adicional",
+    "href": "pages/week1.html#material-adicional",
+    "title": "Semana 1",
+    "section": "Material adicional",
+    "text": "Material adicional\n\nLeer Capítulo 1, Data Science For Business: What You Need to Know About Data Mining & Data-Analytic Thinking.\nLeer Capítulo 1 y 2, Think like a Data Scientist: Tackle the data science process step-by-step."
   },
   {
-    "objectID": "slides/week1.html#bibliografía-principal",
-    "href": "slides/week1.html#bibliografía-principal",
-    "title": "Análisis de Negocios",
-    "section": "Bibliografía principal",
-    "text": "Bibliografía principal\n\n\n\n\n\n\nData Science For Business: What You Need to Know About Data Mining & Data-Analytic Thinking. Provost F., Fawcett, T.\n\n\n\n\n \n\n\n\n\n\nThink like a Data Scientist: Tackle the data science process step-by-step. Godsey B.\n\n\n\n\n \n\n\n\n\n\nNumsense! Data Science for the Layman: No Math Added. Ng, A, Soo K."
+    "objectID": "pages/week10.html#presentación",
+    "href": "pages/week10.html#presentación",
+    "title": "Semana 10",
+    "section": "Presentación",
+    "text": "Presentación\nVer presentación en pantalla completa"
   },
   {
-    "objectID": "slides/week1.html#bibliografía-secundaria-y-de-profundización",
-    "href": "slides/week1.html#bibliografía-secundaria-y-de-profundización",
-    "title": "Análisis de Negocios",
-    "section": "Bibliografía secundaria y de profundización",
-    "text": "Bibliografía secundaria y de profundización\n\n\n\n\n\n\nMachine Learning with R Expert techniques for predictive modeling. Lantz, Brett.\n\n\n\n\n \n\n\n\n\n\nAn Introduction to Statistical Learning with Applications in R. James, Gareth, Witten, Daniela, Hastie, Trevor, Tibshirani Robert.\n\n\n\n\n \n\n\n\n\n\nHands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems. Géron, Aurélien."
+    "objectID": "pages/week10.html#material-adicional",
+    "href": "pages/week10.html#material-adicional",
+    "title": "Semana 10",
+    "section": "Material adicional",
+    "text": "Material adicional"
   },
   {
-    "objectID": "slides/week1.html#introducción-a-analytics",
-    "href": "slides/week1.html#introducción-a-analytics",
-    "title": "Análisis de Negocios",
-    "section": "Introducción a Analytics",
-    "text": "Introducción a Analytics\n\nDel sistema de información de marketing al analytics ¿Qué es Analytics? ¿Para qué sirve? ¿En qué contexto es necesario?\nAnalytics en el mundo y en Chile.\nImpacto social de Analytics en Chile y el mundo.\nComposición de perfiles de un área genérica de analytics en una empresa nacional."
+    "objectID": "pages/week11.html#presentación",
+    "href": "pages/week11.html#presentación",
+    "title": "Semana 11",
+    "section": "Presentación",
+    "text": "Presentación\nVer presentación en pantalla completa"
   },
   {
-    "objectID": "slides/week1.html#conceptos-básicos",
-    "href": "slides/week1.html#conceptos-básicos",
-    "title": "Análisis de Negocios",
-    "section": "Conceptos Básicos",
-    "text": "Conceptos Básicos\n\nEscuelas de probabilidad\nDistribuciones probabilistas\nTest de hipótesis e intervalos de confianza\nRegresión lineal\nEstimadores blandos y robustos\nTécnicas básicas de segmentación\nReglas de asociación\nÁrboles de decisión\nDeep learning, machine learning e inteligencia artificial."
+    "objectID": "pages/week11.html#material-adicional",
+    "href": "pages/week11.html#material-adicional",
+    "title": "Semana 11",
+    "section": "Material adicional",
+    "text": "Material adicional"
   },
   {
-    "objectID": "slides/week1.html#lenguajes-de-programación-y-aplicaciones-en-la-nube",
-    "href": "slides/week1.html#lenguajes-de-programación-y-aplicaciones-en-la-nube",
-    "title": "Análisis de Negocios",
-    "section": "Lenguajes de programación y aplicaciones en la nube",
-    "text": "Lenguajes de programación y aplicaciones en la nube\n\nIntroducción a bases de datos\nIntroducción a Python y R\nIntroducción a Google Cloud y AWS."
+    "objectID": "pages/week12.html#presentación",
+    "href": "pages/week12.html#presentación",
+    "title": "Semana 12",
+    "section": "Presentación",
+    "text": "Presentación\nVer presentación en pantalla completa"
   },
   {
-    "objectID": "slides/week1.html#planificación-de-proyectos-de-analitycs-y-aplicaciones-de-negocios",
-    "href": "slides/week1.html#planificación-de-proyectos-de-analitycs-y-aplicaciones-de-negocios",
-    "title": "Análisis de Negocios",
-    "section": "Planificación de proyectos de analitycs y aplicaciones de negocios",
-    "text": "Planificación de proyectos de analitycs y aplicaciones de negocios\n\nAplicaciones transversales a la empresa."
+    "objectID": "pages/week12.html#material-adicional",
+    "href": "pages/week12.html#material-adicional",
+    "title": "Semana 12",
+    "section": "Material adicional",
+    "text": "Material adicional"
   },
   {
-    "objectID": "slides/week1.html#ponderaciones",
-    "href": "slides/week1.html#ponderaciones",
-    "title": "Análisis de Negocios",
-    "section": "Ponderaciones",
-    "text": "Ponderaciones\nLa metodología de evaluación es la siguiente:\n\n\n\n\n\n\n\nTipo de evaluación\nPorcentaje que corresponde\n\n\n\n\nCertamen 1 (\\(C_1\\))\n20%\n\n\nCertamen 2 (\\(C_2\\))\n20%\n\n\nInforme escrito de avance de proyecto (\\(P_1\\))\n20%\n\n\nInforme escrito y oral final de proyecto (\\(P_2\\))\n40%\n\n\n\nLa nota final (\\(NF\\)) de la asignatura se calculará según:\n\\[\nNF= 0.2*C_1+0.2*C_2+0.2*P_1+0.4*P_2\n\\]"
+    "objectID": "pages/week13.html#presentación",
+    "href": "pages/week13.html#presentación",
+    "title": "Semana 13",
+    "section": "Presentación",
+    "text": "Presentación\nVer presentación en pantalla completa"
   },
   {
-    "objectID": "slides/week1.html#requerimientos-mínimos-de-aprobación",
-    "href": "slides/week1.html#requerimientos-mínimos-de-aprobación",
-    "title": "Análisis de Negocios",
-    "section": "Requerimientos mínimos de aprobación",
-    "text": "Requerimientos mínimos de aprobación\n\nPromedio Certámenes (\\(C_1\\) y \\(C_2\\)): \\(\\overline{C}_{1,2}\\geq 55\\)\nPromedio Proyecto (\\(P_1\\) y \\(P_2\\)): \\(\\overline{P}_{1,2}\\geq 55\\)"
+    "objectID": "pages/week13.html#material-adicional",
+    "href": "pages/week13.html#material-adicional",
+    "title": "Semana 13",
+    "section": "Material adicional",
+    "text": "Material adicional"
   },
   {
-    "objectID": "slides/week1.html#metodología-del-curso",
-    "href": "slides/week1.html#metodología-del-curso",
-    "title": "Análisis de Negocios",
-    "section": "Metodología del curso",
-    "text": "Metodología del curso\n\nAntes de cada sesión, se mandará una lectura de preparación para la sesión\nEl enfoque principal será aplicado, pero sin dejar de lado los fundamentos matemáticos\nSe pondrá a disposición material adicional para estudiar:\n\nEjemplos y ejercicios teóricos\nCódigos\n\nEl curso será autocontenido, pero requiere al menos conocimiento básico de probabilidad y estadística."
+    "objectID": "pages/week14.html#presentación",
+    "href": "pages/week14.html#presentación",
+    "title": "Semana 14",
+    "section": "Presentación",
+    "text": "Presentación\nVer presentación en pantalla completa"
   },
   {
-    "objectID": "slides/week1.html#organización-del-curso",
-    "href": "slides/week1.html#organización-del-curso",
-    "title": "Análisis de Negocios",
-    "section": "Organización del curso",
-    "text": "Organización del curso\n\n\n\n\n%%{init: {'theme': 'neutral' } }%%\nflowchart \n  A(Introducción a \\n Analytics) --> B(Knitr)\n  B(Probabilidad y \\n Estadística) --> C(Aprendizaje \\n Estadístico)\n  C --> D( Lenguajes de  \\n programación  )\n  D --> C\n  D --> E( Aplicaciones a la \\n Empresa)"
+    "objectID": "pages/week14.html#material-adicional",
+    "href": "pages/week14.html#material-adicional",
+    "title": "Semana 14",
+    "section": "Material adicional",
+    "text": "Material adicional"
   },
   {
-    "objectID": "slides/week1.html#ayudantía",
-    "href": "slides/week1.html#ayudantía",
-    "title": "Análisis de Negocios",
-    "section": "Ayudantía",
-    "text": "Ayudantía\n\nAyudante: Nicolás Cárdenas\nHorario a definir"
+    "objectID": "pages/week15.html#presentación",
+    "href": "pages/week15.html#presentación",
+    "title": "Semana 15",
+    "section": "Presentación",
+    "text": "Presentación\nVer presentación en pantalla completa"
   },
   {
-    "objectID": "slides/week1.html#analytics",
-    "href": "slides/week1.html#analytics",
-    "title": "Análisis de Negocios",
-    "section": "Analytics",
-    "text": "Analytics\n\n¿Qué noción tienen sobre analytics?\n¿Dé que sirve en la empresa? ¿Algún ejemplo?\n¿En qué contexto es necesario?\n¿Cómo afecta el uso de analytics en Chile y en el mundo?\n¿Cuál es su impacto social?"
+    "objectID": "pages/week16.html#presentación",
+    "href": "pages/week16.html#presentación",
+    "title": "Semana 16",
+    "section": "Presentación",
+    "text": "Presentación\nVer presentación en pantalla completa"
   },
   {
-    "objectID": "slides/week1.html#asdf",
-    "href": "slides/week1.html#asdf",
-    "title": "Análisis de Negocios",
-    "section": "asdf",
-    "text": "asdf\n\n\n\nIND 163 - Semana 1"
+    "objectID": "pages/week16.html#material-adicional",
+    "href": "pages/week16.html#material-adicional",
+    "title": "Semana 16",
+    "section": "Material adicional",
+    "text": "Material adicional"
   },
   {
-    "objectID": "slides/week1.html#data-analytics",
-    "href": "slides/week1.html#data-analytics",
-    "title": "Análisis de Negocios",
-    "section": "Data Analytics",
-    "text": "Data Analytics\n\nEl avance tecnológico ha permitido la recolección de datos dentro y fuera de la empresa\nEsta disponibilidad de datos ha fomentado la creación de metodologías para extraer información de los datos\nLa gran mayoría de las empresas tienen equipos especializados en extraer la mayor cantidad de información útil para la empresa\nAntiguamente, la industria exploraba los conjuntos de datos disponibles de manera más o menos manual, pero debido al incremento del volumen de datos, esto ya no es posible.\nEn la actualidad, el proceso de descubrir información relevante en los conjuntos de datos disponibles, se le llama data mining"
+    "objectID": "pages/week17.html#presentación",
+    "href": "pages/week17.html#presentación",
+    "title": "Semana 17",
+    "section": "Presentación",
+    "text": "Presentación\nVer presentación en pantalla completa"
   },
   {
-    "objectID": "slides/week1.html#data-mining",
-    "href": "slides/week1.html#data-mining",
-    "title": "Análisis de Negocios",
-    "section": "Data mining",
-    "text": "Data mining\n\nLa aplicación más frecuente de las técnicas de data mining están en marketing. Por ejemplo:\n\nMarketing dirigido\nPublicidad online\nRecomendaciones de compra\n\nEn el sector financiero, es frecuente encontrar estas técnicas en la creación de puntajes crediticios e identificación de fraude\nMuchas empresas han generado una ventaja comparativa utilizando Data Science estratégicamente"
+    "objectID": "pages/week17.html#material-adicional",
+    "href": "pages/week17.html#material-adicional",
+    "title": "Semana 17",
+    "section": "Material adicional",
+    "text": "Material adicional"
   },
   {
-    "objectID": "slides/week1.html#ejemplo",
-    "href": "slides/week1.html#ejemplo",
-    "title": "Análisis de Negocios",
-    "section": "Ejemplo",
-    "text": "Ejemplo\n\nEn una empresa de telecomunicaciones se tiene un problema de retención de clientes\nMuchos de estos clientes se van a la competencia\nA este fenómeno se le conoce como CHURN o tasa de cancelación de clientes.\nTenemos dos formas de abordar la problemática:\n\nAtraer nuevos clientes\nMantener a los clientes actuales\n\nEn general, atraer nuevos clientes es más caro que mantener a los actuales\n¿Cómo podemos identificar clientes que son más propenso a cambiar de compañía?"
+    "objectID": "pages/week2.html",
+    "href": "pages/week2.html",
+    "title": "Semana 2",
+    "section": "",
+    "text": "Instalar R y Python.\nSe recomienda también instalar Rstudio y Spyder\nRepasar materia MAT042"
   },
   {
-    "objectID": "slides/week1.html#data-science",
-    "href": "slides/week1.html#data-science",
-    "title": "Análisis de Negocios",
-    "section": "Data Science",
-    "text": "Data Science\n\n\n\nData Science\n\n\n\n\n\nIND 163 - Semana 1"
+    "objectID": "pages/week2.html#presentación",
+    "href": "pages/week2.html#presentación",
+    "title": "Semana 2",
+    "section": "Presentación",
+    "text": "Presentación\nVer presentación en pantalla completa"
   },
   {
-    "objectID": "slides/week1.html#data-driven-decision-making",
-    "href": "slides/week1.html#data-driven-decision-making",
-    "title": "Análisis de Negocios",
-    "section": "Data Driven Decision Making",
-    "text": "Data Driven Decision Making\n\n\n\nData Science\n\n\n\n\n\nIND 163 - Semana 1"
+    "objectID": "pages/week2.html#material-adicional",
+    "href": "pages/week2.html#material-adicional",
+    "title": "Semana 2",
+    "section": "Material adicional",
+    "text": "Material adicional"
   },
   {
-    "objectID": "slides/week1.html#automatización-de-decisiones",
-    "href": "slides/week1.html#automatización-de-decisiones",
-    "title": "Análisis de Negocios",
-    "section": "Automatización de decisiones",
-    "text": "Automatización de decisiones\nLa automatización de decisiones en una empresa o DDD (Data-driven decision-making), hace referencia a la práctica de basar las decisiones en el análisis de datos en vez de la intuición. Brynjolfsson, Hitt, & Kim, 2011 realizaron un estudio que analizó el rendimiento de distintas empresas, evaluando cada una de estas mediante un índice DDD que cuantificaba cuan predominante eran las decisiones basadas en el análisis de datos.\n\nLos autores mostraron estadísticamente que mientras más decisiones basadas en el análisis de datos, más productiva era la empresa. Más aún, las diferencias entre las empresas con un alto y bajo nivel de índice DDD eran notablemente grandes."
+    "objectID": "pages/week3.html",
+    "href": "pages/week3.html",
+    "title": "Semana 3",
+    "section": "",
+    "text": "Repasar materia MAT042: Test de hipótesis e intervalos de confianza"
   },
   {
-    "objectID": "slides/week1.html#procesamiento-de-datos-y-big-data",
-    "href": "slides/week1.html#procesamiento-de-datos-y-big-data",
-    "title": "Análisis de Negocios",
-    "section": "Procesamiento de datos y “Big Data”",
-    "text": "Procesamiento de datos y “Big Data”\nActualmente, dentro de las empresas existen varias áreas que trabajan con datos. No obstante, no todas ellas recaen dentro de lo que conocemos como Data Science. En general, llamamos ciencia de datos a los análisis posteriores al acceso de datos, por lo que el almacenamiento y procesamiento de datos (en el sentido ingenieril) no sería llamado Data Science. Sin embargo, el trabajo hecho por los Ingenieros de Datos es fundamental para el correcto ejercicio del análisis de negocios.\n\nEl concepto Big Data hace referencia al volumen gigante de datos disponibles, y particularmente, a las tecnologías asociadas que permiten su almacenamiento y correcto acceso, como por ejemplo Hadoop o MongoDB. Estas tecnologías son cruciales para tener acceso a los datos que se analizarán. Este tipo de tecnología (y sus alternativas) ya son estándar en la industria."
+    "objectID": "pages/week3.html#presentación",
+    "href": "pages/week3.html#presentación",
+    "title": "Semana 3",
+    "section": "Presentación",
+    "text": "Presentación\nVer presentación en pantalla completa"
   },
   {
-    "objectID": "slides/week1.html#impacto-social",
-    "href": "slides/week1.html#impacto-social",
-    "title": "Análisis de Negocios",
-    "section": "Impacto social",
-    "text": "Impacto social\n\n\n\nIND 163 - Semana 1"
+    "objectID": "pages/week3.html#material-adicional",
+    "href": "pages/week3.html#material-adicional",
+    "title": "Semana 3",
+    "section": "Material adicional",
+    "text": "Material adicional"
   },
   {
-    "objectID": "slides/week1.html#área-de-analytics",
-    "href": "slides/week1.html#área-de-analytics",
-    "title": "Análisis de Negocios",
-    "section": "Área de analytics",
-    "text": "Área de analytics\nExisten distintas formas de segmentar un área de analytics en una empresa, pero por lo general, se adecuan al proceso general de minería de datos CRISP-DM (Cross Industry Standard Process for Data Mining)"
+    "objectID": "pages/week4.html#presentación",
+    "href": "pages/week4.html#presentación",
+    "title": "Semana 4",
+    "section": "Presentación",
+    "text": "Presentación\nVer presentación en pantalla completa"
   },
   {
-    "objectID": "slides/week1.html#roles-frecuentes",
-    "href": "slides/week1.html#roles-frecuentes",
-    "title": "Análisis de Negocios",
-    "section": "Roles frecuentes",
-    "text": "Roles frecuentes\nEntre los roles más frecuentes en el área de analytics de una empresa están:\n\nBI Analyst\nData Engineer\nSoftware Engineer\nData Scientist\nMachine Learning Researcher/Engineer\nProduct Owner"
+    "objectID": "pages/week4.html#material-adicional",
+    "href": "pages/week4.html#material-adicional",
+    "title": "Semana 4",
+    "section": "Material adicional",
+    "text": "Material adicional"
   },
   {
-    "objectID": "slides/week1.html#habilidades-de-algunos-de-estos-roles",
-    "href": "slides/week1.html#habilidades-de-algunos-de-estos-roles",
-    "title": "Análisis de Negocios",
-    "section": "Habilidades de algunos de estos roles",
-    "text": "Habilidades de algunos de estos roles"
+    "objectID": "pages/week5.html#presentación",
+    "href": "pages/week5.html#presentación",
+    "title": "Semana 5",
+    "section": "Presentación",
+    "text": "Presentación\nVer presentación en pantalla completa"
   },
   {
-    "objectID": "slides/week1.html#test",
-    "href": "slides/week1.html#test",
-    "title": "Análisis de Negocios",
-    "section": "Test",
-    "text": "Test\na\n\n\n\nIND 163 - Semana 1"
+    "objectID": "pages/week5.html#material-adicional",
+    "href": "pages/week5.html#material-adicional",
+    "title": "Semana 5",
+    "section": "Material adicional",
+    "text": "Material adicional"
   },
   {
-    "objectID": "slides/week1.html#testno-toc",
-    "href": "slides/week1.html#testno-toc",
-    "title": "Análisis de Negocios",
-    "section": "test{no-toc}",
-    "text": "test{no-toc}\n\n\n\nIND 163 - Semana 1"
+    "objectID": "pages/week6.html#presentación",
+    "href": "pages/week6.html#presentación",
+    "title": "Semana 6",
+    "section": "Presentación",
+    "text": "Presentación\nVer presentación en pantalla completa"
   },
   {
-    "objectID": "slides/week1.html#manejando-un-equipo-de-data-science",
-    "href": "slides/week1.html#manejando-un-equipo-de-data-science",
-    "title": "Análisis de Negocios",
-    "section": "Manejando un equipo de Data Science",
-    "text": "Manejando un equipo de Data Science\nEs posible ver un proceso de minería de datos como un proceso de desarollo de software, aplicando las metodologías usuales en aquellas áreas (Agile/Scrum). Pero dependiendo del rubro de la empresa, será una mezcla entre las metodologías ágiles de desarrollo de software y el proceso CRISP-DM."
+    "objectID": "pages/week6.html#material-adicional",
+    "href": "pages/week6.html#material-adicional",
+    "title": "Semana 6",
+    "section": "Material adicional",
+    "text": "Material adicional"
   },
   {
-    "objectID": "slides/week1.html#herramientas-del-análisis-de-negocios",
-    "href": "slides/week1.html#herramientas-del-análisis-de-negocios",
-    "title": "Análisis de Negocios",
-    "section": "Herramientas del análisis de negocios",
-    "text": "Herramientas del análisis de negocios\n\nEstadística\nDatabase Querying\nData Warehousing\nMachine Learning\n\n\n\n\nIND 163 - Semana 1"
+    "objectID": "pages/week7.html#presentación",
+    "href": "pages/week7.html#presentación",
+    "title": "Semana 7",
+    "section": "Presentación",
+    "text": "Presentación\nVer presentación en pantalla completa"
   },
   {
-    "objectID": "slides/week1.html#planificación-de-proyectos-de-analytics-y-aplicaciones-de-negocios",
-    "href": "slides/week1.html#planificación-de-proyectos-de-analytics-y-aplicaciones-de-negocios",
-    "title": "Análisis de Negocios",
-    "section": "Planificación de proyectos de analytics y aplicaciones de negocios",
-    "text": "Planificación de proyectos de analytics y aplicaciones de negocios\n\nAplicaciones transversales a la empresa."
+    "objectID": "pages/week7.html#material-adicional",
+    "href": "pages/week7.html#material-adicional",
+    "title": "Semana 7",
+    "section": "Material adicional",
+    "text": "Material adicional"
+  },
+  {
+    "objectID": "pages/week8.html#presentación",
+    "href": "pages/week8.html#presentación",
+    "title": "Semana 8",
+    "section": "Presentación",
+    "text": "Presentación\nVer presentación en pantalla completa"
+  },
+  {
+    "objectID": "pages/week8.html#material-adicional",
+    "href": "pages/week8.html#material-adicional",
+    "title": "Semana 8",
+    "section": "Material adicional",
+    "text": "Material adicional"
+  },
+  {
+    "objectID": "pages/week9.html#presentación",
+    "href": "pages/week9.html#presentación",
+    "title": "Semana 9",
+    "section": "Presentación",
+    "text": "Presentación\nVer presentación en pantalla completa"
+  },
+  {
+    "objectID": "pages/week9.html#material-adicional",
+    "href": "pages/week9.html#material-adicional",
+    "title": "Semana 9",
+    "section": "Material adicional",
+    "text": "Material adicional"
   },
   {
     "objectID": "slides/lec_week1.html#de-qué-trata-el-curso",
@@ -357,13 +385,6 @@
     "text": "Metodología del curso\n\nAntes de cada sesión, se mandará una lectura de preparación para la sesión\nEl enfoque principal será aplicado, pero sin dejar de lado los fundamentos matemáticos\nSe pondrá a disposición material adicional para estudiar:\n\nEjemplos y ejercicios teóricos\nCódigos\n\nEl curso será autocontenido, pero requiere al menos conocimiento básico de probabilidad y estadística."
   },
   {
-    "objectID": "slides/lec_week1.html#organización-del-curso",
-    "href": "slides/lec_week1.html#organización-del-curso",
-    "title": "Análisis de Negocios",
-    "section": "Organización del curso",
-    "text": "Organización del curso\n\n\n\n\n%%{init: {'theme': 'neutral' } }%%\nflowchart \n  A(Introducción a \\n Analytics) --> B(Knitr)\n  B(Probabilidad y \\n Estadística) --> C(Aprendizaje \\n Estadístico)\n  C --> D( Lenguajes de  \\n programación  )\n  D --> C\n  D --> E( Aplicaciones a la \\n Empresa)"
-  },
-  {
     "objectID": "slides/lec_week1.html#ayudantía",
     "href": "slides/lec_week1.html#ayudantía",
     "title": "Análisis de Negocios",
@@ -445,20 +466,41 @@
     "href": "slides/lec_week1.html#herramientas-del-análisis-de-negocios",
     "title": "Análisis de Negocios",
     "section": "Herramientas del análisis de negocios",
-    "text": "Herramientas del análisis de negocios\n\nEstadística\nDatabase Querying\nData Warehousing\nMachine Learning\n\n\n\n\nIND 163 - Semana 1"
+    "text": "Herramientas del análisis de negocios\n\nEstadística\nDatabase Querying\nData Warehousing\nMachine Learning"
   },
   {
-    "objectID": "pages/week1.html",
-    "href": "pages/week1.html",
-    "title": "Semana 1",
-    "section": "",
-    "text": "Leer el programa del curso"
+    "objectID": "slides/lec_week1.html#planteamiento-de-la-problemática",
+    "href": "slides/lec_week1.html#planteamiento-de-la-problemática",
+    "title": "Análisis de Negocios",
+    "section": "Planteamiento de la problemática",
+    "text": "Planteamiento de la problemática\n\nSi no sabemos que debemos resolver, no podremos proveer una respuesta al problema\nAntes de intentar solucionar el problema, debemos identificar en su totalidad el contexto del problema\nPreguntas como:\n\n¿El problema es recurrente?¿Requerirá una automatización posterior a encontrar una solución?\n¿Qué magnitud tiene el problema?\n¿Qué herramientas tengo disponibles? ¿Hay personas capacitadas para resolver concretamente el problema?\n¿Qué tipo de datos se tiene a disposición? ¿Es esta suficiente?\n¿Qué tanto tiempo se tiene ha disposición?"
   },
   {
-    "objectID": "pages/week1.html#presentación",
-    "href": "pages/week1.html#presentación",
-    "title": "Semana 1",
-    "section": "Presentación",
-    "text": "Presentación\nVer presentación en pantalla completa"
+    "objectID": "slides/lec_week1.html#evaluando-la-solución",
+    "href": "slides/lec_week1.html#evaluando-la-solución",
+    "title": "Análisis de Negocios",
+    "section": "Evaluando la solución",
+    "text": "Evaluando la solución\n\nUna vez identificado a cabalidad la problemática, resta preguntarnos:\n\n¿Alguien ha resuelto este tipo de problemas? ¿Cómo?\n¿Es posible replicar aquella solución?\n\nFinalmente, debemos plantear y estructurar la forma en que procederemos. Sin embargo, debemos preguntarnos:\n\n¿Es posible hacerlo dentro del contexto de la empresa?\n¿Resuelve concretamente el problema?\n¿Es eficiente la solución que podremos entregar?\n\n\n\nAl planificar los pasos a seguir, debemos ser lo más flexible posible, debido a que usualmente en proyectos de data science, los percanses suelen ocurrir."
+  },
+  {
+    "objectID": "slides/lec_week2.html#enfoque-clásico",
+    "href": "slides/lec_week2.html#enfoque-clásico",
+    "title": "Conceptos Básicos",
+    "section": "Enfoque Clásico",
+    "text": "Enfoque Clásico"
+  },
+  {
+    "objectID": "slides/lec_week2.html#enfoque-frecuentista",
+    "href": "slides/lec_week2.html#enfoque-frecuentista",
+    "title": "Conceptos Básicos",
+    "section": "Enfoque frecuentista",
+    "text": "Enfoque frecuentista"
+  },
+  {
+    "objectID": "slides/lec_week2.html#enfoque-bayesiano",
+    "href": "slides/lec_week2.html#enfoque-bayesiano",
+    "title": "Conceptos Básicos",
+    "section": "Enfoque bayesiano",
+    "text": "Enfoque bayesiano\n\n\n\nIND 163 - Semana 2"
   }
 ]

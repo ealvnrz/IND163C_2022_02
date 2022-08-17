@@ -1,0 +1,18 @@
+---
+title: "Semana 9"
+subtitle: "Métodos no supervisados"
+---
+
+## Preparación
+
+
+
+## Presentación
+
+[Ver presentación en pantalla completa](../slides/lec_week9.html)
+
+```{=html}
+<iframe class="slide-deck" src="../slides/lec_week9.html" height="630" width="900"></iframe>
+```
+
+## Material adicional

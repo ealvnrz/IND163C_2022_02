@@ -8,6 +8,7 @@ format:
   revealjs:
     theme: slides.scss
     touch: true
+    slide-level: 2
 incremental: true
 slide-number: true
 lang: es
@@ -146,18 +147,6 @@ $$
 
 -   El curso será autocontenido, pero requiere al menos conocimiento básico de probabilidad y estadística.
 
-## Organización del curso
-
-```{mermaid}
-%%{init: {'theme': 'neutral' } }%%
-flowchart 
-  A(Introducción a \n Analytics) --> B(Knitr)
-  B(Probabilidad y \n Estadística) --> C(Aprendizaje \n Estadístico)
-  C --> D( Lenguajes de &nbsp;\n programación &nbsp;)
-  D --> C
-  D --> E( Aplicaciones a la \n Empresa)
-```
-
 ## Ayudantía
 
 -   Ayudante: Nicolás Cárdenas
@@ -252,3 +241,41 @@ Es posible ver un proceso de minería de datos como un proceso de desarollo de s
 -   *Database Querying*
 -   *Data Warehousing*
 -   *Machine Learning*
+
+## Planteamiento de la problemática
+
+-   Si no sabemos que debemos resolver, no podremos proveer una respuesta al problema
+-   Antes de intentar solucionar el problema, debemos identificar en su totalidad el contexto del problema
+-   Preguntas como:
+    -   ¿El problema es recurrente?¿Requerirá una automatización posterior a encontrar una solución?
+    -   ¿Qué magnitud tiene el problema?
+    -   ¿Qué herramientas tengo disponibles? ¿Hay personas capacitadas para resolver concretamente el problema?
+    -   ¿Qué tipo de **datos** se tiene a disposición? ¿Es esta suficiente?
+    -   ¿Qué tanto tiempo se tiene ha disposición?
+
+## Evaluando la solución
+
+-   Una vez identificado a cabalidad la problemática, resta preguntarnos:
+    -   ¿Alguien ha resuelto este tipo de problemas? ¿Cómo?
+    -   ¿Es posible replicar aquella solución?
+-   Finalmente, debemos plantear y estructurar la forma en que procederemos. Sin embargo, debemos preguntarnos:
+    -   ¿Es posible hacerlo dentro del contexto de la empresa?
+    -   ¿Resuelve concretamente el problema?
+    -   ¿Es eficiente la solución que podremos entregar?
+
+. . .
+
+Al planificar los pasos a seguir, debemos ser lo más flexible posible, debido a que usualmente en proyectos de *data science*, los percanses suelen ocurrir.
+
+# ¿Qué veremos la próxima semana?
+
+- Conceptos básicos de estadística y probabilidad
+  - Escuelas de probabilidad
+  - Distribuciones de probabilidades
+- Ejemplos de los conceptos básicos usando R y Python
+
+# ¿Qué deben preparar para la próxima semana?
+
+- Instalar R (se recomienda instalar también Rstudio)
+- Instalar Python (se recomienda instalar también Spyder)
+- Repasar materia de MAT042

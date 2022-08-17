@@ -1,0 +1,21 @@
+---
+title: "Semana 2"
+subtitle: "Conceptos básicos, distribuciones e introducción a R y Python"
+---
+
+## Preparación
+
+- Instalar [R](https://www.r-project.org/) y [Python](https://www.python.org/).
+- Se recomienda también instalar [Rstudio](https://www.rstudio.com/) y [Spyder](https://www.spyder-ide.org/)
+- Repasar materia MAT042
+
+## Presentación
+
+[Ver presentación en pantalla completa](../slides/lec_week2.html)
+
+```{=html}
+<iframe class="slide-deck" src="../slides/lec_week2.html" height="630" width="900"></iframe>
+```
+
+## Material adicional
+
