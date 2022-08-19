@@ -1,6 +1,6 @@
 ---
 title: "Semana 16"
-subtitle: "Aplicaciones a la empresa"
+subtitle: "Presentaciones"
 ---
 
 ## Preparación

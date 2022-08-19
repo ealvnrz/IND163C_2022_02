@@ -61,9 +61,6 @@ website:
             text: "Semana 15"
           - href: pages/week16.qmd
             text: "Semana 16"
-          - href: pages/week17.qmd
-            text: "Semana 17"
-            
 format:
   html:
     theme:

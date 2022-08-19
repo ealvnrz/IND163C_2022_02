@@ -327,8 +327,12 @@
 </section>
 
 <section>
-<section id="escuelas-de-probabilidad" class="title-slide slide level1 center">
-<h1>Escuelas de Probabilidad</h1>
+<section id="conceptos-básicos-de-probabilidad" class="title-slide slide level1 center">
+<h1>Conceptos básicos de probabilidad</h1>
+
+</section>
+<section id="escuelas-de-probabilidad" class="slide level2">
+<h2>Escuelas de Probabilidad</h2>
 <ul>
 <li class="fragment">Enfoque clásico</li>
 <li class="fragment">Enfoque frecuentista</li>
@@ -336,13 +340,218 @@
 </ul>
 </section>
 <section id="enfoque-clásico" class="slide level2">
-<h2>Enfoque Clásico</h2>
+<h2>Enfoque clásico</h2>
+<p>Este enfoque también llamado enfoque <em>apriori</em> tiene por característica principal la asignación igualitaria de una medida de ocurrencia para un resultado de un experimento aleatorio (experimento equiprobable).</p>
+<div class="fragment">
+<p>Esta asignación de <em>probabilidad</em> se determina antes de observar los resultados experimentales.</p>
+</div>
+<div class="fragment">
+<ul>
+<li class="fragment"><strong>¿Algún ejemplo?</strong></li>
+</ul>
+</div>
 </section>
 <section id="enfoque-frecuentista" class="slide level2">
 <h2>Enfoque frecuentista</h2>
+<p>Este enfoque también llamado enfoque <em>empírico</em>, determina la medida de ocurrencia con base en la proporción de veces que ocurre un resultado <em>favorable</em> en un determinado número de observaciones o experimentos. Este enfoque no asigna probabilidades <em>a priori</em> a los posibles resultados de un experimento aleatorio.</p>
+<div class="fragment">
+<ul>
+<li class="fragment"><strong>¿Algún ejemplo?</strong></li>
+</ul>
+</div>
 </section>
 <section id="enfoque-bayesiano" class="slide level2">
 <h2>Enfoque bayesiano</h2>
+<p>Este enfoque también llamado enfoque <em>subjetivo</em>, determina la medida de ocurrencia en base a una <em>expectativa razonable</em> basado en el conocimiento del investigador.</p>
+<p>El enfoque bayesiano es particularmente útil cuando se tiene poca información del experimento, y este puede ser realizado para <em>actualizador</em> mis probabilidades, esto debido a que cada realización del experimento aleatorio me otorgará información adicional para determinar correctamente mis probabilidades.</p>
+</section>
+<section id="conceptos-fundamentales" class="slide level2">
+<h2>Conceptos fundamentales</h2>
+<ul>
+<li class="fragment"><strong>Espacio muestral:</strong> Se define como el conjunto de todos los posibles resultados del experimento, lo anotamos por <span class="math inline">\(\Omega\)</span>.</li>
+<li class="fragment"><strong>Suceso o evento:</strong> Es cualquier subconjunto de <span class="math inline">\(\Omega\)</span>, usualmente lo anotamos con letras mayúsculas. <span class="math inline">\((A,B,C,\dots)\)</span>.</li>
+<li class="fragment"><strong>Espacio de sucesos:</strong> Es el conjunto de todos los subconjuntos de <span class="math inline">\(\Omega\)</span>. Lo anotamos por <span class="math inline">\(2^{\Omega}\)</span>.</li>
+<li class="fragment"><span class="math inline">\(\sigma\)</span>-álgebra: Es una familia de subconjuntos del espacio de sucesos, <span class="math inline">\(\Sigma \subset 2^{\Omega}\)</span>, y que cumplen con <em>ciertas propiedades</em>.</li>
+</ul>
+</section>
+<section id="clasificación-del-espacio-muestral" class="slide level2">
+<h2>Clasificación del espacio muestral</h2>
+<ul>
+<li class="fragment"><strong>Discreto</strong>
+<ul>
+<li class="fragment"><strong>Numerable:</strong> Finito o Infinito.</li>
+</ul></li>
+<li class="fragment"><strong>Continuo</strong>
+<ul>
+<li class="fragment"><strong>No numerable:</strong> Acotado o No acotado.</li>
+</ul></li>
+</ul>
+</section>
+<section id="definición-formal-de-probabilidad" class="slide level2">
+<h2>Definición formal de probabilidad</h2>
+<p>El par <span class="math inline">\((\Omega,\Sigma)\)</span> se dice <em>espacio medible</em>, y la función <span class="math inline">\(\mathbb{P}:\Sigma \rightarrow \mathbb{R}^{+}\)</span>, es una <strong>medida de probabilidad</strong> si satisface:</p>
+<ol type="1">
+<li class="fragment"><span class="math inline">\(0\leq \mathbb{P}[A] \leq 1, \forall A \in \Sigma\)</span></li>
+<li class="fragment"><span class="math inline">\(\mathbb{P}[\Omega]=1\)</span></li>
+<li class="fragment">Dados <span class="math inline">\(\displaystyle A_1,A_2,\dots \in \Sigma \Rightarrow \mathbb{P}\left[ \bigcup_{i=1}^{n} A_n \right] = \sum_{i=1}^{n} \mathbb{P}[A_i], \hspace{5pt} \forall i\)</span></li>
+</ol>
+</section>
+<section id="algunas-propiedades" class="slide level2">
+<h2>Algunas propiedades</h2>
+<ol type="1">
+<li class="fragment"><span class="math inline">\(\mathbb{P}[A]+\mathbb{P}[A^c]=\mathbb{P}[\Omega]\)</span></li>
+<li class="fragment"><span class="math inline">\(\mathbb{P}[\phi]=1-\mathbb{P}[\phi^c]=1-\mathbb{P}[\Omega]=0\)</span></li>
+<li class="fragment"><span class="math inline">\(\mathbb{P}[A \cup B]=\mathbb{P}[A]+\mathbb{P}[B] - \mathbb{P}[A\cap B]\)</span> . Si este último término <span class="math inline">\((\mathbb{P}[A\cap B])\)</span> es cero, se dice que <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son eventos mutuamente excluyentes.</li>
+<li class="fragment"><span class="math inline">\(\mathbb{P}[A-B]=\mathbb{P}[A\cap B^c]\)</span></li>
+<li class="fragment"><span class="math inline">\(\mathbb{P}[A \cap B]=\mathbb{P}[A]\mathbb{P}[B]\)</span>. Si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son independientes.</li>
+</ol>
+</section></section>
+<section>
+<section id="variables-aleatorias" class="title-slide slide level1 center">
+<h1>Variables aleatorias</h1>
+
+</section>
+<section id="definición-básica" class="slide level2">
+<h2>Definición Básica</h2>
+<p>Una <strong>Variable aleatoria</strong>, es una función que permite trabajar cualquier espacio muestral de manera cuantitativa. Se dice que <span class="math inline">\(X\)</span> es una variable aleatoria si es una función que toma los elementos de <span class="math inline">\(\Omega\)</span> y los transforma en puntos sobre la recta de los reales. Esto es:</p>
+<span class="math display">\[\begin{align*}
+  X: \quad &amp;\Omega \longrightarrow \mathbb{R}\\
+           &amp;\omega \longrightarrow X(\omega)
+\end{align*}\]</span>
+<div class="fragment">
+<p>El conjunto de todas las posibles realizaciones es llamado el <strong>soporte</strong> y lo denotamos por <span class="math inline">\(R_X\)</span>.</p>
+</div>
+</section>
+<section id="tipos-de-variables-aleatorias" class="slide level2">
+<h2>Tipos de variables aleatorias</h2>
+<p>Se dice que <span class="math inline">\(X\)</span> es una Variable Aleatoria si es una función que toma valores en probabilidad, es decir, no se puede predecir con certeza sus resultados.</p>
+<p><strong>Una variable aleatoria es siempre cuantitativa</strong> y se puede clasificar en los siguientes grupos:</p>
+<p><span class="math display">\[X(\omega) \begin{cases}
+\text{Discreto}
+\begin{cases}
+\text{Finito}\\
+\text{Infinito}
+\end{cases}\\
+\text{Continuo}
+\begin{cases}
+\text{Acotados}\\
+\text{No Acotados}
+\end{cases}
+\end{cases}\]</span></p>
+</section>
+<section id="variables-aleatorias-discretas" class="slide level2">
+<h2>Variables aleatorias discretas</h2>
+<p>Una variable aleatoria <span class="math inline">\(X\)</span> es llamada <strong>discreta</strong> si:</p>
+<ol type="1">
+<li class="fragment">Su soporte <span class="math inline">\(R_X\)</span> es un conjunto <em>numerable</em>.</li>
+<li class="fragment">Existe una función <span class="math inline">\(p_X:\mathbb{R}\rightarrow [0,1]\)</span>, llamada la <strong>función de masa de probabilidad</strong> de <span class="math inline">\(X\)</span>, tal que, para cualquier <span class="math inline">\(x\in \mathbb{R}\)</span>:</li>
+</ol>
+<div class="fragment">
+<p><span class="math display">\[p_X(x)\begin{cases} \mathbb{P}(X=x) \quad &amp;\text{si } x\in R_X\\ 0 \quad &amp;\text{si } x\notin R_X\end{cases}\]</span></p>
+</div>
+<div class="fragment">
+<p>Esta función tiene dos características principales:</p>
+<ol type="1">
+<li class="fragment"><strong>no-negatividad</strong>: <span class="math inline">\(p_X(x)\geq 0\)</span> para cualquier <span class="math inline">\(x\in \mathbb{R}\)</span>.</li>
+<li class="fragment"><strong>Suma sobre su soporte es 1</strong>: <span class="math inline">\(\sum_{x\in R_X}p_X(x)=1\)</span></li>
+</ol>
+</div>
+</section>
+<section id="variables-aleatorias-continuas" class="slide level2">
+<h2>Variables aleatorias continuas</h2>
+<p>Una variable aleatoria <span class="math inline">\(X\)</span> es llamada <strong>continua</strong> si:</p>
+<ol type="1">
+<li class="fragment">Su soporte <span class="math inline">\(R_X\)</span> es un conjunto <em>no-numerable</em>.</li>
+<li class="fragment">Existe una función <span class="math inline">\(f_X:\mathbb{R}\rightarrow [0,1]\)</span>, llamada <strong>función de densidad de probabilidad</strong> de <span class="math inline">\(X\)</span>, tal que, para cualquier intervalo <span class="math inline">\([a,b]\subseteq \mathbb{R}\)</span>:</li>
+</ol>
+<div class="fragment">
+<p><span class="math display">\[\mathbb{P}(X\in [a,b])=\int_{a}^{b}f_X(x)dx\]</span></p>
+</div>
+<div class="fragment">
+<p>Esta función tiene dos características principales:</p>
+<ol type="1">
+<li class="fragment"><strong>no-negatividad</strong>: <span class="math inline">\(f_X(x)\geq 0\)</span> para cualquier <span class="math inline">\(x\in \mathbb{R}\)</span>.</li>
+<li class="fragment"><strong>Integral sobre <span class="math inline">\(\mathbb{R}\)</span> es 1</strong>: <span class="math inline">\(\int_{-\infty}^{\infty} f_X(x)dx=1\)</span>.</li>
+</ol>
+</div>
+</section>
+<section id="función-de-distribución" class="slide level2">
+<h2>Función de distribución</h2>
+<p>Las variables aleatorias son usualmente caracterizadas en términos de sus funciones de distribución.</p>
+<div class="fragment">
+<p>Sea <span class="math inline">\(X\)</span> una variable aleatoria. La <strong>función de distribución</strong> de <span class="math inline">\(X\)</span> es una función <span class="math inline">\(F_X:\mathbb{R}\rightarrow [0,1]\)</span> tal que:</p>
+<p><span class="math display">\[F_X(x)=\mathbb{P}(X\leq x), \forall x\in \mathbb{R}\]</span></p>
+</div>
+<div class="fragment">
+<p>Si conocemos la función de distribución de una variable aleatoria <span class="math inline">\(X\)</span>, entonces podemos fácilmente calcular la probabilidad que <span class="math inline">\(X\)</span> pertenezca a un intervalo <span class="math inline">\((a,b] \subseteq \mathbb{R}\)</span> como:</p>
+<p><span class="math display">\[\mathbb{P}(a&lt;X&lt;b)=F_X(b)-F_X(a)\]</span></p>
+</div>
+</section>
+<section id="valores-esperados" class="slide level2">
+<h2>Valores esperados</h2>
+<p>Sea <span class="math inline">\(X\)</span> una variable aleatoria, entonces se define el valor esperado de una función real <span class="math inline">\(g(X)\)</span>, como:</p>
+<p><span class="math display">\[\mathbb{E}[g(X)]= \begin{cases} \sum_{x\in \mathbb{R}} g(X)P(X=x)\\ \int_{x\in \mathbb{R}} g(X)f(x)dx \end{cases}\]</span></p>
+<p>Si <span class="math inline">\(g(X)=X\)</span>, diremos que el valor esperado o esperanza matemática de <span class="math inline">\(X\)</span> es:</p>
+<p><span class="math display">\[\mathbb{E}(X)=\begin{cases}\sum_{x\in \mathbb{R}} x P(X=x)\\ \int_{x\in \mathbb{R}} x f(x)dx \end{cases}\]</span></p>
+<p>Para variables de tipo discreta y continua, respectivamente.</p>
+</section>
+<section id="propiedades-de-los-valores-esperados" class="slide level2">
+<h2>Propiedades de los valores esperados</h2>
+<p>Sean <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> constantes, <span class="math inline">\(X\)</span> una variable aleatoria entonces se cumple que:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(\mathbb{E}(a)=a\)</span></li>
+<li class="fragment"><span class="math inline">\(\mathbb{E}(X)=\mu=\)</span> constante</li>
+<li class="fragment"><span class="math inline">\(\mathbb{E}(aX)=a\mathbb{E}(X)\)</span></li>
+<li class="fragment"><span class="math inline">\(\mathbb{E}(aX+b)=\mathbb{E}(aX)+\mathbb{E}(b)=a\mathbb{E}(X)+b\)</span></li>
+</ul>
+</section>
+<section id="varianza" class="slide level2">
+<h2>Varianza</h2>
+<p>Sea <span class="math inline">\(X\)</span> una variable aleatoria, se define el la <strong>varianza</strong> de <span class="math inline">\(X\)</span> como:</p>
+<p><span class="math display">\[\mathbb{E}[(X-\mathbb{E}(X))^2]=V(X)=\begin{cases}\sum_{x\in\mathbb{R}} (X-\mathbb{E}(X))^2P(X=x)\\ \int_{x\in\mathbb{R}}(X-\mathbb{E}(X))^2f_{X}(x)dx\end{cases}\]</span></p>
+<p>Para variables de tipo discreta y continua, respectivamente.</p>
+</section>
+<section id="propiedades-de-la-varianza" class="slide level2">
+<h2>Propiedades de la varianza</h2>
+<p>Sea <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> constantes, <span class="math inline">\(X\)</span> una variable aleatoria, entonces se cumple:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(\mathbb{V}(a)=0\)</span></li>
+<li class="fragment"><span class="math inline">\(\mathbb{V}(X)=\sigma^2=\)</span> constante</li>
+<li class="fragment"><span class="math inline">\(\mathbb{V}(aX)=a^2 \mathbb{V}(X)\)</span></li>
+<li class="fragment"><span class="math inline">\(\mathbb{V}(aX+b)=\mathbb{V}(aX)+\mathbb{V}(b)=a^2\mathbb{V}(X)+0=a^2\mathbb{V}(X)\)</span></li>
+<li class="fragment"><span class="math inline">\(\mathbb{V}(X)=\mathbb{E}(X^2)-(\mathbb{E}(X))^2\)</span></li>
+</ul>
+</section></section>
+<section>
+<section id="distribuciones-discretas" class="title-slide slide level1 center">
+<h1>Distribuciones discretas</h1>
+
+</section>
+<section id="distribución-binomial" class="slide level2">
+<h2>Distribución binomial</h2>
+<p>Sea <span class="math inline">\(X\)</span> una variable aleatoria que representa el número de éxitos en <span class="math inline">\(n\)</span> ensayos y <span class="math inline">\(p\)</span> la probabilidad de éxito con cualquiera de éstos. Se dice entonces que <span class="math inline">\(X\)</span> tiene una distribución binomial con función de probabilidad:</p>
+<p><span class="math display">\[\mathbb{P}(X=k)= {{n}\choose{k}}p^k(1-p)^{n-k} \hspace{20pt} k=1,2,\cdots,n\]</span></p>
+<p>En donde $ {{n}}$ es el coeficiente binomial, esto es:</p>
+<p><span class="math display">\[{{n}\choose{k}}=\dfrac{n!}{k!(n-k)!}\]</span></p>
+<p>Si <span class="math inline">\(n=1\)</span> diremos que <span class="math inline">\(X\)</span> sigue una distribución Bernoulli.</p>
+</section>
+<section id="propiedades-de-la-distribución-binomial" class="slide level2">
+<h2>Propiedades de la distribución binomial</h2>
+<p>Si <span class="math inline">\(X\)</span> tiene una distribución binomial, entonces se cumple que:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(\mathbb{E}[X]=np\)</span></li>
+<li class="fragment"><span class="math inline">\(\mathbb{V}[X]=np(1-p)\)</span></li>
+</ul>
+<div class="fragment">
+<p>Es claro ver que si <span class="math inline">\(X\)</span> tiene una distribución bernoulli, entonces:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(\mathbb{E}[X]=p\)</span></li>
+<li class="fragment"><span class="math inline">\(\mathbb{V}[X]=p(1-p)\)</span></li>
+</ul>
+</div>
+</section>
+<section id="distribución-binomial-en-r-y-python" class="slide level2">
+<h2>Distribución binomial en R y Python</h2>
 
 
 <img src="images/logo_usm.png" class="slide-logo r-stretch"><div class="footer footer-default">

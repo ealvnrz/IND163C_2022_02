@@ -1,180 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "IND163C - Análisis de Negocios (Business Analytics)",
-    "section": "",
-    "text": "En este curso se estudian los fundamentos del análisis de información a través del desarrollo de aplicaciones Cloud (nube) mediante lenguajes de programación, vinculando áreas técnicas especializadas en Analytics con otras áreas de la organización, agregando valor al proceso de diagnóstico y toma de decisiones en tiempo real.\nA lo largo del curso se evalúan el uso de Analytics midiendo el impacto de esta herramienta a nivel individual y social, decidiendo de forma ética y socialmente responsable respecto del uso de la información"
-  },
-  {
-    "objectID": "index.html#softwares",
-    "href": "index.html#softwares",
-    "title": "IND163C - Análisis de Negocios (Business Analytics)",
-    "section": "Softwares",
-    "text": "Softwares\nPara la mayoría de las aplicaciones utilizaremos R y Python, por lo que se sugiere utilizar un IDE como RStudio o Spyder.\nPara la entrega de informes y talleres que requieran uso de programación, se recomienda el uso de Rmarkdown, Jupyter Notebook o \\(\\LaTeX\\) para la confección de documentos a entregar."
-  },
-  {
-    "objectID": "index.html#bibliografía-principal",
-    "href": "index.html#bibliografía-principal",
-    "title": "IND163C - Análisis de Negocios (Business Analytics)",
-    "section": "Bibliografía principal",
-    "text": "Bibliografía principal\nLa bibliografía principal del curso es:\n\n\n\n\n\n\nData Science For Business: What You Need to Know About Data Mining & Data-Analytic Thinking. Provost F., Fawcett, T.\n\n\n\n\n\n\n\nThink like a Data Scientist: Tackle the data science process step-by-step. Godsey B.\n\n\n\n\n\n\n\nNumsense! Data Science for the Layman: No Math Added. Ng, A, Soo K."
-  },
-  {
-    "objectID": "index.html#bibliografía-secundaria-y-de-profundización",
-    "href": "index.html#bibliografía-secundaria-y-de-profundización",
-    "title": "IND163C - Análisis de Negocios (Business Analytics)",
-    "section": "Bibliografía secundaria y de profundización",
-    "text": "Bibliografía secundaria y de profundización\nLa bibliografía secundaria y de profundización de las distintas temáticas a estudiar del curso es:\n\n\n\n\n\n\nMachine Learning with R Expert techniques for predictive modeling. Lantz, Brett.\n\n\n\n\n\n\n\nAn Introduction to Statistical Learning with Applications in R. James, Gareth, Witten, Daniela, Hastie, Trevor, Tibshirani Robert.\n\n\n\n\n\n\n\nHands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems. Géron, Aurélien."
-  },
-  {
-    "objectID": "pages/calendario.html",
-    "href": "pages/calendario.html",
-    "title": "Calendario",
-    "section": "",
-    "text": "Semana\nFecha\nPreparación\nPresentación\nMaterial adicional\nCertamen\nTrabajo Final\n\n\n\n\n1\n19/08\n📖\n🖥️\n📋\n\n\n\n\n2\n26/08\n📖\n🖥️\n📋\n\n\n\n\n3\n02/09\n📖\n🖥️\n📋\n\n\n\n\n4\n09/09\n📖\n🖥️\n📋\n\n\n\n\n5\n16/09\n📖\n🖥️\n📋\n\n\n\n\n6\n30/09\n📖\n🖥️\n📋\n📝\n\n\n\n7\n07/10\n📖\n🖥️\n📋\n\n\n\n\n8\n14/10\n📖\n🖥️\n📋\n\n\n\n\n9\n21/10\n📖\n🖥️\n📋\n\n\n\n\n10\n28/10\n📖\n🖥️\n📋\n\n\n\n\n11\n04/11\n📖\n🖥️\n📋\n📝\n📔\n\n\n12\n11/11\n📖\n🖥️\n📋\n\n\n\n\n13\n18/11\n📖\n🖥️\n📋\n\n\n\n\n14\n25/11\n📖\n🖥️\n📋\n\n📔\n\n\n15\n02/12\n📖\n🖥️\n📋\n\n\n\n\n16\n09/12\n📖\n🖥️\n📋\n\n\n\n\n17\n16/12\n📖\n🖥️\n📋\n\n📔"
-  },
-  {
-    "objectID": "pages/evaluaciones.html",
-    "href": "pages/evaluaciones.html",
-    "title": "Evaluaciones",
-    "section": "",
-    "text": "Requerimientos mínimos de aprobación\n\nPromedio Certámenes (\\(C_1\\) y \\(C_2\\)): \\(\\overline{C}_{1,2}\\geq 55\\)\nPromedio Proyecto (\\(P_1\\) y \\(P_2\\)): \\(\\overline{P}_{1,2}\\geq 55\\)"
-  },
-  {
-    "objectID": "pages/programa.html",
-    "href": "pages/programa.html",
-    "title": "Programa del curso",
-    "section": "",
-    "text": "Introducción a Analytics\n\nDel sistema de información de marketing al analitycs ¿Qué es Analytics? ¿Para qué sirve? ¿En qué contexto es necesario?\nAnalytics en el mundo y en Chile.\nImpacto social de Analytics en Chile y el mundo.\nComposición de perfiles de un área genérica de analytics en una empresa nacional.\n\n\n\nConceptos Básicos\n\nEscuelas de probabilidad\nDistribuciones probabilistas\nTest de hipótesis e intervalos de confianza\nRegresión lineal\nEstimadores blandos y robustos\nTécnicas básicas de segmentación\nReglas de asociación\nÁrboles de decisión\nDeep learning, machine learning e inteligencia artificial.\n\n\n\nLenguajes de programación y aplicaciones en la nube\n\nIntroducción a bases de datos\nIntroducción a Python y R\nIntroducción a Google Cloud y AWS.\n\n\n\nPlanificación de proyectos de analitycs y aplicaciones de negocios\n\nAplicaciones transversales a la empresa."
-  },
-  {
-    "objectID": "pages/week1.html",
-    "href": "pages/week1.html",
-    "title": "Semana 1",
-    "section": "",
-    "text": "Leer el programa del curso"
-  },
-  {
-    "objectID": "pages/week1.html#presentación",
-    "href": "pages/week1.html#presentación",
-    "title": "Semana 1",
-    "section": "Presentación",
-    "text": "Presentación\nVer presentación en pantalla completa"
-  },
-  {
-    "objectID": "pages/week1.html#material-adicional",
-    "href": "pages/week1.html#material-adicional",
-    "title": "Semana 1",
-    "section": "Material adicional",
-    "text": "Material adicional\n\nLeer Capítulo 1, Data Science For Business: What You Need to Know About Data Mining & Data-Analytic Thinking.\nLeer Capítulo 1 y 2, Think like a Data Scientist: Tackle the data science process step-by-step."
-  },
-  {
-    "objectID": "pages/week10.html#presentación",
-    "href": "pages/week10.html#presentación",
-    "title": "Semana 10",
-    "section": "Presentación",
-    "text": "Presentación\nVer presentación en pantalla completa"
-  },
-  {
-    "objectID": "pages/week10.html#material-adicional",
-    "href": "pages/week10.html#material-adicional",
-    "title": "Semana 10",
-    "section": "Material adicional",
-    "text": "Material adicional"
-  },
-  {
-    "objectID": "pages/week11.html#presentación",
-    "href": "pages/week11.html#presentación",
-    "title": "Semana 11",
-    "section": "Presentación",
-    "text": "Presentación\nVer presentación en pantalla completa"
-  },
-  {
-    "objectID": "pages/week11.html#material-adicional",
-    "href": "pages/week11.html#material-adicional",
-    "title": "Semana 11",
-    "section": "Material adicional",
-    "text": "Material adicional"
-  },
-  {
-    "objectID": "pages/week12.html#presentación",
-    "href": "pages/week12.html#presentación",
-    "title": "Semana 12",
-    "section": "Presentación",
-    "text": "Presentación\nVer presentación en pantalla completa"
-  },
-  {
-    "objectID": "pages/week12.html#material-adicional",
-    "href": "pages/week12.html#material-adicional",
-    "title": "Semana 12",
-    "section": "Material adicional",
-    "text": "Material adicional"
-  },
-  {
-    "objectID": "pages/week13.html#presentación",
-    "href": "pages/week13.html#presentación",
-    "title": "Semana 13",
-    "section": "Presentación",
-    "text": "Presentación\nVer presentación en pantalla completa"
-  },
-  {
-    "objectID": "pages/week13.html#material-adicional",
-    "href": "pages/week13.html#material-adicional",
-    "title": "Semana 13",
-    "section": "Material adicional",
-    "text": "Material adicional"
-  },
-  {
-    "objectID": "pages/week14.html#presentación",
-    "href": "pages/week14.html#presentación",
-    "title": "Semana 14",
-    "section": "Presentación",
-    "text": "Presentación\nVer presentación en pantalla completa"
-  },
-  {
-    "objectID": "pages/week14.html#material-adicional",
-    "href": "pages/week14.html#material-adicional",
-    "title": "Semana 14",
-    "section": "Material adicional",
-    "text": "Material adicional"
-  },
-  {
-    "objectID": "pages/week15.html#presentación",
-    "href": "pages/week15.html#presentación",
-    "title": "Semana 15",
-    "section": "Presentación",
-    "text": "Presentación\nVer presentación en pantalla completa"
-  },
-  {
-    "objectID": "pages/week16.html#presentación",
-    "href": "pages/week16.html#presentación",
-    "title": "Semana 16",
-    "section": "Presentación",
-    "text": "Presentación\nVer presentación en pantalla completa"
-  },
-  {
-    "objectID": "pages/week16.html#material-adicional",
-    "href": "pages/week16.html#material-adicional",
-    "title": "Semana 16",
-    "section": "Material adicional",
-    "text": "Material adicional"
-  },
-  {
-    "objectID": "pages/week17.html#presentación",
-    "href": "pages/week17.html#presentación",
-    "title": "Semana 17",
-    "section": "Presentación",
-    "text": "Presentación\nVer presentación en pantalla completa"
-  },
-  {
-    "objectID": "pages/week17.html#material-adicional",
-    "href": "pages/week17.html#material-adicional",
-    "title": "Semana 17",
-    "section": "Material adicional",
-    "text": "Material adicional"
-  },
-  {
     "objectID": "pages/week2.html",
     "href": "pages/week2.html",
     "title": "Semana 2",
@@ -196,311 +21,143 @@
     "text": "Material adicional"
   },
   {
-    "objectID": "pages/week3.html",
-    "href": "pages/week3.html",
-    "title": "Semana 3",
-    "section": "",
-    "text": "Repasar materia MAT042: Test de hipótesis e intervalos de confianza"
-  },
-  {
-    "objectID": "pages/week3.html#presentación",
-    "href": "pages/week3.html#presentación",
-    "title": "Semana 3",
-    "section": "Presentación",
-    "text": "Presentación\nVer presentación en pantalla completa"
-  },
-  {
-    "objectID": "pages/week3.html#material-adicional",
-    "href": "pages/week3.html#material-adicional",
-    "title": "Semana 3",
-    "section": "Material adicional",
-    "text": "Material adicional"
-  },
-  {
-    "objectID": "pages/week4.html#presentación",
-    "href": "pages/week4.html#presentación",
-    "title": "Semana 4",
-    "section": "Presentación",
-    "text": "Presentación\nVer presentación en pantalla completa"
-  },
-  {
-    "objectID": "pages/week4.html#material-adicional",
-    "href": "pages/week4.html#material-adicional",
-    "title": "Semana 4",
-    "section": "Material adicional",
-    "text": "Material adicional"
-  },
-  {
-    "objectID": "pages/week5.html#presentación",
-    "href": "pages/week5.html#presentación",
-    "title": "Semana 5",
-    "section": "Presentación",
-    "text": "Presentación\nVer presentación en pantalla completa"
-  },
-  {
-    "objectID": "pages/week5.html#material-adicional",
-    "href": "pages/week5.html#material-adicional",
-    "title": "Semana 5",
-    "section": "Material adicional",
-    "text": "Material adicional"
-  },
-  {
-    "objectID": "pages/week6.html#presentación",
-    "href": "pages/week6.html#presentación",
-    "title": "Semana 6",
-    "section": "Presentación",
-    "text": "Presentación\nVer presentación en pantalla completa"
-  },
-  {
-    "objectID": "pages/week6.html#material-adicional",
-    "href": "pages/week6.html#material-adicional",
-    "title": "Semana 6",
-    "section": "Material adicional",
-    "text": "Material adicional"
-  },
-  {
-    "objectID": "pages/week7.html#presentación",
-    "href": "pages/week7.html#presentación",
-    "title": "Semana 7",
-    "section": "Presentación",
-    "text": "Presentación\nVer presentación en pantalla completa"
-  },
-  {
-    "objectID": "pages/week7.html#material-adicional",
-    "href": "pages/week7.html#material-adicional",
-    "title": "Semana 7",
-    "section": "Material adicional",
-    "text": "Material adicional"
-  },
-  {
-    "objectID": "pages/week8.html#presentación",
-    "href": "pages/week8.html#presentación",
-    "title": "Semana 8",
-    "section": "Presentación",
-    "text": "Presentación\nVer presentación en pantalla completa"
-  },
-  {
-    "objectID": "pages/week8.html#material-adicional",
-    "href": "pages/week8.html#material-adicional",
-    "title": "Semana 8",
-    "section": "Material adicional",
-    "text": "Material adicional"
-  },
-  {
-    "objectID": "pages/week9.html#presentación",
-    "href": "pages/week9.html#presentación",
-    "title": "Semana 9",
-    "section": "Presentación",
-    "text": "Presentación\nVer presentación en pantalla completa"
-  },
-  {
-    "objectID": "pages/week9.html#material-adicional",
-    "href": "pages/week9.html#material-adicional",
-    "title": "Semana 9",
-    "section": "Material adicional",
-    "text": "Material adicional"
-  },
-  {
-    "objectID": "slides/lec_week1.html#de-qué-trata-el-curso",
-    "href": "slides/lec_week1.html#de-qué-trata-el-curso",
-    "title": "Análisis de Negocios",
-    "section": "¿De qué trata el curso?",
-    "text": "¿De qué trata el curso?\nA lo largo del curso analizaremos los fundamentos del análisis de datos mediante el uso de lenguajes de programación con el fin de agregar al valor al proceso de diagnóstico y toma de decisiones en tiempo real.\nCon el fin de tener mayor claridad de lo que han estudiado\n\n\n¿Qué herramientas computacionales han visto en cursos anteriores?\n¿Hasta qué vieron en el curso MAT042: Probabilidad y Estadística?\n¿Han tenido alguna experiencia trabajando con R o Python en el análisis de datos?"
-  },
-  {
-    "objectID": "slides/lec_week1.html#horario-de-clases",
-    "href": "slides/lec_week1.html#horario-de-clases",
-    "title": "Análisis de Negocios",
-    "section": "Horario de clases",
-    "text": "Horario de clases\n\n\n\n\nDía\nHorario\nLugar\n\n\n\n\nCátedra #1\nViernes\n09:35 am - 10:45 am\nM401-H\n\n\nCátedra #2\nViernes\n10:55 am - 12:05 pm\nM401-H\n\n\n\nPágina del curso\nUtilizaremos el Aula USM y el sitio https://ind163c-2022-02.netlify.app/. Ambas páginas tendrán la misma información, sin embargo, para efectos de entrega de informes el medio oficial será el aula USM."
-  },
-  {
-    "objectID": "slides/lec_week1.html#qué-necesitaremos-a-lo-largo-del-curso",
-    "href": "slides/lec_week1.html#qué-necesitaremos-a-lo-largo-del-curso",
-    "title": "Análisis de Negocios",
-    "section": "¿Qué necesitaremos a lo largo del curso?",
-    "text": "¿Qué necesitaremos a lo largo del curso?\n\n\n\n\n\n\n\n\n\n\n\nAdicionalmente, se recomienda utilizar un IDE como RStudio o Spyder."
-  },
-  {
-    "objectID": "slides/lec_week1.html#bibliografía-principal",
-    "href": "slides/lec_week1.html#bibliografía-principal",
-    "title": "Análisis de Negocios",
-    "section": "Bibliografía principal",
-    "text": "Bibliografía principal\n\n\n\n\n\n\nData Science For Business: What You Need to Know About Data Mining & Data-Analytic Thinking. Provost F., Fawcett, T.\n\n\n\n\n \n\n\n\n\n\nThink like a Data Scientist: Tackle the data science process step-by-step. Godsey B.\n\n\n\n\n \n\n\n\n\n\nNumsense! Data Science for the Layman: No Math Added. Ng, A, Soo K."
-  },
-  {
-    "objectID": "slides/lec_week1.html#bibliografía-secundaria-y-de-profundización",
-    "href": "slides/lec_week1.html#bibliografía-secundaria-y-de-profundización",
-    "title": "Análisis de Negocios",
-    "section": "Bibliografía secundaria y de profundización",
-    "text": "Bibliografía secundaria y de profundización\n\n\n\n\n\n\nMachine Learning with R Expert techniques for predictive modeling. Lantz, Brett.\n\n\n\n\n \n\n\n\n\n\nAn Introduction to Statistical Learning with Applications in R. James, Gareth, Witten, Daniela, Hastie, Trevor, Tibshirani Robert.\n\n\n\n\n \n\n\n\n\n\nHands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems. Géron, Aurélien."
-  },
-  {
-    "objectID": "slides/lec_week1.html#introducción-a-analytics",
-    "href": "slides/lec_week1.html#introducción-a-analytics",
-    "title": "Análisis de Negocios",
-    "section": "Introducción a Analytics",
-    "text": "Introducción a Analytics\n\nDel sistema de información de marketing al analytics ¿Qué es Analytics? ¿Para qué sirve? ¿En qué contexto es necesario?\nAnalytics en el mundo y en Chile.\nImpacto social de Analytics en Chile y el mundo.\nComposición de perfiles de un área genérica de analytics en una empresa nacional."
-  },
-  {
-    "objectID": "slides/lec_week1.html#conceptos-básicos",
-    "href": "slides/lec_week1.html#conceptos-básicos",
-    "title": "Análisis de Negocios",
-    "section": "Conceptos Básicos",
-    "text": "Conceptos Básicos\n\nEscuelas de probabilidad\nDistribuciones probabilistas\nTest de hipótesis e intervalos de confianza\nRegresión lineal\nEstimadores blandos y robustos\nTécnicas básicas de segmentación\nReglas de asociación\nÁrboles de decisión\nDeep learning, machine learning e inteligencia artificial."
-  },
-  {
-    "objectID": "slides/lec_week1.html#lenguajes-de-programación-y-aplicaciones-en-la-nube",
-    "href": "slides/lec_week1.html#lenguajes-de-programación-y-aplicaciones-en-la-nube",
-    "title": "Análisis de Negocios",
-    "section": "Lenguajes de programación y aplicaciones en la nube",
-    "text": "Lenguajes de programación y aplicaciones en la nube\n\nIntroducción a bases de datos\nIntroducción a Python y R\nIntroducción a Google Cloud y AWS."
-  },
-  {
-    "objectID": "slides/lec_week1.html#planificación-de-proyectos-de-analytics-y-aplicaciones-de-negocios",
-    "href": "slides/lec_week1.html#planificación-de-proyectos-de-analytics-y-aplicaciones-de-negocios",
-    "title": "Análisis de Negocios",
-    "section": "Planificación de proyectos de analytics y aplicaciones de negocios",
-    "text": "Planificación de proyectos de analytics y aplicaciones de negocios\n\nAplicaciones transversales a la empresa."
-  },
-  {
-    "objectID": "slides/lec_week1.html#ponderaciones",
-    "href": "slides/lec_week1.html#ponderaciones",
-    "title": "Análisis de Negocios",
-    "section": "Ponderaciones",
-    "text": "Ponderaciones\nLa metodología de evaluación es la siguiente:\n\n\n\n\n\n\n\nTipo de evaluación\nPorcentaje que corresponde\n\n\n\n\nCertamen 1 (\\(C_1\\))\n20%\n\n\nCertamen 2 (\\(C_2\\))\n20%\n\n\nInforme escrito de avance de proyecto (\\(P_1\\))\n20%\n\n\nInforme escrito y oral final de proyecto (\\(P_2\\))\n40%\n\n\n\nLa nota final (\\(NF\\)) de la asignatura se calculará según:\n\\[\nNF= 0.2*C_1+0.2*C_2+0.2*P_1+0.4*P_2\n\\]"
-  },
-  {
-    "objectID": "slides/lec_week1.html#requerimientos-mínimos-de-aprobación",
-    "href": "slides/lec_week1.html#requerimientos-mínimos-de-aprobación",
-    "title": "Análisis de Negocios",
-    "section": "Requerimientos mínimos de aprobación",
-    "text": "Requerimientos mínimos de aprobación\n\nPromedio Certámenes (\\(C_1\\) y \\(C_2\\)): \\(\\overline{C}_{1,2}\\geq 55\\)\nPromedio Proyecto (\\(P_1\\) y \\(P_2\\)): \\(\\overline{P}_{1,2}\\geq 55\\)"
-  },
-  {
-    "objectID": "slides/lec_week1.html#metodología-del-curso",
-    "href": "slides/lec_week1.html#metodología-del-curso",
-    "title": "Análisis de Negocios",
-    "section": "Metodología del curso",
-    "text": "Metodología del curso\n\nAntes de cada sesión, se mandará una lectura de preparación para la sesión\nEl enfoque principal será aplicado, pero sin dejar de lado los fundamentos matemáticos\nSe pondrá a disposición material adicional para estudiar:\n\nEjemplos y ejercicios teóricos\nCódigos\n\nEl curso será autocontenido, pero requiere al menos conocimiento básico de probabilidad y estadística."
-  },
-  {
-    "objectID": "slides/lec_week1.html#ayudantía",
-    "href": "slides/lec_week1.html#ayudantía",
-    "title": "Análisis de Negocios",
-    "section": "Ayudantía",
-    "text": "Ayudantía\n\nAyudante: Nicolás Cárdenas\nHorario a definir"
-  },
-  {
-    "objectID": "slides/lec_week1.html#analytics",
-    "href": "slides/lec_week1.html#analytics",
-    "title": "Análisis de Negocios",
-    "section": "Analytics",
-    "text": "Analytics\n\n¿Qué noción tienen sobre analytics?\n¿Dé que sirve en la empresa? ¿Algún ejemplo?\n¿En qué contexto es necesario?\n¿Cómo afecta el uso de analytics en Chile y en el mundo?\n¿Cuál es su impacto social?"
-  },
-  {
-    "objectID": "slides/lec_week1.html#data-analytics",
-    "href": "slides/lec_week1.html#data-analytics",
-    "title": "Análisis de Negocios",
-    "section": "Data Analytics",
-    "text": "Data Analytics\n\nEl avance tecnológico ha permitido la recolección de datos dentro y fuera de la empresa\nEsta disponibilidad de datos ha fomentado la creación de metodologías para extraer información de los datos\nLa gran mayoría de las empresas tienen equipos especializados en extraer la mayor cantidad de información útil para la empresa\nAntiguamente, la industria exploraba los conjuntos de datos disponibles de manera más o menos manual, pero debido al incremento del volumen de datos, esto ya no es posible.\nEn la actualidad, el proceso de descubrir información relevante en los conjuntos de datos disponibles, se le llama data mining"
-  },
-  {
-    "objectID": "slides/lec_week1.html#data-mining",
-    "href": "slides/lec_week1.html#data-mining",
-    "title": "Análisis de Negocios",
-    "section": "Data mining",
-    "text": "Data mining\n\nLa aplicación más frecuente de las técnicas de data mining están en marketing. Por ejemplo:\n\nMarketing dirigido\nPublicidad online\nRecomendaciones de compra\n\nEn el sector financiero, es frecuente encontrar estas técnicas en la creación de puntajes crediticios e identificación de fraude\nMuchas empresas han generado una ventaja comparativa utilizando Data Science estratégicamente"
-  },
-  {
-    "objectID": "slides/lec_week1.html#ejemplo",
-    "href": "slides/lec_week1.html#ejemplo",
-    "title": "Análisis de Negocios",
-    "section": "Ejemplo",
-    "text": "Ejemplo\n\nEn una empresa de telecomunicaciones se tiene un problema de retención de clientes\nMuchos de estos clientes se van a la competencia\nA este fenómeno se le conoce como CHURN o tasa de cancelación de clientes.\nTenemos dos formas de abordar la problemática:\n\nAtraer nuevos clientes\nMantener a los clientes actuales\n\nEn general, atraer nuevos clientes es más caro que mantener a los actuales\n¿Cómo podemos identificar clientes que son más propenso a cambiar de compañía?"
-  },
-  {
-    "objectID": "slides/lec_week1.html#automatización-de-decisiones",
-    "href": "slides/lec_week1.html#automatización-de-decisiones",
-    "title": "Análisis de Negocios",
-    "section": "Automatización de decisiones",
-    "text": "Automatización de decisiones\nLa automatización de decisiones en una empresa o DDD (Data-driven decision-making), hace referencia a la práctica de basar las decisiones en el análisis de datos en vez de la intuición. Brynjolfsson, Hitt, & Kim, 2011 realizaron un estudio que analizó el rendimiento de distintas empresas, evaluando cada una de estas mediante un índice DDD que cuantificaba cuan predominante eran las decisiones basadas en el análisis de datos.\n\nLos autores mostraron estadísticamente que mientras más decisiones basadas en el análisis de datos, más productiva era la empresa. Más aún, las diferencias entre las empresas con un alto y bajo nivel de índice DDD eran notablemente grandes."
-  },
-  {
-    "objectID": "slides/lec_week1.html#procesamiento-de-datos-y-big-data",
-    "href": "slides/lec_week1.html#procesamiento-de-datos-y-big-data",
-    "title": "Análisis de Negocios",
-    "section": "Procesamiento de datos y “Big Data”",
-    "text": "Procesamiento de datos y “Big Data”\nActualmente, dentro de las empresas existen varias áreas que trabajan con datos. No obstante, no todas ellas recaen dentro de lo que conocemos como Data Science. En general, llamamos ciencia de datos a los análisis posteriores al acceso de datos, por lo que el almacenamiento y procesamiento de datos (en el sentido ingenieril) no sería llamado Data Science. Sin embargo, el trabajo hecho por los Ingenieros de Datos es fundamental para el correcto ejercicio del análisis de negocios.\n\nEl concepto Big Data hace referencia al volumen gigante de datos disponibles, y particularmente, a las tecnologías asociadas que permiten su almacenamiento y correcto acceso, como por ejemplo Hadoop o MongoDB. Estas tecnologías son cruciales para tener acceso a los datos que se analizarán. Este tipo de tecnología (y sus alternativas) ya son estándar en la industria."
-  },
-  {
-    "objectID": "slides/lec_week1.html#área-de-analytics",
-    "href": "slides/lec_week1.html#área-de-analytics",
-    "title": "Análisis de Negocios",
-    "section": "Área de analytics",
-    "text": "Área de analytics\nExisten distintas formas de segmentar un área de analytics en una empresa, pero por lo general, se adecuan al proceso general de minería de datos CRISP-DM (Cross Industry Standard Process for Data Mining)"
-  },
-  {
-    "objectID": "slides/lec_week1.html#roles-frecuentes",
-    "href": "slides/lec_week1.html#roles-frecuentes",
-    "title": "Análisis de Negocios",
-    "section": "Roles frecuentes",
-    "text": "Roles frecuentes\nEntre los roles más frecuentes en el área de analytics de una empresa están:\n\nBI Analyst\nData Engineer\nSoftware Engineer\nData Scientist\nMachine Learning Researcher/Engineer\nProduct Owner"
-  },
-  {
-    "objectID": "slides/lec_week1.html#habilidades-de-algunos-de-estos-roles",
-    "href": "slides/lec_week1.html#habilidades-de-algunos-de-estos-roles",
-    "title": "Análisis de Negocios",
-    "section": "Habilidades de algunos de estos roles",
-    "text": "Habilidades de algunos de estos roles"
-  },
-  {
-    "objectID": "slides/lec_week1.html#manejando-un-equipo-de-data-science",
-    "href": "slides/lec_week1.html#manejando-un-equipo-de-data-science",
-    "title": "Análisis de Negocios",
-    "section": "Manejando un equipo de Data Science",
-    "text": "Manejando un equipo de Data Science\nEs posible ver un proceso de minería de datos como un proceso de desarollo de software, aplicando las metodologías usuales en aquellas áreas (Agile/Scrum). Pero dependiendo del rubro de la empresa, será una mezcla entre las metodologías ágiles de desarrollo de software y el proceso CRISP-DM."
-  },
-  {
-    "objectID": "slides/lec_week1.html#herramientas-del-análisis-de-negocios",
-    "href": "slides/lec_week1.html#herramientas-del-análisis-de-negocios",
-    "title": "Análisis de Negocios",
-    "section": "Herramientas del análisis de negocios",
-    "text": "Herramientas del análisis de negocios\n\nEstadística\nDatabase Querying\nData Warehousing\nMachine Learning"
-  },
-  {
-    "objectID": "slides/lec_week1.html#planteamiento-de-la-problemática",
-    "href": "slides/lec_week1.html#planteamiento-de-la-problemática",
-    "title": "Análisis de Negocios",
-    "section": "Planteamiento de la problemática",
-    "text": "Planteamiento de la problemática\n\nSi no sabemos que debemos resolver, no podremos proveer una respuesta al problema\nAntes de intentar solucionar el problema, debemos identificar en su totalidad el contexto del problema\nPreguntas como:\n\n¿El problema es recurrente?¿Requerirá una automatización posterior a encontrar una solución?\n¿Qué magnitud tiene el problema?\n¿Qué herramientas tengo disponibles? ¿Hay personas capacitadas para resolver concretamente el problema?\n¿Qué tipo de datos se tiene a disposición? ¿Es esta suficiente?\n¿Qué tanto tiempo se tiene ha disposición?"
-  },
-  {
-    "objectID": "slides/lec_week1.html#evaluando-la-solución",
-    "href": "slides/lec_week1.html#evaluando-la-solución",
-    "title": "Análisis de Negocios",
-    "section": "Evaluando la solución",
-    "text": "Evaluando la solución\n\nUna vez identificado a cabalidad la problemática, resta preguntarnos:\n\n¿Alguien ha resuelto este tipo de problemas? ¿Cómo?\n¿Es posible replicar aquella solución?\n\nFinalmente, debemos plantear y estructurar la forma en que procederemos. Sin embargo, debemos preguntarnos:\n\n¿Es posible hacerlo dentro del contexto de la empresa?\n¿Resuelve concretamente el problema?\n¿Es eficiente la solución que podremos entregar?\n\n\n\nAl planificar los pasos a seguir, debemos ser lo más flexible posible, debido a que usualmente en proyectos de data science, los percanses suelen ocurrir."
+    "objectID": "slides/lec_week2.html#escuelas-de-probabilidad",
+    "href": "slides/lec_week2.html#escuelas-de-probabilidad",
+    "title": "Conceptos Básicos",
+    "section": "Escuelas de Probabilidad",
+    "text": "Escuelas de Probabilidad\n\nEnfoque clásico\nEnfoque frecuentista\nEnfoque bayesiano"
   },
   {
     "objectID": "slides/lec_week2.html#enfoque-clásico",
     "href": "slides/lec_week2.html#enfoque-clásico",
     "title": "Conceptos Básicos",
-    "section": "Enfoque Clásico",
-    "text": "Enfoque Clásico"
+    "section": "Enfoque clásico",
+    "text": "Enfoque clásico\nEste enfoque también llamado enfoque apriori tiene por característica principal la asignación igualitaria de una medida de ocurrencia para un resultado de un experimento aleatorio (experimento equiprobable).\n\nEsta asignación de probabilidad se determina antes de observar los resultados experimentales.\n\n\n\n¿Algún ejemplo?"
   },
   {
     "objectID": "slides/lec_week2.html#enfoque-frecuentista",
     "href": "slides/lec_week2.html#enfoque-frecuentista",
     "title": "Conceptos Básicos",
     "section": "Enfoque frecuentista",
-    "text": "Enfoque frecuentista"
+    "text": "Enfoque frecuentista\nEste enfoque también llamado enfoque empírico, determina la medida de ocurrencia con base en la proporción de veces que ocurre un resultado favorable en un determinado número de observaciones o experimentos. Este enfoque no asigna probabilidades a priori a los posibles resultados de un experimento aleatorio.\n\n\n¿Algún ejemplo?"
   },
   {
     "objectID": "slides/lec_week2.html#enfoque-bayesiano",
     "href": "slides/lec_week2.html#enfoque-bayesiano",
     "title": "Conceptos Básicos",
     "section": "Enfoque bayesiano",
-    "text": "Enfoque bayesiano\n\n\n\nIND 163 - Semana 2"
+    "text": "Enfoque bayesiano\nEste enfoque también llamado enfoque subjetivo, determina la medida de ocurrencia en base a una expectativa razonable basado en el conocimiento del investigador.\nEl enfoque bayesiano es particularmente útil cuando se tiene poca información del experimento, y este puede ser realizado para actualizador mis probabilidades, esto debido a que cada realización del experimento aleatorio me otorgará información adicional para determinar correctamente mis probabilidades."
+  },
+  {
+    "objectID": "slides/lec_week2.html#conceptos-fundamentales",
+    "href": "slides/lec_week2.html#conceptos-fundamentales",
+    "title": "Conceptos Básicos",
+    "section": "Conceptos fundamentales",
+    "text": "Conceptos fundamentales\n\nEspacio muestral: Se define como el conjunto de todos los posibles resultados del experimento, lo anotamos por \\(\\Omega\\).\nSuceso o evento: Es cualquier subconjunto de \\(\\Omega\\), usualmente lo anotamos con letras mayúsculas. \\((A,B,C,\\dots)\\).\nEspacio de sucesos: Es el conjunto de todos los subconjuntos de \\(\\Omega\\). Lo anotamos por \\(2^{\\Omega}\\).\n\\(\\sigma\\)-álgebra: Es una familia de subconjuntos del espacio de sucesos, \\(\\Sigma \\subset 2^{\\Omega}\\), y que cumplen con ciertas propiedades."
+  },
+  {
+    "objectID": "slides/lec_week2.html#clasificación-del-espacio-muestral",
+    "href": "slides/lec_week2.html#clasificación-del-espacio-muestral",
+    "title": "Conceptos Básicos",
+    "section": "Clasificación del espacio muestral",
+    "text": "Clasificación del espacio muestral\n\nDiscreto\n\nNumerable: Finito o Infinito.\n\nContinuo\n\nNo numerable: Acotado o No acotado."
+  },
+  {
+    "objectID": "slides/lec_week2.html#definición-formal-de-probabilidad",
+    "href": "slides/lec_week2.html#definición-formal-de-probabilidad",
+    "title": "Conceptos Básicos",
+    "section": "Definición formal de probabilidad",
+    "text": "Definición formal de probabilidad\nEl par \\((\\Omega,\\Sigma)\\) se dice espacio medible, y la función \\(\\mathbb{P}:\\Sigma \\rightarrow \\mathbb{R}^{+}\\), es una medida de probabilidad si satisface:\n\n\\(0\\leq \\mathbb{P}[A] \\leq 1, \\forall A \\in \\Sigma\\)\n\\(\\mathbb{P}[\\Omega]=1\\)\nDados \\(\\displaystyle A_1,A_2,\\dots \\in \\Sigma \\Rightarrow \\mathbb{P}\\left[ \\bigcup_{i=1}^{n} A_n \\right] = \\sum_{i=1}^{n} \\mathbb{P}[A_i], \\hspace{5pt} \\forall i\\)"
+  },
+  {
+    "objectID": "slides/lec_week2.html#algunas-propiedades",
+    "href": "slides/lec_week2.html#algunas-propiedades",
+    "title": "Conceptos Básicos",
+    "section": "Algunas propiedades",
+    "text": "Algunas propiedades\n\n\\(\\mathbb{P}[A]+\\mathbb{P}[A^c]=\\mathbb{P}[\\Omega]\\)\n\\(\\mathbb{P}[\\phi]=1-\\mathbb{P}[\\phi^c]=1-\\mathbb{P}[\\Omega]=0\\)\n\\(\\mathbb{P}[A \\cup B]=\\mathbb{P}[A]+\\mathbb{P}[B] - \\mathbb{P}[A\\cap B]\\) . Si este último término \\((\\mathbb{P}[A\\cap B])\\) es cero, se dice que \\(A\\) y \\(B\\) son eventos mutuamente excluyentes.\n\\(\\mathbb{P}[A-B]=\\mathbb{P}[A\\cap B^c]\\)\n\\(\\mathbb{P}[A \\cap B]=\\mathbb{P}[A]\\mathbb{P}[B]\\). Si \\(A\\) y \\(B\\) son independientes."
+  },
+  {
+    "objectID": "slides/lec_week2.html#definición-básica",
+    "href": "slides/lec_week2.html#definición-básica",
+    "title": "Conceptos Básicos",
+    "section": "Definición Básica",
+    "text": "Definición Básica\nUna Variable aleatoria, es una función que permite trabajar cualquier espacio muestral de manera cuantitativa. Se dice que \\(X\\) es una variable aleatoria si es una función que toma los elementos de \\(\\Omega\\) y los transforma en puntos sobre la recta de los reales. Esto es:\n\\[\\begin{align*}\n  X: \\quad &\\Omega \\longrightarrow \\mathbb{R}\\\\\n           &\\omega \\longrightarrow X(\\omega)\n\\end{align*}\\]\n\nEl conjunto de todas las posibles realizaciones es llamado el soporte y lo denotamos por \\(R_X\\)."
+  },
+  {
+    "objectID": "slides/lec_week2.html#tipos-de-variables-aleatorias",
+    "href": "slides/lec_week2.html#tipos-de-variables-aleatorias",
+    "title": "Conceptos Básicos",
+    "section": "Tipos de variables aleatorias",
+    "text": "Tipos de variables aleatorias\nSe dice que \\(X\\) es una Variable Aleatoria si es una función que toma valores en probabilidad, es decir, no se puede predecir con certeza sus resultados.\nUna variable aleatoria es siempre cuantitativa y se puede clasificar en los siguientes grupos:\n\\[X(\\omega) \\begin{cases}\n\\text{Discreto}\n\\begin{cases}\n\\text{Finito}\\\\\n\\text{Infinito}\n\\end{cases}\\\\\n\\text{Continuo}\n\\begin{cases}\n\\text{Acotados}\\\\\n\\text{No Acotados}\n\\end{cases}\n\\end{cases}\\]"
+  },
+  {
+    "objectID": "slides/lec_week2.html#variables-aleatorias-discretas",
+    "href": "slides/lec_week2.html#variables-aleatorias-discretas",
+    "title": "Conceptos Básicos",
+    "section": "Variables aleatorias discretas",
+    "text": "Variables aleatorias discretas\nUna variable aleatoria \\(X\\) es llamada discreta si:\n\nSu soporte \\(R_X\\) es un conjunto numerable.\nExiste una función \\(p_X:\\mathbb{R}\\rightarrow [0,1]\\), llamada la función de masa de probabilidad de \\(X\\), tal que, para cualquier \\(x\\in \\mathbb{R}\\):\n\n\n\\[p_X(x)\\begin{cases} \\mathbb{P}(X=x) \\quad &\\text{si } x\\in R_X\\\\ 0 \\quad &\\text{si } x\\notin R_X\\end{cases}\\]\n\n\nEsta función tiene dos características principales:\n\nno-negatividad: \\(p_X(x)\\geq 0\\) para cualquier \\(x\\in \\mathbb{R}\\).\nSuma sobre su soporte es 1: \\(\\sum_{x\\in R_X}p_X(x)=1\\)"
+  },
+  {
+    "objectID": "slides/lec_week2.html#variables-aleatorias-continuas",
+    "href": "slides/lec_week2.html#variables-aleatorias-continuas",
+    "title": "Conceptos Básicos",
+    "section": "Variables aleatorias continuas",
+    "text": "Variables aleatorias continuas\nUna variable aleatoria \\(X\\) es llamada continua si:\n\nSu soporte \\(R_X\\) es un conjunto no-numerable.\nExiste una función \\(f_X:\\mathbb{R}\\rightarrow [0,1]\\), llamada función de densidad de probabilidad de \\(X\\), tal que, para cualquier intervalo \\([a,b]\\subseteq \\mathbb{R}\\):\n\n\n\\[\\mathbb{P}(X\\in [a,b])=\\int_{a}^{b}f_X(x)dx\\]\n\n\nEsta función tiene dos características principales:\n\nno-negatividad: \\(f_X(x)\\geq 0\\) para cualquier \\(x\\in \\mathbb{R}\\).\nIntegral sobre \\(\\mathbb{R}\\) es 1: \\(\\int_{-\\infty}^{\\infty} f_X(x)dx=1\\)."
+  },
+  {
+    "objectID": "slides/lec_week2.html#función-de-distribución",
+    "href": "slides/lec_week2.html#función-de-distribución",
+    "title": "Conceptos Básicos",
+    "section": "Función de distribución",
+    "text": "Función de distribución\nLas variables aleatorias son usualmente caracterizadas en términos de sus funciones de distribución.\n\nSea \\(X\\) una variable aleatoria. La función de distribución de \\(X\\) es una función \\(F_X:\\mathbb{R}\\rightarrow [0,1]\\) tal que:\n\\[F_X(x)=\\mathbb{P}(X\\leq x), \\forall x\\in \\mathbb{R}\\]\n\n\nSi conocemos la función de distribución de una variable aleatoria \\(X\\), entonces podemos fácilmente calcular la probabilidad que \\(X\\) pertenezca a un intervalo \\((a,b] \\subseteq \\mathbb{R}\\) como:\n\\[\\mathbb{P}(a<X<b)=F_X(b)-F_X(a)\\]"
+  },
+  {
+    "objectID": "slides/lec_week2.html#valores-esperados",
+    "href": "slides/lec_week2.html#valores-esperados",
+    "title": "Conceptos Básicos",
+    "section": "Valores esperados",
+    "text": "Valores esperados\nSea \\(X\\) una variable aleatoria, entonces se define el valor esperado de una función real \\(g(X)\\), como:\n\\[\\mathbb{E}[g(X)]= \\begin{cases} \\sum_{x\\in \\mathbb{R}} g(X)P(X=x)\\\\ \\int_{x\\in \\mathbb{R}} g(X)f(x)dx \\end{cases}\\]\nSi \\(g(X)=X\\), diremos que el valor esperado o esperanza matemática de \\(X\\) es:\n\\[\\mathbb{E}(X)=\\begin{cases}\\sum_{x\\in \\mathbb{R}} x P(X=x)\\\\ \\int_{x\\in \\mathbb{R}} x f(x)dx \\end{cases}\\]\nPara variables de tipo discreta y continua, respectivamente."
+  },
+  {
+    "objectID": "slides/lec_week2.html#propiedades-de-los-valores-esperados",
+    "href": "slides/lec_week2.html#propiedades-de-los-valores-esperados",
+    "title": "Conceptos Básicos",
+    "section": "Propiedades de los valores esperados",
+    "text": "Propiedades de los valores esperados\nSean \\(a\\) y \\(b\\) constantes, \\(X\\) una variable aleatoria entonces se cumple que:\n\n\\(\\mathbb{E}(a)=a\\)\n\\(\\mathbb{E}(X)=\\mu=\\) constante\n\\(\\mathbb{E}(aX)=a\\mathbb{E}(X)\\)\n\\(\\mathbb{E}(aX+b)=\\mathbb{E}(aX)+\\mathbb{E}(b)=a\\mathbb{E}(X)+b\\)"
+  },
+  {
+    "objectID": "slides/lec_week2.html#varianza",
+    "href": "slides/lec_week2.html#varianza",
+    "title": "Conceptos Básicos",
+    "section": "Varianza",
+    "text": "Varianza\nSea \\(X\\) una variable aleatoria, se define el la varianza de \\(X\\) como:\n\\[\\mathbb{E}[(X-\\mathbb{E}(X))^2]=V(X)=\\begin{cases}\\sum_{x\\in\\mathbb{R}} (X-\\mathbb{E}(X))^2P(X=x)\\\\ \\int_{x\\in\\mathbb{R}}(X-\\mathbb{E}(X))^2f_{X}(x)dx\\end{cases}\\]\nPara variables de tipo discreta y continua, respectivamente."
+  },
+  {
+    "objectID": "slides/lec_week2.html#propiedades-de-la-varianza",
+    "href": "slides/lec_week2.html#propiedades-de-la-varianza",
+    "title": "Conceptos Básicos",
+    "section": "Propiedades de la varianza",
+    "text": "Propiedades de la varianza\nSea \\(a\\) y \\(b\\) constantes, \\(X\\) una variable aleatoria, entonces se cumple:\n\n\\(\\mathbb{V}(a)=0\\)\n\\(\\mathbb{V}(X)=\\sigma^2=\\) constante\n\\(\\mathbb{V}(aX)=a^2 \\mathbb{V}(X)\\)\n\\(\\mathbb{V}(aX+b)=\\mathbb{V}(aX)+\\mathbb{V}(b)=a^2\\mathbb{V}(X)+0=a^2\\mathbb{V}(X)\\)\n\\(\\mathbb{V}(X)=\\mathbb{E}(X^2)-(\\mathbb{E}(X))^2\\)"
+  },
+  {
+    "objectID": "slides/lec_week2.html#distribución-binomial",
+    "href": "slides/lec_week2.html#distribución-binomial",
+    "title": "Conceptos Básicos",
+    "section": "Distribución binomial",
+    "text": "Distribución binomial\nSea \\(X\\) una variable aleatoria que representa el número de éxitos en \\(n\\) ensayos y \\(p\\) la probabilidad de éxito con cualquiera de éstos. Se dice entonces que \\(X\\) tiene una distribución binomial con función de probabilidad:\n\\[\\mathbb{P}(X=k)= {{n}\\choose{k}}p^k(1-p)^{n-k} \\hspace{20pt} k=1,2,\\cdots,n\\]\nEn donde $ {{n}}$ es el coeficiente binomial, esto es:\n\\[{{n}\\choose{k}}=\\dfrac{n!}{k!(n-k)!}\\]\nSi \\(n=1\\) diremos que \\(X\\) sigue una distribución Bernoulli."
+  },
+  {
+    "objectID": "slides/lec_week2.html#propiedades-de-la-distribución-binomial",
+    "href": "slides/lec_week2.html#propiedades-de-la-distribución-binomial",
+    "title": "Conceptos Básicos",
+    "section": "Propiedades de la distribución binomial",
+    "text": "Propiedades de la distribución binomial\nSi \\(X\\) tiene una distribución binomial, entonces se cumple que:\n\n\\(\\mathbb{E}[X]=np\\)\n\\(\\mathbb{V}[X]=np(1-p)\\)\n\n\nEs claro ver que si \\(X\\) tiene una distribución bernoulli, entonces:\n\n\\(\\mathbb{E}[X]=p\\)\n\\(\\mathbb{V}[X]=p(1-p)\\)"
+  },
+  {
+    "objectID": "slides/lec_week2.html#distribución-binomial-en-r-y-python",
+    "href": "slides/lec_week2.html#distribución-binomial-en-r-y-python",
+    "title": "Conceptos Básicos",
+    "section": "Distribución binomial en R y Python",
+    "text": "Distribución binomial en R y Python\n\n\n\nIND 163 - Semana 2"
   }
 ]
