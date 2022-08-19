@@ -144,7 +144,7 @@
     "href": "slides/lec_week2.html#distribución-binomial",
     "title": "Conceptos Básicos",
     "section": "Distribución binomial",
-    "text": "Distribución binomial\nSea \\(X\\) una variable aleatoria que representa el número de éxitos en \\(n\\) ensayos y \\(p\\) la probabilidad de éxito con cualquiera de éstos. Se dice entonces que \\(X\\) tiene una distribución binomial con función de probabilidad:\n\\[\\mathbb{P}(X=k)= {{n}\\choose{k}}p^k(1-p)^{n-k} \\hspace{20pt} k=1,2,\\cdots,n\\]\nEn donde $ {{n}}$ es el coeficiente binomial, esto es:\n\\[{{n}\\choose{k}}=\\dfrac{n!}{k!(n-k)!}\\]\nSi \\(n=1\\) diremos que \\(X\\) sigue una distribución Bernoulli."
+    "text": "Distribución binomial\nSea \\(X\\) una variable aleatoria que representa el número de éxitos en \\(n\\) ensayos y \\(p\\) la probabilidad de éxito con cualquiera de éstos. Se dice entonces que \\(X\\) tiene una distribución binomial con función de probabilidad:\n\\[\\mathbb{P}(X=k)= {{n}\\choose{k}}p^k(1-p)^{n-k} \\hspace{20pt} k=1,2,\\cdots,n\\]\nEn donde \\({{n}\\choose{k}}\\) es el coeficiente binomial, esto es:\n\\[{{n}\\choose{k}}=\\dfrac{n!}{k!(n-k)!}\\]\nSi \\(n=1\\) diremos que \\(X\\) sigue una distribución Bernoulli."
   },
   {
     "objectID": "slides/lec_week2.html#propiedades-de-la-distribución-binomial",
@@ -159,5 +159,68 @@
     "title": "Conceptos Básicos",
     "section": "Distribución binomial en R y Python",
     "text": "Distribución binomial en R y Python\n\n\n\nIND 163 - Semana 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "IND163C - Análisis de Negocios (Business Analytics)",
+    "section": "",
+    "text": "En este curso se estudian los fundamentos del análisis de información a través del desarrollo de aplicaciones Cloud (nube) mediante lenguajes de programación, vinculando áreas técnicas especializadas en Analytics con otras áreas de la organización, agregando valor al proceso de diagnóstico y toma de decisiones en tiempo real.\nA lo largo del curso se evalúan el uso de Analytics midiendo el impacto de esta herramienta a nivel individual y social, decidiendo de forma ética y socialmente responsable respecto del uso de la información"
+  },
+  {
+    "objectID": "index.html#softwares",
+    "href": "index.html#softwares",
+    "title": "IND163C - Análisis de Negocios (Business Analytics)",
+    "section": "Softwares",
+    "text": "Softwares\nPara la mayoría de las aplicaciones utilizaremos R y Python, por lo que se sugiere utilizar un IDE como RStudio o Spyder.\nPara la entrega de informes y talleres que requieran uso de programación, se recomienda el uso de Rmarkdown, Jupyter Notebook o \\(\\LaTeX\\) para la confección de documentos a entregar."
+  },
+  {
+    "objectID": "index.html#bibliografía-principal",
+    "href": "index.html#bibliografía-principal",
+    "title": "IND163C - Análisis de Negocios (Business Analytics)",
+    "section": "Bibliografía principal",
+    "text": "Bibliografía principal\nLa bibliografía principal del curso es:\n\n\n\n\n\n\nData Science For Business: What You Need to Know About Data Mining & Data-Analytic Thinking. Provost F., Fawcett, T.\n\n\n\n\n\n\n\nThink like a Data Scientist: Tackle the data science process step-by-step. Godsey B.\n\n\n\n\n\n\n\nNumsense! Data Science for the Layman: No Math Added. Ng, A, Soo K."
+  },
+  {
+    "objectID": "index.html#bibliografía-secundaria-y-de-profundización",
+    "href": "index.html#bibliografía-secundaria-y-de-profundización",
+    "title": "IND163C - Análisis de Negocios (Business Analytics)",
+    "section": "Bibliografía secundaria y de profundización",
+    "text": "Bibliografía secundaria y de profundización\nLa bibliografía secundaria y de profundización de las distintas temáticas a estudiar del curso es:\n\n\n\n\n\n\nMachine Learning with R Expert techniques for predictive modeling. Lantz, Brett.\n\n\n\n\n\n\n\nAn Introduction to Statistical Learning with Applications in R. James, Gareth, Witten, Daniela, Hastie, Trevor, Tibshirani Robert.\n\n\n\n\n\n\n\nHands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems. Géron, Aurélien."
+  },
+  {
+    "objectID": "slides/lec_week2.html#distribución-binomial-en-r",
+    "href": "slides/lec_week2.html#distribución-binomial-en-r",
+    "title": "Conceptos Básicos",
+    "section": "Distribución binomial en R",
+    "text": "Distribución binomial en R\n\n\n\n\nCódigoSalidas\n\n\n\nset.seed(163)\ndbinom(x = 2, size = 10, prob = 0.3)\nmean(rbinom(n = 10000, size = 10, prob = 0.3) == 2)\npbinom(q = 5, size = 10, p = 0.3, lower.tail = TRUE)\nmean(rbinom(n = 10000, size = 10, prob = 0.3) <= 5)\npbinom(q = 4, size = 10, p = 0.3, lower.tail  = FALSE)\nmean(rbinom(n = 10000, size = 10, prob = 0.3) >= 5)\n\n\n\n\nset.seed(163)\ndbinom(x = 2, size = 10, prob = 0.3)\n\n[1] 0.2334744\n\nmean(rbinom(n = 10000, size = 10, prob = 0.3) == 2)\n\n[1] 0.2417\n\npbinom(q = 5, size = 10, p = 0.3, lower.tail = TRUE)\n\n[1] 0.952651\n\nmean(rbinom(n = 10000, size = 10, prob = 0.3) <= 5)\n\n[1] 0.9529\n\npbinom(q = 4, size = 10, p = 0.3, lower.tail  = FALSE)\n\n[1] 0.1502683\n\nmean(rbinom(n = 10000, size = 10, prob = 0.3) >= 5)\n\n[1] 0.1497"
+  },
+  {
+    "objectID": "slides/lec_week2.html#distribución-binomial-en-python",
+    "href": "slides/lec_week2.html#distribución-binomial-en-python",
+    "title": "Conceptos Básicos",
+    "section": "Distribución binomial en Python",
+    "text": "Distribución binomial en Python\n\nCódigoSalidas\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom scipy.stats import binom\n\nnp.random.seed(163)\nbinom.pmf(2, n=10, p=0.3)\nsum(np.random.binomial(10, 0.3, 10000) == 2)/10000\nbinom.cdf(5, n=10, p=0.3)\nsum(np.random.binomial(10, 0.3, 10000) <= 5)/10000\n1-binom.cdf(4, n=10, p=0.3)\nsum(np.random.binomial(10, 0.3, 10000) >= 5)/10000\n\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom scipy.stats import binom\n\nnp.random.seed(163)\nbinom.pmf(2, n=10, p=0.3)\n\n0.2334744405000001\n\nsum(np.random.binomial(10, 0.3, 10000) == 2)/10000\n\n0.2332\n\nbinom.cdf(5, n=10, p=0.3)\n\n0.9526510126000001\n\nsum(np.random.binomial(10, 0.3, 10000) <= 5)/10000\n\n0.9517\n\n1-binom.cdf(4, n=10, p=0.3)\n\n0.15026833259999994\n\nsum(np.random.binomial(10, 0.3, 10000) >= 5)/10000\n\n0.1478"
+  },
+  {
+    "objectID": "slides/lec_week2.html#distribución-de-poisson",
+    "href": "slides/lec_week2.html#distribución-de-poisson",
+    "title": "Conceptos Básicos",
+    "section": "Distribución de Poisson",
+    "text": "Distribución de Poisson\nSea \\(X\\) una variable aleatoria que representa el número de eventos aleatorios independientes que ocurren a una rapidez constante sobre el tiempo o el espacio. Se dice entonces que la variable aleatoria \\(X\\) tiene una distribución de Poisson con función de probabilidad:\n\\[\\mathbb{P}(X=k)=\\dfrac{e^{-\\lambda}\\lambda^k}{k!} \\hspace{20pt} k=0,1,\\cdots,n,\\cdots\\]\nEn donde \\(\\lambda>0\\) representa el número promedio de ocurrencias del evento aleatorio por unidad de tiempo. Además, si \\(X\\) sigue una distribución de Poisson se cumple que:\n\n\\(\\mathbb{E}[X]=\\lambda\\)\n\\(\\mathbb{V}[X]=\\lambda\\)"
+  },
+  {
+    "objectID": "slides/lec_week2.html#distribución-de-poisson-en-r",
+    "href": "slides/lec_week2.html#distribución-de-poisson-en-r",
+    "title": "Conceptos Básicos",
+    "section": "Distribución de Poisson en R",
+    "text": "Distribución de Poisson en R\n\nCódigoSalidas\n\n\n\nset.seed(163)\ndpois(x = 7, 5)\nmean(rpois(n = 10000, 5) == 7)\nppois(q = 5, 5, lower.tail = TRUE)\nmean(rpois(n = 10000, 5) <= 5)\nppois(q = 4, 5, lower.tail  = FALSE)\nmean(rpois(n = 10000,5) >= 5)\n\n\n\n\nset.seed(163)\ndpois(x = 7, 5)\n\n[1] 0.1044449\n\nmean(rpois(n = 10000, 5) == 7)\n\n[1] 0.1107\n\nppois(q = 5, 5, lower.tail = TRUE)\n\n[1] 0.6159607\n\nmean(rpois(n = 10000, 5) <= 5)\n\n[1] 0.6109\n\nppois(q = 4, 5, lower.tail  = FALSE)\n\n[1] 0.5595067\n\nmean(rpois(n = 10000,5) >= 5)\n\n[1] 0.5542"
+  },
+  {
+    "objectID": "slides/lec_week2.html#distribución-de-poisson-en-python",
+    "href": "slides/lec_week2.html#distribución-de-poisson-en-python",
+    "title": "Conceptos Básicos",
+    "section": "Distribución de Poisson en Python",
+    "text": "Distribución de Poisson en Python\n\nCódigoSalidas\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom scipy.stats import poisson\n\nnp.random.seed(163)\npoisson.pmf(2, n=10, p=0.3)\nsum(np.random.binomial(10, 0.3, 10000) == 2)/10000\nbinom.cdf(5, n=10, p=0.3)\nsum(np.random.binomial(10, 0.3, 10000) <= 5)/10000\n1-binom.cdf(4, n=10, p=0.3)\nsum(np.random.binomial(10, 0.3, 10000) >= 5)/10000\n\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom scipy.stats import poisson\n\nnp.random.seed(163)\npoisson.pmf(7, 5)\n\n0.10444486295705395\n\nsum(np.random.poisson(5, 10000) == 7)/10000\n\n0.1024\n\npoisson.cdf(7, 5)\n\n0.8666283259299925\n\nsum(np.random.poisson(5, 10000) <= 7)/10000\n\n0.8662\n\n1-poisson.cdf(6, 5)\n\n0.2378165370270613\n\nsum(np.random.poisson(5, 10000) >= 7)/10000\n\n0.2369\n\n\n\n\n\n\n\n\nIND 163 - Semana 2"
   }
 ]
