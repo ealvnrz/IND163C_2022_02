@@ -20,7 +20,7 @@ logo: images/logo_usm.png
 transition: fade
 footer: "IND 163 - Semana 2"
 execute:
-  freeze: auto
+  freeze: false
 ---
 
 # Conceptos básicos de probabilidad

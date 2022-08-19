@@ -5,7 +5,7 @@ subtitle: "Bienvenida al curso e Introducción al Analytics"
 
 ## Preparación
 
-Leer el [**programa del curso**](/documents/IND163C_AN.pdf "Programa IND 163C")
+Leer el [programa del curso](/documents/IND163C_AN.pdf "Programa IND 163C")
 
 ## Presentación
 
