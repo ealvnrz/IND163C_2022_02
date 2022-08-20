@@ -21,10 +21,14 @@ A lo largo del curso se evalúan el uso de Analytics midiendo el impacto de esta
 
 Prof. [Eloy Alvarado Narváez](https://ealvnrz.netlify.com/) es candidato a Doctor en estadística en la [Universidad de Valparaíso](https://www.uv.cl/) en el área de estadística espacial, particularmente en el estudio de campos aleatorios y cópulas. Es Licenciado en Estadística de la [Pontificia Universidad Católica de Valparaíso](http://www.pucv.cl). Actualmente, presta servicios de consultoría al [Instituto de Fomento Pesquero](http://www.ifop.cl) en modelamiento espacio-temporal.
 
+Contacto: [ealvaradonarvaez@gmail.com](mailto:ealvaradonarvaez@gmail.com)
+
 # Ayudante
 
 ![](images/nico.jpg){style="float:right;padding: 0 0 0 10px;" fig-alt="NCP" width="200"}
 Nicolás Cárdenas Pantoja es ingeniero civil industrial de la Universidad Técnica Federico Santa María actualmente desarrollándose como ingeniero de investigación para el departamento de industrias de la UTFSM en el área de mantenimiento y gestión de activos con foco en programación e implementación computacional, análisis de riesgo, análisis RAM, modelamiento de sistemas complejos con dependencia estocástica.
+
+Contacto: [nicolas.cardenasp@alumnos.usm.cl](mailto:nicolas.cardenasp@alumnos.usm.cl)
 
 # Pre-requisitos
 
