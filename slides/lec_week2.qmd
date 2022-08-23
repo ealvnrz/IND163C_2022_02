@@ -20,7 +20,7 @@ logo: images/logo_usm.png
 transition: fade
 footer: "IND 163 - Semana 2"
 execute:
-  freeze: false
+  freeze: auto
 ---
 
 # Conceptos básicos de probabilidad
@@ -379,18 +379,17 @@ mean(rpois(n = 10000,5) >= 5)
 
 ### Código
 
-```{.python code-line-numbers="1-3|5|6|7|8|9|10|11"}
+```{.python code-line-numbers="1-2|4|5|6|7|8|9|10"}
 import numpy as np
-import matplotlib.pyplot as plt
 from scipy.stats import poisson
 
 np.random.seed(163)
-poisson.pmf(2, n=10, p=0.3)
-sum(np.random.binomial(10, 0.3, 10000) == 2)/10000
-binom.cdf(5, n=10, p=0.3)
-sum(np.random.binomial(10, 0.3, 10000) <= 5)/10000
-1-binom.cdf(4, n=10, p=0.3)
-sum(np.random.binomial(10, 0.3, 10000) >= 5)/10000
+poisson.pmf(7, 5)
+sum(np.random.poisson(5, 10000) == 7)/10000
+poisson.cdf(7, 5)
+sum(np.random.poisson(5, 10000) <= 7)/10000
+1-poisson.cdf(6, 5)
+sum(np.random.poisson(5, 10000) >= 7)/10000
 ```
 
 ### Salidas
@@ -399,7 +398,6 @@ sum(np.random.binomial(10, 0.3, 10000) >= 5)/10000
 #| echo: TRUE
 #| eval: TRUE
 import numpy as np
-import matplotlib.pyplot as plt
 from scipy.stats import poisson
 
 np.random.seed(163)
@@ -413,4 +411,524 @@ sum(np.random.poisson(5, 10000) >= 7)/10000
 
 :::
 
+## Distribución geométrica
+
+Sea $X$ una variable aleatoria que representa el número de fallas que ocurren antes de que se presente el primer éxito.Se dice entonces que la variable aleatoria $X$ tiene una distribución geométrica con función de probabilidad:
+
+$$\mathbb{P}(X=k)=(1-p)^{k-1}p \quad \quad k=1,2,\cdots$$
+
+En donde $p$ es la probabilidad de éxito. Además, Si $X$ sigue una distribución geométrica, entonces se cumple que:
+
+- $\displaystyle E[X]=\dfrac{1}{p}$
+- $V[X]=\dfrac{(1-p)}{p^2}$
+
+## Distribución geométrica en R
+
+::: {.panel-tabset}
+
+### Código
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+#| code-line-numbers: "1|2-3|4|5|6|7|8|9"
+set.seed(163)
+p = 0.2
+n = 3
+dgeom(x = n, prob = p)
+mean(rgeom(n = 10000, prob = p) == n)
+pgeom(q = n, prob = p, lower.tail = TRUE)
+mean(rgeom(n = 10000, prob = p) <= n)
+pgeom(q = n, prob = p, lower.tail  = FALSE)
+mean(rgeom(n = 10000, prob = p) > n)
+```
+### Salidas
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+set.seed(163)
+p = 0.2
+n = 3
+dgeom(x = n, prob = p)
+mean(rgeom(n = 10000, prob = p) == n)
+pgeom(q = n, prob = p, lower.tail = TRUE)
+mean(rgeom(n = 10000, prob = p) <= n)
+pgeom(q = n, prob = p, lower.tail  = FALSE)
+mean(rgeom(n = 10000, prob = p) > n)
+```
+
+:::
+
+## Distribución geométrica en Python
+
+::: {.panel-tabset}
+
+### Código
+
+```{.python code-line-numbers="1-2|4|5|6|7|8|9|10"}
+import numpy as np
+from scipy.stats import geom
+
+np.random.seed(163)
+geom.pmf(k=3, p=0.2)
+sum(np.random.geometric(0.2, 10000) == 3)/10000
+geom.cdf(k=3, p=0.2)
+sum(np.random.geometric(0.2, 10000) <= 3)/10000
+1-geom.cdf(k=3, p=0.2)
+sum(np.random.geometric(0.2, 10000) > 3)/10000
+```
+
+### Salidas
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+import numpy as np
+from scipy.stats import geom
+
+np.random.seed(163)
+geom.pmf(k=3, p=0.2)
+sum(np.random.geometric(0.2, 10000) == 3)/10000
+geom.cdf(k=3, p=0.2)
+sum(np.random.geometric(0.2, 10000) <= 3)/10000
+1-geom.cdf(k=3, p=0.2)
+sum(np.random.geometric(0.2, 10000) > 3)/10000
+```
+
+:::
+
+## Distribución hipergeométrica
+
+Sea $N$ el número total de objetos de una población finita, de manera tal que $k$ de éstos es de un tipo y $N-k$ de otros. Si se selecciona una muestra aleatoria de la población constituida por $n$ objetos de la probabilidad de que $x$ sea de un tipo exactamente y $n-x$ sea del otro, está dada por la función de probabilidad hipergeométrica:
+
+$$\displaystyle \mathbb{P}(X=x)= \dfrac{{{k}\choose{x}} {{N-k}\choose{n-x}}  }{  {{N}\choose{n}}}\quad \quad x=1,2,\cdots,n \quad; x \leq k\quad ;n-x\leq N-k$$
+Si $X$ sigue una distribución hipergeométrica y si $p=k/N$
+
+- $E[X]=np$
+- $V[X]=np(1-p)\left( \dfrac{N-n}{N-1}\right)$
+
+# Distribuciones continuas
+
+## Distribución normal
+
+Sea $X$ una variable aleatoria que toma valores reales, diremos que $X$ sigue una distribución normal (o Gaussiana) si su función de densidad está por:
+
+$$f_{X}(x)=\dfrac{1}{\sqrt{2\pi}\sigma}\exp\left[ -\dfrac{1}{2}\left(\dfrac{x-\mu}{\sigma}\right) ^2\right],$$
+
+En donde los parámetros de la distribución son $\mu$ y $\sigma$ satisfacen las condiciones:
+
+$$-\infty<\mu<\infty, \quad \sigma^2>0$$
+
+## Distribución normal en R
+
+::: {.panel-tabset}
+
+### Código
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+#| code-line-numbers: "1|2-3|5|6|7|8|9"
+set.seed(163)
+media=100
+ds=16
+
+pnorm(q = 90, mean = media, sd = ds, lower.tail = TRUE)
+mean(rnorm(n = 10000, mean = media, sd = ds) <= 90)
+pnorm(q = 140, mean = media, sd = ds, lower.tail = FALSE)
+mean(rnorm(n = 10000, mean = media, sd = ds) > 140)
+```
+### Salidas
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+set.seed(163)
+media=100
+ds=16
+
+pnorm(q = 90, mean = media, sd = ds, lower.tail = TRUE)
+mean(rnorm(n = 10000, mean = media, sd = ds) <= 90)
+pnorm(q = 140, mean = media, sd = ds, lower.tail = FALSE)
+mean(rnorm(n = 10000, mean = media, sd = ds) > 140)
+```
+
+:::
+
+## Distribución normal en Python
+
+::: {.panel-tabset}
+
+### Código
+
+```{.python code-line-numbers="1-2|4|5|6|7|8|9"}
+import numpy as np
+from scipy.stats import norm
+
+np.random.seed(163)
+mu, sigma = 100, 16
+norm.cdf(90, mu , sigma)
+sum(np.random.normal(mu, sigma, 10000) <= 90)/10000
+1-norm.cdf(140, mu , sigma)
+sum(np.random.normal(mu, sigma, 10000) > 140)/10000
+```
+
+### Salidas
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+import numpy as np
+from scipy.stats import norm
+
+np.random.seed(163)
+mu, sigma = 100, 16
+norm.cdf(90, mu , sigma)
+sum(np.random.normal(mu, sigma, 10000) <= 90)/10000
+1-norm.cdf(140, mu , sigma)
+sum(np.random.normal(mu, sigma, 10000) > 140)/10000
+```
+
+:::
+
+## Distribución uniforme
+
+Sea $X$ una variable aleatoria continua, diremos que $X$ sigue una distribución uniforme sobre el intervalo $(a,b)$ si su función de densidad de probabilidad está dada por:
+
+$$f_{X}(x)=\begin{cases}1/(b-a) \quad &a\leq x \leq b\\0 \quad &e.o.c\end{cases}$$
+
+Los parámetros de la distribución cumplen las condiciones:
+
+$$-\infty<a<\infty,\quad -\infty<b<\infty$$
+
+- $E[X]=\dfrac{(a+b)}{2}$    
+- $V[X]=\dfrac{(b-a)^2}{12}$ 
+
+## Distribución uniforme en R
+
+::: {.panel-tabset}
+
+### Código
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+#| code-line-numbers: "1|3|4|5|6"
+set.seed(163)
+
+punif(0.3, 0 , 1 , lower.tail = TRUE)
+mean(runif(n = 10000, 0, 1) <= 0.3)
+punif(0.3, 0 , 1 , lower.tail = FALSE)
+mean(runif(n = 10000, 0, 1) > 0.3)
+```
+### Salidas
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+set.seed(163)
+
+punif(0.3, 0 , 1 , lower.tail = TRUE)
+mean(runif(n = 10000, 0, 1) <= 0.3)
+punif(0.3, 0 , 1 , lower.tail = FALSE)
+mean(runif(n = 10000, 0, 1) > 0.3)
+```
+
+:::
+
+## Distribución uniforme en Python
+
+::: {.panel-tabset}
+
+### Código
+
+```{.python code-line-numbers="1-2|4|5|6|7|8"}
+import numpy as np
+from scipy.stats import uniform
+
+np.random.seed(163)
+uniform.cdf(0.3, 0 , 1)
+sum(np.random.uniform(0, 1, 10000) <= 0.3)/10000
+1-uniform.cdf(0.3, 0 , 1)
+sum(np.random.uniform(0, 1, 10000) > 0.3)/10000
+```
+
+### Salidas
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+import numpy as np
+from scipy.stats import uniform
+
+np.random.seed(163)
+uniform.cdf(0.3, 0 , 1)
+sum(np.random.uniform(0, 1, 10000) <= 0.3)/10000
+1-uniform.cdf(0.3, 0 , 1)
+sum(np.random.uniform(0, 1, 10000) > 0.3)/10000
+```
+
+:::
+
+## Distribución exponencial
+
+Sea $X$ una variable aleatoria continua que toma valores positivos, diremos que $X$ sigue una distribución exponencial con parámetro $\alpha>0$ si su función de densidad está dada por:
+
+$$f_{X}(x)=\begin{cases}\alpha e^{-\alpha x} \quad &x\geq 0 \\0 \quad &e.o.c\end{cases}$$
+Además se cumple que:
+
+- $E[X]=\dfrac{1}{\alpha}$     
+- $V[X]=\dfrac{1}{\alpha^2}$  
+
+## Distribución exponencial en R
+
+::: {.panel-tabset}
+
+### Código
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+#| code-line-numbers: "1|3|4|5|6"
+set.seed(163)
+
+pexp(2, 0.4, lower.tail = TRUE)
+mean(rexp(0.4, n = 10000) <= 2)
+pexp(2, 0.4, lower.tail = FALSE)
+mean(rexp(0.4, n = 10000) > 2)
+```
+### Salidas
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+set.seed(163)
+
+pexp(2, 0.4, lower.tail = TRUE)
+mean(rexp(0.4, n = 10000) <= 2)
+pexp(2, 0.4, lower.tail = FALSE)
+mean(rexp(0.4, n = 10000) > 2)
+```
+
+:::
+
+## Distribución exponencial en Python 
+
+::: {.panel-tabset}
+
+### Código
+
+```{.python code-line-numbers="1-2|4|5|6|7|8"}
+import numpy as np
+from scipy.stats import expon
+
+np.random.seed(163)
+expon.cdf(2, scale=1/0.4)
+sum(np.random.exponential(1/0.4, 10000) <= 2)/10000
+1-expon.cdf(2, scale=1/0.4)
+sum(np.random.exponential(1/0.4, 10000) > 2)/10000
+```
+
+### Salidas
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+import numpy as np
+from scipy.stats import expon
+
+np.random.seed(163)
+expon.cdf(2, scale=1/0.4)
+sum(np.random.exponential(1/0.4, 10000) <= 2)/10000
+1-expon.cdf(2, scale=1/0.4)
+sum(np.random.exponential(1/0.4, 10000) > 2)/10000
+```
+
+:::
+
+## Función gamma
+
+La **función gamma** denotada por $\Gamma$ está definida por:
+
+$$\Gamma(p)=\int_{0}^{\infty} x^{p-1} e^{-x}dx \hspace{20pt} p>0$$
+
+Esta función cumple las siguientes propiedades:
+
+- $\Gamma(n)=(n-1)!$       
+- $\Gamma(1/2)=\sqrt{\pi}$ 
+
+## Distribución gamma
+
+Sea $X$ una variable aleatoria continua que toma valores positivos. Diremos que $X$ sigue una distribución Gamma si su función de densidad está dada por:
+
+$$f_{X}(x)=\begin{cases}\dfrac{\alpha}{\Gamma(r)}(\alpha x)^{r-1}e^{-\alpha x} \quad &x>0\\0 \quad &e.o.c,\end{cases}$$
+En donde los parámetros $r$ y $\alpha$ son positivos.
+
+Es claro ver que un caso particular de la distribución Gamma es la distribución exponencial ($r=1$). Si $X$ se distribuye Gamma entonces se cumple:
+
+- $E[X]=r/\alpha$   
+- $V[X]=r/\alpha^2$ 
+
+## Distribución gamma en R
+
+::: {.panel-tabset}
+
+### Código
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+#| code-line-numbers: "1|3|4|5|6"
+set.seed(163)
+
+pgamma(q = 3, shape = 10, scale = 1/4)
+mean(rgamma(shape=10, scale= 1/4, n = 10000) <= 3)
+pgamma(q = 3, shape = 10, scale = 1/4, lower.tail = FALSE)
+mean(rgamma(shape=10, scale= 1/4, n = 10000) > 3)
+```
+### Salidas
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+set.seed(163)
+
+pgamma(q = 3, shape = 10, scale = 1/4)
+mean(rgamma(shape=10, scale= 1/4, n = 10000) <= 3)
+pgamma(q = 3, shape = 10, scale = 1/4, lower.tail = FALSE)
+mean(rgamma(shape=10, scale= 1/4, n = 10000) > 3)
+```
+
+:::
+
+## Distribución gamma en Python
+
+::: {.panel-tabset}
+
+### Código
+
+```{.python code-line-numbers="1-2|4|5|6|7|8"}
+import numpy as np
+from scipy.stats import gamma
+
+np.random.seed(163)
+gamma.cdf(3, a=10, scale=0.25)
+sum(np.random.gamma(10,0.25, 10000) <= 3)/10000
+1-gamma.cdf(3, a=10, scale=0.25)
+sum(np.random.gamma(10,0.25, 10000) > 3)/10000
+```
+
+### Salidas
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+import numpy as np
+from scipy.stats import gamma
+
+np.random.seed(163)
+gamma.cdf(3, a=10, scale=0.25)
+sum(np.random.gamma(10,0.25, 10000) <= 3)/10000
+1-gamma.cdf(3, a=10, scale=0.25)
+sum(np.random.gamma(10,0.25, 10000) > 3)/10000
+```
+
+:::
+
+## Distribución t-student
+
+Sea $X$ una variable aleatoria continua que toma valores reales, diremos que $X$ sigue una distribución t-student con $\nu$ grados de libertad, si su función de densidad de probabilidad está dada por:
+
+$$f(t) = \dfrac{\Gamma(\dfrac{\nu+1}{2})} {\sqrt{\nu\pi}\,\Gamma(\dfrac{\nu}{2})} \left(1+\dfrac{t^2}{\nu} \right)^{\!-\dfrac{\nu+1}{2}},$$
+donde $\Gamma$ es la función gamma. Si $X$ se distribuye t-student entonces:
+
+- $\mathbb{E}[X]=0$ para $\nu>1$. Indefinida para otros valores.                   
+- $\mathbb{V}[X]=\dfrac{\nu}{\nu -2}$ para $\nu>2$. Indefinida para otros valores. 
+
+## Distribución t-student en R
+
+::: {.panel-tabset}
+
+### Código
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+#| code-line-numbers: "1|3|4|5|6"
+set.seed(163)
+
+pt(q=1.9, df=15, lower.tail = T)
+mean(rt(15, n = 10000) <= 1.9)
+pt(q=1.9, df=15, lower.tail = F)
+mean(rt(15, n = 10000) > 1.9)
+```
+### Salidas
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+set.seed(163)
+
+pt(q=1.9, df=15, lower.tail = T)
+mean(rt(15, n = 10000) <= 1.9)
+pt(q=1.9, df=15, lower.tail = F)
+mean(rt(15, n = 10000) > 1.9)
+```
+
+:::
+
+## Distribución t-student en Python
+
+::: {.panel-tabset}
+
+### Código
+
+```{.python code-line-numbers="1-2|4|5|6|7|8"}
+import numpy as np
+from scipy.stats import gamma
+
+np.random.seed(163)
+gamma.cdf(3, a=10, scale=0.25)
+sum(np.random.gamma(10,0.25, 10000) <= 3)/10000
+1-gamma.cdf(3, a=10, scale=0.25)
+sum(np.random.gamma(10,0.25, 10000) > 3)/10000
+```
+
+### Salidas
+
+```{python}
+#| echo: TRUE
+#| eval: TRUE
+import numpy as np
+from scipy.stats import t
+
+np.random.seed(163)
+t.cdf(1.9, 15)
+sum(np.random.standard_t(15, 10000) <= 1.9)/10000
+1-t.cdf(1.9, 15)
+sum(np.random.standard_t(15, 10000) > 1.9)/10000
+```
+
+:::
+
+# Teorema del límite central
+
+Sean $X_1,X_2,\dots,X_n$, $n$ variables aleatorias i.i.d. con una distribución de probabilidad no especificada y que tienen una media $\mu$ y varianza $\sigma^2$ finita. El promedio muestral 
+
+$$\overline{X}=(X_1+X_2+\cdots+X_n)/n$$
+tiene una distribución con media $\mu$ y varianza $\sigma^2/n$ que tiende hacia una distribución normal conforme $n\rightarrow\infty$. 
+
+En otras palabras, la variable aleatoria $(\overline{X}-\mu)/(\sigma/\sqrt{n})$ tiene como límite una distribución normal estándar.
+
+# ¿Qué veremos la próxima semana?
+
+- Intervalos de confianza
+- Test de hipótesis
+- Implementación de estos en R y Python
+
+# ¿Que deben preparar para la próxima semana?
+
+- Leer el material adicional sobre R y Python
+- Repasar materia MAT042 sobre Intervalos de confianza y test de hipótesis
 

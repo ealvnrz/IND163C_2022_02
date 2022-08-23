@@ -783,26 +783,24 @@
 <ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Código</a></li><li><a href="#tabset-4-2">Salidas</a></li></ul>
 <div class="tab-content">
 <div id="tabset-4-1">
-<div class="sourceCode" id="cb40" data-code-line-numbers="1-3|5|6|7|8|9|10|11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb40-2"><a href="#cb40-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb40-3"><a href="#cb40-3"></a><span class="im">from</span> scipy.stats <span class="im">import</span> poisson</span>
-<span id="cb40-4"><a href="#cb40-4"></a></span>
-<span id="cb40-5"><a href="#cb40-5"></a>np.random.seed(<span class="dv">163</span>)</span>
-<span id="cb40-6"><a href="#cb40-6"></a>poisson.pmf(<span class="dv">2</span>, n<span class="op">=</span><span class="dv">10</span>, p<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb40-7"><a href="#cb40-7"></a><span class="bu">sum</span>(np.random.binomial(<span class="dv">10</span>, <span class="fl">0.3</span>, <span class="dv">10000</span>) <span class="op">==</span> <span class="dv">2</span>)<span class="op">/</span><span class="dv">10000</span></span>
-<span id="cb40-8"><a href="#cb40-8"></a>binom.cdf(<span class="dv">5</span>, n<span class="op">=</span><span class="dv">10</span>, p<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb40-9"><a href="#cb40-9"></a><span class="bu">sum</span>(np.random.binomial(<span class="dv">10</span>, <span class="fl">0.3</span>, <span class="dv">10000</span>) <span class="op">&lt;=</span> <span class="dv">5</span>)<span class="op">/</span><span class="dv">10000</span></span>
-<span id="cb40-10"><a href="#cb40-10"></a><span class="dv">1</span><span class="op">-</span>binom.cdf(<span class="dv">4</span>, n<span class="op">=</span><span class="dv">10</span>, p<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb40-11"><a href="#cb40-11"></a><span class="bu">sum</span>(np.random.binomial(<span class="dv">10</span>, <span class="fl">0.3</span>, <span class="dv">10000</span>) <span class="op">&gt;=</span> <span class="dv">5</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb40" data-code-line-numbers="1-2|4|5|6|7|8|9|10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb40-2"><a href="#cb40-2"></a><span class="im">from</span> scipy.stats <span class="im">import</span> poisson</span>
+<span id="cb40-3"><a href="#cb40-3"></a></span>
+<span id="cb40-4"><a href="#cb40-4"></a>np.random.seed(<span class="dv">163</span>)</span>
+<span id="cb40-5"><a href="#cb40-5"></a>poisson.pmf(<span class="dv">7</span>, <span class="dv">5</span>)</span>
+<span id="cb40-6"><a href="#cb40-6"></a><span class="bu">sum</span>(np.random.poisson(<span class="dv">5</span>, <span class="dv">10000</span>) <span class="op">==</span> <span class="dv">7</span>)<span class="op">/</span><span class="dv">10000</span></span>
+<span id="cb40-7"><a href="#cb40-7"></a>poisson.cdf(<span class="dv">7</span>, <span class="dv">5</span>)</span>
+<span id="cb40-8"><a href="#cb40-8"></a><span class="bu">sum</span>(np.random.poisson(<span class="dv">5</span>, <span class="dv">10000</span>) <span class="op">&lt;=</span> <span class="dv">7</span>)<span class="op">/</span><span class="dv">10000</span></span>
+<span id="cb40-9"><a href="#cb40-9"></a><span class="dv">1</span><span class="op">-</span>poisson.cdf(<span class="dv">6</span>, <span class="dv">5</span>)</span>
+<span id="cb40-10"><a href="#cb40-10"></a><span class="bu">sum</span>(np.random.poisson(<span class="dv">5</span>, <span class="dv">10000</span>) <span class="op">&gt;=</span> <span class="dv">7</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-4-2">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb41-2"><a href="#cb41-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb41-3"><a href="#cb41-3"></a><span class="im">from</span> scipy.stats <span class="im">import</span> poisson</span>
-<span id="cb41-4"><a href="#cb41-4"></a></span>
-<span id="cb41-5"><a href="#cb41-5"></a>np.random.seed(<span class="dv">163</span>)</span>
-<span id="cb41-6"><a href="#cb41-6"></a>poisson.pmf(<span class="dv">7</span>, <span class="dv">5</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb41-2"><a href="#cb41-2"></a><span class="im">from</span> scipy.stats <span class="im">import</span> poisson</span>
+<span id="cb41-3"><a href="#cb41-3"></a></span>
+<span id="cb41-4"><a href="#cb41-4"></a>np.random.seed(<span class="dv">163</span>)</span>
+<span id="cb41-5"><a href="#cb41-5"></a>poisson.pmf(<span class="dv">7</span>, <span class="dv">5</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0.10444486295705395</code></pre>
 </div>
@@ -830,12 +828,645 @@
 </div>
 </div>
 </div>
+</section>
+<section id="distribución-geométrica" class="slide level2">
+<h2>Distribución geométrica</h2>
+<p>Sea <span class="math inline">\(X\)</span> una variable aleatoria que representa el número de fallas que ocurren antes de que se presente el primer éxito.Se dice entonces que la variable aleatoria <span class="math inline">\(X\)</span> tiene una distribución geométrica con función de probabilidad:</p>
+<p><span class="math display">\[\mathbb{P}(X=k)=(1-p)^{k-1}p \quad \quad k=1,2,\cdots\]</span></p>
+<p>En donde <span class="math inline">\(p\)</span> es la probabilidad de éxito. Además, Si <span class="math inline">\(X\)</span> sigue una distribución geométrica, entonces se cumple que:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(\displaystyle E[X]=\dfrac{1}{p}\)</span></li>
+<li class="fragment"><span class="math inline">\(V[X]=\dfrac{(1-p)}{p^2}\)</span></li>
+</ul>
+</section>
+<section id="distribución-geométrica-en-r" class="slide level2">
+<h2>Distribución geométrica en R</h2>
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">Código</a></li><li><a href="#tabset-5-2">Salidas</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53" data-code-line-numbers="1|2-3|4|5|6|7|8|9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="fu">set.seed</span>(<span class="dv">163</span>)</span>
+<span id="cb53-2"><a href="#cb53-2"></a>p <span class="ot">=</span> <span class="fl">0.2</span></span>
+<span id="cb53-3"><a href="#cb53-3"></a>n <span class="ot">=</span> <span class="dv">3</span></span>
+<span id="cb53-4"><a href="#cb53-4"></a><span class="fu">dgeom</span>(<span class="at">x =</span> n, <span class="at">prob =</span> p)</span>
+<span id="cb53-5"><a href="#cb53-5"></a><span class="fu">mean</span>(<span class="fu">rgeom</span>(<span class="at">n =</span> <span class="dv">10000</span>, <span class="at">prob =</span> p) <span class="sc">==</span> n)</span>
+<span id="cb53-6"><a href="#cb53-6"></a><span class="fu">pgeom</span>(<span class="at">q =</span> n, <span class="at">prob =</span> p, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb53-7"><a href="#cb53-7"></a><span class="fu">mean</span>(<span class="fu">rgeom</span>(<span class="at">n =</span> <span class="dv">10000</span>, <span class="at">prob =</span> p) <span class="sc">&lt;=</span> n)</span>
+<span id="cb53-8"><a href="#cb53-8"></a><span class="fu">pgeom</span>(<span class="at">q =</span> n, <span class="at">prob =</span> p, <span class="at">lower.tail  =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb53-9"><a href="#cb53-9"></a><span class="fu">mean</span>(<span class="fu">rgeom</span>(<span class="at">n =</span> <span class="dv">10000</span>, <span class="at">prob =</span> p) <span class="sc">&gt;</span> n)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-5-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a><span class="fu">set.seed</span>(<span class="dv">163</span>)</span>
+<span id="cb54-2"><a href="#cb54-2"></a>p <span class="ot">=</span> <span class="fl">0.2</span></span>
+<span id="cb54-3"><a href="#cb54-3"></a>n <span class="ot">=</span> <span class="dv">3</span></span>
+<span id="cb54-4"><a href="#cb54-4"></a><span class="fu">dgeom</span>(<span class="at">x =</span> n, <span class="at">prob =</span> p)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1024</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a><span class="fu">mean</span>(<span class="fu">rgeom</span>(<span class="at">n =</span> <span class="dv">10000</span>, <span class="at">prob =</span> p) <span class="sc">==</span> n)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1028</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a><span class="fu">pgeom</span>(<span class="at">q =</span> n, <span class="at">prob =</span> p, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5904</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1"></a><span class="fu">mean</span>(<span class="fu">rgeom</span>(<span class="at">n =</span> <span class="dv">10000</span>, <span class="at">prob =</span> p) <span class="sc">&lt;=</span> n)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5905</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1"></a><span class="fu">pgeom</span>(<span class="at">q =</span> n, <span class="at">prob =</span> p, <span class="at">lower.tail  =</span> <span class="cn">FALSE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.4096</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1"></a><span class="fu">mean</span>(<span class="fu">rgeom</span>(<span class="at">n =</span> <span class="dv">10000</span>, <span class="at">prob =</span> p) <span class="sc">&gt;</span> n)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.4011</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="distribución-geométrica-en-python" class="slide level2">
+<h2>Distribución geométrica en Python</h2>
+<div class="panel-tabset">
+<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">Código</a></li><li><a href="#tabset-6-2">Salidas</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1">
+<div class="sourceCode" id="cb66" data-code-line-numbers="1-2|4|5|6|7|8|9|10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb66-2"><a href="#cb66-2"></a><span class="im">from</span> scipy.stats <span class="im">import</span> geom</span>
+<span id="cb66-3"><a href="#cb66-3"></a></span>
+<span id="cb66-4"><a href="#cb66-4"></a>np.random.seed(<span class="dv">163</span>)</span>
+<span id="cb66-5"><a href="#cb66-5"></a>geom.pmf(k<span class="op">=</span><span class="dv">3</span>, p<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb66-6"><a href="#cb66-6"></a><span class="bu">sum</span>(np.random.geometric(<span class="fl">0.2</span>, <span class="dv">10000</span>) <span class="op">==</span> <span class="dv">3</span>)<span class="op">/</span><span class="dv">10000</span></span>
+<span id="cb66-7"><a href="#cb66-7"></a>geom.cdf(k<span class="op">=</span><span class="dv">3</span>, p<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb66-8"><a href="#cb66-8"></a><span class="bu">sum</span>(np.random.geometric(<span class="fl">0.2</span>, <span class="dv">10000</span>) <span class="op">&lt;=</span> <span class="dv">3</span>)<span class="op">/</span><span class="dv">10000</span></span>
+<span id="cb66-9"><a href="#cb66-9"></a><span class="dv">1</span><span class="op">-</span>geom.cdf(k<span class="op">=</span><span class="dv">3</span>, p<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb66-10"><a href="#cb66-10"></a><span class="bu">sum</span>(np.random.geometric(<span class="fl">0.2</span>, <span class="dv">10000</span>) <span class="op">&gt;</span> <span class="dv">3</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-6-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb67-2"><a href="#cb67-2"></a><span class="im">from</span> scipy.stats <span class="im">import</span> geom</span>
+<span id="cb67-3"><a href="#cb67-3"></a></span>
+<span id="cb67-4"><a href="#cb67-4"></a>np.random.seed(<span class="dv">163</span>)</span>
+<span id="cb67-5"><a href="#cb67-5"></a>geom.pmf(k<span class="op">=</span><span class="dv">3</span>, p<span class="op">=</span><span class="fl">0.2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.12800000000000003</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1"></a><span class="bu">sum</span>(np.random.geometric(<span class="fl">0.2</span>, <span class="dv">10000</span>) <span class="op">==</span> <span class="dv">3</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.1291</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1"></a>geom.cdf(k<span class="op">=</span><span class="dv">3</span>, p<span class="op">=</span><span class="fl">0.2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.488</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1"></a><span class="bu">sum</span>(np.random.geometric(<span class="fl">0.2</span>, <span class="dv">10000</span>) <span class="op">&lt;=</span> <span class="dv">3</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.4938</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1"></a><span class="dv">1</span><span class="op">-</span>geom.cdf(k<span class="op">=</span><span class="dv">3</span>, p<span class="op">=</span><span class="fl">0.2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.512</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1"></a><span class="bu">sum</span>(np.random.geometric(<span class="fl">0.2</span>, <span class="dv">10000</span>) <span class="op">&gt;</span> <span class="dv">3</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.5113</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="distribución-hipergeométrica" class="slide level2">
+<h2>Distribución hipergeométrica</h2>
+<p>Sea <span class="math inline">\(N\)</span> el número total de objetos de una población finita, de manera tal que <span class="math inline">\(k\)</span> de éstos es de un tipo y <span class="math inline">\(N-k\)</span> de otros. Si se selecciona una muestra aleatoria de la población constituida por <span class="math inline">\(n\)</span> objetos de la probabilidad de que <span class="math inline">\(x\)</span> sea de un tipo exactamente y <span class="math inline">\(n-x\)</span> sea del otro, está dada por la función de probabilidad hipergeométrica:</p>
+<p><span class="math display">\[\displaystyle \mathbb{P}(X=x)= \dfrac{{{k}\choose{x}} {{N-k}\choose{n-x}}  }{  {{N}\choose{n}}}\quad \quad x=1,2,\cdots,n \quad; x \leq k\quad ;n-x\leq N-k\]</span></p>
+<p>Si <span class="math inline">\(X\)</span> sigue una distribución hipergeométrica y si <span class="math inline">\(p=k/N\)</span></p>
+<ul>
+<li class="fragment"><span class="math inline">\(E[X]=np\)</span></li>
+<li class="fragment"><span class="math inline">\(V[X]=np(1-p)\left( \dfrac{N-n}{N-1}\right)\)</span></li>
+</ul>
+</section></section>
+<section>
+<section id="distribuciones-continuas" class="title-slide slide level1 center">
+<h1>Distribuciones continuas</h1>
+
+</section>
+<section id="distribución-normal" class="slide level2">
+<h2>Distribución normal</h2>
+<p>Sea <span class="math inline">\(X\)</span> una variable aleatoria que toma valores reales, diremos que <span class="math inline">\(X\)</span> sigue una distribución normal (o Gaussiana) si su función de densidad está por:</p>
+<p><span class="math display">\[f_{X}(x)=\dfrac{1}{\sqrt{2\pi}\sigma}\exp\left[ -\dfrac{1}{2}\left(\dfrac{x-\mu}{\sigma}\right) ^2\right],\]</span></p>
+<p>En donde los parámetros de la distribución son <span class="math inline">\(\mu\)</span> y <span class="math inline">\(\sigma\)</span> satisfacen las condiciones:</p>
+<p><span class="math display">\[-\infty&lt;\mu&lt;\infty, \quad \sigma^2&gt;0\]</span></p>
+</section>
+<section id="distribución-normal-en-r" class="slide level2">
+<h2>Distribución normal en R</h2>
+<div class="panel-tabset">
+<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">Código</a></li><li><a href="#tabset-7-2">Salidas</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb79" data-code-line-numbers="1|2-3|5|6|7|8|9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1"></a><span class="fu">set.seed</span>(<span class="dv">163</span>)</span>
+<span id="cb79-2"><a href="#cb79-2"></a>media<span class="ot">=</span><span class="dv">100</span></span>
+<span id="cb79-3"><a href="#cb79-3"></a>ds<span class="ot">=</span><span class="dv">16</span></span>
+<span id="cb79-4"><a href="#cb79-4"></a></span>
+<span id="cb79-5"><a href="#cb79-5"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">90</span>, <span class="at">mean =</span> media, <span class="at">sd =</span> ds, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb79-6"><a href="#cb79-6"></a><span class="fu">mean</span>(<span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">10000</span>, <span class="at">mean =</span> media, <span class="at">sd =</span> ds) <span class="sc">&lt;=</span> <span class="dv">90</span>)</span>
+<span id="cb79-7"><a href="#cb79-7"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">140</span>, <span class="at">mean =</span> media, <span class="at">sd =</span> ds, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb79-8"><a href="#cb79-8"></a><span class="fu">mean</span>(<span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">10000</span>, <span class="at">mean =</span> media, <span class="at">sd =</span> ds) <span class="sc">&gt;</span> <span class="dv">140</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-7-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1"></a><span class="fu">set.seed</span>(<span class="dv">163</span>)</span>
+<span id="cb80-2"><a href="#cb80-2"></a>media<span class="ot">=</span><span class="dv">100</span></span>
+<span id="cb80-3"><a href="#cb80-3"></a>ds<span class="ot">=</span><span class="dv">16</span></span>
+<span id="cb80-4"><a href="#cb80-4"></a></span>
+<span id="cb80-5"><a href="#cb80-5"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">90</span>, <span class="at">mean =</span> media, <span class="at">sd =</span> ds, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2659855</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1"></a><span class="fu">mean</span>(<span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">10000</span>, <span class="at">mean =</span> media, <span class="at">sd =</span> ds) <span class="sc">&lt;=</span> <span class="dv">90</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2592</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">140</span>, <span class="at">mean =</span> media, <span class="at">sd =</span> ds, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.006209665</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1"></a><span class="fu">mean</span>(<span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">10000</span>, <span class="at">mean =</span> media, <span class="at">sd =</span> ds) <span class="sc">&gt;</span> <span class="dv">140</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.005</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="distribución-normal-en-python" class="slide level2">
+<h2>Distribución normal en Python</h2>
+<div class="panel-tabset">
+<ul id="tabset-8" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-8-1">Código</a></li><li><a href="#tabset-8-2">Salidas</a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1">
+<div class="sourceCode" id="cb88" data-code-line-numbers="1-2|4|5|6|7|8|9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb88-2"><a href="#cb88-2"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
+<span id="cb88-3"><a href="#cb88-3"></a></span>
+<span id="cb88-4"><a href="#cb88-4"></a>np.random.seed(<span class="dv">163</span>)</span>
+<span id="cb88-5"><a href="#cb88-5"></a>mu, sigma <span class="op">=</span> <span class="dv">100</span>, <span class="dv">16</span></span>
+<span id="cb88-6"><a href="#cb88-6"></a>norm.cdf(<span class="dv">90</span>, mu , sigma)</span>
+<span id="cb88-7"><a href="#cb88-7"></a><span class="bu">sum</span>(np.random.normal(mu, sigma, <span class="dv">10000</span>) <span class="op">&lt;=</span> <span class="dv">90</span>)<span class="op">/</span><span class="dv">10000</span></span>
+<span id="cb88-8"><a href="#cb88-8"></a><span class="dv">1</span><span class="op">-</span>norm.cdf(<span class="dv">140</span>, mu , sigma)</span>
+<span id="cb88-9"><a href="#cb88-9"></a><span class="bu">sum</span>(np.random.normal(mu, sigma, <span class="dv">10000</span>) <span class="op">&gt;</span> <span class="dv">140</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-8-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb89-1"><a href="#cb89-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb89-2"><a href="#cb89-2"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
+<span id="cb89-3"><a href="#cb89-3"></a></span>
+<span id="cb89-4"><a href="#cb89-4"></a>np.random.seed(<span class="dv">163</span>)</span>
+<span id="cb89-5"><a href="#cb89-5"></a>mu, sigma <span class="op">=</span> <span class="dv">100</span>, <span class="dv">16</span></span>
+<span id="cb89-6"><a href="#cb89-6"></a>norm.cdf(<span class="dv">90</span>, mu , sigma)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.26598552904870054</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb91-1"><a href="#cb91-1"></a><span class="bu">sum</span>(np.random.normal(mu, sigma, <span class="dv">10000</span>) <span class="op">&lt;=</span> <span class="dv">90</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.2656</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb93-1"><a href="#cb93-1"></a><span class="dv">1</span><span class="op">-</span>norm.cdf(<span class="dv">140</span>, mu , sigma)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.006209665325776159</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb95-1"><a href="#cb95-1"></a><span class="bu">sum</span>(np.random.normal(mu, sigma, <span class="dv">10000</span>) <span class="op">&gt;</span> <span class="dv">140</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.0068</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="distribución-uniforme" class="slide level2">
+<h2>Distribución uniforme</h2>
+<p>Sea <span class="math inline">\(X\)</span> una variable aleatoria continua, diremos que <span class="math inline">\(X\)</span> sigue una distribución uniforme sobre el intervalo <span class="math inline">\((a,b)\)</span> si su función de densidad de probabilidad está dada por:</p>
+<p><span class="math display">\[f_{X}(x)=\begin{cases}1/(b-a) \quad &amp;a\leq x \leq b\\0 \quad &amp;e.o.c\end{cases}\]</span></p>
+<p>Los parámetros de la distribución cumplen las condiciones:</p>
+<p><span class="math display">\[-\infty&lt;a&lt;\infty,\quad -\infty&lt;b&lt;\infty\]</span></p>
+<ul>
+<li class="fragment"><span class="math inline">\(E[X]=\dfrac{(a+b)}{2}\)</span><br>
+</li>
+<li class="fragment"><span class="math inline">\(V[X]=\dfrac{(b-a)^2}{12}\)</span></li>
+</ul>
+</section>
+<section id="distribución-uniforme-en-r" class="slide level2">
+<h2>Distribución uniforme en R</h2>
+<div class="panel-tabset">
+<ul id="tabset-9" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-9-1">Código</a></li><li><a href="#tabset-9-2">Salidas</a></li></ul>
+<div class="tab-content">
+<div id="tabset-9-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb97" data-code-line-numbers="1|3|4|5|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1"></a><span class="fu">set.seed</span>(<span class="dv">163</span>)</span>
+<span id="cb97-2"><a href="#cb97-2"></a></span>
+<span id="cb97-3"><a href="#cb97-3"></a><span class="fu">punif</span>(<span class="fl">0.3</span>, <span class="dv">0</span> , <span class="dv">1</span> , <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb97-4"><a href="#cb97-4"></a><span class="fu">mean</span>(<span class="fu">runif</span>(<span class="at">n =</span> <span class="dv">10000</span>, <span class="dv">0</span>, <span class="dv">1</span>) <span class="sc">&lt;=</span> <span class="fl">0.3</span>)</span>
+<span id="cb97-5"><a href="#cb97-5"></a><span class="fu">punif</span>(<span class="fl">0.3</span>, <span class="dv">0</span> , <span class="dv">1</span> , <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb97-6"><a href="#cb97-6"></a><span class="fu">mean</span>(<span class="fu">runif</span>(<span class="at">n =</span> <span class="dv">10000</span>, <span class="dv">0</span>, <span class="dv">1</span>) <span class="sc">&gt;</span> <span class="fl">0.3</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-9-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1"></a><span class="fu">set.seed</span>(<span class="dv">163</span>)</span>
+<span id="cb98-2"><a href="#cb98-2"></a></span>
+<span id="cb98-3"><a href="#cb98-3"></a><span class="fu">punif</span>(<span class="fl">0.3</span>, <span class="dv">0</span> , <span class="dv">1</span> , <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1"></a><span class="fu">mean</span>(<span class="fu">runif</span>(<span class="at">n =</span> <span class="dv">10000</span>, <span class="dv">0</span>, <span class="dv">1</span>) <span class="sc">&lt;=</span> <span class="fl">0.3</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.298</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1"></a><span class="fu">punif</span>(<span class="fl">0.3</span>, <span class="dv">0</span> , <span class="dv">1</span> , <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.7</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1"></a><span class="fu">mean</span>(<span class="fu">runif</span>(<span class="at">n =</span> <span class="dv">10000</span>, <span class="dv">0</span>, <span class="dv">1</span>) <span class="sc">&gt;</span> <span class="fl">0.3</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.7082</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="distribución-uniforme-en-python" class="slide level2">
+<h2>Distribución uniforme en Python</h2>
+<div class="panel-tabset">
+<ul id="tabset-10" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-10-1">Código</a></li><li><a href="#tabset-10-2">Salidas</a></li></ul>
+<div class="tab-content">
+<div id="tabset-10-1">
+<div class="sourceCode" id="cb106" data-code-line-numbers="1-2|4|5|6|7|8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb106-1"><a href="#cb106-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb106-2"><a href="#cb106-2"></a><span class="im">from</span> scipy.stats <span class="im">import</span> uniform</span>
+<span id="cb106-3"><a href="#cb106-3"></a></span>
+<span id="cb106-4"><a href="#cb106-4"></a>np.random.seed(<span class="dv">163</span>)</span>
+<span id="cb106-5"><a href="#cb106-5"></a>uniform.cdf(<span class="fl">0.3</span>, <span class="dv">0</span> , <span class="dv">1</span>)</span>
+<span id="cb106-6"><a href="#cb106-6"></a><span class="bu">sum</span>(np.random.uniform(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">10000</span>) <span class="op">&lt;=</span> <span class="fl">0.3</span>)<span class="op">/</span><span class="dv">10000</span></span>
+<span id="cb106-7"><a href="#cb106-7"></a><span class="dv">1</span><span class="op">-</span>uniform.cdf(<span class="fl">0.3</span>, <span class="dv">0</span> , <span class="dv">1</span>)</span>
+<span id="cb106-8"><a href="#cb106-8"></a><span class="bu">sum</span>(np.random.uniform(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">10000</span>) <span class="op">&gt;</span> <span class="fl">0.3</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-10-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb107-1"><a href="#cb107-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb107-2"><a href="#cb107-2"></a><span class="im">from</span> scipy.stats <span class="im">import</span> uniform</span>
+<span id="cb107-3"><a href="#cb107-3"></a></span>
+<span id="cb107-4"><a href="#cb107-4"></a>np.random.seed(<span class="dv">163</span>)</span>
+<span id="cb107-5"><a href="#cb107-5"></a>uniform.cdf(<span class="fl">0.3</span>, <span class="dv">0</span> , <span class="dv">1</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb109"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb109-1"><a href="#cb109-1"></a><span class="bu">sum</span>(np.random.uniform(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">10000</span>) <span class="op">&lt;=</span> <span class="fl">0.3</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.3048</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb111-1"><a href="#cb111-1"></a><span class="dv">1</span><span class="op">-</span>uniform.cdf(<span class="fl">0.3</span>, <span class="dv">0</span> , <span class="dv">1</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.7</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb113-1"><a href="#cb113-1"></a><span class="bu">sum</span>(np.random.uniform(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">10000</span>) <span class="op">&gt;</span> <span class="fl">0.3</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.699</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="distribución-exponencial" class="slide level2">
+<h2>Distribución exponencial</h2>
+<p>Sea <span class="math inline">\(X\)</span> una variable aleatoria continua que toma valores positivos, diremos que <span class="math inline">\(X\)</span> sigue una distribución exponencial con parámetro <span class="math inline">\(\alpha&gt;0\)</span> si su función de densidad está dada por:</p>
+<p><span class="math display">\[f_{X}(x)=\begin{cases}\alpha e^{-\alpha x} \quad &amp;x\geq 0 \\0 \quad &amp;e.o.c\end{cases}\]</span></p>
+<p>Además se cumple que:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(E[X]=\dfrac{1}{\alpha}\)</span><br>
+</li>
+<li class="fragment"><span class="math inline">\(V[X]=\dfrac{1}{\alpha^2}\)</span></li>
+</ul>
+</section>
+<section id="distribución-exponencial-en-r" class="slide level2">
+<h2>Distribución exponencial en R</h2>
+<div class="panel-tabset">
+<ul id="tabset-11" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-11-1">Código</a></li><li><a href="#tabset-11-2">Salidas</a></li></ul>
+<div class="tab-content">
+<div id="tabset-11-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb115" data-code-line-numbers="1|3|4|5|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a href="#cb115-1"></a><span class="fu">set.seed</span>(<span class="dv">163</span>)</span>
+<span id="cb115-2"><a href="#cb115-2"></a></span>
+<span id="cb115-3"><a href="#cb115-3"></a><span class="fu">pexp</span>(<span class="dv">2</span>, <span class="fl">0.4</span>, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb115-4"><a href="#cb115-4"></a><span class="fu">mean</span>(<span class="fu">rexp</span>(<span class="fl">0.4</span>, <span class="at">n =</span> <span class="dv">10000</span>) <span class="sc">&lt;=</span> <span class="dv">2</span>)</span>
+<span id="cb115-5"><a href="#cb115-5"></a><span class="fu">pexp</span>(<span class="dv">2</span>, <span class="fl">0.4</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb115-6"><a href="#cb115-6"></a><span class="fu">mean</span>(<span class="fu">rexp</span>(<span class="fl">0.4</span>, <span class="at">n =</span> <span class="dv">10000</span>) <span class="sc">&gt;</span> <span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-11-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1"></a><span class="fu">set.seed</span>(<span class="dv">163</span>)</span>
+<span id="cb116-2"><a href="#cb116-2"></a></span>
+<span id="cb116-3"><a href="#cb116-3"></a><span class="fu">pexp</span>(<span class="dv">2</span>, <span class="fl">0.4</span>, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.550671</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1"></a><span class="fu">mean</span>(<span class="fu">rexp</span>(<span class="fl">0.4</span>, <span class="at">n =</span> <span class="dv">10000</span>) <span class="sc">&lt;=</span> <span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5458</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href="#cb120-1"></a><span class="fu">pexp</span>(<span class="dv">2</span>, <span class="fl">0.4</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.449329</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a href="#cb122-1"></a><span class="fu">mean</span>(<span class="fu">rexp</span>(<span class="fl">0.4</span>, <span class="at">n =</span> <span class="dv">10000</span>) <span class="sc">&gt;</span> <span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.446</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="distribución-exponencial-en-python" class="slide level2">
+<h2>Distribución exponencial en Python</h2>
+<div class="panel-tabset">
+<ul id="tabset-12" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-12-1">Código</a></li><li><a href="#tabset-12-2">Salidas</a></li></ul>
+<div class="tab-content">
+<div id="tabset-12-1">
+<div class="sourceCode" id="cb124" data-code-line-numbers="1-2|4|5|6|7|8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb124-1"><a href="#cb124-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb124-2"><a href="#cb124-2"></a><span class="im">from</span> scipy.stats <span class="im">import</span> expon</span>
+<span id="cb124-3"><a href="#cb124-3"></a></span>
+<span id="cb124-4"><a href="#cb124-4"></a>np.random.seed(<span class="dv">163</span>)</span>
+<span id="cb124-5"><a href="#cb124-5"></a>expon.cdf(<span class="dv">2</span>, scale<span class="op">=</span><span class="dv">1</span><span class="op">/</span><span class="fl">0.4</span>)</span>
+<span id="cb124-6"><a href="#cb124-6"></a><span class="bu">sum</span>(np.random.exponential(<span class="dv">1</span><span class="op">/</span><span class="fl">0.4</span>, <span class="dv">10000</span>) <span class="op">&lt;=</span> <span class="dv">2</span>)<span class="op">/</span><span class="dv">10000</span></span>
+<span id="cb124-7"><a href="#cb124-7"></a><span class="dv">1</span><span class="op">-</span>expon.cdf(<span class="dv">2</span>, scale<span class="op">=</span><span class="dv">1</span><span class="op">/</span><span class="fl">0.4</span>)</span>
+<span id="cb124-8"><a href="#cb124-8"></a><span class="bu">sum</span>(np.random.exponential(<span class="dv">1</span><span class="op">/</span><span class="fl">0.4</span>, <span class="dv">10000</span>) <span class="op">&gt;</span> <span class="dv">2</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-12-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb125"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb125-1"><a href="#cb125-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb125-2"><a href="#cb125-2"></a><span class="im">from</span> scipy.stats <span class="im">import</span> expon</span>
+<span id="cb125-3"><a href="#cb125-3"></a></span>
+<span id="cb125-4"><a href="#cb125-4"></a>np.random.seed(<span class="dv">163</span>)</span>
+<span id="cb125-5"><a href="#cb125-5"></a>expon.cdf(<span class="dv">2</span>, scale<span class="op">=</span><span class="dv">1</span><span class="op">/</span><span class="fl">0.4</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.5506710358827784</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb127"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb127-1"><a href="#cb127-1"></a><span class="bu">sum</span>(np.random.exponential(<span class="dv">1</span><span class="op">/</span><span class="fl">0.4</span>, <span class="dv">10000</span>) <span class="op">&lt;=</span> <span class="dv">2</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.5572</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb129"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb129-1"><a href="#cb129-1"></a><span class="dv">1</span><span class="op">-</span>expon.cdf(<span class="dv">2</span>, scale<span class="op">=</span><span class="dv">1</span><span class="op">/</span><span class="fl">0.4</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.44932896411722156</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb131"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb131-1"><a href="#cb131-1"></a><span class="bu">sum</span>(np.random.exponential(<span class="dv">1</span><span class="op">/</span><span class="fl">0.4</span>, <span class="dv">10000</span>) <span class="op">&gt;</span> <span class="dv">2</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.4416</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="función-gamma" class="slide level2">
+<h2>Función gamma</h2>
+<p>La <strong>función gamma</strong> denotada por <span class="math inline">\(\Gamma\)</span> está definida por:</p>
+<p><span class="math display">\[\Gamma(p)=\int_{0}^{\infty} x^{p-1} e^{-x}dx \hspace{20pt} p&gt;0\]</span></p>
+<p>Esta función cumple las siguientes propiedades:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(\Gamma(n)=(n-1)!\)</span><br>
+</li>
+<li class="fragment"><span class="math inline">\(\Gamma(1/2)=\sqrt{\pi}\)</span></li>
+</ul>
+</section>
+<section id="distribución-gamma" class="slide level2">
+<h2>Distribución gamma</h2>
+<p>Sea <span class="math inline">\(X\)</span> una variable aleatoria continua que toma valores positivos. Diremos que <span class="math inline">\(X\)</span> sigue una distribución Gamma si su función de densidad está dada por:</p>
+<p><span class="math display">\[f_{X}(x)=\begin{cases}\dfrac{\alpha}{\Gamma(r)}(\alpha x)^{r-1}e^{-\alpha x} \quad &amp;x&gt;0\\0 \quad &amp;e.o.c,\end{cases}\]</span></p>
+<p>En donde los parámetros <span class="math inline">\(r\)</span> y <span class="math inline">\(\alpha\)</span> son positivos.</p>
+<p>Es claro ver que un caso particular de la distribución Gamma es la distribución exponencial (<span class="math inline">\(r=1\)</span>). Si <span class="math inline">\(X\)</span> se distribuye Gamma entonces se cumple:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(E[X]=r/\alpha\)</span><br>
+</li>
+<li class="fragment"><span class="math inline">\(V[X]=r/\alpha^2\)</span></li>
+</ul>
+</section>
+<section id="distribución-gamma-en-r" class="slide level2">
+<h2>Distribución gamma en R</h2>
+<div class="panel-tabset">
+<ul id="tabset-13" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-13-1">Código</a></li><li><a href="#tabset-13-2">Salidas</a></li></ul>
+<div class="tab-content">
+<div id="tabset-13-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb133" data-code-line-numbers="1|3|4|5|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb133-1"><a href="#cb133-1"></a><span class="fu">set.seed</span>(<span class="dv">163</span>)</span>
+<span id="cb133-2"><a href="#cb133-2"></a></span>
+<span id="cb133-3"><a href="#cb133-3"></a><span class="fu">pgamma</span>(<span class="at">q =</span> <span class="dv">3</span>, <span class="at">shape =</span> <span class="dv">10</span>, <span class="at">scale =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">4</span>)</span>
+<span id="cb133-4"><a href="#cb133-4"></a><span class="fu">mean</span>(<span class="fu">rgamma</span>(<span class="at">shape=</span><span class="dv">10</span>, <span class="at">scale=</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">4</span>, <span class="at">n =</span> <span class="dv">10000</span>) <span class="sc">&lt;=</span> <span class="dv">3</span>)</span>
+<span id="cb133-5"><a href="#cb133-5"></a><span class="fu">pgamma</span>(<span class="at">q =</span> <span class="dv">3</span>, <span class="at">shape =</span> <span class="dv">10</span>, <span class="at">scale =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">4</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb133-6"><a href="#cb133-6"></a><span class="fu">mean</span>(<span class="fu">rgamma</span>(<span class="at">shape=</span><span class="dv">10</span>, <span class="at">scale=</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">4</span>, <span class="at">n =</span> <span class="dv">10000</span>) <span class="sc">&gt;</span> <span class="dv">3</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-13-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb134"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb134-1"><a href="#cb134-1"></a><span class="fu">set.seed</span>(<span class="dv">163</span>)</span>
+<span id="cb134-2"><a href="#cb134-2"></a></span>
+<span id="cb134-3"><a href="#cb134-3"></a><span class="fu">pgamma</span>(<span class="at">q =</span> <span class="dv">3</span>, <span class="at">shape =</span> <span class="dv">10</span>, <span class="at">scale =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">4</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.7576078</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb136"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a href="#cb136-1"></a><span class="fu">mean</span>(<span class="fu">rgamma</span>(<span class="at">shape=</span><span class="dv">10</span>, <span class="at">scale=</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">4</span>, <span class="at">n =</span> <span class="dv">10000</span>) <span class="sc">&lt;=</span> <span class="dv">3</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.7542</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb138"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb138-1"><a href="#cb138-1"></a><span class="fu">pgamma</span>(<span class="at">q =</span> <span class="dv">3</span>, <span class="at">shape =</span> <span class="dv">10</span>, <span class="at">scale =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">4</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2423922</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb140"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb140-1"><a href="#cb140-1"></a><span class="fu">mean</span>(<span class="fu">rgamma</span>(<span class="at">shape=</span><span class="dv">10</span>, <span class="at">scale=</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">4</span>, <span class="at">n =</span> <span class="dv">10000</span>) <span class="sc">&gt;</span> <span class="dv">3</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2427</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="distribución-gamma-en-python" class="slide level2">
+<h2>Distribución gamma en Python</h2>
+<div class="panel-tabset">
+<ul id="tabset-14" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-14-1">Código</a></li><li><a href="#tabset-14-2">Salidas</a></li></ul>
+<div class="tab-content">
+<div id="tabset-14-1">
+<div class="sourceCode" id="cb142" data-code-line-numbers="1-2|4|5|6|7|8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb142-1"><a href="#cb142-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb142-2"><a href="#cb142-2"></a><span class="im">from</span> scipy.stats <span class="im">import</span> gamma</span>
+<span id="cb142-3"><a href="#cb142-3"></a></span>
+<span id="cb142-4"><a href="#cb142-4"></a>np.random.seed(<span class="dv">163</span>)</span>
+<span id="cb142-5"><a href="#cb142-5"></a>gamma.cdf(<span class="dv">3</span>, a<span class="op">=</span><span class="dv">10</span>, scale<span class="op">=</span><span class="fl">0.25</span>)</span>
+<span id="cb142-6"><a href="#cb142-6"></a><span class="bu">sum</span>(np.random.gamma(<span class="dv">10</span>,<span class="fl">0.25</span>, <span class="dv">10000</span>) <span class="op">&lt;=</span> <span class="dv">3</span>)<span class="op">/</span><span class="dv">10000</span></span>
+<span id="cb142-7"><a href="#cb142-7"></a><span class="dv">1</span><span class="op">-</span>gamma.cdf(<span class="dv">3</span>, a<span class="op">=</span><span class="dv">10</span>, scale<span class="op">=</span><span class="fl">0.25</span>)</span>
+<span id="cb142-8"><a href="#cb142-8"></a><span class="bu">sum</span>(np.random.gamma(<span class="dv">10</span>,<span class="fl">0.25</span>, <span class="dv">10000</span>) <span class="op">&gt;</span> <span class="dv">3</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-14-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb143"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb143-1"><a href="#cb143-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb143-2"><a href="#cb143-2"></a><span class="im">from</span> scipy.stats <span class="im">import</span> gamma</span>
+<span id="cb143-3"><a href="#cb143-3"></a></span>
+<span id="cb143-4"><a href="#cb143-4"></a>np.random.seed(<span class="dv">163</span>)</span>
+<span id="cb143-5"><a href="#cb143-5"></a>gamma.cdf(<span class="dv">3</span>, a<span class="op">=</span><span class="dv">10</span>, scale<span class="op">=</span><span class="fl">0.25</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.7576078383294875</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb145"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb145-1"><a href="#cb145-1"></a><span class="bu">sum</span>(np.random.gamma(<span class="dv">10</span>,<span class="fl">0.25</span>, <span class="dv">10000</span>) <span class="op">&lt;=</span> <span class="dv">3</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.7595</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb147"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb147-1"><a href="#cb147-1"></a><span class="dv">1</span><span class="op">-</span>gamma.cdf(<span class="dv">3</span>, a<span class="op">=</span><span class="dv">10</span>, scale<span class="op">=</span><span class="fl">0.25</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.24239216167051247</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb149"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb149-1"><a href="#cb149-1"></a><span class="bu">sum</span>(np.random.gamma(<span class="dv">10</span>,<span class="fl">0.25</span>, <span class="dv">10000</span>) <span class="op">&gt;</span> <span class="dv">3</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.2443</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="distribución-t-student" class="slide level2">
+<h2>Distribución t-student</h2>
+<p>Sea <span class="math inline">\(X\)</span> una variable aleatoria continua que toma valores reales, diremos que <span class="math inline">\(X\)</span> sigue una distribución t-student con <span class="math inline">\(\nu\)</span> grados de libertad, si su función de densidad de probabilidad está dada por:</p>
+<p><span class="math display">\[f(t) = \dfrac{\Gamma(\dfrac{\nu+1}{2})} {\sqrt{\nu\pi}\,\Gamma(\dfrac{\nu}{2})} \left(1+\dfrac{t^2}{\nu} \right)^{\!-\dfrac{\nu+1}{2}},\]</span></p>
+<p>donde <span class="math inline">\(\Gamma\)</span> es la función gamma. Si <span class="math inline">\(X\)</span> se distribuye t-student entonces:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(\mathbb{E}[X]=0\)</span> para <span class="math inline">\(\nu&gt;1\)</span>. Indefinida para otros valores.<br>
+</li>
+<li class="fragment"><span class="math inline">\(\mathbb{V}[X]=\dfrac{\nu}{\nu -2}\)</span> para <span class="math inline">\(\nu&gt;2\)</span>. Indefinida para otros valores.</li>
+</ul>
+</section>
+<section id="distribución-t-student-en-r" class="slide level2">
+<h2>Distribución t-student en R</h2>
+<div class="panel-tabset">
+<ul id="tabset-15" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-15-1">Código</a></li><li><a href="#tabset-15-2">Salidas</a></li></ul>
+<div class="tab-content">
+<div id="tabset-15-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb151" data-code-line-numbers="1|3|4|5|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb151-1"><a href="#cb151-1"></a><span class="fu">set.seed</span>(<span class="dv">163</span>)</span>
+<span id="cb151-2"><a href="#cb151-2"></a></span>
+<span id="cb151-3"><a href="#cb151-3"></a><span class="fu">pt</span>(<span class="at">q=</span><span class="fl">1.9</span>, <span class="at">df=</span><span class="dv">15</span>, <span class="at">lower.tail =</span> T)</span>
+<span id="cb151-4"><a href="#cb151-4"></a><span class="fu">mean</span>(<span class="fu">rt</span>(<span class="dv">15</span>, <span class="at">n =</span> <span class="dv">10000</span>) <span class="sc">&lt;=</span> <span class="fl">1.9</span>)</span>
+<span id="cb151-5"><a href="#cb151-5"></a><span class="fu">pt</span>(<span class="at">q=</span><span class="fl">1.9</span>, <span class="at">df=</span><span class="dv">15</span>, <span class="at">lower.tail =</span> F)</span>
+<span id="cb151-6"><a href="#cb151-6"></a><span class="fu">mean</span>(<span class="fu">rt</span>(<span class="dv">15</span>, <span class="at">n =</span> <span class="dv">10000</span>) <span class="sc">&gt;</span> <span class="fl">1.9</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-15-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb152"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb152-1"><a href="#cb152-1"></a><span class="fu">set.seed</span>(<span class="dv">163</span>)</span>
+<span id="cb152-2"><a href="#cb152-2"></a></span>
+<span id="cb152-3"><a href="#cb152-3"></a><span class="fu">pt</span>(<span class="at">q=</span><span class="fl">1.9</span>, <span class="at">df=</span><span class="dv">15</span>, <span class="at">lower.tail =</span> T)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9615845</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb154"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb154-1"><a href="#cb154-1"></a><span class="fu">mean</span>(<span class="fu">rt</span>(<span class="dv">15</span>, <span class="at">n =</span> <span class="dv">10000</span>) <span class="sc">&lt;=</span> <span class="fl">1.9</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9637</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb156"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb156-1"><a href="#cb156-1"></a><span class="fu">pt</span>(<span class="at">q=</span><span class="fl">1.9</span>, <span class="at">df=</span><span class="dv">15</span>, <span class="at">lower.tail =</span> F)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.03841551</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb158"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb158-1"><a href="#cb158-1"></a><span class="fu">mean</span>(<span class="fu">rt</span>(<span class="dv">15</span>, <span class="at">n =</span> <span class="dv">10000</span>) <span class="sc">&gt;</span> <span class="fl">1.9</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.0386</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="distribución-t-student-en-python" class="slide level2">
+<h2>Distribución t-student en Python</h2>
+<div class="panel-tabset">
+<ul id="tabset-16" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-16-1">Código</a></li><li><a href="#tabset-16-2">Salidas</a></li></ul>
+<div class="tab-content">
+<div id="tabset-16-1">
+<div class="sourceCode" id="cb160" data-code-line-numbers="1-2|4|5|6|7|8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb160-1"><a href="#cb160-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb160-2"><a href="#cb160-2"></a><span class="im">from</span> scipy.stats <span class="im">import</span> gamma</span>
+<span id="cb160-3"><a href="#cb160-3"></a></span>
+<span id="cb160-4"><a href="#cb160-4"></a>np.random.seed(<span class="dv">163</span>)</span>
+<span id="cb160-5"><a href="#cb160-5"></a>gamma.cdf(<span class="dv">3</span>, a<span class="op">=</span><span class="dv">10</span>, scale<span class="op">=</span><span class="fl">0.25</span>)</span>
+<span id="cb160-6"><a href="#cb160-6"></a><span class="bu">sum</span>(np.random.gamma(<span class="dv">10</span>,<span class="fl">0.25</span>, <span class="dv">10000</span>) <span class="op">&lt;=</span> <span class="dv">3</span>)<span class="op">/</span><span class="dv">10000</span></span>
+<span id="cb160-7"><a href="#cb160-7"></a><span class="dv">1</span><span class="op">-</span>gamma.cdf(<span class="dv">3</span>, a<span class="op">=</span><span class="dv">10</span>, scale<span class="op">=</span><span class="fl">0.25</span>)</span>
+<span id="cb160-8"><a href="#cb160-8"></a><span class="bu">sum</span>(np.random.gamma(<span class="dv">10</span>,<span class="fl">0.25</span>, <span class="dv">10000</span>) <span class="op">&gt;</span> <span class="dv">3</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-16-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb161"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb161-1"><a href="#cb161-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb161-2"><a href="#cb161-2"></a><span class="im">from</span> scipy.stats <span class="im">import</span> t</span>
+<span id="cb161-3"><a href="#cb161-3"></a></span>
+<span id="cb161-4"><a href="#cb161-4"></a>np.random.seed(<span class="dv">163</span>)</span>
+<span id="cb161-5"><a href="#cb161-5"></a>t.cdf(<span class="fl">1.9</span>, <span class="dv">15</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.9615844871419956</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb163"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb163-1"><a href="#cb163-1"></a><span class="bu">sum</span>(np.random.standard_t(<span class="dv">15</span>, <span class="dv">10000</span>) <span class="op">&lt;=</span> <span class="fl">1.9</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.9611</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb165"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb165-1"><a href="#cb165-1"></a><span class="dv">1</span><span class="op">-</span>t.cdf(<span class="fl">1.9</span>, <span class="dv">15</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.038415512858004375</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb167"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb167-1"><a href="#cb167-1"></a><span class="bu">sum</span>(np.random.standard_t(<span class="dv">15</span>, <span class="dv">10000</span>) <span class="op">&gt;</span> <span class="fl">1.9</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.0392</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section id="teorema-del-límite-central" class="title-slide slide level1 center">
+<h1>Teorema del límite central</h1>
+<p>Sean <span class="math inline">\(X_1,X_2,\dots,X_n\)</span>, <span class="math inline">\(n\)</span> variables aleatorias i.i.d. con una distribución de probabilidad no especificada y que tienen una media <span class="math inline">\(\mu\)</span> y varianza <span class="math inline">\(\sigma^2\)</span> finita. El promedio muestral</p>
+<p><span class="math display">\[\overline{X}=(X_1+X_2+\cdots+X_n)/n\]</span></p>
+<p>tiene una distribución con media <span class="math inline">\(\mu\)</span> y varianza <span class="math inline">\(\sigma^2/n\)</span> que tiende hacia una distribución normal conforme <span class="math inline">\(n\rightarrow\infty\)</span>.</p>
+<p>En otras palabras, la variable aleatoria <span class="math inline">\((\overline{X}-\mu)/(\sigma/\sqrt{n})\)</span> tiene como límite una distribución normal estándar.</p>
+</section>
+
+<section id="qué-veremos-la-próxima-semana" class="title-slide slide level1 center">
+<h1>¿Qué veremos la próxima semana?</h1>
+<ul>
+<li class="fragment">Intervalos de confianza</li>
+<li class="fragment">Test de hipótesis</li>
+<li class="fragment">Implementación de estos en R y Python</li>
+</ul>
+</section>
+
+<section id="que-deben-preparar-para-la-próxima-semana" class="title-slide slide level1 center">
+<h1>¿Que deben preparar para la próxima semana?</h1>
+<ul>
+<li class="fragment">Leer el material adicional sobre R y Python</li>
+<li class="fragment">Repasar materia MAT042 sobre Intervalos de confianza y test de hipótesis</li>
+</ul>
 
 
 <img src="images/logo_usm.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p>IND 163 - Semana 2</p>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
