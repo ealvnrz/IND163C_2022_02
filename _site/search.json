@@ -3,8 +3,8 @@
     "objectID": "slides/lec_week2.html#escuelas-de-probabilidad",
     "href": "slides/lec_week2.html#escuelas-de-probabilidad",
     "title": "Conceptos Básicos",
-    "section": "Escuelas de Probabilidad",
-    "text": "Escuelas de Probabilidad\n\nEnfoque clásico\nEnfoque frecuentista\nEnfoque bayesiano"
+    "section": "Escuelas de probabilidad",
+    "text": "Escuelas de probabilidad\n\nEnfoque clásico\nEnfoque frecuentista\nEnfoque bayesiano"
   },
   {
     "objectID": "slides/lec_week2.html#enfoque-clásico",
@@ -305,7 +305,7 @@
     "href": "slides/lec_week2.html#distribución-t-student-en-python",
     "title": "Conceptos Básicos",
     "section": "Distribución t-student en Python",
-    "text": "Distribución t-student en Python\n\nCódigoSalidas\n\n\nimport numpy as np\nfrom scipy.stats import gamma\n\nnp.random.seed(163)\ngamma.cdf(3, a=10, scale=0.25)\nsum(np.random.gamma(10,0.25, 10000) <= 3)/10000\n1-gamma.cdf(3, a=10, scale=0.25)\nsum(np.random.gamma(10,0.25, 10000) > 3)/10000\n\n\n\nimport numpy as np\nfrom scipy.stats import t\n\nnp.random.seed(163)\nt.cdf(1.9, 15)\n\n0.9615844871419956\n\nsum(np.random.standard_t(15, 10000) <= 1.9)/10000\n\n0.9611\n\n1-t.cdf(1.9, 15)\n\n0.038415512858004375\n\nsum(np.random.standard_t(15, 10000) > 1.9)/10000\n\n0.0392"
+    "text": "Distribución t-student en Python\n\nCódigoSalidas\n\n\nimport numpy as np\nfrom scipy.stats import t\n\nnp.random.seed(163)\nt.cdf(1.9, 15)\nsum(np.random.standard_t(15, 10000) <= 1.9)/10000\n1-t.cdf(1.9, 15)\nsum(np.random.standard_t(15, 10000) > 1.9)/10000\n\n\n\nimport numpy as np\nfrom scipy.stats import t\n\nnp.random.seed(163)\nt.cdf(1.9, 15)\n\n0.9615844871419956\n\nsum(np.random.standard_t(15, 10000) <= 1.9)/10000\n\n0.9611\n\n1-t.cdf(1.9, 15)\n\n0.038415512858004375\n\nsum(np.random.standard_t(15, 10000) > 1.9)/10000\n\n0.0392"
   },
   {
     "objectID": "index.html",

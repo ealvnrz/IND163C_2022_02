@@ -396,7 +396,7 @@
 
 </section>
 <section id="escuelas-de-probabilidad" class="slide level2">
-<h2>Escuelas de Probabilidad</h2>
+<h2>Escuelas de probabilidad</h2>
 <ul>
 <li class="fragment">Enfoque clásico</li>
 <li class="fragment">Enfoque frecuentista</li>
@@ -1403,13 +1403,13 @@
 <div class="tab-content">
 <div id="tabset-16-1">
 <div class="sourceCode" id="cb160" data-code-line-numbers="1-2|4|5|6|7|8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb160-1"><a href="#cb160-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb160-2"><a href="#cb160-2"></a><span class="im">from</span> scipy.stats <span class="im">import</span> gamma</span>
+<span id="cb160-2"><a href="#cb160-2"></a><span class="im">from</span> scipy.stats <span class="im">import</span> t</span>
 <span id="cb160-3"><a href="#cb160-3"></a></span>
 <span id="cb160-4"><a href="#cb160-4"></a>np.random.seed(<span class="dv">163</span>)</span>
-<span id="cb160-5"><a href="#cb160-5"></a>gamma.cdf(<span class="dv">3</span>, a<span class="op">=</span><span class="dv">10</span>, scale<span class="op">=</span><span class="fl">0.25</span>)</span>
-<span id="cb160-6"><a href="#cb160-6"></a><span class="bu">sum</span>(np.random.gamma(<span class="dv">10</span>,<span class="fl">0.25</span>, <span class="dv">10000</span>) <span class="op">&lt;=</span> <span class="dv">3</span>)<span class="op">/</span><span class="dv">10000</span></span>
-<span id="cb160-7"><a href="#cb160-7"></a><span class="dv">1</span><span class="op">-</span>gamma.cdf(<span class="dv">3</span>, a<span class="op">=</span><span class="dv">10</span>, scale<span class="op">=</span><span class="fl">0.25</span>)</span>
-<span id="cb160-8"><a href="#cb160-8"></a><span class="bu">sum</span>(np.random.gamma(<span class="dv">10</span>,<span class="fl">0.25</span>, <span class="dv">10000</span>) <span class="op">&gt;</span> <span class="dv">3</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb160-5"><a href="#cb160-5"></a>t.cdf(<span class="fl">1.9</span>, <span class="dv">15</span>)</span>
+<span id="cb160-6"><a href="#cb160-6"></a><span class="bu">sum</span>(np.random.standard_t(<span class="dv">15</span>, <span class="dv">10000</span>) <span class="op">&lt;=</span> <span class="fl">1.9</span>)<span class="op">/</span><span class="dv">10000</span></span>
+<span id="cb160-7"><a href="#cb160-7"></a><span class="dv">1</span><span class="op">-</span>t.cdf(<span class="fl">1.9</span>, <span class="dv">15</span>)</span>
+<span id="cb160-8"><a href="#cb160-8"></a><span class="bu">sum</span>(np.random.standard_t(<span class="dv">15</span>, <span class="dv">10000</span>) <span class="op">&gt;</span> <span class="fl">1.9</span>)<span class="op">/</span><span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-16-2">
 <div class="cell">

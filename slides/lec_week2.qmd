@@ -25,7 +25,7 @@ execute:
 
 # Conceptos básicos de probabilidad
 
-## Escuelas de Probabilidad
+## Escuelas de probabilidad
 
 -   Enfoque clásico
 -   Enfoque frecuentista
@@ -886,13 +886,13 @@ mean(rt(15, n = 10000) > 1.9)
 
 ```{.python code-line-numbers="1-2|4|5|6|7|8"}
 import numpy as np
-from scipy.stats import gamma
+from scipy.stats import t
 
 np.random.seed(163)
-gamma.cdf(3, a=10, scale=0.25)
-sum(np.random.gamma(10,0.25, 10000) <= 3)/10000
-1-gamma.cdf(3, a=10, scale=0.25)
-sum(np.random.gamma(10,0.25, 10000) > 3)/10000
+t.cdf(1.9, 15)
+sum(np.random.standard_t(15, 10000) <= 1.9)/10000
+1-t.cdf(1.9, 15)
+sum(np.random.standard_t(15, 10000) > 1.9)/10000
 ```
 
 ### Salidas
