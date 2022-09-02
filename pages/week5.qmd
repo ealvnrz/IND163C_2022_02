@@ -1,6 +1,6 @@
 ---
 title: "Semana 5"
-subtitle: "Regresión y propiedades de estimadores"
+subtitle: "Certamen 1"
 ---
 
 ## Preparación

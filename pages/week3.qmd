@@ -1,6 +1,6 @@
 ---
 title: "Semana 3"
-subtitle: "Test de hipótesis e intervalos de confianza."
+subtitle: "Intervalos de confianza, test de hipótesis y regresión lineal simple"
 ---
 
 ## Preparación
@@ -16,3 +16,7 @@ subtitle: "Test de hipótesis e intervalos de confianza."
 ```
 
 ## Material adicional
+
+- Para contextualización en la industria, capítulo 2 de Data Science For Business: What You Need to Know About Data Mining & Data-Analytic Thinking.
+
+- Capítulo 6, Numsense! Data Science for the Layman: No Math Added. Ng, A, Soo K.

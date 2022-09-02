@@ -1,6 +1,6 @@
 ---
 title: "Semana 4"
-subtitle: "Visualización de datos con R y Python"
+subtitle: "Regresión lineal múltiple y aplicaciones computacionales"
 ---
 
 ## Preparación

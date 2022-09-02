@@ -21,7 +21,7 @@ A lo largo del curso se evalúan el uso de Analytics midiendo el impacto de esta
 
 Prof. [Eloy Alvarado Narváez](https://ealvnrz.netlify.com/) es candidato a Doctor en estadística en la [Universidad de Valparaíso](https://www.uv.cl/) en el área de estadística espacial, particularmente en el estudio de campos aleatorios y cópulas. Es Licenciado en Estadística de la [Pontificia Universidad Católica de Valparaíso](http://www.pucv.cl). Actualmente, presta servicios de consultoría al [Instituto de Fomento Pesquero](http://www.ifop.cl) en modelamiento espacio-temporal.
 
-Contacto: [ealvaradonarvaez@gmail.com](mailto:ealvaradonarvaez@gmail.com)
+Contacto: [eloy.alvarado@usm.cl](mailto:eloy.alvarado@usm.cl)
 
 # Ayudante
 

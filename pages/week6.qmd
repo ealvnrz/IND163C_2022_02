@@ -1,6 +1,6 @@
 ---
 title: "Semana 6"
-subtitle: "Certamen 1"
+subtitle: ""
 ---
 
 ## Preparación
