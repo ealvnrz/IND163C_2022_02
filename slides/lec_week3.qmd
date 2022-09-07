@@ -92,7 +92,8 @@ Sea $S(\alpha,\beta)=\sum_{i=1}^{N} [Y_i - (\alpha x_i +\beta)]^2$. Para
 minimizar $S(\alpha,\beta)$, debemos resolver las ecuaciones:
 
 $$\dfrac{\partial S}{\partial \alpha}=0 \hspace{20pt}\text{y}\hspace{20pt}\dfrac{\partial S}{\partial \beta}=0$$
-\## Método de mínimos cuadrados: desarrollo
+
+## Método de mínimos cuadrados: desarrollo
 
 Derivando, obtenemos:
 
@@ -187,7 +188,9 @@ $$ T_n \overset{p}{\to} \theta$$
 Un estimador $T$, de un parámetro desconocido $\theta$, se dice
 consistente en media cuadrática, si se cumple:
 
-$$\lim_{n\rightarrow\infty} ECM(T_n)=0$$ \# Estimación por intervalo
+$$\lim_{n\rightarrow\infty} ECM(T_n)=0$$ 
+
+# Estimación por intervalo
 
 La estimación puntual de un parámetro poblacional adolece del siguiente
 defecto: La probabilidad de que el estimador coincida con el verdadero
@@ -366,7 +369,8 @@ Luego, despejando el parámetro de interés $\sigma^2$, podemos definir un
 intervalo de $(1-\alpha)\%$ de confianza para la varianza poblacional:
 
 $$IC(\sigma^2)=\left[ \dfrac{(n-1)S_{n-1}^{2}}{\chi_{1-\alpha/2}^{2}(n-1)};\dfrac{(n-1)S_{n-1}^{2}}{\chi_{\alpha/2}^{2}(n-1)}\right]$$
-\# Test de hipótesis
+
+# Test de hipótesis
 
 Para llegar a tomar decisiones, conviene hacer determinados supuestos o
 conjeturas acerca de las poblaciones que se estudian. Tales supuestos
@@ -412,8 +416,7 @@ Sea $X_1,X_2,\dots,X_n$ una muestra aleatoria de una distribución normal
 con media $\mu$ desconocida. En este caso el interés recae en probar uno
 de los siguientes conjuntos de hipotesis con respecto a $\mu$.
 
-$$H_0:\mu = \mu_0 \qquad H_0:\mu= \mu_0 \qquad H_0:\mu = \mu_0 \\
-H_1:\mu \neq \mu_0 \qquad H_1:\mu > \mu_0 \qquad H_1:\mu < \mu_0$$
+$$H_0:\mu = \mu_0 \qquad H_0:\mu= \mu_0 \qquad H_0:\mu = \mu_0 \\H_1:\mu \neq \mu_0 \qquad H_1:\mu > \mu_0 \qquad H_1:\mu < \mu_0$$
 
 Supongamos primero que la varianza poblacional $\sigma^2$ es conocida.
 Utilizando la estadística de prueba $\overline{X}$, bajo $H_0$ se tiene

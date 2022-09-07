@@ -362,7 +362,9 @@
 <p>Para poder obtener las estimaciones para <span class="math inline">\(\alpha\)</span> y <span class="math inline">\(\beta\)</span>, procedemos de la siguiente manera:</p>
 <p>Sea <span class="math inline">\(S(\alpha,\beta)=\sum_{i=1}^{N} [Y_i - (\alpha x_i +\beta)]^2\)</span>. Para minimizar <span class="math inline">\(S(\alpha,\beta)\)</span>, debemos resolver las ecuaciones:</p>
 <p><span class="math display">\[\dfrac{\partial S}{\partial \alpha}=0 \hspace{20pt}\text{y}\hspace{20pt}\dfrac{\partial S}{\partial \beta}=0\]</span></p>
-<p>## Método de mínimos cuadrados: desarrollo</p>
+</section>
+<section id="método-de-mínimos-cuadrados-desarrollo" class="slide level2">
+<h2>Método de mínimos cuadrados: desarrollo</h2>
 <p>Derivando, obtenemos:</p>
 <p><span class="math display">\[\dfrac{\partial S}{\partial \alpha}=\sum_{i=1}^{n}2[Y_i - (\alpha x_i + \beta)](-x_i)=-2\sum_{i=1}^{n}[x_i Y_i - \alpha x_{i}^{2} - \beta x_i]\]</span></p>
 <p>y,</p>
@@ -370,7 +372,7 @@
 <p>Luego, igualando a cero, se tiene que:</p>
 <p><span class="math display">\[\alpha\sum_{i=1}^{n} x_{i}^{2} + \beta \sum_{i=1}^{n} x_i = \sum_{i=1}^{n} x_i Y_i \qquad \text{y,} \qquad \alpha \sum_{i=1}^{n} x_i + n\beta=\sum_{i=1}^{n} Y_i\]</span></p>
 </section>
-<section id="método-de-mínimos-cuadrados-desarrollo" class="slide level2">
+<section id="método-de-mínimos-cuadrados-desarrollo-1" class="slide level2">
 <h2>Método de mínimos cuadrados: desarrollo</h2>
 <p>Tenemos dos ecuaciones <em>lineales</em> y dos incógnitas, por lo que podemos obtener soluciones para <span class="math inline">\(\alpha\)</span> y <span class="math inline">\(\beta\)</span>, así:</p>
 <p><span class="math display">\[\hat{\alpha}=\dfrac{\sum_{i=1}^{n} Y_i (x_i - \overline{x})}{\sum_{i=1}^{n} (x_i-\overline{x})^2}\hspace{20pt}\text{donde}\hspace{20pt}\overline{x}=\dfrac{1}{n}\sum_{i=1}^{n}x_i\]</span></p>
@@ -417,9 +419,13 @@
 </ul>
 <div class="fragment">
 <p>Un estimador <span class="math inline">\(T\)</span>, de un parámetro desconocido <span class="math inline">\(\theta\)</span>, se dice consistente en media cuadrática, si se cumple:</p>
-<p><span class="math display">\[\lim_{n\rightarrow\infty} ECM(T_n)=0\]</span> # Estimación por intervalo</p>
-<p>La estimación puntual de un parámetro poblacional adolece del siguiente defecto: La probabilidad de que el estimador coincida con el verdadero valor del parámetro es muy pequeña y en el caso continuo nula. Los intervalos de <em>confianza</em> resuelven este inconveniente, ofreciéndonos un rango para los posibles valores del parámetro poblacional.</p>
+<p><span class="math display">\[\lim_{n\rightarrow\infty} ECM(T_n)=0\]</span></p>
 </div>
+</section></section>
+<section>
+<section id="estimación-por-intervalo" class="title-slide slide level1 center">
+<h1>Estimación por intervalo</h1>
+<p>La estimación puntual de un parámetro poblacional adolece del siguiente defecto: La probabilidad de que el estimador coincida con el verdadero valor del parámetro es muy pequeña y en el caso continuo nula. Los intervalos de <em>confianza</em> resuelven este inconveniente, ofreciéndonos un rango para los posibles valores del parámetro poblacional.</p>
 </section>
 <section id="definición-intervalo-de-confianza" class="slide level2">
 <h2>Definición intervalo de confianza</h2>
@@ -516,7 +522,10 @@
 <p><span class="math display">\[\mathbb{P}\left[ \chi_{\alpha/2}^{2}(n-1) \leq \dfrac{(n-1) S_{n-1}^{2}}{\sigma^2} \leq \chi_{1-\alpha/2}^{2}(n-1) \right]=1-\alpha\]</span></p>
 <p>Luego, despejando el parámetro de interés <span class="math inline">\(\sigma^2\)</span>, podemos definir un intervalo de <span class="math inline">\((1-\alpha)\%\)</span> de confianza para la varianza poblacional:</p>
 <p><span class="math display">\[IC(\sigma^2)=\left[ \dfrac{(n-1)S_{n-1}^{2}}{\chi_{1-\alpha/2}^{2}(n-1)};\dfrac{(n-1)S_{n-1}^{2}}{\chi_{\alpha/2}^{2}(n-1)}\right]\]</span></p>
-<p># Test de hipótesis</p>
+</section></section>
+<section>
+<section id="test-de-hipótesis" class="title-slide slide level1 center">
+<h1>Test de hipótesis</h1>
 <p>Para llegar a tomar decisiones, conviene hacer determinados supuestos o conjeturas acerca de las poblaciones que se estudian. Tales supuestos que pueden ser o no ciertos se llaman <strong>hipótesis estadísticas</strong> y, en general, lo son sobre las distribuciones de probabilidad de las poblaciones.</p>
 <p>En muchos casos se formulan las hipótesis estadísticas con el sólo propósito de rechazarlas o invalidarlas. Cualquier hipótesis que difiera de una hipótesis dada se llama <strong>hipótesis alternativa</strong>. Denotaremos por <span class="math inline">\(H_0\)</span> a nuestro supuesto o hipótesis nula, y <span class="math inline">\(H_1\)</span> a nuestra hipótesis alternativa.</p>
 </section>
@@ -571,8 +580,7 @@
 <section id="prueba-para-la-media-poblacional" class="slide level2">
 <h2>Prueba para la media poblacional</h2>
 <p>Sea <span class="math inline">\(X_1,X_2,\dots,X_n\)</span> una muestra aleatoria de una distribución normal con media <span class="math inline">\(\mu\)</span> desconocida. En este caso el interés recae en probar uno de los siguientes conjuntos de hipotesis con respecto a <span class="math inline">\(\mu\)</span>.</p>
-<p>$$H_0:= _0 H_0:= _0 H_0:= _0 \</p>
-<p>H_1:_0 H_1:&gt; _0 H_1:&lt; _0$$</p>
+<p><span class="math display">\[H_0:\mu = \mu_0 \qquad H_0:\mu= \mu_0 \qquad H_0:\mu = \mu_0 \\H_1:\mu \neq \mu_0 \qquad H_1:\mu &gt; \mu_0 \qquad H_1:\mu &lt; \mu_0\]</span></p>
 <p>Supongamos primero que la varianza poblacional <span class="math inline">\(\sigma^2\)</span> es conocida. Utilizando la estadística de prueba <span class="math inline">\(\overline{X}\)</span>, bajo <span class="math inline">\(H_0\)</span> se tiene que <span class="math inline">\(\overline{X}\sim N\left(\mu_0,{\sigma^2 \over n}\right)\)</span>. La región crítica de tamaño <span class="math inline">\(\alpha\)</span> para la hipótesis bilateral es de la forma:</p>
 <p><span class="math display">\[\text{Rechazar }H_0 \text{ si}\begin{cases} \overline{X}\geq \overline{x}_{1-\alpha /2}\\ \overline{X}\leq \overline{x}_{\alpha /2} \end{cases}\]</span></p>
 </section>
