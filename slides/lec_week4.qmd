@@ -1,0 +1,578 @@
+---
+title: "Regresión lineal"
+subtitle: "IND 163 - 2022/02"
+author: "Eloy Alvarado Narváez"
+institute: "Universidad Técnica Federico Santa María"
+date: 09/09/22
+format: 
+  revealjs:
+    theme: slides.scss
+    touch: true
+    slide-level: 2
+    code-copy: true
+incremental: true
+slide-number: true
+lang: es
+highlight-style: github
+width: 1600
+height: 900
+logo: images/logo_usm.png
+transition: fade
+footer: "IND 163 - Semana 4"
+execute:
+  freeze: auto
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Inferencia sobre los parámetros de regresión 
+
+En lo que sigue, realizaremos inferencia sobre los parámetros del modelo de regresión:
+
+$$Y_i=\beta_0+\beta_1 X_i + \varepsilon_i$$
+
+En donde $\beta_0$ y $\beta_1$ son parámetros, $X_i$ son constantes conocidas y $\varepsilon_i$ son independientes $N(0,\sigma^2)$. Esto último, es un supuesto adicional al establecido en la definición formal que hemos visto.
+
+## Inferencia sobre la pendiente {.small}
+
+Frecuentemente es de particular interés la inferencia sobre el parámetro de la pendiente de regresión, pues nos entrega una noción de cambio medio por unidad en la variable regresora. Un tipo de test relevante en este contexto es:
+
+$$H_0: \beta_1=0 \hspace{20pt} H_1: \beta_1\ne 0$$
+
+Este test de hipótesis es relevante debido a que cuando $\beta_1=0$, no existe una asociación lineal entre las variables $X$ e $Y$.
+
+En el caso de que el término de error en el modelo de regresión sea normal, la condición de que $\beta_1=0$ implica aún más cosas. Debido a que en este modelo todas las distribución de probabilidades de $Y$ son normales con varianza constante, y que las medias son iguales cuando $\beta_1=0$, sigue que las distribuciones de probabilidad de $Y$ son **idénticas** cuando $\beta_1=0$.
+
+::: box1
+Así, $\beta_1=0$ para el modelo de regresión lineal normal implica que no sólo no existe relación lineal entre $X$ e $Y$, pero además no existe ningún tipo de relación entre $Y$ y $X$, dado que las distribuciones de probabilidad de $Y$ son idénticas para todos los niveles de $X$.
+:::
+
+## Distribución muestral de $b_1$
+
+Por lo visto antes, sabemos que el estimador puntual de $b_1$ está dado por:
+
+$$b_1=\dfrac{\sum (X_i-\overline{X})(Y_i - \overline{Y})}{\sum (X_i-\overline{X})^2}$$
+La distribución muestral de $b_1$ hace referencia a los diferentes valores de $b_1$ que serían obtenidos con un muestreo repetido cuando los niveles de la variable predictora $X$ se mantiene constante entre las diferentes muestras. Para el modelo de regresión normal, la distribución muestral de $b_1$ es normal con media y varianza dada por:
+
+$$\mathbb{E}(b_1)=\beta_1\qquad \qquad\mathbb{V}(b_1)=\dfrac{\sigma^2}{\sum (X_i-\overline{X})^2}$$
+
+Para mostrar esto, debemos identificar que $b_1$ es una combinación lineal de las observaciones $Y_i$.
+
+
+## Normalidad, media y varianza{.small}
+
+Debido a que el término $b_1$ es una combinación lineal de $Y_i$, y este último son variables aleatoria normales independientes, sigue que $b_1$ también lo es.
+
+La insesgadez del estimador puntual de $b_1$ es debido al teorema de Gauss-Markov, sigue que:
+
+\begin{align*}
+\mathbb{E}(b_1)&=\mathbb{E}\left(\sum k_i Y_i\right)=\sum k_i \mathbb{E}(Y_i)= \sum k_i(\beta_0+\beta_1 X_i)\\
+&= \beta_0 \sum k_i + \beta_1 \sum k_i X_i = \beta_1
+\end{align*}
+En cuanto a la varianza de $b_1$, sólo necesitamos recordar que $Y_i$ son variables aleatorias independientes, cada una con varianza $\sigma^2$ y que $k_i$ son constantes. Por lo que:
+\begin{align*}
+\mathbb{V}(b_1)&=\mathbb{V}\left(\sum k_i Y_i\right)=\sum k_{i}^{2} \mathbb{V}(Y_i)\\
+&=\sum k_{i}^{2} \sigma^2=\sigma^2 \sum k_{i}^{2}\\
+&= \dfrac{\sigma^2}{\sum (X_i -\overline{X})^2}
+\end{align*}
+
+## Varianza estimada
+
+Podemos estimar la varianza de la distribución muestral de $b_1$:
+
+$$\mathbb{V}(b_1)=\dfrac{\sigma^2}{\sum (X_i - \overline{X})^2}$$
+
+Reemplazando el parámetro $\sigma^2$ con el ECM, el estimador insesgado de $\sigma^2$:
+
+$$\widehat{\mathbb{V}(b_1)}=\dfrac{MSE}{\sum (X_i - \overline{X})^2}$$
+Esta estimación puntual es un estimador insesgada de $\mathbb{V}(b_1)$.  Tomando la raíz cuadrado podemos obtener la estimación puntual para la desviación estándar.
+
+## Distribución muestral útil
+
+Con vistas en obtener intervalos de confianza para los parámetros de regresión, necesitamos obtener las distribuciones muestrales de cantidades pivotales, entre ellas la cantidad:
+
+
+$$(b_1-\beta_1)/\sqrt{\widehat{\mathbb{V}(b_1)}}$$
+Debido a que $b_1$ está distribuido normalmente, sabemos que la estandarización:
+
+$$\dfrac{(b_1-\beta_1)}{\sqrt{\mathbb{V}(b_1)}}$$
+es una variable aleatoria normal estándar. En la práctica, no se tiene acceso a la varianza teórica por lo que esta cantidad debe ser estimada por $\widehat{\mathbb{V}(b_1)}$ por que estamos particularmente interesados en la distribución de $(b_1-\beta_1)/\sqrt{\widehat{\mathbb{V}(b_1)}}$
+
+## Distribución muestral útil: continuación
+
+Cuando una estadístico está estandarizado pero el denominador es una estimación de la desviación estándar en vez de su valor real, se le llama **estadístico estudentizado**. Un teorema importante en estadística establece que el estadístico:
+
+
+$$\dfrac{(b_1-\beta_1)}{\sqrt{\widehat{\mathbb{V}(b_1)}}}\sim t(n-2)$$
+Para el modelo de regresión que estamos estudiando. Esto viene del hecho que $SSE/\sigma^2 \sim \chi^2(n-2)$ y es independiente de $b_0$ y $b_1$.
+
+## Intervalo de confianza para la pendiente
+
+Debido a que esta cantidad sigue una distribución t-student, podemos establecer que:
+
+$$\mathbb{P}(t(\alpha/2,n-2)\leq (b_1-\beta_1)/\sqrt{\widehat{\mathbb{V}(b_1)}} \leq  t(1-\alpha/2,n-2))=1-\alpha$$
+Luego, operando de igual manera que en la construcción de intervalos de confianza  usual (vía pivote). Podemos llegar a un intervalo de confianza para $\beta_1$:
+
+$$\left[ b_1 \pm t(1-\alpha/2, n-2) \sqrt{\widehat{\mathbb{V}(b_1)}}\right]$$
+
+## Test de hipótesis para la pendiente
+
+Debido a que:
+
+$$\dfrac{(b_1-\beta_1)}{\sqrt{\widehat{\mathbb{V}(b_1)}}}\sim t(n-2)$$
+
+Toda la teoría de test de hipótesis usuales es válida (tests unilaterales y bilaterales). 
+
+Tenemos particular interés en un test del tipo:
+
+$$H_0: \beta_1 = 0 \hspace{20pt} H_1:\beta_1 \neq 0$$
+
+Pues con ello probamos si existe una asociación lineal entre las variables del modelo bajo un cierto nivel de confianza.
+
+## Inferencia sobre el intercepto{.small}
+
+Como lo mencionamos antes, rara vez tendremos interés en hacer inferencia sobre el parámetro $\beta_0$, y estos son sólo válidos cuando el rango de la variable predictora incluye $X=0$.
+
+Como hemos visto antes la estimación puntal del intercepto está dado por:
+
+$$b_0=\overline{Y}-b_1\overline{X}$$
+Para el modelo de regresión en estudio, la distribución muestral de $b_0$ es normal, con media y varianza:
+
+$$\mathbb{E}(b_0)=\beta_0\qquad \qquad \mathbb{V}(b_0)=\sigma^2\left[ \dfrac{1}{n}+\dfrac{\overline{X}^2}{\sum (X_i-\overline{X})^2}\right]$$
+La normalidad es obtenida debido a que $b_0$ al igual que $b_1$, es una combinación lineal de observaciones $Y_i$. Al igual que antes, una estimador de la varianza viene dado al reemplazar $\sigma^2$ por su estimación puntual (ECM). El estimador de la desviación estándar es obtenido aplicando raíz cuadrada.
+
+## Intervalo de confianza para el intercepto
+
+Al igual que antes, se tiene que:
+
+$$\dfrac{b_0-\beta_0}{\sqrt{\widehat{\mathbb{V}(b_0)}}}\sim t(n-2)$$
+
+para este modelo de regresión. Así, los intervalos de confianza pueden ser construidos al igual que para $\beta_1$. Esto es:
+
+$$\left[ b_0 \pm t(1-\alpha/2, n-1)\sqrt{\widehat{\mathbb{V}(b_0)}}\right]$$
+
+# Análisis de Varianza para análisis de regresión
+
+## Introducción
+
+Con lo anterior, ya hemos visto gran parte de la teoría de un modelo de regresión básico. En lo que sigue, estudiaremos el análisis de regresión desde la perspectiva de análisis de varianza.
+
+**Nociones básicas:** El enfoque desde el análisis de varianza se base en particionar la suma de cuadrado y grados de libertad asociados con la variable respuesta $Y$. Identificaremos 3 términos que usaremos frecuentemente:
+
+- *Suma de cuadrados total* (SSTO): $\sum (Y_i - \overline{Y})^2$
+
+- *Suma de los cuadrados del error* (SSE): $\sum (Y_i - \hat{Y}_i)^2$
+
+- *Suma de los cuadrados de la regresión* (SSR): $\sum (\hat{Y}_i-\overline{Y})^2$
+
+. . .
+
+en donde se tiene la relación:
+
+$$SSTO=SSE+SSR$$
+
+## Desglose de los grados de libertad
+
+Al igual que para la varianza, podemos desglosar los grados de libertad. Es claro ver que:
+
+- SSTO tiene asociado $n-1$ grados de libertad, debido a que estimamos la media poblacional.
+
+- SSE tiene asociado $n-2$ grados de libertad, debido a que para obtener $\hat{Y}_i$ debemos estimar $\beta_0$ y $\beta_1$
+
+- SSR tiene asociado $1$ grado de libertad debido a que los valores ajustados son calculados a partir de la recta de regresión, por lo que $2$ grados de libertad están a asociado a esta, pero uno de ello es perdido debido a la estimación $\overline{Y}$.
+
+. . .
+
+Así, se tiene que:
+
+$$n-1=1+(n-2)$$
+
+
+## Cuadrados medios
+
+Llamamos cuadrados medios a las sumas cuadradas divididas por sus grados de libertad respectivos. Por lo que tenemos:
+
+- **Error cuadrático medio**: $\dfrac{SSE}{n-2}$
+
+- **Cuadrado medio de regresión**: $\dfrac{SSR}{1}$
+
+. . .
+
+En este caso, los cuadrados medios **no son aditivos**
+
+## Tabla ANOVA
+
+Lo que hemos visto anteriormente, puede ser resumido en la tabla ANOVA usual, en donde se incorporó además la esperanza de los cuadrados medios.
+
+
+| F.V. 	| SS                             	| g.l. 	| MS            	| $\mathbf{\mathbb{E}(MS)}$                         	|
+|---------------	|-----------------------------------------	|---------------	|------------------------	|---------------------------------------------------	|
+| Regresión     	| $SSR = \sum (\hat{Y}_i-\overline{Y})^2$ 	| $1$           	| $MSR=SSR$              	| $\sigma^2+\beta_{1}^{2}\sum (X_i-\overline{X})^2$ 	|
+| Error         	| $SSE = \sum (Y_i - \hat{Y}_i)^2$        	| $n-2$         	| $MSE=\dfrac{SSE}{n-2}$ 	| $\sigma^2$                                        	|
+| Total         	| $SSTO=\sum (Y_i - \overline{Y})^2$      	| $n-1$         	|                        	|                                                   	|
+
+
+## Test F
+
+El enfoque de análisis de varianza nos permite realizar fácilmente test para modelos de regresión (y otros modelos lineales). Por ejemplo, consideremos:
+
+
+$$H_0: \beta_1 = 0 \hspace{20pt} H_1:\beta_1 \neq 0$$
+
+### Estadístico de prueba
+
+Bajo este enfoque consideramos el estadístico $F^*$, definido como:
+
+$$F^*=\dfrac{MSR}{MSE}$$
+
+### Distribución muestral de $F^*$
+
+*Es posible mostrar* que bajo $H_0$, $F^*$ sigue una distribución $F(1,n-2)$
+
+## Test F: continuación
+
+### Regla de decisión
+
+Debido a que $F^*$ sigue una distribución $F(1,n-2)$ bajo $H_0$, la regla de decisión será:
+
+- Si $F^* \leq F(1-\alpha; 1,n-2)$, optamos por $H_0$
+
+- Si $F^* > F(1-\alpha; 1,n-2)$, optamos por $H_1$
+
+# Medidas de asociación lineal entre X e Y
+
+Hasta ahora no hemos definido ningún nivel de asociación lineal para las variables en estudio, pues nos concentramos en la regresión misma, su inferencia y utilidad de predicción, pero existen casos en los cuales la asociación lineal **en sí misma** es de principal interés. Para determinar el grado de asociación lineal, utilizamos el **coeficiente de determinación y correlación**
+
+## Coeficiente de determinación
+
+El coeficiente de determinación lo definimos como:
+
+$$R^2=\dfrac{SSR}{SSTO}=1-\dfrac{SSE}{SSTO}$$
+
+y lo interpretamos como **la proporción de la variabilidad que es explicada por el ajuste de regresión lineal**.
+
+Este coeficiente se mueve entre 0 y 1, siendo 1 un ajuste perfecto. *Un buen ajuste de regresión suele estar entre 0.7 - 0.9*, pero esto puede variar dependiendo del contexto del problema.
+
+## Limitaciones del coeficiente de determinación
+
+- Un coeficiente de determinación alto **no indica** que se puedan hacer predicciones buenas
+
+- Un coeficiente de determinación alto **no indica** que el ajuste es necesariamente bueno
+
+- Un coeficiente de determinación cercano a cero **no indica** que $X$ e $Y$ no estén relacionados.
+
+## Coeficiente de correlación
+
+Este coeficiente puede ser definido como la raíz del coeficiente de determinación.
+
+$$r=\pm \sqrt{R^2}$$
+
+y lo interpretamos como el **coeficiente de correlación de Pearson**.
+
+## Aplicación computacional
+
+```{r echo=TRUE, results='hide',message = FALSE, warning=FALSE,fig.show='hide'}
+require(tidyverse)
+require(MASS)
+require(car)
+require(mosaic)
+set.seed(163)
+data(UScereal)
+plot<-ggplot(UScereal,aes(x=fibre,y=calories)) + geom_point() +
+  geom_smooth(method=lm,se=FALSE,color="red") 
+```
+
+```{r echo=FALSE,warning=FALSE, message=FALSE}
+#| fig-pos: 'c'
+plot
+```
+
+## Aplicación computacional: continuación
+
+```{r}
+#| echo: TRUE
+model <- lm(calories~fibre,data=UScereal)
+summary(model)
+```
+
+## Aplicación computacional: continuación
+
+```{r}
+#| echo: TRUE
+confint(model)
+anova(model)
+```
+
+# Diagnóstico 
+
+Cuando realizamos un modelo de regresión, como por ejemplo el modelo de regresión lineal simple antes visto, frecuentemente no podemos estar seguros por adelantado si el modelo es apropiado para aplicación que se le desea dar. 
+
+Muchas de las características del modelo, tales como la linealidad de la función de regresión o normalidad de los errores podría no ser apropiada, por lo que toma relevancia saber si el modelo puede ser aplicado.
+
+En lo que sigue estudiaremos métodos gráficos y test formales, para saber si un modelo es apropiado usarlo. Nos concentramos en el modelo de regresión lineal simple, pero los mismos principios son válidos para todos los modelos estadísticos que veremos.
+
+## Diagnóstico para las variables predictoras
+
+Primero debemos analizar las variables predictora para detectar la presencia de datos anómalos o *outliers*, que puedan influenciar la viabilidad del modelo. 
+
+::: box1
+**La presencia de outliers, puede provocar residuos grandes en magnitud, influenciando enormemente el ajuste de regresión.**
+:::
+
+## Diagnóstico para residuos{.small}
+
+En general, los gráficos de diagnósticos utilizando directamente la variable respuesta $Y$ no son muy útiles en el análisis de regresión debido a que el valor de las observaciones en la variable respuesta son una función del nivel de la variable predictora. Por lo que usualmente, se analizan indirectamente mediante la inspección de los residuos.
+
+Los residuos $e_i$ son la diferencia entre el valor observado $Y_i$ y el valor ajustado $\hat{Y}_i$:
+
+$$e_i=Y_i-\hat{Y}_i$$
+
+Estos pueden ser considerados como el **error observado**, a diferencia de valor real del error $\varepsilon_i$ en el modelo de regresión:
+
+$$\varepsilon_i=Y_i - \mathbb{E}(Y_i)$$
+Para el modelo de regresión lineal simple, los errores $\varepsilon_i$ se asumen **variables aleatorias normales independientes, con media 0 y varianza constante $\sigma^2$**. Si el modelo es apropiado para los datos disponibles, el residuo observado $e_i$ deben reflejar las propiedades que se asumieron para $\varepsilon_i$.
+
+Esta es la idea básica del **análisis de residuos**, una herramienta útil para evaluar la viabilidades de los modelos.
+
+
+## Propiedades de los residuos: media
+
+La media de los $n$ residuos $e_i$ para el modelo de regresión lineal simple es:
+
+$$\overline{e}=\dfrac{\sum e_i}{n}=0$$
+donde $\overline{e}$ denota la media de los residuos. Así, debido a que $\overline{e}$ es siempre 0, este **no** provee información sobre si los errores reales $\varepsilon_i$ tienen valor esperado $\mathbb{E}(\varepsilon_i)=0$.
+
+## Propiedades de los residuos: varianza
+
+La varianza de los $n$ residuos $e_i$ está definida como:
+
+$$s^2=\dfrac{\sum (e_i - \overline{e})^2}{n-2}=\dfrac{\sum e_{i}^{2}}{n-2}=\dfrac{SSE}{n-2}=MSE$$
+Si el modelo es apropiado, el **error cuadrático medio** es un estimador insesgado de la varianza del error $\sigma^2$.
+
+## Propiedades de los residuos: no independencia
+
+Los residuos $e_i$ no son variables aleatorias independientes debido a que involucran los valores ajustados $\hat{Y}_i$, los cuales están basado en la misma función de regresión ajustada. Como resultado de lo anterior, los residuos para el modelo de regresión están sujetos a dos restricciones:
+
+- La suma de $e_i$ debe ser 0
+- la suma de $X_i e_i$ debe ser 0
+
+. . .
+
+Cuando el tamaño de muestra es grande en comparación con el número de parámetros en el modelo de regresión, la efecto de dependencia entre los residuos $e_i$ no tiene mayor importancia y puede ser ignorado.
+
+## Propiedades de los residuos: residuos semi-studentizados
+
+
+Frecuentemente, sirve estandarizar los residuos para realizar el análisis. debido a que la desviación estándar de los términos de error $\varepsilon_i$ es $\sigma$, el cual puede ser estimado mediante $\sqrt{MSE}$, por lo que es natural considerar la estandarización:
+
+$$e_{i}^{*}=\dfrac{e_i-\overline{e}}{\sqrt{MSE}}=\dfrac{e_i}{\sqrt{MSE}}$$
+
+Si $\sqrt{MSE}$ fuese una estimación de la desviación estándar de los residuos $e_i$, llamaríamos $e_{i}^{*}$ residuos *studentizados*. Sin embargo, la desviación estándar de $e_i$ es compleja y varía para los diferentes residuos $e_i$, y $\sqrt{MSE}$ es **sólo una aproximación** de la desviación estándar de $e_i$.
+
+Por lo que llamamos el estadístico $e_{i}^{*}$ un **residuo semi-studentizado**. Estos tipo de residuos nos sirven para identificar la presencia de datos anómalos.
+
+## Diferencias con el modelo estudiado
+
+Usualmente, estaremos en busca de 6 formas en la cuales un modelo de regresión lineal simple con errores normales no es adecuado.
+
+- La función de regresión no es lineal
+- Los errores no tienen varianza constante
+- Los errores no son independientes
+- El modelo ajusta todas las observaciones exceptuando algunas
+- Los errores no se distribuyen de manera normal
+- Unas o varias variables predictoras fueron omitidas del modelo
+
+## Diagnóstico de los residuos
+
+Utilizaremos varios gráficos para identificar si ocurre alguna de las 6 situaciones antes planteadas. Los siguientes gráficos son usualmente usados para este fin
+
+- Gráficos de los residuos vs la variable predictora
+- Gráfico del valor absoluto o el cuadrado de los residuos vs la variable predictora
+- Gráfico de los residuos vs valores ajustados
+- Gráfico de los residuos vs tiempo u otra secuencia
+- Gráfico de los residuos vs variables predictoras omitidas
+- Box-Plot de los residuos
+- Gráfico de probabilidad normal de los residuos
+
+
+## Test relacionados con los residuos
+
+El análisis de residuos mediante gráficos es inherentemente subjetivo. Aún así, este análisis subjetivo de una variedad de gráficos de residuos frecuentemente revela dificultades en la implementación del modelo más claramente que un test formal.
+
+- Test de aleatoriedad: Durbin-Watson Test
+- Test para la consistencia de varianza:  Brown-Forsythe test y Breusch-Pagan test
+- Test de normalidad: Test Chi-cuadrado, Kolmogorov-Smirnov, Lilliefors test.
+
+## Medidas correctivas
+
+Si el modelo de regresión lineal simple no es apropiado para el conjunto de datos que se está analizando, se tienen dos opciones:
+
+- Abandonar el modelo de regresión lineal simple y desarrollar otro modelo
+- Aplicar alguna transformación a los datos tal que el modelo de regresión lineal simple sea apropiado para los datos transformados.
+
+
+#  Modelo de regresión lineal general
+
+Definimos el modelo de regresión lineal general con errores normales de la siguiente manera:
+
+$$Y_i=\beta_0+\beta_1 X_{i1}+\beta_2 X_{i2} + \cdots + \beta_{p-1}X_{i,p-1}+\varepsilon_i$$
+
+donde:
+
+* $\beta_0,\beta_1,\dots,\beta_{p-1}$ son los parámetros de regresión
+* $X_{i1},\dots,X_{i,p-1}$ son constantes conocidas
+* $\varepsilon_i$ son independientes $N(0,\sigma^2)$
+* $i=1,\dots,n$
+
+## Modelo de regresión lineal general: forma  equivalente{.small}
+
+Si consideramos $X_{i0}=1$, el modelo de regresión anterior puede reescrito como:
+
+$$Y_i=\beta_0 X_{i0}+\beta_1 X_{i1}+\beta_2 X_{i2} + \cdots + \beta_{p-1}X_{i,p-1}+\varepsilon_i$$
+por lo que,
+
+$$Y_i=\sum_{k=0}^{p-1} \beta_k X_{ik}+\varepsilon_i$$
+La respuesta media para este modelo de regresión está dado por:
+
+$$\mathbb{E}(Y)=\beta_0+\beta_1 X_1 + \beta_2 X_2 + \cdots+\beta_{p-1} X_{p-1}$$
+debido a que $\mathbb{E}(\varepsilon_i)=0$
+
+Así, el modelo de regresión lineal general con errores normales implica que las observaciones $Y_i$ son variables aleatorias normales, con media $\mathbb{E}(Y_i)$ dado por la expresión anterior y con varianza constante $\sigma^2$.
+
+
+## Variables predictoras cualitativas{.small}
+
+El modelo de regresión lineal general abarca **no sólo variables predictoras cuantitativas, sino también variables cualitativas**. Estas se conocen como variables indicadoras que toman los valores 0 y 1 para identificar las clases de la variable cualitativa.
+
+### Ejemplo
+
+Consideramos el siguiente análisis de regresión para predecir el largo de la estadía en un hospital $(Y)$ basado en la edad $(X_1)$ y género $(X_2)$ del paciente. Definimos $X_2$ como:
+
+$$X_2=\begin{cases}1 \hspace{20pt} \text{si el paciente es mujer}\\  0 \hspace{20pt} \text{si el paciente es hombre}\end{cases}$$
+El modelo de regresión lineal de primer order estará dado por:
+
+$$Y_i=\beta_0+\beta_1 X_{i1} + \beta_2 X_{i2}+\varepsilon_i$$
+donde:
+
+\begin{align*}
+X_{i1}&= \text{ Edad del paciente}\\
+X_{i2}&=\begin{cases}1 \hspace{20pt} \text{si el paciente es mujer}\\  0 \hspace{20pt} \text{si el paciente es hombre}\end{cases}
+\end{align*}
+
+## Ejemplo
+
+En este caso, la función de respuesta estará dada por:
+
+$$\mathbb{E}(Y)=\beta_0+\beta_1 X_1 +\beta_2 X_2$$
+
+Para los pacientes hombres, $X_2=0$ y la respuesta media será:
+
+$$\mathbb{E}(Y)=\beta_0+\beta_1 X_1$$
+
+Y para los pacientes mujeres, $X_2=1$ y la respuesta media será:
+
+$$\mathbb{E}(Y)=(\beta_0+\beta_2)+\beta_1 X_1$$
+
+::: box1
+**En general, representamos una variable cualitativa con $c$ clases mediante $c-1$ variables indicadoras.**
+:::
+
+## Ejemplo: continuación
+
+Por ejemplo, si en el ejemplo anterior se agrega una variable cualitativa que representa el estado de discapacidad. Podemos agregar dos variable indicadoras $X_3$ y $X_4$ como:
+
+$$X_3=\begin{cases}1 \hspace{20pt} \text{si el paciente no es discapacitado}\\  0 \hspace{20pt} \text{en otro caso}\end{cases}$$
+y,
+
+$$X_4=\begin{cases}1 \hspace{20pt} \text{si el paciente es discapacitado}\\  0 \hspace{20pt} \text{en otro caso}\end{cases}$$
+Así, el modelo quedaría como:
+
+$$Y_i=\beta_0+\beta_1 X_{i1} + \beta_2 X_{i2}+ \beta_3 X_{i3} + \beta_4 X_{i4} + \varepsilon_i$$
+
+donde las variables predictoras están definidas como antes.
+
+## Regresión polinómica
+
+Las regresiones polinómicas son casos especiales del modelo de regresión lineal general. Estos contienen términos cuadrados o de grados mayores de las variables predictoras, provocando que la función de respuesta sea curvilínea. Un ejemplo de una regresión polinómica sería:
+
+$$Y_i=\beta_0 + \beta_1 X_i + \beta_2 X_{i}^{2}+\varepsilon_i$$
+
+## Variables transformadas
+
+Los modelos con variables transformadas involucran funciones respuesta complejas y curvilíneas, aún así son casos especiales de un modelo de regresión lineal general. 
+
+Consideremos el siguiente modelo:
+
+$$\log Y_i = \beta_0 + \beta_1 X_{i1} +\beta_2 X_{i2}+\beta_3 X_{i3} +\varepsilon_i$$
+
+Acá, la superficie de respuesta (desde el punto de vista geométrico) es compleja, aún así puede ser tratada como un modelo de regresión lineal general. Si consideramos $Y_{i}^{'}=\log Y_i$, podemos reescribir el modelo de regresión anterior como:
+
+$$Y_{i}^{'}=\beta_0 + \beta_1 X_{i1} +\beta_2 X_{i2}+\beta_3 X_{i3} +\varepsilon_i$$
+
+El cual tiene la forma del modelo general. La variable respuesta es el logaritmo de $Y$.
+
+## Variables transformadas: continuación
+
+Muchos modelos pueden ser transformados al modelo de regresión lineal general, por ejemplo el modelo:
+
+$$Y_i=\dfrac{1}{\beta_0 + \beta_1 X_{i1} +\beta_2 X_{i2}+\varepsilon_i}$$
+
+Puede ser transformado al modelo de regresión lineal general al considerar $Y_{i}^{'}=1/Y_i$. Así, se puede reescribir como:
+
+$$Y_{i}^{'}=\beta_0 + \beta_1 X_{i1} +\beta_2 X_{i2}+\varepsilon_i$$
+
+## Efectos de interacción
+
+Cuando los efectos de la variables predictoras en la variable respuesta no son **aditivos**, el efecto de un predictor depende del nivel en otra variable predictora. El modelo de regresión lineal general abarca modelos con efectos no aditivos o que interactúan entre sí. Un ejemplo de un modelo de regresión lineal no aditivo con dos variables predictoras $X_1$ y $X_2$ es:
+
+$$Y_i=\beta_0 + \beta_1 X_{i1}+\beta_2 X_{i2} + \beta_3 X_{i1} X_{2i} +\varepsilon_i$$
+
+Acá, la función de respuesta es compleja debido a la término de interacción $\beta_3 X_{i1} X_{2i}$. Aún así, el modelo anterior, es un caso especial de un modelo de regresión lineal general. Sea $X_{i3}=X_{i1}X_{i2}$, podemos reescribir el modelos anterior como:
+
+$$Y_i=\beta_0 + \beta_1 X_{i1}+\beta_2 X_{i2} + \beta_3 X_{i3} +\varepsilon_i$$
+
+En el cual es claro ver que tiene la forma general buscada.
+
+## Combinación de casos
+
+Un modelo de regresión puede combinar muchos de los elementos que hemos mencionado, y aún así ser tratado como un modelo de regresión lineal general. Consideremos el siguiente modelo de regresión que contiene términos lineal y cuadráticos para cada una de las variables predictoras, y un término de interacción.
+
+$$Y_i=\beta_0 + \beta_1 X_{i1}+\beta_{2}X_{i1}^{2} + \beta_3 X_{i2} + \beta_4 X_{i2}^{2}+\beta_5 X_{i1}X_{i2}+\varepsilon_i$$
+Si definimos,
+
+$$Z_{i1}=X_{i1} \hspace{15pt} Z_{i2}=X_{i1}^{2} \hspace{15pt} Z_{i3}=X_{i2} \hspace{15pt} Z_{i4}=X_{i2}^{2} \hspace{15pt} Z_{i5}=X_{i1}X_{i2}$$
+Podemos representar el modelo como:
+
+$$Y_i=\beta_0 + \beta_1 Z_{i1}+\beta_2 Z_{i2}+\beta_3 Z_{i3} + \beta_4 Z_{i4} + \beta_5 Z_{i5} +\varepsilon$$
+
+## Interpretación
+
+Debe estar claro, por lo ejemplos, que el modelo de regresión lineal general no está restringido a una respuesta lineal. El término **modelo lineal** hace referencia al hecho que el modelo en estudio es lineal en los parámetros; no hace referencia a la forma de la superficie de respuesta.
+
+Decimos que un modelo de regresión es lineal en los parámetros cuando puede ser escrito de la forma:
+
+$$Y_i=c_{i0}\beta_0 + c_{i1}\beta_1 + c_{i2}\beta_2 + \dots + c_{i,p-1}\beta_{p-1} +\varepsilon_i$$
+
+donde los términos $c_{i0},c_{i1},$etc, son coeficientes que acompañan a las variables predictoras. Un ejemplo de un modelo de regresión lineal no lineal sería:
+
+$$Y_i=\beta_0 \exp (\beta_1 X_i) + \varepsilon$$
+
+Este último modelo no puede ser expresado en la forma de un modelo de regresión lineal.
+
+## Bibliografía recomendada para modelos lineales
+
+Para profundizar en la teoría de modelos lineales (y sus aplicaciones) se recomienda el libro: **Applied lineal statistical models**. Kutner Michael H., Nachtsheim Christopher J. , Neter John ,Li William. 5th Edition, 2004.
+
+
+![](images/week4/kutner.jpg){fig-align="center"}
+
+
+# Próxima sesión 23/09 Certamen #1
+
+- Certamen será con computador, pero **podría** tener también preguntas teóricas
+- Se subirá una guía de ejercicios con preguntas tipo certamen
+- Se realizará ayudantía la semana del certamen
+- Preguntas y consultas al correo: eloy.alvarado@usm.cl
+
+
