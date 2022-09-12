@@ -8,7 +8,7 @@ El programa oficial del curso está disponible [**acá**](/documents/IND163C_AN.
 
 # Introducción a Analytics
 
-1. Del sistema de información de marketing al analitycs ¿Qué es Analytics? ¿Para qué sirve? ¿En
+1. Del sistema de información de marketing al analytics ¿Qué es Analytics? ¿Para qué sirve? ¿En
 qué contexto es necesario?
 2. Analytics en el mundo y en Chile.
 3. Impacto social de Analytics en Chile y el mundo. 
