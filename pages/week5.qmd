@@ -5,7 +5,9 @@ subtitle: "Certamen 1"
 
 ## Preparación
 
+[Guía ejemplo - Certamen #1](../documents/G1/IND163C_2022_02_G1.pdf)
 
+[Base de datos guía](../documents/G1/Advertising.csv)
 
 ## Presentación
 

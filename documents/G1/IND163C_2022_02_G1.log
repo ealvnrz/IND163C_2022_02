@@ -1,0 +1,1233 @@
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2022.5.21)  22 SEP 2022 00:17
+entering extended mode
+**./IND163C_2022_02_G1.tex
+(IND163C_2022_02_G1.tex
+LaTeX2e <2021-06-01> patch level 1
+L3 programming layer <2021-08-27> (C:\Program Files\MiKTeX\tex/latex/tufte-late
+x\tufte-handout.cls
+Document Class: tufte-handout 2015/06/21 v3.5.2 Tufte-handout class
+(C:\Program Files\MiKTeX\tex/latex/tufte-latex\tufte-common.def
+File: tufte-common.def 2015/06/21 v3.5.2 Common code for the Tufte-LaTeX styles
+
+(C:\Program Files\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+(C:\Program Files\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Program Files\MiKT
+eX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks16
+\XKV@tempa@toks=\toks17
+(C:\Program Files\MiKTeX\tex/generic/xkeyval\keyval.tex))
+\XKV@depth=\count178
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (C:\Program Files\MiKTeX\tex/latex/xifthen\xifthen.sty
+Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
+(C:\Program Files\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count179
+\calc@Bcount=\count180
+\calc@Adimen=\dimen138
+\calc@Bdimen=\dimen139
+\calc@Askip=\skip47
+\calc@Bskip=\skip48
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count181
+\calc@Cskip=\skip49
+) (C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+) (C:\Program Files\MiKTeX\tex/latex/ifmtarg\ifmtarg.sty
+Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
+)) (C:\Program Files\MiKTeX\tex/latex/hardwrap\hardwrap.sty
+Package: hardwrap 2011/02/12 v0.2 Hard wrap messages
+(C:\Program Files\MiKTeX\tex/latex/ifplatform\ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+(C:\Program Files\MiKTeX\tex/latex/tools\shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+) (C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+(C:\Program Files\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+) (C:\Program Files\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+) (C:\Program Files\MiKTeX\tex/generic/catchfile\catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+(C:\Program Files\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)) (C:\Program Files\MiKTeX\tex/generic/iftex\ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+
+Package ifplatform Warning: 
+    shell escape is disabled, so I can only detect \ifwindows.
+
+) (C:\Program Files\MiKTeX\tex/generic/iftex\ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+\hw@charcount=\count182
+\hw@wordcount=\count183
+\hw@maxprintline=\count184
+)
+Class tufte-handout Info: Loading the base class `article'
+(C:\Program Files\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
+(C:\Program Files\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip50
+\belowcaptionskip=\skip51
+\bibindent=\dimen140
+) (C:\Program Files\MiKTeX\tex/generic/iftex\ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+) (C:\Program Files\MiKTeX\tex/latex/xltxtra\xltxtra.sty
+Package: xltxtra 2018/12/31 v0.7 Improvements for the "XeLaTeX" format
+(C:\Program Files\MiKTeX\tex/latex/fontspec\fontspec.sty (C:\Program Files\MiKT
+eX\tex/latex/l3packages/xparse\xparse.sty (C:\Program Files\MiKTeX\tex/latex/l3
+kernel\expl3.sty
+Package: expl3 2021-08-27 L3 programming layer (loader) 
+(C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-xetex.def
+File: l3backend-xetex.def 2021-08-04 L3 backend support: XeTeX
+()
+\c__kernel_sys_dvipdfmx_version_int=\count193
+\l__color_backend_stack_int=\count194
+\g__color_backend_stack_int=\count195
+\g__graphics_track_int=\count196
+\l__pdf_internal_box=\box50
+\g__pdf_backend_object_int=\count197
+\g__pdf_backend_annotation_int=\count198
+\g__pdf_backend_link_int=\count199
+))
+Package: xparse 2021-08-27 L3 Experimental document command parser
+)
+Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
+(C:\Program Files\MiKTeX\tex/latex/fontspec\fontspec-xetex.sty
+Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count266
+\l__fontspec_language_int=\count267
+\l__fontspec_strnum_int=\count268
+\l__fontspec_tmp_int=\count269
+\l__fontspec_tmpa_int=\count270
+\l__fontspec_tmpb_int=\count271
+\l__fontspec_tmpc_int=\count272
+\l__fontspec_em_int=\count273
+\l__fontspec_emdef_int=\count274
+\l__fontspec_strong_int=\count275
+\l__fontspec_strongdef_int=\count276
+\l__fontspec_tmpa_dim=\dimen141
+\l__fontspec_tmpb_dim=\dimen142
+\l__fontspec_tmpc_dim=\dimen143
+(C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (C:\Program Files\MiKTeX\tex/latex/fontspec\fontspec.cfg))) (C:\Program Files
+\MiKTeX\tex/latex/realscripts\realscripts.sty
+Package: realscripts 2016/02/13 v0.3d Access OpenType subscripts and superscrip
+ts
+\subsupersep=\dimen144
+) (C:\Program Files\MiKTeX\tex/latex/metalogo\metalogo.sty
+Package: metalogo 2010/05/29 v0.12 Extended TeX logo macros
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+(C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+(C:\Program Files\MiKTeX\tex/latex/graphics-def\xetex.def
+File: xetex.def 2021/03/18 v5.0k Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen145
+\Gin@req@width=\dimen146
+)
+\xl@everylogo=\toks18
+\xl@@everylogo=\toks19
+LaTeX Info: Redefining \TeX on input line 193.
+LaTeX Info: Redefining \LaTeX on input line 202.
+LaTeX Info: Redefining \LaTeXe on input line 219.
+)
+\l__xetex_show_hyphens_wrapping_box=\box51
+\l__xetex_show_hyphens_temp_box=\box52
+\l__xetex_show_hyphens_final_box=\box53
+\g__xetex_show_hyphens_word_box=\box54
+) (C:\Program Files\MiKTeX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box55
+\beforetitleunit=\skip52
+\aftertitleunit=\skip53
+\ttl@plus=\dimen147
+\ttl@minus=\dimen148
+\ttl@toksa=\toks20
+\titlewidth=\dimen149
+\titlewidthlast=\dimen150
+\titlewidthfirst=\dimen151
+) (C:\Program Files\MiKTeX\tex/latex/titlesec\titletoc.sty
+Package: titletoc 2021/07/05 v2.14 TOC entries
+\ttl@leftsep=\dimen152
+) (C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+(C:\Program Files\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (C:\Program Files\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (C:\Program Files\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (C:\Program Files\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (C:\Program Files\MiKTeX\tex/latex/letltxmacro\letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (C:\Program Files\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (C:\Program Files\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen153
+\Hy@linkcounter=\count277
+\Hy@pagecounter=\count278
+(C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+) (C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
+) (C:\Program Files\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count279
+(C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4073.
+Package hyperref Info: Option `hyperfootnotes' set `false' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count280
+(C:\Program Files\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen154
+(C:\Program Files\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+(C:\Program Files\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count281
+\Field@Width=\dimen155
+\Fld@charsize=\dimen156
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
+(C:\Program Files\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count282
+\c@Item=\count283
+)
+Package hyperref Info: Driver: hxetex.
+(C:\Program Files\MiKTeX\tex/latex/hyperref\hxetex.def
+File: hxetex.def 2021-06-07 v7.00m Hyperref driver for XeTeX
+(C:\Program Files\MiKTeX\tex/generic/stringenc\stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box56
+\c@Hy@AnnotLevel=\count284
+\HyField@AnnotCount=\count285
+\Fld@listcount=\count286
+\c@bookmark@seq@number=\count287
+(C:\Program Files\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+(C:\Program Files\MiKTeX\tex/latex/base\atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+) (C:\Program Files\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip54
+) (C:\Program Files\MiKTeX\tex/latex/ragged2e\ragged2e.sty
+Package: ragged2e 2021/02/05 v3.0 ragged2e Package
+\CenteringLeftskip=\skip55
+\RaggedLeftLeftskip=\skip56
+\RaggedRightLeftskip=\skip57
+\CenteringRightskip=\skip58
+\RaggedLeftRightskip=\skip59
+\RaggedRightRightskip=\skip60
+\CenteringParfillskip=\skip61
+\RaggedLeftParfillskip=\skip62
+\RaggedRightParfillskip=\skip63
+\JustifyingParfillskip=\skip64
+\CenteringParindent=\skip65
+\RaggedLeftParindent=\skip66
+\RaggedRightParindent=\skip67
+\JustifyingParindent=\skip68
+) (C:\Program Files\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count288
+\Gm@cntv=\count289
+\c@Gm@tempcnt=\count290
+\Gm@bindingoffset=\dimen157
+\Gm@wd@mp=\dimen158
+\Gm@odd@mp=\dimen159
+\Gm@even@mp=\dimen160
+\Gm@layoutwidth=\dimen161
+\Gm@layoutheight=\dimen162
+\Gm@layouthoffset=\dimen163
+\Gm@layoutvoffset=\dimen164
+\Gm@dimlist=\toks21
+(C:\Program Files\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Program Files\Mi
+KTeX\tex/latex/changepage\changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count291
+\cp@tempcnt=\count292
+)
+\@tufte@overhang=\skip69
+\@tufte@fullwidth=\skip70
+\@tufte@caption@fill=\skip71
+(C:\Program Files\MiKTeX\tex/latex/paralist\paralist.sty
+Package: paralist 2017/01/22 v2.7 Extended list environments
+\pltopsep=\skip72
+\plpartopsep=\skip73
+\plitemsep=\skip74
+\plparsep=\skip75
+\pl@lab=\toks22
+) (C:\Program Files\MiKTeX\tex/latex/textcase\textcase.sty
+Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
+) (C:\Program Files\MiKTeX\tex/generic/soul\soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks23
+\SOUL@lasttoken=\toks24
+\SOUL@cmds=\toks25
+\SOUL@buffer=\toks26
+\SOUL@token=\toks27
+\SOUL@spaceskip=\skip76
+\SOUL@ttwidth=\dimen165
+\SOUL@uldp=\dimen166
+\SOUL@ulht=\dimen167
+)
+LaTeX Info: Redefining \allcapsspacing on input line 737.
+LaTeX Info: Redefining \smallcapsspacing on input line 737.
+(C:\Program Files\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+) (C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Package option `usenames' ignored on input line 216.
+Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+(C:\Program Files\MiKTeX\tex/latex/graphics\dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+) (C:\Program Files\MiKTeX\tex/latex/xcolor\svgnam.def
+File: svgnam.def 2016/05/11 v2.12 Predefined colors according to SVG 1.1 (UK)
+)) (C:\Program Files\MiKTeX\tex/latex/natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip77
+\bibsep=\skip78
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count293
+) (C:\Program Files\MiKTeX\tex/latex/natbib\bibentry.sty
+Package: bibentry 2007/10/30 1.5 (PWD)
+)
+No file IND163C_2022_02_G1.bbl.
+\c@@tufte@num@bibkeys=\count294
+(C:\Program Files\MiKTeX\tex/latex/sauerj\optparams.sty
+Package: optparams 2004/08/14 v0.9 multiple optional parameters in macros
+)
+\@tufte@sidenote@vertical@offset=\skip79
+(C:\Program Files\MiKTeX\tex/latex/placeins\placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+\@tufte@margin@floatbox=\box57
+\@tufte@figure@box=\box58
+\@tufte@caption@box=\box59
+\@tufte@caption@vertical@offset=\skip80
+\@tufte@float@contents@width=\skip81
+(C:\Program Files\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
+rs
+\f@nch@headwidth=\skip82
+\f@nch@O@elh=\skip83
+\f@nch@O@erh=\skip84
+\f@nch@O@olh=\skip85
+\f@nch@O@orh=\skip86
+\f@nch@O@elf=\skip87
+\f@nch@O@erf=\skip88
+\f@nch@O@olf=\skip89
+\f@nch@O@orf=\skip90
+)
+\tufteskipamount=\skip91
+(C:\Program Files\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count295
+\mult@box=\box60
+\multicol@leftmargin=\dimen168
+\c@unbalance=\count296
+\c@collectmore=\count297
+\doublecol@number=\count298
+\multicoltolerance=\count299
+\multicolpretolerance=\count300
+\full@width=\dimen169
+\page@free=\dimen170
+\premulticols=\dimen171
+\postmulticols=\dimen172
+\multicolsep=\skip92
+\multicolbaselineskip=\skip93
+\partial@page=\box61
+\last@line=\box62
+\maxbalancingoverflow=\dimen173
+\mult@rightbox=\box63
+\mult@grightbox=\box64
+\mult@gfirstbox=\box65
+\mult@firstbox=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\c@minrows=\count301
+\c@columnbadness=\count302
+\c@finalcolumnbadness=\count303
+\last@try=\dimen174
+\multicolovershoot=\dimen175
+\multicolundershoot=\dimen176
+\mult@nat@firstbox=\box104
+\colbreak@box=\box105
+\mc@col@check@num=\count304
+))) (C:\Program Files\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks28
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2021/04/20 v2.17j AMS math features
+\@mathmargin=\skip94
+For additional information on amsmath, use the `?' option.
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks29
+\ex@=\dimen177
+)) (C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen178
+) (C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count305
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count306
+\leftroot@=\count307
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count308
+\DOTSCASE@=\count309
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box106
+\strutbox@=\box107
+\big@size=\dimen179
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count310
+\c@MaxMatrixCols=\count311
+\dotsspace@=\muskip17
+\c@parentequation=\count312
+\dspbrk@lvl=\count313
+\tag@help=\toks30
+\row@=\count314
+\column@=\count315
+\maxfields@=\count316
+\andhelp@=\toks31
+\eqnshift@=\dimen180
+\alignsep@=\dimen181
+\tagshift@=\dimen182
+\tagwidth@=\dimen183
+\totwidth@=\dimen184
+\lineht@=\dimen185
+\@envbody=\toks32
+\multlinegap=\skip95
+\multlinetaggap=\skip96
+\mathdisplay@stack=\toks33
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+) (C:\Program Files\MiKTeX\tex/latex/base\fixltx2e.sty
+Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
+Applying: [2015/01/01] Old fixltx2e package on input line 46.
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
+Already applied: [0000/00/00] Old fixltx2e package on input line 53.
+) (C:\Program Files\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen186
+\lightrulewidth=\dimen187
+\cmidrulewidth=\dimen188
+\belowrulesep=\dimen189
+\belowbottomsep=\dimen190
+\aboverulesep=\dimen191
+\abovetopsep=\dimen192
+\cmidrulesep=\dimen193
+\cmidrulekern=\dimen194
+\defaultaddspace=\dimen195
+\@cmidla=\count317
+\@cmidlb=\count318
+\@aboverulesep=\dimen196
+\@belowrulesep=\dimen197
+\@thisruleclass=\count319
+\@lastruleclass=\count320
+\@thisrulewidth=\dimen198
+) (C:\Program Files\MiKTeX\tex/latex/units\units.sty
+Package: units 1998/08/04 v0.9b Typesetting units
+(C:\Program Files\MiKTeX\tex/latex/units\nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip97
+\L@UnitsRaiseTextstyle=\skip98
+\L@UnitsRaiseScriptstyle=\skip99
+)) (C:\Program Files\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+Package: fancyvrb 2021/08/12 v3.8 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count321
+\FV@InFile=\read2
+\FV@TabBox=\box108
+\c@FancyVerbLine=\count322
+\FV@StepNumber=\count323
+\FV@OutFile=\write3
+) (C:\Program Files\MiKTeX\tex/latex/ulem\ulem.sty
+\UL@box=\box109
+\UL@hyphenbox=\box110
+\UL@skip=\skip100
+\UL@hook=\toks34
+\UL@height=\dimen199
+\UL@pe=\count324
+\UL@pixel=\dimen256
+\ULC@box=\box111
+Package: ulem 2019/11/18
+\ULdepth=\dimen257
+) (C:\Program Files\MiKTeX\tex/latex/morefloats\morefloats.sty
+Package: morefloats 2015/07/22 v1.0h Raise limit of unprocessed floats (HMM)
+Package morefloats Info: Maximum number of possible floats asked for: 36
+(morefloats)             (i.e. 18 more floats).
+(morefloats)             LaTeX might run out of memory before this
+(morefloats)             (in which case it will notify you).
+) (IND163C_2022_02_G1.aux)
+\openout1 = `IND163C_2022_02_G1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+11.
+(C:\Program Files\MiKTeX\tex/latex/base\ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 111.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 111.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 111.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 111.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 111.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 111.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 111.
+LaTeX Font Info:    Redeclaring math accent \check on input line 111.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 111.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 111.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 111.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 111.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 111.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 111.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 111.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 111.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 111.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 111.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 111.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 111.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 111.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 111.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 111.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 111.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 111.
+Package hyperref Info: Link coloring OFF on input line 111.
+(C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+(C:\Program Files\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (C:\Program Files\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count325
+)
+LaTeX Info: Redefining \ref on input line 111.
+LaTeX Info: Redefining \pageref on input line 111.
+LaTeX Info: Redefining \nameref on input line 111.
+(IND163C_2022_02_G1.out) (IND163C_2022_02_G1.out)
+\@outlinefile=\write4
+\openout4 = `IND163C_2022_02_G1.out'.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside asymmetric 
+* h-part:(L,W,R)=(72.26999pt, 312.0pt, 230.02501pt)
+* v-part:(T,H,B)=(72.26999pt, 616.0pt, 106.7pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=312.0pt
+* \textheight=616.0pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-42.0pt
+* \headheight=14.0pt
+* \headsep=28.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=144.0pt
+* \marginparsep=24.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\langwohyphens=\language79
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+[1
+
+]
+File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file 
+(type pdf)
+<use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-3-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
+
+ []
+
+
+Overfull \hbox (12.29002pt too wide) in paragraph at lines 208--213
+\TU/lmr/m/n/10 mas para las variables continuas utilizando la función \TU/lmtt/
+m/n/10 plot_histogram()\TU/lmr/m/n/10 :  
+ []
+
+File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file 
+(type pdf)
+<use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-4-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+
+ []
+
+File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-4-2.pdf Graphic file 
+(type pdf)
+<use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-4-2.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
+
+ []
+
+File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file 
+(type pdf)
+<use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-5-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
+
+ []
+
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 261; it cannot be
+(fontspec)                used with a font that wasn't selected by a fontspec
+(fontspec)                command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[2]
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 261; it cannot be
+(fontspec)                used with a font that wasn't selected by a fontspec
+(fontspec)                command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[3]
+File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file 
+(type pdf)
+<use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-6-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
+
+ []
+
+
+LaTeX Warning: Marginpar on page 4 moved.
+
+
+Overfull \hbox (10.87003pt too wide) in paragraph at lines 276--279
+\TU/lmr/m/n/10 mos más adelante en detalle) se puede utilizar la función \TU/lm
+tt/m/n/10 plot_prcomp()\TU/lmr/m/n/10 . 
+ []
+
+
+LaTeX Warning: Marginpar on page 4 moved.
+
+File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file 
+(type pdf)
+<use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-7-1.pdf>
+
+Overfull \hbox (12.01646pt too wide) in paragraph at lines 294--295
+[][]  
+ []
+
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 296; it cannot be
+(fontspec)                used with a font that wasn't selected by a fontspec
+(fontspec)                command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[4]
+Overfull \hbox (19.58002pt too wide) in paragraph at lines 296--300
+\TU/lmr/m/n/10 una de las variables en estudio mediante la función \TU/lmtt/m/n
+/10 plot_scatterplot(... 
+ []
+
+
+Overfull \hbox (0.41002pt too wide) in paragraph at lines 310--313
+[]\TU/lmr/m/n/10 En este ejemplo introductorio, al no tener datos faltantes y c
+ategóri- 
+ []
+
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 345; it cannot be
+(fontspec)                used with a font that wasn't selected by a fontspec
+(fontspec)                command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[5]
+File: IND163C_2022_02_G1_files/figure-latex/modelos-1.pdf Graphic file (type pd
+f)
+<use IND163C_2022_02_G1_files/figure-latex/modelos-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
+
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 354
+.
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 354
+.
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Warning: Marginpar on page 6 moved.
+
+
+Overfull \hbox (0.41002pt too wide) in paragraph at lines 386--390
+[]\TU/lmr/m/n/10 La función \TU/lmtt/m/n/10 lm() \TU/lmr/m/n/10 utiliza por def
+ecto el método de \TU/lmr/bx/n/10 mínimos cuadra- 
+ []
+
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 421; it cannot be
+(fontspec)                used with a font that wasn't selected by a fontspec
+(fontspec)                command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[6]
+Overfull \hbox (29.25pt too wide) in paragraph at lines 421--421
+[]\TU/lmtt/m/n/10 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 '
+ ' 1[] 
+ []
+
+
+Overfull \hbox (29.25pt too wide) in paragraph at lines 449--449
+[]\TU/lmtt/m/n/10 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 '
+ ' 1[] 
+ []
+
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 477; it cannot be
+(fontspec)                used with a font that wasn't selected by a fontspec
+(fontspec)                command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[7]
+Overfull \hbox (29.25pt too wide) in paragraph at lines 477--477
+[]\TU/lmtt/m/n/10 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 '
+ ' 1[] 
+ []
+
+
+Overfull \hbox (24.0pt too wide) in paragraph at lines 477--477
+[]\TU/lmtt/m/n/10 ## Multiple R-squared:  0.05212,    Adjusted R-squared:  0.04
+733[] 
+ []
+
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 527; it cannot be
+(fontspec)                used with a font that wasn't selected by a fontspec
+(fontspec)                command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[8]
+Overfull \hbox (29.25pt too wide) in paragraph at lines 539--539
+[]\TU/lmtt/m/n/10 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 '
+ ' 1[] 
+ []
+
+File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-13-1.pdf Graphic file
+ (type pdf)
+<use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-13-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 556--557
+
+ []
+
+File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-14-1.pdf Graphic file
+ (type pdf)
+<use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-14-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--576
+
+ []
+
+
+Overfull \hbox (6.05002pt too wide) in paragraph at lines 578--580
+[]\TU/lmr/m/n/10 Una forma de visualizar más claramente los residuos, es estand
+arizán- 
+ []
+
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 586; it cannot be
+(fontspec)                used with a font that wasn't selected by a fontspec
+(fontspec)                command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[9]
+File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-15-1.pdf Graphic file
+ (type pdf)
+<use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-15-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 601--602
+
+ []
+
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 611; it cannot be
+(fontspec)                used with a font that wasn't selected by a fontspec
+(fontspec)                command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[10]
+File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-16-1.pdf Graphic file
+ (type pdf)
+<use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-16-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 620--621
+
+ []
+
+File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-17-1.pdf Graphic file
+ (type pdf)
+<use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-17-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 640--641
+
+ []
+
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 648; it cannot be
+(fontspec)                used with a font that wasn't selected by a fontspec
+(fontspec)                command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[11]
+Overfull \hbox (108.0pt too wide) in paragraph at lines 663--663
+[]\TU/lmtt/m/n/10 ##      TV radio newspaper sales .fitted .resid   .hat .sigma
+ .cooksd .std.resid[] 
+ []
+
+
+Overfull \hbox (108.0pt too wide) in paragraph at lines 663--663
+[]\TU/lmtt/m/n/10 ##   <dbl> <dbl>     <dbl> <dbl>   <dbl>  <dbl>  <dbl>  <dbl>
+   <dbl>      <dbl>[] 
+ []
+
+
+Overfull \hbox (108.0pt too wide) in paragraph at lines 663--663
+[]\TU/lmtt/m/n/10 ## 1  263.   3.5      19.5  12      19.5  -7.53 0.0142   3.22
+  0.0389      -2.33[] 
+ []
+
+
+Overfull \hbox (108.0pt too wide) in paragraph at lines 663--663
+[]\TU/lmtt/m/n/10 ## 2  291.   4.1       8.5  12.8    20.9  -8.05 0.0191   3.22
+  0.0605      -2.49[] 
+ []
+
+
+Overfull \hbox (108.0pt too wide) in paragraph at lines 663--663
+[]\TU/lmtt/m/n/10 ## 3  277.   2.3      23.7  11.8    20.2  -8.39 0.0165   3.21
+  0.0563      -2.59[] 
+ []
+
+
+Overfull \hbox (39.75pt too wide) in paragraph at lines 710--710
+[]\TU/lmtt/m/n/10 ## lm(formula = sales ~ TV + radio + newspaper, data = Advert
+ising)[] 
+ []
+
+
+Overfull \hbox (29.25pt too wide) in paragraph at lines 710--710
+[]\TU/lmtt/m/n/10 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 '
+ ' 1[] 
+ []
+
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 710; it cannot be
+(fontspec)                used with a font that wasn't selected by a fontspec
+(fontspec)                command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[12]
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 769; it cannot be
+(fontspec)                used with a font that wasn't selected by a fontspec
+(fontspec)                command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[13]
+File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-21-1.pdf Graphic file
+ (type pdf)
+<use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-21-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 773--774
+
+ []
+
+File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-22-1.pdf Graphic file
+ (type pdf)
+<use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-22-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 793--794
+
+ []
+
+
+Overfull \hbox (6.83pt too wide) in paragraph at lines 796--801
+\TU/lmr/m/n/10 trario pareciera suceder. El modelo de regresión lineal múltiple
+ pareciera 
+ []
+
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 801; it cannot be
+(fontspec)                used with a font that wasn't selected by a fontspec
+(fontspec)                command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[14]
+
+LaTeX Warning: Marginpar on page 15 moved.
+
+
+Overfull \hbox (26.25343pt too wide) in paragraph at lines 817--847
+ [][] 
+ []
+
+
+LaTeX Warning: Marginpar on page 15 moved.
+
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 869; it cannot be
+(fontspec)                used with a font that wasn't selected by a fontspec
+(fontspec)                command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[15]
+Overfull \hbox (45.0pt too wide) in paragraph at lines 914--914
+[]\TU/lmtt/m/n/10 ## lm(formula = sales ~ TV + radio + TV * radio, data = Adver
+tising)[] 
+ []
+
+
+Overfull \hbox (29.25pt too wide) in paragraph at lines 914--914
+[]\TU/lmtt/m/n/10 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 '
+ ' 1[] 
+ []
+
+
+Overfull \hbox (3.0pt too wide) in paragraph at lines 914--914
+[]\TU/lmtt/m/n/10 ## Residual standard error: 0.9435 on 196 degrees of freedom[
+] 
+ []
+
+
+LaTeX Warning: Marginpar on page 16 moved.
+
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 922; it cannot be
+(fontspec)                used with a font that wasn't selected by a fontspec
+(fontspec)                command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[16]
+Overfull \hbox (156.88513pt too wide) in paragraph at lines 940--973
+ [][] 
+ []
+
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 982; it cannot be
+(fontspec)                used with a font that wasn't selected by a fontspec
+(fontspec)                command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[17]
+File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-26-1.pdf Graphic file
+ (type pdf)
+<use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-26-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 997--998
+
+ []
+
+File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-27-1.pdf Graphic file
+ (type pdf)
+<use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-27-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1015--1016
+
+ []
+
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 1030; it cannot
+(fontspec)                be used with a font that wasn't selected by a
+(fontspec)                fontspec command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[18]
+File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-28-1.pdf Graphic file
+ (type pdf)
+<use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-28-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1034--1035
+
+ []
+
+File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-29-1.pdf Graphic file
+ (type pdf)
+<use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-29-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1052
+
+ []
+
+
+LaTeX Warning: Marginpar on page 19 moved.
+
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 1075; it cannot
+(fontspec)                be used with a font that wasn't selected by a
+(fontspec)                fontspec command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[19]
+No file IND163C_2022_02_G1.bbl.
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 1085; it cannot
+(fontspec)                be used with a font that wasn't selected by a
+(fontspec)                fontspec command.
+(fontspec)                 
+(fontspec)                 The current font is "\TU/lmr/m/n/10 ".
+(fontspec)                  The requested feature is "LetterSpace=10". 
+
+[20] (IND163C_2022_02_G1.aux)
+Package rerunfilecheck Info: File `IND163C_2022_02_G1.out' has not changed.
+(rerunfilecheck)             Checksum: 15ECBFD6DED6463E8EC8AF24BC416E06;257.
+ ) 
+Here is how much of TeX's memory you used:
+ 15633 strings out of 411295
+ 280592 string characters out of 2836125
+ 676939 words of memory out of 3000000
+ 35783 multiletter control sequences out of 15000+600000
+ 406012 words of font info for 51 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 108i,12n,112p,424b,510s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on IND163C_2022_02_G1.pdf (20 pages).

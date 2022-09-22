@@ -1,0 +1,378 @@
+---
+title: "Ejemplo resulto - Certamen #1"
+runningheader: "Certamen #1" # only for pdf output
+author: "Eloy Alvarado Narváez"
+date: "`r Sys.Date()`"
+output:
+  tufte::tufte_handout:
+    citation_package: natbib
+    latex_engine: xelatex
+  tufte::tufte_html: default
+  tufte::tufte_book:
+    citation_package: natbib
+    latex_engine: xelatex
+bibliography: skeleton.bib
+link-citations: yes
+---
+
+\renewcommand{\figurename}{Fig.}
+
+```{r setup, include=FALSE}
+library(tufte)
+# invalidate cache when the tufte version changes
+knitr::opts_chunk$set(cache.extra = packageVersion('tufte'))
+options(htmltools.dir.version = FALSE)
+```
+
+# Introducción
+
+En lo que sigue, se desarrolla en detalle una pregunta tipo certamen #1, con el fin de entregarles una idea de cómo será la primera evaluación. Se desarrolló en `R` sin embargo, todo lo expuesto puede ser realizado en `Python` análogamente. Adicionalmente al tipo de preguntas como la desarollada en este documento, preguntas teóricas y conceptuales podrán también ser incorporadas.
+
+# Pregunta tipo prueba
+
+`r newthought("Publicidad")` El conjunto de datos `Advertising` consiste en las ventas (`sales`) en miles de unidades de un producto en 200 mercados diferentes, junto con los presupuestos en dólares de publicidad en cada uno de estos mercados para tres medios diferentes: televisión (`TV`), `radio` y periódicos (`newspaper`).
+
+1. Realice un análisis exploratorio del conjunto de datos `Advertising`.
+
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse) 
+library(modelr)
+library(broom)
+library(readr)
+Advertising <- read_csv("Advertising.csv") %>% select(-X1)
+```
+`r margin_note("Cargamos algunos paquetes que serán útiles para el análisis, luego leémos el conjunto de datos y descartamos la primera columna (por ser una columna que no nos entrega información). Adicionalmente, imprimimos parte de los datos para verificar que están siendo correctamente ingresados.")`
+```{r}
+head(Advertising)
+```
+
+Para realizar el análisis exploratorio de datos (**EDA** por sus siglas en inglés), existen varias formas de abarcar el problema. Una manera sencilla aunque **sólo preliminar** para realizar un **EDA** sistemático a un conjunto de datos, es usar el paquete `DataExplorer`
+
+```{r fig.fullwidth=TRUE, fig.width=10, fig.height=3, fig.cap = "Exploración del tipo de variables y datos faltantes"}
+library(DataExplorer)
+plot_intro(Advertising)
+```
+
+La función `plot_intro()` nos entrega el tipo de variables en las columnas y el porcentaje de datos faltantes. Alternativamente, se puede obtener la misma información en formato de tabla usando `introduce()`. 
+
+En el caso que existan datos faltantes a lo largo del conjunto de datos en distintas variables, es posible obtener el detalle del porcentaje de estos utilizando la función `plot_missing()`. El paquete `DataExplorer` entrega además **sugerencias** sobre la calidad de las variables conforme el nivel de datos faltantes presentes, sin embargo, la eliminación de columnas debe ser estudiada cuidadosamente y siempre dependerá del contexto del problema.
+
+En el caso de que existan datos discretos, es posible visualizar la distribución de frecuencias para todas estas variables utilizando la función `plot_bar()`. De manera similar, es posible obtener los histogramas para las variables continuas utilizando la función `plot_histogram()`:
+
+```{r fig.fullwidth=TRUE, fig.width=10, fig.height=3, fig.cap = "Histograma para las variables continuas"}
+plot_histogram(Advertising)
+plot_density(Advertising)
+```
+
+La primera función nos entrega los histogramas hechos sistemáticamente usando el paquete `ggplot2`, mientras que el segundo realiza una [**estimación de densidad por kernel**](https://en.wikipedia.org/wiki/Kernel_density_estimation), que vendría siendo *algo así* como una versión suavizada del histograma. Esta técnica tomará relevancia **más adelante** en el curso.
+
+Para comparar **visualmente** la distribución de las variables en estudio con distribuciones teóricas conocidas, es posible utilizar [**QQ-plot**](https://es.wikipedia.org/wiki/Gr%C3%A1fico_Q-Q) mediante la función `plot_qq()`.
+
+```{r fig.fullwidth=TRUE, fig.width=10, fig.height=3, fig.cap = "QQ plot de las variables"}
+plot_qq(Advertising)
+```
+
+Por defecto, el comando `plot_qq()` compara con una distribución normal, por lo que es una buena **herramienta visual** para el análisis de residuos bajo un modelo lineal. Adicionalmente, es posible agrupar las variables continuas graficadas por factores o variables categóricas mediante el argumento `plot_qq(... , by="")`.
+
+Para realizar un análisis correlacional de las variables en estudio, es posible utilizar la función `plot_correlation()`
+
+
+```{r fig.fullwidth=TRUE, fig.width=10, fig.height=3, fig.cap = "Análisis correlacional"}
+plot_correlation(Advertising)
+```
+`r margin_note("Hay que ser particularmente cuidadoso en la interpretación de este análisis, pues se debe tener claro que tipo de correlación se está calculando (y graficando). Este comando utiliza la función cor(). Es posible, realizar este análisis para los dos tipos de variables: discretos y continuos. Se recomienda tratar los datos faltantes antes de realizar este proceso.")`
+
+Para realizar un **análisis de componentes principales** (que veremos más adelante en detalle) se puede utilizar la función `plot_prcomp()`. Omitiremos estos gráficos por el momento.
+
+Como recordarán de cursos anteriores, uno de los mejores gráficos disponibles es el **boxplot** que puede ser calculado fácilmente utilizando la función `plot_boxplot(..., by="")` si deseamos agrupar por alguna variable **categórica**. Para ver cada uno de manera **univariada** usamos la siguiente función.
+`r margin_note("Este tipo de gráficos toma más relevancia cuando podemos analizar una misma variable agrupada por una categórica, como veremos más adelante.")`
+```{r}
+p <- ggplot(Advertising, aes(TV)) + geom_boxplot()
+p 
+```
+
+También es posible obtener los **gráficos de dispersión** de cada una de las variables en estudio mediante la función `plot_scatterplot(... ,by="")` agrupada por una variable categórica. 
+
+Finalmente, cabe mencionar que los estadísticos descriptivos (media, varianza, cuartiles, etc) también son parte del **EDA**. Todo el proceso anterior puede ser en su totalidad automatizado con el comando `create_report()`, este creo un archivo `.html` con las funciones que *puede* hacer con el conjunto de datos, sin embargo, hay que tomar atención a lo que hace en cada uno de los pasos pues es sólo un proceso sistematizado con parámetros por defecto. Se recomienda realizar cada paso por separado.
+
+En este ejemplo introductorio, al no tener datos faltantes y categóricos, el **EDA** es bastante sencillo y se reduce a la creación de gráficos básicos y estadística descriptiva.
+
+2. Realice un ajuste lineal simple para las ventas (`sales`) medidas en miles de unidades vs cada uno de los tres medios utilizados. Explicite los ajustes realizados.
+
+
+```{r}
+p1<- ggplot(data = Advertising, mapping = aes(x = TV, y = sales)) + 
+  geom_point() + geom_smooth(method = "lm", se = FALSE)
+p2<- ggplot(data = Advertising, mapping = aes(x = radio, y = sales)) + 
+  geom_point() + geom_smooth(method = "lm", se = FALSE)
+p3<- ggplot(data = Advertising, mapping = aes(x = newspaper, y = sales)) + 
+  geom_point() + geom_smooth(method = "lm", se = FALSE)
+```
+
+La creación de gráficos utilizando `ggplot2` funciona de manera modular, primero se establece el conjunto de datos a utilizar, y se especifica que variables serán los ejes (`ggplot()`). Luego, se grafican los puntos (`geom_point()`) y finalmente la recta `geom_smooth()`, respectivamente.
+
+```{r modelos, fig.fullwidth=TRUE, fig.width=10, fig.height=3, fig.cap = "Ajuste lineal simple para las ventas en función de los tres medios utilizados", message=FALSE}
+library(gridExtra)
+grid.arrange(p1, p2, p3, nrow = 1)
+```
+
+Los modelos de regresión ajustados tienen la forma:
+
+$$Y=\beta_0+\beta_1 X +\epsilon$$
+
+donde:
+
+- $Y$ representa las ventas en miles de unidades
+- $X$ representa el presupuesto en cada uno de los medios, respectivamente.
+- $\beta_0$ es el intercepto
+- $\beta_1$ es la pendiente, que representa la relación lineal
+- $\epsilon$ es el término de error aleatorio con media cero.
+
+Para analizar el detalle de nuestro ajusto lineal, guardamos los modelos lineales en tres objetivos distintos:
+
+`r margin_note("El comando lm viene de linear models y existen versiones más generales y específicas dentro de R")`
+```{r}
+modelo_1<-lm(sales ~ TV, data=Advertising)
+modelo_2<-lm(sales ~ radio, data=Advertising)
+modelo_3<-lm(sales ~ newspaper, data=Advertising)
+```
+
+La función `lm()` utiliza por defecto el método de **mínimos cuadrados** para estimar los coeficientes de regresión, pero es posible definir otras metodologías utilizando la función `glm()`.
+
+Los ajustos especificos obtenidos (con sus estimaciones de los parámetros) los podemos obtener simplemente haciendo un `summary()` a los modelos calculados.
+
+```{r}
+# Sales vs TV 
+summary(modelo_1)
+# Sales vs radio
+summary(modelo_2)
+# Sales vs newspaper
+summary(modelo_3)
+```
+
+3. ¿Qué modelo ajustado es mejor? Comente e interprete los resultados de este modelo.
+
+Es claro notar que el modelo que mejor se ajusta es el primero, las ventas (`sales`) vs `TV`, lo cual era esperable desde la figura exploratoria. El modelo ajustado corresponde a:
+
+$$Y=7.032594+0.047537 X + \epsilon$$
+
+En otras palabras, nuestra estimación del intercepto es 7.032594, por lo que cuando el presupuesto para el medio televisivo es cero, esperaremos ventas de 7032 unidades, y por cada $1000 dólares adicionales en el presupuesto esperaremos un incremento **promedio** en las ventas de 47 unidades. Además, es claro notar que ambos coeficientes son** estadísticamente significativos**, y podemos calcular sus intervalos de confianza como:
+
+```{r}
+confint(modelo_1)
+```
+
+Debido a que el cero no está incluido en el intervalo de confianza para el coeficiente de pendiente, podemos concluir que por cada $1000 dólares adicionales de presupuesto en el medio televisivo, esperaremos un incremento **promedio** en las ventas entre 42 y 52 unidades.
+
+Para justificar en detalle, podemos el R^2 del `modelo_1` es el mayor entre los realizados, y podemos realizar una tabla anova para verificar que mediante el test F, los coeficientes **no son nulos**:
+
+```{r}
+anova(modelo_1)
+```
+
+Por lo que, **de ser viable nuestro modelo realizado**, esto es, que cumpla con los supuestos de una regresión lineal, sería el modelo más adecuado entre los realizados. Para ello, primero visualizamos -nuevamente-:
+
+```{r fig.fullwidth=TRUE, fig.width=10, fig.height=3, fig.cap = "Ajuste lineal simple para ventas vs TV", message=FALSE}
+ggplot(Advertising, aes(TV, sales)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  geom_smooth(se = FALSE, color = "red")
+```
+
+Para ver el análisis de residuos, es posible utilizar el comando `plot(modelo_1)` el cual entregará 4 gráficos en formato básico. En lo que sigue, los creamos uno por uno utilizando el paquete `ggplot2`.
+
+```{r fig.fullwidth=TRUE, fig.width=10, fig.height=3, fig.cap = "Gráfico de residuos vs ajuste", message=FALSE}
+ggplot(modelo_1, aes(.fitted, .resid)) +
+  geom_ref_line(h = 0) +
+  geom_point() +
+  geom_smooth(se = FALSE) +
+  ggtitle("Residuos vs Ajuste")
+```
+
+Una forma de visualizar más claramente los residuos, es estandarizándolos y reescalándolos, respectivamente.
+
+```{r fig.fullwidth=TRUE, fig.width=10, fig.height=3, fig.cap = "Gráfico de residuos estandarizados y reescalados vs ajuste", message=FALSE, warning=FALSE}
+modelo_1_res <- augment(modelo_1, Advertising)
+p4 <- ggplot(modelo_1_res, aes(.fitted, .std.resid)) +
+  geom_ref_line(h = 0) +
+  geom_point() +
+  geom_smooth(se = FALSE) +
+  ggtitle("Residuos Estadarizados vs Ajuste")
+
+p5 <- ggplot(modelo_1_res, aes(.fitted, sqrt(.std.resid))) +
+  geom_ref_line(h = 0) +
+  geom_point() +
+  geom_smooth(se = FALSE) +
+  ggtitle("Reescalamiento")
+
+gridExtra::grid.arrange(p4, p5, nrow = 1)
+```
+
+En el primer gráfico podemos identificar fácilmente cuando un residuo se desvía por varias desviaciones estándar, en donde usualmente estamos en busca de los residuos que difieren por más de 3 desviaciones estándar. El segundo gráfico muestra si los residuos están dispersos equitativamente a lo largo del rango de los predictores. Luego, como hemos asumido normalidad en los errores, debemos realizar un **QQ plot**
+
+```{r fig.fullwidth=TRUE, fig.width=10, fig.height=3, fig.cap = "QQ plot de los residuos", message=FALSE, warning=FALSE}
+qq_plot <- qqnorm(modelo_1_res$.resid)
+qq_plot <- qqline(modelo_1_res$.resid)
+```
+Como lo cuantiles esperados se asemejan a los teóricos, podemos asumir normalidad. 
+
+Siguiendo, si deseamos encontrar datos u observaciones anómales podemos calculos las distancias de cook de las observaciones y graficar los apalancamientos.
+
+```{r fig.fullwidth=TRUE, fig.width=10, fig.height=3, fig.cap = "Distancias de Cook y apalancamientos", message=FALSE, warning=FALSE}
+par(mfrow=c(1, 2))
+
+plot(modelo_1, which = 4, id.n = 5)
+plot(modelo_1, which = 5, id.n = 5)
+```
+
+En el gráfico anterior, buscamos las observaciones que tienen mayor distancia de cook, y estas serán sospechosas de ser **outliers**, siendo esta sospecha reforzada si su apalancamiento está muy a la derecha en el gráfico respectivo. Para extraer las n observaciones con mayor distancia de cook, podemos escribir:
+
+```{r}
+modelo_1_res %>%
+  top_n(3, wt = .cooksd)
+```
+
+Conforme lo anterior, se cumplen todos los supuestos del modelo de regresión lineal simple, por lo que la regresión ajustada es la mejor entre las realizadas.
+
+4. Ajustar mediante un ajuste de regresión múltiple las ventas en miles de unidades (`sales`), sin incorporar interacciones. Interprete los resultados.
+
+De manera similar, podemos realizar un ajuste de regresión múltiple utilizando los presupuestos en los distintos medios de manera conjunta:
+
+```{r}
+modelo_4<-lm(sales ~ TV + radio + newspaper, data= Advertising)
+summary(modelo_4)
+```
+
+La interpretación de los coeficientes de regresión es similar a caso de la regresión simple. Primero, notamos que los coeficientes asociados a los presupuestos en televisión y radio son significativos bajo un test de hipótesis t (p-valor $< 0.05$), mientras que el coeficiente asociado al presupuesto en periódicos no lo es. Por lo que, bajo un modelo de regresión múltiple, cambios en el presupuesto en periódicos no pareciera tener una relación con los cambios en las ventas. Sin embargo, en el caso del presupuesto televisivo, si este aumenta en $1000 dólares y **se mantienen los otros predictores constantes**, esperaríamos un incremento de 45 unidades en las ventas, en promedio. Análogamente, para un aumento de igual monto en el presupuesto radial, se esperaría un aumento de 188 unidades en promedio.
+
+5. Investigue la viabilidad del modelo de regresión múltiple y compare los resultados con el mejor modelo de regresión lineal simple.  Obtenga intervalos de confianza para los parámetros de la regresión.
+
+De manera similar al caso de regresión lineal simple, podemos calcular intervalos de confianza para los parámetros de regresión como:
+
+```{r}
+confint(modelo_4)
+```
+
+Luego, podemos hacemos un análisis de residuos:
+
+```{r fig.fullwidth=TRUE, fig.width=10, fig.height=3, fig.cap = "Distancias de Cook y apalancamientos", message=FALSE, warning=FALSE}
+modelo_1_res <- modelo_1_res %>%
+  mutate(Model = "Modelo de regresión lineal simple")
+
+modelo_4_res <- augment(modelo_4, Advertising) %>%
+  mutate(Model = "Modelo de regresión lineal múltiple") %>%
+  rbind(modelo_1_res)
+
+ggplot(modelo_4_res, aes(.fitted, .resid)) +
+  geom_ref_line(h = 0) +
+  geom_point() +
+  geom_smooth(se = FALSE) +
+  facet_wrap(~ Model) +
+  ggtitle("Residuos vs Ajuste")
+```
+
+Como vemos, la variabilidad de los residuos pareciera ser más constante en el modelo de regresión lineal simple, por lo que sugiere que los supuestos sobre la varianza se cumple. Comparamos los QQ-plot:
+
+```{r fig.fullwidth=TRUE, fig.width=10, fig.height=3, fig.cap = "Distancias de Cook y apalancamientos", message=FALSE, warning=FALSE}
+par(mfrow=c(1, 2))
+
+# Izquierda: Modelo de regresión lineal simple
+qqnorm(modelo_1_res$.resid); qqline(modelo_1_res$.resid)
+
+# Derecha: Modelo de regresión lineal múltiple
+qqnorm(modelo_4_res$.resid); qqline(modelo_4_res$.resid)
+```
+
+Sin embargo, en el caso de los supuestos distribucionales, lo contrario pareciera suceder. El modelo de regresión lineal múltiple pareciera tener colas de distribución más pesadas que una distribución normal, por lo que el supuesto de normalidad de los errores podría no estar cumpliéndose. 
+
+Luego, podemos comparar las medidas de desempeño de ambos modelos de la forma:
+
+`r margin_note("El paquete stargazer es útil para exportar los resultados de modelos estadísticos de manera tabulada a LaTeX y otros formatos.")`
+```{r, results='asis', fig.align='center', message=FALSE, warning=FALSE}
+library(stargazer)
+stargazer(modelo_1,modelo_4, type="latex", header = FALSE)
+```
+
+Como vemos, el modelo de regresión múltiple aumenta considerablemente nuestros $R^2$ y $R^2$ ajustado, de 0.612 a 0.897 y 0.61 a 0.896, sugiriendo que el modelo de regresión múltiple es más adecuado para modelar la venta de productos. Adicionalmente, nuestro estadístico F es mayor en el caso múltiple, sugiriendo un mayor ajuste de curva.
+`r margin_note("Estos criterios los veremos detalladamente más adelante en el curso")`
+Complementariamente, es posible calcular los medidas de AIC (criterio de información de Akaike) y BIC (criterio de información Bayesiano), en las que el modelo de regresión múltiple también supera al modelo de regresión simple, al tener menor valor en estos indicadores.
+
+6. ¿Cómo se podría justificar -dentro del contexto del problema- una incorporación de interacción en el modelo de regresión múltiple? Proponga una modelo de regresión múltiple con interacción adecuado, analice y compare con los modelos anteriores.
+
+Es claro que en el modelo de regresión múltiple, los incrementos en las ventas se han interpretado **manteniendo los otros presupuestos constantes**, y que además, estos son independientes. Sin embargo, esto podría ser erróneo, pues es posible que aumentando el presupuesto de publicidad en radio, se aumente la efectividad de la publicidad en televisión, por lo que el coeficiente asociado a la variable `TV` se verá aumentado conforme la variable `radio` aumenta. Bajo este escenario, es posible que al tener un monto fijo de presupuesto, repartirlo en ambos medios (tv y radio) sea más efectivo que simplemente asignarlo a publicidad televisiva (como el modelo de regresión múltiple sin interacción sugiere). Así, una **segunda iteración** del modelo propuesto sería incorporar una interacción entre los dos medios de publicidad mencionados y además, descartar el medio de publicidad en periódicos pues este no fue significativo anteriormente. 
+
+
+```{r}
+modelo_5<-lm(sales~ TV + radio + TV * radio, data= Advertising)
+summary(modelo_5)
+```
+`r margin_note("Alternativamente, se puede escribir solo TV * radio, y R interpretará el modelo de la misma manera")`
+
+ Notamos que todos nuestros coeficientes, incluida la interacción son estadísticamente significativos. Por lo que, tras un aumento de $1000 dólares en el presupuesto de televisión esperaremos, en promedio, un 
+ 
+ $$(\beta_1+ \beta_3 \times radio) \times 1000 = 19 + 1\times radio$$
+y análogamente, ante un equitativo en el presupuesto de radio, se esperará:
+
+ $$(\beta_2+ \beta_3 \times TV) \times 1000 = 28 + 1\times radio$$
+ 
+ 
+Luego, comparamos nuestro nuevo modelo con los dos modelos anterior:
+
+```{r, results='asis', fig.align='center', message=FALSE, warning=FALSE}
+library(stargazer)
+stargazer(modelo_1,modelo_4, modelo_5, type="latex", header = FALSE)
+```
+
+
+Es claro notar que la incorporación de la interacción en nuestro modelo de regresión múltiple mejoró aún más nuestro ajuste de curva, bajo la perspectiva de los mismos indicadores utilizas para comparar los primeros dos modelos. Finalmente, realizamos un análisis de residuos comparando los modelos realizados:
+
+```{r fig.fullwidth=TRUE, fig.width=10, fig.height=3, fig.cap = "Distancias de Cook y apalancamientos", message=FALSE, warning=FALSE}
+modelo_5_res <- augment(modelo_5, Advertising) %>%
+  mutate(Model = "Model de regresión lineal múltiple con interacción") %>%
+  rbind(modelo_4_res)
+
+ggplot(modelo_5_res, aes(.fitted, .resid)) +
+  geom_ref_line(h = 0) +
+  geom_point() +
+  geom_smooth(se = FALSE) +
+  facet_wrap(~ Model) +
+  ggtitle("Residuos vs Ajuste")
+```
+
+El modelo con interacción provee una varianza constante que los otros dos modelos, sin embargo, parecieran haber datos anómalos. Un manera alternativa de analizar visualmente la distribución de los residuos, es utilizando histogramas apropiadamente (en vez de QQ-plot):
+
+```{r fig.fullwidth=TRUE, fig.width=10, fig.height=3, fig.cap = "Distancias de Cook y apalancamientos", message=FALSE, warning=FALSE}
+ggplot(modelo_5_res, aes(.resid)) +
+  geom_histogram(binwidth = .25) +
+  facet_wrap(~ Model, scales = "free_x") +
+  ggtitle("Histograma de residuos")
+```
+
+Es posible que si analizamos para distintas magnitudes de ventas veamos mayor grado de normalidad en los residuos, digamos que si ventas `sales` mayores a 10, obtenemos:
+
+```{r fig.fullwidth=TRUE, fig.width=10, fig.height=3, fig.cap = "Distancias de Cook y apalancamientos", message=FALSE, warning=FALSE}
+modelo_5_res %>%
+  filter(sales > 10) %>%
+  ggplot(aes(.resid)) +
+  geom_histogram(binwidth = .25) +
+  facet_wrap(~ Model, scales = "free_x") +
+  ggtitle("Histograma de residuos")
+```
+
+Es claro ver la normalidad en el modelo de regresión lineal con interacción es bastante viable. En cuanto a las observaciones anómalas, las diagnosticamos como:
+
+```{r fig.fullwidth=TRUE, fig.width=10, fig.height=3, fig.cap = "Distancias de Cook y apalancamientos", message=FALSE, warning=FALSE}
+par(mfrow=c(1, 2))
+
+plot(modelo_5, which = 4, id.n = 5)
+plot(modelo_5, which = 5, id.n = 5)
+```
+
+En el gráfico de la distancia de Cook, se ve claramente que las observaciones 6, 9, 109, 131 y 156 parecieran ser outliers. Por lo que vemos estas observaciones.
+
+`r margin_note("La coma final, ordena a R que nos entregue todas las columnas.")`
+```{r}
+Advertising[c(6,9,109,131,156),]
+```
+
+Notamos que en todas estas observaciones se tienen pocas ventas, lo que reafirma que nuestro modelo no se desempeña bien para niveles bajos de ventas.
