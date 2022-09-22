@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2022.5.21)  22 SEP 2022 00:17
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2022.5.21)  22 SEP 2022 17:11
 entering extended mode
 **./IND163C_2022_02_G1.tex
 (IND163C_2022_02_G1.tex
@@ -801,10 +801,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 272--273
  []
 
 
-LaTeX Warning: Marginpar on page 4 moved.
-
-
-Overfull \hbox (10.87003pt too wide) in paragraph at lines 276--279
+Overfull \hbox (10.87003pt too wide) in paragraph at lines 275--278
 \TU/lmr/m/n/10 mos más adelante en detalle) se puede utilizar la función \TU/lm
 tt/m/n/10 plot_prcomp()\TU/lmr/m/n/10 . 
  []
@@ -829,19 +826,23 @@ Package fontspec Warning: \addfontfeature(s) ignored on line 296; it cannot be
 (fontspec)                  The requested feature is "LetterSpace=10". 
 
 [4]
-Overfull \hbox (19.58002pt too wide) in paragraph at lines 296--300
+
+LaTeX Warning: Marginpar on page 5 moved.
+
+
+Overfull \hbox (19.58002pt too wide) in paragraph at lines 298--302
 \TU/lmr/m/n/10 una de las variables en estudio mediante la función \TU/lmtt/m/n
 /10 plot_scatterplot(... 
  []
 
 
-Overfull \hbox (0.41002pt too wide) in paragraph at lines 310--313
+Overfull \hbox (0.41002pt too wide) in paragraph at lines 312--315
 []\TU/lmr/m/n/10 En este ejemplo introductorio, al no tener datos faltantes y c
 ategóri- 
  []
 
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 345; it cannot be
+Package fontspec Warning: \addfontfeature(s) ignored on line 347; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -853,16 +854,16 @@ File: IND163C_2022_02_G1_files/figure-latex/modelos-1.pdf Graphic file (type pd
 f)
 <use IND163C_2022_02_G1_files/figure-latex/modelos-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--350
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
 
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 354
+LaTeX Font Info:    Trying to load font information for U+msa on input line 356
 .
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 354
+LaTeX Font Info:    Trying to load font information for U+msb on input line 356
 .
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -871,13 +872,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Warning: Marginpar on page 6 moved.
 
 
-Overfull \hbox (0.41002pt too wide) in paragraph at lines 386--390
+Overfull \hbox (0.41002pt too wide) in paragraph at lines 388--392
 []\TU/lmr/m/n/10 La función \TU/lmtt/m/n/10 lm() \TU/lmr/m/n/10 utiliza por def
 ecto el método de \TU/lmr/bx/n/10 mínimos cuadra- 
  []
 
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 421; it cannot be
+Package fontspec Warning: \addfontfeature(s) ignored on line 423; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -885,19 +886,19 @@ Package fontspec Warning: \addfontfeature(s) ignored on line 421; it cannot be
 (fontspec)                  The requested feature is "LetterSpace=10". 
 
 [6]
-Overfull \hbox (29.25pt too wide) in paragraph at lines 421--421
+Overfull \hbox (29.25pt too wide) in paragraph at lines 423--423
 []\TU/lmtt/m/n/10 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 '
  ' 1[] 
  []
 
 
-Overfull \hbox (29.25pt too wide) in paragraph at lines 449--449
+Overfull \hbox (29.25pt too wide) in paragraph at lines 451--451
 []\TU/lmtt/m/n/10 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 '
  ' 1[] 
  []
 
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 477; it cannot be
+Package fontspec Warning: \addfontfeature(s) ignored on line 479; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -905,19 +906,19 @@ Package fontspec Warning: \addfontfeature(s) ignored on line 477; it cannot be
 (fontspec)                  The requested feature is "LetterSpace=10". 
 
 [7]
-Overfull \hbox (29.25pt too wide) in paragraph at lines 477--477
+Overfull \hbox (29.25pt too wide) in paragraph at lines 479--479
 []\TU/lmtt/m/n/10 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 '
  ' 1[] 
  []
 
 
-Overfull \hbox (24.0pt too wide) in paragraph at lines 477--477
+Overfull \hbox (24.0pt too wide) in paragraph at lines 479--479
 []\TU/lmtt/m/n/10 ## Multiple R-squared:  0.05212,    Adjusted R-squared:  0.04
 733[] 
  []
 
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 527; it cannot be
+Package fontspec Warning: \addfontfeature(s) ignored on line 529; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -925,7 +926,7 @@ Package fontspec Warning: \addfontfeature(s) ignored on line 527; it cannot be
 (fontspec)                  The requested feature is "LetterSpace=10". 
 
 [8]
-Overfull \hbox (29.25pt too wide) in paragraph at lines 539--539
+Overfull \hbox (29.25pt too wide) in paragraph at lines 541--541
 []\TU/lmtt/m/n/10 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 '
  ' 1[] 
  []
@@ -934,7 +935,7 @@ File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-13-1.pdf Graphic file
  (type pdf)
 <use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-13-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 556--557
+Underfull \hbox (badness 10000) in paragraph at lines 558--559
 
  []
 
@@ -942,18 +943,18 @@ File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-14-1.pdf Graphic file
  (type pdf)
 <use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-14-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 575--576
+Underfull \hbox (badness 10000) in paragraph at lines 577--578
 
  []
 
 
-Overfull \hbox (6.05002pt too wide) in paragraph at lines 578--580
+Overfull \hbox (6.05002pt too wide) in paragraph at lines 580--582
 []\TU/lmr/m/n/10 Una forma de visualizar más claramente los residuos, es estand
 arizán- 
  []
 
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 586; it cannot be
+Package fontspec Warning: \addfontfeature(s) ignored on line 588; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -965,12 +966,12 @@ File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-15-1.pdf Graphic file
  (type pdf)
 <use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-15-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 601--602
+Underfull \hbox (badness 10000) in paragraph at lines 603--604
 
  []
 
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 611; it cannot be
+Package fontspec Warning: \addfontfeature(s) ignored on line 613; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -982,7 +983,7 @@ File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-16-1.pdf Graphic file
  (type pdf)
 <use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-16-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 620--621
+Underfull \hbox (badness 10000) in paragraph at lines 622--623
 
  []
 
@@ -990,12 +991,12 @@ File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-17-1.pdf Graphic file
  (type pdf)
 <use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-17-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 640--641
+Underfull \hbox (badness 10000) in paragraph at lines 642--643
 
  []
 
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 648; it cannot be
+Package fontspec Warning: \addfontfeature(s) ignored on line 650; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -1003,49 +1004,49 @@ Package fontspec Warning: \addfontfeature(s) ignored on line 648; it cannot be
 (fontspec)                  The requested feature is "LetterSpace=10". 
 
 [11]
-Overfull \hbox (108.0pt too wide) in paragraph at lines 663--663
+Overfull \hbox (108.0pt too wide) in paragraph at lines 665--665
 []\TU/lmtt/m/n/10 ##      TV radio newspaper sales .fitted .resid   .hat .sigma
  .cooksd .std.resid[] 
  []
 
 
-Overfull \hbox (108.0pt too wide) in paragraph at lines 663--663
+Overfull \hbox (108.0pt too wide) in paragraph at lines 665--665
 []\TU/lmtt/m/n/10 ##   <dbl> <dbl>     <dbl> <dbl>   <dbl>  <dbl>  <dbl>  <dbl>
    <dbl>      <dbl>[] 
  []
 
 
-Overfull \hbox (108.0pt too wide) in paragraph at lines 663--663
+Overfull \hbox (108.0pt too wide) in paragraph at lines 665--665
 []\TU/lmtt/m/n/10 ## 1  263.   3.5      19.5  12      19.5  -7.53 0.0142   3.22
   0.0389      -2.33[] 
  []
 
 
-Overfull \hbox (108.0pt too wide) in paragraph at lines 663--663
+Overfull \hbox (108.0pt too wide) in paragraph at lines 665--665
 []\TU/lmtt/m/n/10 ## 2  291.   4.1       8.5  12.8    20.9  -8.05 0.0191   3.22
   0.0605      -2.49[] 
  []
 
 
-Overfull \hbox (108.0pt too wide) in paragraph at lines 663--663
+Overfull \hbox (108.0pt too wide) in paragraph at lines 665--665
 []\TU/lmtt/m/n/10 ## 3  277.   2.3      23.7  11.8    20.2  -8.39 0.0165   3.21
   0.0563      -2.59[] 
  []
 
 
-Overfull \hbox (39.75pt too wide) in paragraph at lines 710--710
+Overfull \hbox (39.75pt too wide) in paragraph at lines 712--712
 []\TU/lmtt/m/n/10 ## lm(formula = sales ~ TV + radio + newspaper, data = Advert
 ising)[] 
  []
 
 
-Overfull \hbox (29.25pt too wide) in paragraph at lines 710--710
+Overfull \hbox (29.25pt too wide) in paragraph at lines 712--712
 []\TU/lmtt/m/n/10 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 '
  ' 1[] 
  []
 
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 710; it cannot be
+Package fontspec Warning: \addfontfeature(s) ignored on line 712; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -1054,7 +1055,7 @@ Package fontspec Warning: \addfontfeature(s) ignored on line 710; it cannot be
 
 [12]
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 769; it cannot be
+Package fontspec Warning: \addfontfeature(s) ignored on line 771; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -1066,7 +1067,7 @@ File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-21-1.pdf Graphic file
  (type pdf)
 <use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-21-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 773--774
+Underfull \hbox (badness 10000) in paragraph at lines 775--776
 
  []
 
@@ -1074,18 +1075,18 @@ File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-22-1.pdf Graphic file
  (type pdf)
 <use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-22-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 793--794
+Underfull \hbox (badness 10000) in paragraph at lines 795--796
 
  []
 
 
-Overfull \hbox (6.83pt too wide) in paragraph at lines 796--801
+Overfull \hbox (6.83pt too wide) in paragraph at lines 798--803
 \TU/lmr/m/n/10 trario pareciera suceder. El modelo de regresión lineal múltiple
  pareciera 
  []
 
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 801; it cannot be
+Package fontspec Warning: \addfontfeature(s) ignored on line 803; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -1097,7 +1098,7 @@ Package fontspec Warning: \addfontfeature(s) ignored on line 801; it cannot be
 LaTeX Warning: Marginpar on page 15 moved.
 
 
-Overfull \hbox (26.25343pt too wide) in paragraph at lines 817--847
+Overfull \hbox (26.25343pt too wide) in paragraph at lines 819--849
  [][] 
  []
 
@@ -1105,7 +1106,7 @@ Overfull \hbox (26.25343pt too wide) in paragraph at lines 817--847
 LaTeX Warning: Marginpar on page 15 moved.
 
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 869; it cannot be
+Package fontspec Warning: \addfontfeature(s) ignored on line 871; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -1113,19 +1114,19 @@ Package fontspec Warning: \addfontfeature(s) ignored on line 869; it cannot be
 (fontspec)                  The requested feature is "LetterSpace=10". 
 
 [15]
-Overfull \hbox (45.0pt too wide) in paragraph at lines 914--914
+Overfull \hbox (45.0pt too wide) in paragraph at lines 916--916
 []\TU/lmtt/m/n/10 ## lm(formula = sales ~ TV + radio + TV * radio, data = Adver
 tising)[] 
  []
 
 
-Overfull \hbox (29.25pt too wide) in paragraph at lines 914--914
+Overfull \hbox (29.25pt too wide) in paragraph at lines 916--916
 []\TU/lmtt/m/n/10 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 '
  ' 1[] 
  []
 
 
-Overfull \hbox (3.0pt too wide) in paragraph at lines 914--914
+Overfull \hbox (3.0pt too wide) in paragraph at lines 916--916
 []\TU/lmtt/m/n/10 ## Residual standard error: 0.9435 on 196 degrees of freedom[
 ] 
  []
@@ -1134,7 +1135,7 @@ Overfull \hbox (3.0pt too wide) in paragraph at lines 914--914
 LaTeX Warning: Marginpar on page 16 moved.
 
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 922; it cannot be
+Package fontspec Warning: \addfontfeature(s) ignored on line 924; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -1142,12 +1143,12 @@ Package fontspec Warning: \addfontfeature(s) ignored on line 922; it cannot be
 (fontspec)                  The requested feature is "LetterSpace=10". 
 
 [16]
-Overfull \hbox (156.88513pt too wide) in paragraph at lines 940--973
+Overfull \hbox (156.88513pt too wide) in paragraph at lines 942--975
  [][] 
  []
 
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 982; it cannot be
+Package fontspec Warning: \addfontfeature(s) ignored on line 984; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -1159,7 +1160,7 @@ File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-26-1.pdf Graphic file
  (type pdf)
 <use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-26-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 997--998
+Underfull \hbox (badness 10000) in paragraph at lines 999--1000
 
  []
 
@@ -1167,12 +1168,12 @@ File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-27-1.pdf Graphic file
  (type pdf)
 <use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-27-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1015--1016
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1018
 
  []
 
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 1030; it cannot
+Package fontspec Warning: \addfontfeature(s) ignored on line 1032; it cannot
 (fontspec)                be used with a font that wasn't selected by a
 (fontspec)                fontspec command.
 (fontspec)                 
@@ -1184,7 +1185,7 @@ File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-28-1.pdf Graphic file
  (type pdf)
 <use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-28-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1034--1035
+Underfull \hbox (badness 10000) in paragraph at lines 1036--1037
 
  []
 
@@ -1192,7 +1193,7 @@ File: IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-29-1.pdf Graphic file
  (type pdf)
 <use IND163C_2022_02_G1_files/figure-latex/unnamed-chunk-29-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1052
+Underfull \hbox (badness 10000) in paragraph at lines 1053--1054
 
  []
 
@@ -1200,7 +1201,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1051--1052
 LaTeX Warning: Marginpar on page 19 moved.
 
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 1075; it cannot
+Package fontspec Warning: \addfontfeature(s) ignored on line 1077; it cannot
 (fontspec)                be used with a font that wasn't selected by a
 (fontspec)                fontspec command.
 (fontspec)                 
@@ -1210,7 +1211,7 @@ Package fontspec Warning: \addfontfeature(s) ignored on line 1075; it cannot
 [19]
 No file IND163C_2022_02_G1.bbl.
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 1085; it cannot
+Package fontspec Warning: \addfontfeature(s) ignored on line 1087; it cannot
 (fontspec)                be used with a font that wasn't selected by a
 (fontspec)                fontspec command.
 (fontspec)                 

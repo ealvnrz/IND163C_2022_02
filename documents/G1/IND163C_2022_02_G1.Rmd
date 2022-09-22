@@ -74,22 +74,28 @@ plot_qq(Advertising)
 
 Por defecto, el comando `plot_qq()` compara con una distribución normal, por lo que es una buena **herramienta visual** para el análisis de residuos bajo un modelo lineal. Adicionalmente, es posible agrupar las variables continuas graficadas por factores o variables categóricas mediante el argumento `plot_qq(... , by="")`.
 
+
+
 Para realizar un análisis correlacional de las variables en estudio, es posible utilizar la función `plot_correlation()`
 
 
 ```{r fig.fullwidth=TRUE, fig.width=10, fig.height=3, fig.cap = "Análisis correlacional"}
 plot_correlation(Advertising)
 ```
-`r margin_note("Hay que ser particularmente cuidadoso en la interpretación de este análisis, pues se debe tener claro que tipo de correlación se está calculando (y graficando). Este comando utiliza la función cor(). Es posible, realizar este análisis para los dos tipos de variables: discretos y continuos. Se recomienda tratar los datos faltantes antes de realizar este proceso.")`
+
 
 Para realizar un **análisis de componentes principales** (que veremos más adelante en detalle) se puede utilizar la función `plot_prcomp()`. Omitiremos estos gráficos por el momento.
 
+`r margin_note("Hay que ser particularmente cuidadoso en la interpretación de este análisis, pues se debe tener claro que tipo de correlación se está calculando (y graficando). Este comando utiliza la función cor(). Es posible, realizar este análisis para los dos tipos de variables: discretos y continuos. Se recomienda tratar los datos faltantes antes de realizar este proceso.")`
+
 Como recordarán de cursos anteriores, uno de los mejores gráficos disponibles es el **boxplot** que puede ser calculado fácilmente utilizando la función `plot_boxplot(..., by="")` si deseamos agrupar por alguna variable **categórica**. Para ver cada uno de manera **univariada** usamos la siguiente función.
-`r margin_note("Este tipo de gráficos toma más relevancia cuando podemos analizar una misma variable agrupada por una categórica, como veremos más adelante.")`
+
 ```{r}
 p <- ggplot(Advertising, aes(TV)) + geom_boxplot()
 p 
 ```
+
+`r margin_note("Este tipo de gráficos toma más relevancia cuando podemos analizar una misma variable agrupada por una categórica, como veremos más adelante.")`
 
 También es posible obtener los **gráficos de dispersión** de cada una de las variables en estudio mediante la función `plot_scatterplot(... ,by="")` agrupada por una variable categórica. 
 
