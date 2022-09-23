@@ -404,7 +404,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <p>Por defecto, el comando <code>plot_qq()</code> compara con una distribución normal, por lo que es una buena <strong>herramienta visual</strong> para el análisis de residuos bajo un modelo lineal. Adicionalmente, es posible agrupar las variables continuas graficadas por factores o variables categóricas mediante el argumento <code>plot_qq(... , by="")</code>.</p>
-<p><label for="tufte-mn-" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-" class="margin-toggle"><span class="marginnote">Hay que ser particularmente cuidadoso en la interpretación de este análisis, pues se debe tener claro que tipo de correlación se está calculando (y graficando). Este comando utiliza la función cor(). Es posible, realizar este análisis para los dos tipos de variables: discretos y continuos. Se recomienda tratar los datos faltantes antes de realizar este proceso.</span></p>
 <p>Para realizar un análisis correlacional de las variables en estudio, es posible utilizar la función <code>plot_correlation()</code></p>
 <div class="cell" data-fig.fullwidth="true">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_correlation</span>(Advertising)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -418,8 +417,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <p>Para realizar un <strong>análisis de componentes principales</strong> (que veremos más adelante en detalle) se puede utilizar la función <code>plot_prcomp()</code>. Omitiremos estos gráficos por el momento.</p>
+<p><label for="tufte-mn-" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-" class="margin-toggle"><span class="marginnote">Hay que ser particularmente cuidadoso en la interpretación de este análisis, pues se debe tener claro que tipo de correlación se está calculando (y graficando). Este comando utiliza la función cor(). Es posible, realizar este análisis para los dos tipos de variables: discretos y continuos. Se recomienda tratar los datos faltantes antes de realizar este proceso.</span></p>
 <p>Como recordarán de cursos anteriores, uno de los mejores gráficos disponibles es el <strong>boxplot</strong> que puede ser calculado fácilmente utilizando la función <code>plot_boxplot(..., by="")</code> si deseamos agrupar por alguna variable <strong>categórica</strong>. Para ver cada uno de manera <strong>univariada</strong> usamos la siguiente función.</p>
-<p><label for="tufte-mn-" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-" class="margin-toggle"><span class="marginnote">Este tipo de gráficos toma más relevancia cuando podemos analizar una misma variable agrupada por una categórica, como veremos más adelante.</span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(Advertising, <span class="fu">aes</span>(TV)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>p </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -427,6 +426,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="IND163C_2022_02_G1_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p><label for="tufte-mn-" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-" class="margin-toggle"><span class="marginnote">Este tipo de gráficos toma más relevancia cuando podemos analizar una misma variable agrupada por una categórica, como veremos más adelante.</span></p>
 <p>También es posible obtener los <strong>gráficos de dispersión</strong> de cada una de las variables en estudio mediante la función <code>plot_scatterplot(... ,by="")</code> agrupada por una variable categórica.</p>
 <p>Finalmente, cabe mencionar que los estadísticos descriptivos (media, varianza, cuartiles, etc) también son parte del <strong>EDA</strong>. Todo el proceso anterior puede ser en su totalidad automatizado con el comando <code>create_report()</code>, este creo un archivo <code>.html</code> con las funciones que <em>puede</em> hacer con el conjunto de datos, sin embargo, hay que tomar atención a lo que hace en cada uno de los pasos pues es sólo un proceso sistematizado con parámetros por defecto. Se recomienda realizar cada paso por separado.</p>
 <p>En este ejemplo introductorio, al no tener datos faltantes y categóricos, el <strong>EDA</strong> es bastante sencillo y se reduce a la creación de gráficos básicos y estadística descriptiva.</p>

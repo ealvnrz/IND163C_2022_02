@@ -7,7 +7,13 @@ subtitle: "Certamen 1"
 
 [Guía ejemplo - Certamen #1](../documents/G1/IND163C_2022_02_G1.pdf)
 
-[Base de datos guía](../documents/G1/Advertising.csv)
+[Base de datos: Advertising](../documents/G1/Advertising.csv)
+
+[Guía Certamen #1](../documents/IND163C_2022_02_G2.pdf)
+
+[Base de datos: Marketing](../documents/marketing.csv)
+
+[Base de datos: Real Estate](../documents/realestate.csv)
 
 ## Presentación
 
