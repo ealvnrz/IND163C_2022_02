@@ -1,6 +1,6 @@
 ---
 title: "Semana 6"
-subtitle: ""
+subtitle: "Revisión Certamen 1 e Introducción a machine learning"
 ---
 
 ## Preparación
