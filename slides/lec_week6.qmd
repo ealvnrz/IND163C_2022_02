@@ -1,5 +1,5 @@
 ---
-title: "Regresión lineal"
+title: "Introducción a machine learning"
 subtitle: "IND 163 - 2022/02"
 author: "Eloy Alvarado Narváez"
 institute: "Universidad Técnica Federico Santa María"

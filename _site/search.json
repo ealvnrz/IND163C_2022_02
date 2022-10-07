@@ -1472,91 +1472,91 @@
   {
     "objectID": "slides/lec_week6.html#ejemplo",
     "href": "slides/lec_week6.html#ejemplo",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Ejemplo",
     "text": "Ejemplo\nTomemos como ejemplo el reconocer dígitos escritos a mano."
   },
   {
     "objectID": "slides/lec_week6.html#ejemplo-continuación",
     "href": "slides/lec_week6.html#ejemplo-continuación",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Ejemplo: continuación",
     "text": "Ejemplo: continuación\nEstos dígitos corresponden a imágenes de 28x28 pixeles, por lo que pueden ser representados en un vector \\(\\mathbf{x}\\) que contiene 784 números reales.\nEl objetivo es construir una máquina que tome el vector \\(\\mathbf{x}\\) como entrada y produzca la identidad del dígito \\(0,\\dots,9\\) como salida.\nEste problema es claramente no-trivial debido a la gran variedad de escrituras. Podría abordarse utilizando reglas heurísticas para distinguir los dígitos en función de las formas de los trazos, pero en la práctica, tal enfoque conduce a una proliferación de reglas y de excepciones a las reglas, etc., e invariablemente da malos resultados."
   },
   {
     "objectID": "slides/lec_week6.html#introducción-continuación",
     "href": "slides/lec_week6.html#introducción-continuación",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Introducción: continuación",
     "text": "Introducción: continuación\nMejores resultados pueden ser obtenidos adoptando un enfoque de machine learning, en donde un conjunto grande de datos de \\(N\\) dígitos \\(\\{x_1 ,\\ldots, x_n\\}\\) llamados conjunto de entrenamiento (training set) se utiliza para ajustar los parámetros de un modelo adaptativo.\nLas categorías de los dígitos en el conjunto de entrenamiento se conocen de antemano, normalmente inspeccionándolos individualmente y etiquetándolos a mano.\nPodemos expresar la categoría de un dígito usando un vector objetivo (target vector) \\(\\mathbf{t}\\), que representa la identidad del dígito correspondiente. Notar que hay un vector objetivo \\(\\mathbf{t}\\) para cada dígito de la imagen \\(\\mathbf{x}\\)."
   },
   {
     "objectID": "slides/lec_week6.html#introducción-continuación-1",
     "href": "slides/lec_week6.html#introducción-continuación-1",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Introducción: continuación",
     "text": "Introducción: continuación\nEl resultado tras aplicar el algoritmo de machine learning puede ser expresado como una función \\(\\mathbf{y}(\\mathbf{x})\\), que toma una nueva imagen del dígito \\(\\mathbf{x}\\) como entrada y que genera como salida un vector \\(\\mathbf{y}\\), codificada de la misma manera que los vector objetivos.\nLa forma exacta de la función \\(\\mathbf{y}(\\mathbf{x})\\) es determinada durante la fase de entrenamiento, también conocida como la fase de aprendizaje, en base al conjunto de entrenamiento.\nUna vez que el modelo es entrenado, este puede ser usado para identificar nuevas imágenes de dígitos, que les llamamos conjunto de prueba (test set).\nLa habilidad de categorizar correctamente nuevos ejemplos que difieren de los utilizados en la fase de aprendizaje es conocido como generalización."
   },
   {
     "objectID": "slides/lec_week6.html#introducción-continuación-2",
     "href": "slides/lec_week6.html#introducción-continuación-2",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Introducción: continuación",
     "text": "Introducción: continuación\nEn la mayoría de las aplicaciones reales, las variables de entrada son típicamente preprocesadas para transformarlas a un nuevo espacio de variables donde, se espera que la problemática de reconocer patrones sea más fácil de resolver.\nPor ejemplo, en el reconocimiento de dígitos escritos a mano, las imágenes de los dígitos generalmente se transforman y escalan tal que cada dígito esté contenido dentro de un cuadro de tamaño fijo. Esto reduce en gran medida la variabilidad dentro de cada clase de dígito, debido a que la localización y la escala de todos los dígitos serán las mismas, por lo que la identificación de patrones se facilitará.\nLa etapa de de pre-procesamiento es usualmente conocida como extracción de características (feature extraction).\nNotar que los nuevos datos, incluidos en el conjunto de entrenamiento, deben ser preprocesados de igual manera que los del conjunto de entrenamiento."
   },
   {
     "objectID": "slides/lec_week6.html#introducción-continuación-5",
     "href": "slides/lec_week6.html#introducción-continuación-5",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Introducción: continuación",
     "text": "Introducción: continuación\nOtra técnica utilizada en machine learning es el aprendizaje reforzado (reinforcement learning), que se ocupa del problema de encontrar acciones adecuadas para tomar en una situación específica con el fin de maximizar una recompensa.\nEn este caso, el algoritmo de aprendizaje no recibe ejemplos de resultados óptimos (como se tienen en el aprendizaje supervisado), sino que debe descubrirlos mediante un proceso de prueba y error."
   },
   {
     "objectID": "slides/lec_week6.html#introducción-continuación-4",
     "href": "slides/lec_week6.html#introducción-continuación-4",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Introducción: continuación",
     "text": "Introducción: continuación\nLas aplicaciones en donde la entrada son los datos de entrenamiento (training set) sin sus correspondientes vectores objetivos son conocidas como problemas de aprendizaje no supervisado (unsupervised learning problems). Varios pueden ser los objetivos en este tipo de problemas:\n\nDescubrir grupos de elementos similares dentro de los datos, en este caso le llamamos agrupamiento (clustering)\nEstimar la distribución de los datos dentro del espacio de los datos, a esto le llamamos estimación de densidad\nProyectar los datos desde un espacio multidimensional a uno de 2 o 3 dimensiones, para así poder visualizarlo, a esto le llamamos visualización."
   },
   {
     "objectID": "slides/lec_week6.html#introducción-continuación-3",
     "href": "slides/lec_week6.html#introducción-continuación-3",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Introducción: continuación",
     "text": "Introducción: continuación\nLa etapa de preprocesamiento también puede ser utilizada para acelerar el cálculo del algoritmo utilizado. Se debe tener especial cuidado en esta etapa debido a que usualmente, cierta información es descartada, y si esta es importante para la solución del problema, la precisión general del sistema confeccionado puede verse afectada.\nLas aplicaciones en donde la entrada son los datos de entrenamiento (training set) en conjunto con sus correspondientes vectores objetivo son conocidas como problemas de aprendizaje supervisado (supervised learning problems).\nLos casos en donde el objetivo es asignar a cada vector de entrada una categoría, se conocen como problemas de clasificación.\nSi se desean salidas que consisten en una o más variables continuas, entonces le llamamos regresión."
   },
   {
     "objectID": "slides/lec_week6.html#ejemplo-1",
     "href": "slides/lec_week6.html#ejemplo-1",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Ejemplo",
     "text": "Ejemplo\nSe desea mejorar las ventas de un producto en particular. El siguiente conjunto de datos contiene datos de las ventas de aquel producto en 200 mercados diferentes, junto con el presupuesto de publicidad para el producto en cada uno de los mercados para 3 medios de publicidad: TV, radio y diario.\n\n\n  X    TV Radio Newspaper Sales\n1 1 230.1  37.8      69.2  22.1\n2 2  44.5  39.3      45.1  10.4\n3 3  17.2  45.9      69.3   9.3\n4 4 151.5  41.3      58.5  18.5\n5 5 180.8  10.8      58.4  12.9\n6 6   8.7  48.9      75.0   7.2"
   },
   {
     "objectID": "slides/lec_week6.html#ejemplo-continuación-1",
     "href": "slides/lec_week6.html#ejemplo-continuación-1",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Ejemplo: continuación",
     "text": "Ejemplo: continuación"
   },
   {
     "objectID": "slides/lec_week6.html#ejemplo-continuación-2",
     "href": "slides/lec_week6.html#ejemplo-continuación-2",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Ejemplo: continuación",
     "text": "Ejemplo: continuación"
   },
   {
     "objectID": "slides/lec_week6.html#ejemplo-continuación-3",
     "href": "slides/lec_week6.html#ejemplo-continuación-3",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Ejemplo: continuación",
     "text": "Ejemplo: continuación\nEn este ejemplo, los presupuestos son las variables de entrada (input) mientras que las ventas es la variable de salida (output). Usualmente denotaremos a las variables de entrada por la letra \\(X\\), así \\(X_1\\) es el presupuesto en televisión, \\(X_2\\) en Radio y \\(X_3\\) en periódicos.\nEstas variables de entregada también se le conocen como predictores, variables independientes, features o simplemente variables.\nLa variable respuesta Sales es usualmente llamada respuesta o variable dependiente, y se denota por la letra \\(Y\\)."
   },
   {
     "objectID": "slides/lec_week6.html#ejemplo-continuación-4",
     "href": "slides/lec_week6.html#ejemplo-continuación-4",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Ejemplo: continuación",
     "text": "Ejemplo: continuación\nEn general, supongamos que observamos una variable respuesta cuantitativa \\(Y\\) y \\(p\\) diferentes predictores \\(X_1,\\dots,X_p\\). Asumiremos que existe algún tipo de relación entre \\(Y\\) y \\(X=(X_1,X_2,\\dots,X_p)\\) que puede ser escrito de forma general como\n\\[Y=f(X)+\\varepsilon\\]\nDonde \\(f\\) es una función fija de \\(X_1,\\dots,X_p\\) y \\(\\varepsilon\\) es un error aleatorio, que es independiente de \\(X\\) y tiene media cero. En lo anterior, \\(f\\) representa la información sistemática que \\(X\\) provee sobre \\(Y\\)."
   },
@@ -1570,105 +1570,105 @@
   {
     "objectID": "slides/lec_week6.html#predicción",
     "href": "slides/lec_week6.html#predicción",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Predicción",
     "text": "Predicción\nEn muchas situaciones, un conjunto de variables de entrada \\(X\\) son fácilmente obtenibles, pero las salidas \\(Y\\) tienen difícil acceso. Bajo esta configuración, debido a que el promedio de los errores tiene media cero, podemos predecir \\(Y\\) usando:\n\\[\n\\hat{Y}=\\hat{f}(X)\n\\]\ndonde \\(\\hat{f}\\) representa nuestra estimación para \\(f\\) e \\(\\hat{Y}\\) representa la predicción obtenida para \\(Y\\). En este contexto, \\(\\hat{f}\\) es usualmente tratada como una caja negra, en el sentido que no estamos usualmente preocupados con la forma exacta de \\(\\hat{f}\\), si es que esta entrega predicciones precisas de \\(Y\\)."
   },
   {
     "objectID": "slides/lec_week6.html#ejemplo-2",
     "href": "slides/lec_week6.html#ejemplo-2",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Ejemplo",
     "text": "Ejemplo\n\nlibrary(plot3D)\nlibrary(tidyverse)\nIncome2<- read.csv(\"./db/Income2.csv\")\n# Ajuste\nfit_2_3_loess <- loess(Income ~ Education + Seniority, data = Income2) \n# Predicción de valores\nx.pred <- seq(min(Income2$Education), max(Income2$Education), length.out = 30)\ny.pred <- seq(min(Income2$Seniority), max(Income2$Seniority), length.out = 30)\nxy     <- expand.grid(Education = x.pred, Seniority = y.pred)\nz.pred <- matrix(predict(fit_2_3_loess, newdata = xy), nrow = 30, ncol = 30)"
   },
   {
     "objectID": "slides/lec_week6.html#ejemplo-continuación-5",
     "href": "slides/lec_week6.html#ejemplo-continuación-5",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Ejemplo: continuación",
     "text": "Ejemplo: continuación\n\nIncome2 %>% \n  scatter3D(\n    type = \"p\",\n    x = Income2$Education, \n    y = Income2$Seniority, \n    z = Income2$Income,\n    colvar = NA, pch = 19, col = \"gold\", cex = 1.75,\n    phi = 25, theta = 45, expand = 0.6,\n    xlab = \"Years of Education\", ylab = \"Seniority\", zlab = \"Income\",\n    panel.first = scatter3D(x = Income2$Education,y = Income2$Seniority,\n    z = Income2$Income,colvar = NA, col = \"black\", add = T,\n    surf = list(x = x.pred, y = y.pred, z = z.pred, \n    fit = predict(fit_2_3_loess), facets = T, col = \"skyblue\",\n    border = \"royalblue\", alpha = 0.45)))"
   },
   {
     "objectID": "slides/lec_week6.html#ejemplo-continuación-6",
     "href": "slides/lec_week6.html#ejemplo-continuación-6",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Ejemplo: continuación",
     "text": "Ejemplo: continuación"
   },
   {
     "objectID": "slides/lec_week6.html#ejemplo-continuación-7",
     "href": "slides/lec_week6.html#ejemplo-continuación-7",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Ejemplo: continuación",
     "text": "Ejemplo: continuación\nConsideremos que un estimador \\(\\hat{f}\\) y un conjunto de variables \\(X\\) entregan la predicción \\(\\hat{Y}=\\hat{f}(X)\\) . Asumiendo que \\(\\hat{f}\\) y \\(X\\) son fijos, entonces se tiene:\n\\[\\begin{align*}\n\\mathbb{E}(Y-\\hat{Y})^2 &= \\mathbb{E}(f(X)+\\varepsilon - \\hat{f}(X))^2 \\\\\n&= \\underbrace{[f(X) - \\hat{f}(X)]^2}_\\text{Reducible} + \\underbrace{\\mathbb{V}(\\varepsilon)}_\\text{Irreducible}\n\\end{align*}\\]\nNosotros nos concentraremos en técnicas para estimar \\(f\\) con el fin de poder minimizar el error reducible."
   },
   {
     "objectID": "slides/lec_week6.html#inferencia",
     "href": "slides/lec_week6.html#inferencia",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Inferencia",
     "text": "Inferencia\nUsualmente estamos interesados en entender la forma en que \\(Y\\) se ve afectada conforme \\(X_1,\\dots,X_p\\) cambia. En este tipo de situaciones, deseamos estimar \\(f\\), pero nuestro objetivo no es necesariamente hacer predicciones para \\(Y\\). En cambio, se quiere entender la relación entre \\(X\\) e \\(Y\\), por lo que ya no podemos tratar \\(\\hat{f}\\) como una caja negra, debido a que para poder explicar el fenómeno debemos tener una forma exacta. Usualmente nos preguntamos:\n\n¿Qué predictores están asociados con la respuesta?\n¿Cuál es la relación entre la respuesta y cada predictor?\n¿La relación entre \\(Y\\) y cada predictor ser explicada adecuadamente usando una ecuación lineal o la relación es más complicada?"
   },
   {
     "objectID": "slides/lec_week6.html#cómo-estimamos-f",
     "href": "slides/lec_week6.html#cómo-estimamos-f",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "¿Cómo estimamos \\(f\\)?",
     "text": "¿Cómo estimamos \\(f\\)?\nA lo largo del curso, veremos enfoques lineales y no lineales para estimar \\(f\\). Estos métodos usualmente comparten ciertas características.\nEn general, la mayoría de las técnicas de aprendizaje estadístico pueden ser categorizadas como paramétricas o no-paramétricas."
   },
   {
     "objectID": "slides/lec_week6.html#métodos-paramétricos",
     "href": "slides/lec_week6.html#métodos-paramétricos",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Métodos paramétricos",
     "text": "Métodos paramétricos\nEste enfoque tiene dos pasos y se base en modelos que reducen el problema de estimar \\(f\\) a estimar un conjunto de parámetros.\n\nPros\n\nEs mucho más fácil que ajustar una función arbitraria cualquiera\n\n\n\nContras\n\nEl modelo usualmente no seguirá la forma real de \\(f\\)\nSi el ajuste está muy lejano a la forma real, la estimación será mala\nSe puede caer en sobreajuste."
   },
   {
     "objectID": "slides/lec_week6.html#métodos-paramétricos-continuación",
     "href": "slides/lec_week6.html#métodos-paramétricos-continuación",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Métodos paramétricos: continuación",
     "text": "Métodos paramétricos: continuación\n¿Cuales serían los pasos de un enfoque paramétrico?\n\nAsumir la forma de \\(f\\)\nRealizar un proceso que ajuste el conjunto de datos (training set) para el modelo."
   },
   {
     "objectID": "slides/lec_week6.html#métodos-no-paramétricos",
     "href": "slides/lec_week6.html#métodos-no-paramétricos",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Métodos no paramétricos",
     "text": "Métodos no paramétricos\nEl enfoque no paramétrico se caracteriza por no asumir la forma de \\(f\\), pero en lugar de eso intenta obtener una estimación de \\(f\\) que sea lo más cercano al conjunto de datos sin llegar a un sobreajuste.\n\nPros\n\nAl no asumir nada sobre \\(f\\), estos métodos permiten un vasto rango de formas que se ajustan con precisión a \\(f\\)\n\n\n\nContras\n\nUn gran número de datos es necesario para estimar de forma precisa \\(f\\), mucho más que bajo un enfoque paramétrico."
   },
   {
     "objectID": "slides/lec_week6.html#compensación-entre-precisión-vs-interpretabilidad",
     "href": "slides/lec_week6.html#compensación-entre-precisión-vs-interpretabilidad",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Compensación entre precisión vs interpretabilidad",
     "text": "Compensación entre precisión vs interpretabilidad\nComo sabemos hay métodos de aprendizaje estadístico que son menos flexibles que otros, por ejemplo la regresión lineal. Sin embargo, existen razones para escoger estas metodologías en vez de una más flexible.\n\nSi la inferencia es nuestro principal objetivo, los modelos más restrictivos son recomendados debido a que la relación entre \\(X\\) e \\(Y\\) es fácilmente interpretable.\nMétodos más flexibles usualmente llegar a estimación más complejas que dificultan el análisis de alguna relación individual entre un predictor y la variable respuesta.\nIncluso cuando la predicción es el único objetivo, modelos más restrictivos pueden entregar mayor precisión que la mayoría de los métodos más flexible, debido a que estos últimos pueden sobreajustar."
   },
   {
     "objectID": "slides/lec_week6.html#diagrama-de-modelos",
     "href": "slides/lec_week6.html#diagrama-de-modelos",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Diagrama de modelos",
     "text": "Diagrama de modelos"
   },
   {
     "objectID": "slides/lec_week6.html#teorema-del-no-free-lunch",
     "href": "slides/lec_week6.html#teorema-del-no-free-lunch",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Teorema del No-Free-Lunch",
     "text": "Teorema del No-Free-Lunch\n¿Por qué no simplemente elegimos el mejor método para todos los problemas?\nEl teorema de No-Free-Lunch establece que todos los algoritmos de optimización se desempeñan igualmente bien cuando su desempeño es promediado sobre todas las funciones objetivos posibles."
   },
   {
     "objectID": "slides/lec_week6.html#compromiso-sesgo-varianza",
     "href": "slides/lec_week6.html#compromiso-sesgo-varianza",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Compromiso sesgo-varianza",
     "text": "Compromiso sesgo-varianza\nUna de las herramientas que tenemos para cuantificar que tan bueno es nuestro ajuste es el Error cuadrático medio, lo notamos por sus siglas en inglés MSE. Para un valor \\(x_0\\) dado, es posible mostrar que el error cuadrático medio se puede descomponer de la forma\n\\[\n\\mathbb{E}\\left(y_0 - \\hat{f}(x_0)\\right)^2=\\mathbb{V}(\\hat{f}(x_0))+[Bias(\\hat{f}(x_0))]^2+\\mathbb{V}(\\varepsilon)\n\\]\nEn donde el lado izquierdo representa el error cuadrado medio esperado cuando se estima \\(f\\) y se evalúan en el punto \\(x_0\\).\nDe la ecuación anterior se desprende que para minimizar el error cuadrático medio se debe seleccionar una metodología que simultáneamente logre una varianza baja y un bajo sesgo."
   },
   {
     "objectID": "slides/lec_week6.html#compromiso-sesgo-varianza-continuación",
     "href": "slides/lec_week6.html#compromiso-sesgo-varianza-continuación",
-    "title": "Regresión lineal",
+    "title": "Introducción a machine learning",
     "section": "Compromiso sesgo-varianza: continuación",
     "text": "Compromiso sesgo-varianza: continuación\nA esta relación le llamamos un compromiso, debido a que es fácil obtener un método con extremadamente bajo sesgo pero varianza alta o un modelo con baja varianza pero alto sesgo.\nComo regla general, si se utilizan metodologías más flexibles, la varianza crecerá y el sesgo disminuirá."
   }
