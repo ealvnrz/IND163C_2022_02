@@ -5,6 +5,8 @@ subtitle: "Métodos supervisados"
 
 ## Preparación
 
+- Capítulo 1 , Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems. Géron, Aurélien.
+- Capítulo 4, An Introduction to Statistical Learning with Applications in R.
 
 ## Presentación
 
@@ -15,3 +17,6 @@ subtitle: "Métodos supervisados"
 ```
 
 ## Material adicional
+
+- Capítulo 6 y 7, Data Science For Business: What You Need to Know About Data Mining & Data-Analytic Thinking. Provost F., Fawcett, T.
+
