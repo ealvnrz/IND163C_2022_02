@@ -1,0 +1,418 @@
+---
+title: "Métodos supervisados: continuación"
+subtitle: "IND 163 - 2022/02"
+author: "Eloy Alvarado Narváez"
+institute: "Universidad Técnica Federico Santa María"
+date: 14/10/22
+format: 
+  revealjs:
+    theme: slides.scss
+    touch: true
+    slide-level: 2
+    code-copy: true
+incremental: true
+slide-number: true
+lang: es
+highlight-style: github
+width: 1600
+height: 900
+logo: images/logo_usm.png
+transition: fade
+footer: "IND 163 - Semana 8"
+execute:
+  freeze: auto
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Métodos supervisados: continuación
+
+## K-vecinos cercanos
+
+Como sabemos, un clasificador Bayesiano tiene la forma:
+
+$$
+\mathbb{P}(Y=j|X=x_o)
+$$
+
+que es simplemente una probabilidad condicional. Sin embargo, tomamos este clasificador como el idóneo no-obtenible, debido a que nos entrega el error de testeo. En la práctica, este clasificador no es alcanzable debido a que no sabemos la distribución condicional de $Y$ dado $X$.
+
+## K-vecinos cercanos: continuación
+
+Una metodología que intenta estimar la probabilidad condicional para luego asignar la clase $k-$ésima a la observación que tenga la mayor probabilidad condicional es **K-vecinos cercanos** o **KNN** por sus siglas en inglés.
+
+Dada un entero positivo $K$, una observación de prueba $x_0$, el clasificador $KNN$ primero identifica los $K$ puntos más cercanos a $x_0$ pertenecientes al conjunto de entrenamiento, representados por $\mathcal{N}_0$. Luego estima la probabilidad condicional para la clase $j-$ésima como una fracción de puntos en $\mathcal{N}_0$ cuyas respuestas son igual a la de $j$, esto es:
+
+$$
+\mathbb{P}(Y=j|X=x_0)=\dfrac{1}{K}\sum_{i\in \mathcal{N}_0}I(y_i = j)
+$$
+
+Finalmente, **KNN** aplica la regla de Bayes y clasifica la observación de prueba/testeo $x_0$ a la clase con la mayor probabilidad
+
+## RL vs LDA vs QDA vs KNN
+
+Es natural preguntarse que técnica utilizar en distintas circunstancias, pues todas ellas tienen por finalidad clasificar observaciones. En lo que sigue se lista comentarios respecto a los nexos entre estas metodologías.
+
+-   Debido a que RL y LDA producen límites de decisión lineales, usualmente entregan resultados similares.
+
+-   Debido a los supuestos distribucionales de LDA, si estos se cumplen, suele entregar mejores resultados que una regresión logística. De no cumplirse los supuestos, la regresión puede superar a LDA.
+
+-   KNN al tener un enfoque enteramente no-paramétrico, esto es: no asume nada sobre la forma del límite de decisión. Si el límite de decisión es altamente no-lineal, KNN superará a la regresión logística y LDA. Sin embargo, no tendremos información de cuales predictores son importantes.
+
+## RL vs LDA vs QDA vs KNN: continuación 
+
+-   QDA puede ser visto como un punto medio entre KNN y LDA/RL. Como el QDA asume un límite de decisión cuadrático, puede modelar más problemas que al asumir linealidad.
+
+-   Si bien QDA no es tan flexible como KNN, puede entregar mejores resultados bajo un número limitado de observaciones de entrenamiento debido a que se hacen ciertos supuestos sobre la forma del límite de decisión.
+
+# Ejemplos para un mismo conjunto de datos
+
+Utilizaremos un conjunto de datos de rendimientos porcentuales de las acciones **S&P 500** a lo largo de 1250 días, desde principios de 2001 hasta finales de 2005. Para cada día, se registraron los rendimientos porcentuals para cada uno de los 5 días hábiles previos (`lag1` a `lag5`). También se registró el volumen de acciones tranzadas en el día anterior (en billones) (variable `Volume`), el rendimiento porcentual del día en cuestión (variable `Today`) y la dirección, que representa si el mercado va hacia la alta o baja.
+
+## Análisis exploratiorio
+
+```{r}
+#| echo: true
+library(ISLR)
+names(Smarket)
+dim(Smarket)
+head(Smarket)
+```
+
+## Análisis exploratorio: continuación
+
+```{r}
+#| echo: true
+library(ggplot2)
+cor(Smarket[,-9])
+```
+## Análisis exploratorio: continuación
+
+```{r}
+#| echo: true
+#| fig-align: center
+library(DataExplorer)
+plot_correlation(Smarket[,-9])
+```
+
+## Análisis exploratorio: continuación
+
+```{r}
+#| echo: true
+#| fig-align: center
+attach(Smarket)
+ggplot(Smarket) + aes(x = 1:nrow(Smarket), y = Volume) +geom_point(shape = "circle", size = 1.5, colour = "#4682B4") +
+  theme_bw()
+```
+
+## Regresión logística
+
+```{r}
+#| echo: true
+glm.fit=glm(Direction~Lag1+Lag2+Lag3+Lag4+Lag5+Volume,data = Smarket , family = binomial )
+summary(glm.fit)
+```
+
+## Regresión logística: continuación
+
+```{r}
+#| echo: true
+glm.probs=predict(glm.fit,type="response")
+glm.probs[1:10]
+contrasts(Direction)
+glm.pred=rep("Down",1250)
+glm.pred[glm.probs>.5]="Up"
+table(glm.pred,Direction)
+(507+145)/1250
+mean(glm.pred==Direction)
+```
+
+## Regresión logística: continuación
+
+```{r}
+#| echo: true
+library(caret)
+confusionMatrix(table(glm.probs >= 0.5, Smarket$Direction == "Up"))
+```
+
+## Regresión logística: continuación
+
+```{r}
+#| echo: true
+train=(Year <2005)
+Smarket.2005=Smarket[!train,]
+dim(Smarket.2005)
+Direction.2005=Direction[!train]
+glm.fit=glm(Direction~Lag1+Lag2+Lag3+Lag4+Lag5+Volume,data = Smarket, family = binomial, subset = train)
+glm.probs=predict(glm.fit,Smarket.2005,type="response")
+glm.pred=rep("Down",252)
+glm.pred[glm.probs >.5]="Up"
+table(glm.pred, Direction.2005)
+mean(glm.pred==Direction.2005)
+mean(glm.pred!=Direction.2005)
+```
+
+## Regresión logística: continuación
+
+```{r}
+#| echo: true
+confusionMatrix(table(glm.probs >= 0.5, Smarket.2005$Direction == "Up"))
+```
+
+## Regresión logística: continuación
+
+```{r}
+#| echo: true
+glm.fit=glm(Direction~Lag1+Lag2,data=Smarket,family=binomial,subset=train)
+glm.probs=predict(glm.fit,Smarket.2005,type="response")
+glm.pred=rep("Down",252)
+glm.pred[glm.probs >.5]="Up"
+table(glm.pred,Direction.2005)
+mean(glm.pred==Direction.2005)
+106/(106+76)
+```
+## Regresión logística: continuación
+
+```{r}
+#| echo: true
+confusionMatrix(table(glm.probs >= 0.5, Smarket.2005$Direction == "Up"))
+predict(glm.fit,newdata=data.frame(Lag1=c(1.2,1.5),Lag2=c(1.1,-0.8)), type="response")
+```
+
+## Análisis discriminante lineal
+
+```{r}
+#| echo: true
+library(MASS)
+lda.fit=lda(Direction~Lag1+Lag2,data=Smarket,subset=train)
+lda.fit
+```
+
+## Análisis discriminante lineal: continuación
+
+```{r}
+#| echo: true
+#| fig-align: center
+plot(lda.fit)
+```
+
+## Análisis discriminante lineal: continuación
+
+```{r}
+#| echo: true
+lda.pred=predict(lda.fit,Smarket.2005)
+names(lda.pred)
+lda.class=lda.pred$class
+table(lda.class,Direction.2005)
+mean(lda.class==Direction.2005)
+```
+## Análisis discriminante lineal: continuación
+
+```{r}
+#| echo: true
+confusionMatrix(table(lda.class,Direction.2005))
+```
+
+
+## Análisis discriminante lineal: continuación
+
+```{r}
+#| echo: true
+# Aplicando un umbral del 50%
+sum(lda.pred$posterior[,1] >=.5)
+sum(lda.pred$posterior[,1] <.5)
+# Primeros 20 datos
+lda.pred$posterior[1:20,1]
+lda.class[1:20]
+# Aplicando un umbral del 90%
+sum(lda.pred$posterior[,1] >.9)
+```
+
+## Análisis discriminante cuadrático
+
+```{r}
+#| echo: true
+qda.fit=qda(Direction~Lag1+Lag2,data=Smarket,subset=train)
+qda.fit
+qda.class=predict(qda.fit,Smarket.2005)$class
+table(qda.class,Direction.2005)
+mean(qda.class==Direction.2005)
+```
+
+## Análisis discriminante cuadrático: continuación
+
+```{r}
+#| echo: true
+confusionMatrix(table(qda.class,Direction.2005))
+```
+
+## K-vecinos cercanos
+
+```{r}
+#| warning: false
+#| echo: true
+library(class)
+train.X=cbind(Lag1,Lag2)[train,]
+test.X=cbind(Lag1,Lag2)[!train,]
+train.Direction=Direction[train]
+head(train.X)
+knn.pred=knn(train.X,test.X,train.Direction,k=1)
+table(knn.pred,Direction.2005)
+(83+43)/252
+```
+
+## K-vecinos cercanos: continuación
+
+```{r}
+#| echo: true
+confusionMatrix(table(knn.pred,Direction.2005))
+```
+
+## K-vecinos cercanos: continuación
+
+```{r}
+#| echo: true
+knn.pred=knn(train.X,test.X,train.Direction,k=3)
+table(knn.pred,Direction.2005)
+mean(knn.pred==Direction.2005)
+```
+
+## K-vecinos cercanos: continuación
+
+```{r}
+#| echo: true
+confusionMatrix(table(knn.pred,Direction.2005))
+```
+
+## Ejercicio
+
+Realizar **KNN** con el conjunto `Caravan` del paquete `ISLR`. El conjunto de datos corresponde a 85 predictores que miden características demográficas para 5822 personas, en donde la variable respuesta es `Purchase` que indica si la persona adquirió un póliza de seguros. Realice el ejercicio con y sin estandarización de variables.
+
+# Árbol de decisión
+
+Los árboles de decisión son una metodología que estratifica o segmenta el espacio de los predictores en distintas regiones, en donde se utiliza una serie de reglas de división para segmentar los espacios.
+
+En general, esta metodología no es lo suficientemente competitiva en contraste con otras técnicas supervisadas (en términos de su precisión).
+
+Los árboles de decisión pueden ser aplicados a problemas de regresión y clasificación, en lo que sigue sólo nos concentramos en esta metodología para problemas de clasificación.
+
+## Definición
+
+En un árbol de decisión para problemas de clasificación se predice que cada observación pertenece a la clase más frecuente entre las observaciones de entrenamiento en la región a la que pertenece.
+
+Utilizamos la **tasa de error de clasificación** para separar los espacios a lo largo del árbol de decisión. Debido a que se planea asignar una observación en una región particular a la *clase más frecuente* en el conjunto de entrenamiento, este error se define como:
+
+$$
+E=1-\max_{k}(\hat{p}_{mk})
+$$
+
+en donde $\hat{p}_{mk}$ representa la proporción de observaciones de entrenamiento en la región $m-$ésima que son de la clase $k-$ésima.
+
+## Diagrama de ejemplo
+
+![](images/week8/tree1.png){fig-align="center"}
+
+## Definición: continuación
+
+En general, usar sólo la tasa de error de clasifición no es lo suficientemente sensible para esta metodología, y se opta por dos medidas alternativas: índice de Gini y entropía cruzada.
+
+El **índice de Gini** está definido como:
+
+$$
+G=\sum_{k=1}^{K} \hat{p}_{mk}(1-\hat{p}_{mk})
+$$
+
+que es una medida de la varianza total a lo largo de las $K$ clases. Es claro ver que este índice toma valores pequeños si todos los $\hat{p}_{mk}$ son cercanos a cero.
+
+## Definición: continuación
+
+Una alternativa al índice anterior es la **entropía cruzada**, dada por:
+
+$$
+D=-\sum_{k=1}^{K} \hat{p}_{mk}\log \hat{p}_{mk}.
+$$
+
+Debido a que $0 \leq \hat{p}_{mk}\leq 1$, sigue que $0\leq -\hat{p}_{mk}\log\hat{p}_{mk}$. Se puede mostrar que la entropía cruzada tomará valores cercanos a cero si todos los $\hat{p}_{mk}$ están cercano a cero o a uno. Por lo que ambos índices tomaran valores pequeños si la $m-$ésimo *nodo* es *puro*.
+
+## Ejemplo 
+
+```{r}
+#| warning: false
+#| message: false
+#| echo: true
+library(tree)
+attach(Carseats)
+require(ISLR)
+head(Carseats)
+```
+
+## Ejemplo: continuación
+
+```{r}
+#| warning: false
+#| echo: true
+High=as.factor(ifelse(Sales<=8,"No","Yes"))
+Carseats=data.frame(Carseats,High)
+Carseats_tree=tree(High~ . -Sales, data=Carseats)
+summary(Carseats_tree)
+```
+## Ejemplo: continuación
+
+```{r}
+#| echo: true
+#| fig-align: center
+plot(Carseats_tree)
+text(Carseats_tree, pretty=0)
+```
+## Ejemplo: continuación
+
+```{r}
+#| warning: false
+#| echo: true
+#Alternativa
+library(rpart)
+library(rpart.plot)
+Carseats_tree2<-rpart(formula=High~ . -Sales, data=Carseats)
+summary(Carseats_tree2)
+```
+
+## Ejemplo: continuación
+
+```{r}
+#| echo: true
+tree_plot<-rpart.plot(Carseats_tree2)
+```
+## Ejemplo: continuación
+
+```{r}
+#| echo: true
+set.seed(2)
+train=sample(1:nrow(Carseats), 200)
+Carseats_test=Carseats[-train,]
+High_test=High[-train]
+Carseats_tree=tree(High~ .-Sales ,Carseats ,subset = train)
+tree_pred=predict(Carseats_tree ,Carseats_test , type ="class")
+table(tree_pred,High_test)
+(104+50)/200
+```
+## Ejemplo: continuación
+
+```{r}
+#| echo: true
+confusionMatrix(table(tree_pred,High_test))
+```
+
+# ¿Qué veremos la próxima semana?
+
+- Métodos supervisados: continuación
+  - SVM
+- Métodos no supervisados: introducción
+
+# ¿Que deben preparar para la próxima semana?
+
+- Capítulo 8 y 9 , Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems. Géron, Aurélien.
+- Capítulo 9, An Introduction to Statistical Learning with Applications in R.
+
+
+

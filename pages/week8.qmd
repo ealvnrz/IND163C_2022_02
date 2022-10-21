@@ -17,3 +17,5 @@ subtitle: "Métodos supervisados: continuación"
 ```
 
 ## Material adicional
+
+- Capítulos 7 y 9, Numsense! Data Science for the Layman: No Math Added. Ng, A, Soo K.
