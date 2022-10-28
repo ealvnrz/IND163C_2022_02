@@ -33,6 +33,6 @@ nacional.
 2. Introducción a Python y R
 3. Introducción a Google Cloud y AWS.
 
-# Planificación de proyectos de analitycs y aplicaciones de negocios
+# Planificación de proyectos de analytics aplicaciones de negocios
 
 1. Aplicaciones transversales a la empresa.
