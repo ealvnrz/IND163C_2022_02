@@ -2973,5 +2973,327 @@
     "title": "Métodos supervisados: continuación",
     "section": "Corte del árbol: continuación",
     "text": "Corte del árbol: continuación\nDos propiedades adicionales se derivan de la forma en que se generan los clusters en el método de hierarchical clustering:\n\nDada la longitud variable de las ramas, siempre existe un intervalo de altura para el que cualquier corte da lugar al mismo número de clusters.\nCon un solo dendrograma se dispone de la flexibilidad para generar cualquier número de clusters desde 1 a \\(n\\). La selección del número óptimo puede valorarse de forma visual, tratando de identificar las ramas principales en base a la altura a la que ocurren las uniones."
+  },
+  {
+    "objectID": "slides/lec_week11.html#neurona",
+    "href": "slides/lec_week11.html#neurona",
+    "title": "Redes neuronales artificiales",
+    "section": "Neurona",
+    "text": "Neurona\nLa neurona es la unidad funcional de los modelos de redes. Dentro de cada neurona ocurren simplemente dos operaciones: la suma ponderada de sus entradas y la aplicación de una función de activación.\nEn la primera parte, se multiplica cada valor de entrada \\(x_i\\) por su peso asociado \\(w_i\\) y se suman junto con el sesgo. Este es el valor neto de entrada a la neurona. A continuación, este valor se pasa por una función, conocida como función de activación, que transforma el valor neto de entrada en un valor de salida.\nSi bien el valor que llega a la neurona, siempre es una combinación lineal, gracias a la función de activación, se pueden generar salidas muy diversas. Es en la función de activación donde reside el potencial de los modelos de redes para aprender relaciones no lineales."
+  },
+  {
+    "objectID": "slides/lec_week11.html#función-de-activación",
+    "href": "slides/lec_week11.html#función-de-activación",
+    "title": "Redes neuronales artificiales",
+    "section": "Función de activación",
+    "text": "Función de activación\nLas funciones de activación controlan en gran medida qué información se propaga desde una capa a la siguiente (forward propagation). Estas funciones convierten el valor neto de entrada a la neurona (combinación de los input, pesos y sesgo) en un nuevo valor.\nGracias a combinación de funciones de activación no lineales con múltiples capas, los modelos de redes son capaces de aprender relaciones no lineales.\nLa gran mayoría de funciones de activación convierten el valor de entrada neto de la neurona en un valor dentro del rango \\((0, 1)\\) o \\((-1, 1)\\). Cuando el valor de activación de una neurona (salida de su función de activación) es cero, se dice que la neurona está inactiva, ya que no pasa ningún tipo de información a las siguientes neuronas."
+  },
+  {
+    "objectID": "slides/lec_week11.html#función-de-coste-loss-function",
+    "href": "slides/lec_week11.html#función-de-coste-loss-function",
+    "title": "Métodos supervisados: continuación",
+    "section": "Función de coste (loss function)",
+    "text": "Función de coste (loss function)\nLa función de coste (\\(l\\)), también llamada función de pérdida, loss function o cost function, es la encargada de cuantificar la distancia entre el valor real y el valor predicho por la red, en otras palabras, mide cuánto se equivoca la red al realizar predicciones.\nEn la mayoría de casos, la función de coste devuelve valores positivos. Cuanto más próximo a cero es el valor de coste, mejor son las predicciones de la red (menor error), siendo cero cuando las predicciones se corresponden exactamente con el valor real.\nLa función de coste puede calcularse para una única observación o para un conjunto de datos (normalmente promediando el valor de todas las observaciones). Es el segundo caso el que se utiliza para dirigir el entrenamiento de los modelos."
+  },
+  {
+    "objectID": "slides/lec_week11.html#múltiples-capas",
+    "href": "slides/lec_week11.html#múltiples-capas",
+    "title": "Redes neuronales artificiales",
+    "section": "Múltiples capas",
+    "text": "Múltiples capas\nEl modelo de red neuronal con una única capa (single-layer perceptron), aunque supuso un gran avance en el campo del machine learning, solo es capaz de aprender patrones sencillos. Para superar esta limitación, los investigadores descubrieron que, combinando múltiples capas ocultas, la red puede aprender relaciones mucho más complejas entre los predictores y la variable respuesta. A esta estructura se le conoce como perceptrón multicapa o multilayer perceptron (MLP), y puede considerarse como el primer modelo de deep learning.\nLa estructura de un perceptrón multicapa consta de varias capas ocultas. Cada neurona está conectada a todas las neuronas de la capa anterior y a las de la capa posterior. Aunque no es estrictamente necesario, todas las neuronas que forman parte de una misma capa suelen emplear la misma función de activación."
+  },
+  {
+    "objectID": "slides/lec_week11.html#entrenamiento",
+    "href": "slides/lec_week11.html#entrenamiento",
+    "title": "Redes neuronales artificiales",
+    "section": "Entrenamiento",
+    "text": "Entrenamiento\nEl proceso de entrenamiento de una red neuronal consiste en ajustar el valor de los pesos y sesgo de tal forma que, las predicciones que se generen, tengan el menor error posible. Gracias a esto, el modelo es capaz de identificar qué predictores tienen mayor influencia y de qué forma están relacionados entre ellos y con la variable respuesta.\nLa idea intuitiva de cómo entrenar una red neuronal es la siguiente:\n\nIniciar la red con valores aleatorios de los pesos y sesgo.\nPara cada observación de entrenamiento, calcular el error que comete la red al hacer su predicción. Promediar los errores de todas las observaciones.\nIdentificar la responsabilidad que ha tenido cada peso y sesgo en el error de las predicciones.\nModificar ligeramente los pesos y sesgos de la red (de forma proporcional a su responsabilidad en el error) en la dirección correcta para que se reduzca el error.\nRepetir los pasos 2, 3, 4 y 5 hasta que la red sea suficientemente buena.\n\n\nSi bien la idea parece sencilla, alcanzar una forma de implementarla ha requerido la combinación de múltiples métodos matemáticos, en particular, backward y forward propagation."
+  },
+  {
+    "objectID": "slides/lec_week11.html#hiperparámetros",
+    "href": "slides/lec_week11.html#hiperparámetros",
+    "title": "Métodos supervisados: continuación",
+    "section": "Hiperparámetros",
+    "text": "Hiperparámetros\nLa gran “flexibilidad” que tienen las redes neuronales es un arma de doble filo. Por un lado, son capaces de generar modelos que aprenden relaciones muy complejas, sin embargo, sufren fácilmente el problema de sobreajuste (overfitting) lo que los incapacita al tratar de predecir nuevas observaciones.\nLa forma de minimizar este problema y conseguir modelos útiles pasa por configurar de forma adecuada sus hiperparámetros. Son muchos los hiperparámetros de un modelo basado en redes y su nomenclatura varía de unas implementaciones a otras, sin embargo, los de mayor impacto siempre están presentes:\n\nNúmero y tamaño de capas\nLearning rate\nAlgoritmo de optimización\nRegularización\n\nNúmero y tamaño de capas\nLa arquitectura de una red, el número de capas y el número de neuronas que forman parte de cada capa, determinan en gran medida la complejidad del modelo y con ello su potencial capacidad de aprendizaje.\nLa capa de entrada y salida son sencillas de establecer. La capa de entrada tiene tantas neuronas como predictores y la capa de salida tiene una neurona en problemas de regresión y tantas como clases en problemas de clasificación. En la mayoría de implementaciones, estos valores se establecen automáticamente en función del conjunto de entrenamiento. El usuario suele especificar únicamente el número de capas intermedias (ocultas) y el tamaño de las mismas.\nCuantas más neuronas y capas, mayor la complejidad de las relaciones que puede aprender el modelo. Sin embargo, dado que cada neurona está conectada por pesos al resto de neuronas de las capas adyacentes, el número de parámetros a aprender aumenta y con ello el tiempo de entrenamiento.\nLearning rate\nEl learning rate o tasa de aprendizaje establece cuan rápido pueden cambiar los parámetros de un modelo a medida que se optimiza (aprende). Este hiperparámetro es uno de los más complicados de establecer, ya que depende mucho de los datos e interacciona con el resto de hiperparámetros. Si el learning rate es muy grande, el proceso de optimización puede ir saltando de una región a otra sin que el modelo sea capaz de aprender. Si por el contrario, el learning rate es muy pequeño, el proceso de entrenamiento puede tardar demasiado y no llegar a completarse. Algunas de las recomendaciones heurísticas basadas en prueba y error son:\n\nUtilizar un learning rate lo más pequeño posible siempre y cuando el tiempo de entrenamiento no supere las limitaciones temporales disponibles.\nNo utilizar un valor constante de learning rate durante todo el proceso de entrenamiento. Por lo general, utilizar valores mayores al inicio y pequeños al final.\n\nAlgoritmo de optimización\nEl descenso de gradiente y el descenso de gradiente estocástico fueron de los primeros métodos de optimización utilizados para entrenar modelos de redes neuronales. Ambos utilizan directamente el gradiente para dirigir la optimización. Pronto se vio que esto genera problemas a medida que las redes aumentan de tamaño (neuronas y capas). En muchas regiones del espacio de búsqueda, el gradiente es muy próximo a cero, lo que hace que la optimización quede estancada. Para evitar este problema, se han desarrollado modificaciones del descenso de gradiente capaces de adaptar el learning rate en función del gradiente y subgradiente. De esta forma, el proceso de aprendizaje se ralentiza o acelera dependiendo de las características de la región del espacio de búsqueda en el que se encuentren. Aunque existen multitud de adaptaciones, suele recomendarse:\n\nPara conjuntos de datos pequeños: l-bfgs (limited memory bfgs)\nPara conjuntos de datos grandes: adam o rmsprop (root mean square propagation)\n\nLa elección del algoritmo de optimización puede tener un impacto notable en el aprendizaje de los modelos, sobre todo en deep learning.\nRegularización\nLos métodos de regularización tienen el objetivo de reducir el sobreajuste (overfitting) de los modelos. Un modelo con sobreajuste memoriza los datos de entrenamiento pero es incapaz de predecir correctamente nuevas observaciones.\nLos modelos de redes neuronales pueden considerarse como modelos sobre parametrizados, por lo tanto, las estrategias de regularización son fundamentales. De entre las muchas que existen, destacan la regularización L1 y L2 (weight decay) y el dropout."
+  },
+  {
+    "objectID": "slides/lec_week11.html#ejemplo",
+    "href": "slides/lec_week11.html#ejemplo",
+    "title": "Métodos supervisados: continuación",
+    "section": "Ejemplo",
+    "text": "Ejemplo\nUtilizaremos datos del repositorio del Center for Machine Learning and Intelligent Systems de la Universidad de California, en particular, el conjunto de datos Concrete Compressive Strength Data Sets."
+  },
+  {
+    "objectID": "slides/lec_week11.html#representación-de-red-neuronal",
+    "href": "slides/lec_week11.html#representación-de-red-neuronal",
+    "title": "Redes neuronales artificiales",
+    "section": "Representación de red neuronal",
+    "text": "Representación de red neuronal"
+  },
+  {
+    "objectID": "slides/lec_week11.html#redes-neuronales-continuación",
+    "href": "slides/lec_week11.html#redes-neuronales-continuación",
+    "title": "Redes neuronales artificiales",
+    "section": "Redes neuronales: continuación",
+    "text": "Redes neuronales: continuación\nLa forma más común de representar la estructura de una red neuronal es mediante el uso de capas (layers), formadas a su vez por neuronas. Cada neurona, realiza una operación sencilla y está conectada a las neuronas de la capa anterior y de la capa siguiente mediante pesos, cuya función es regular la información que se propaga de una neurona a otra."
+  },
+  {
+    "objectID": "slides/lec_week11.html#red-neuronal-artificial",
+    "href": "slides/lec_week11.html#red-neuronal-artificial",
+    "title": "Redes neuronales artificiales",
+    "section": "Red neuronal artificial",
+    "text": "Red neuronal artificial"
+  },
+  {
+    "objectID": "slides/lec_week11.html#red-neuronal-artificial-continuación",
+    "href": "slides/lec_week11.html#red-neuronal-artificial-continuación",
+    "title": "Redes neuronales artificiales",
+    "section": "Red neuronal artificial: continuación",
+    "text": "Red neuronal artificial: continuación\nPara facilitar la comprensión de la estructura de las redes, es útil representar una red equivalente a un modelo de regresión lineal:\n\\[y=w_1 x_1 +\\dots+w_d x_d + b\\]\nCada neurona de la capa de entrada representa el valor de uno de los predictores. Las flechas representan los coeficientes de regresión, que en términos de redes se llaman pesos, y la neurona de salida representa el valor predicho. Para que esta representación sea equivalente a la ecuación de un modelo lineal, faltan dos cosas:\n\nEl sesgo del modelo\nLas operaciones de multiplicación y suma que combinan el valor de los predictores con los pesos del modelo\n\n\nCada neurona de la capa intermedia tiene un valor de sesgo, pero suele omitirse en las representaciones gráficas. En cuanto a las operaciones matemáticas, es el elemento clave que ocurre dentro de las neuronas y conviene verlo con detalle."
+  },
+  {
+    "objectID": "slides/lec_week11.html#representación-de-una-neurona",
+    "href": "slides/lec_week11.html#representación-de-una-neurona",
+    "title": "Redes neuronales artificiales",
+    "section": "Representación de una neurona",
+    "text": "Representación de una neurona"
+  },
+  {
+    "objectID": "slides/lec_week11.html#neurona-continuación",
+    "href": "slides/lec_week11.html#neurona-continuación",
+    "title": "Redes neuronales artificiales",
+    "section": "Neurona: continuación",
+    "text": "Neurona: continuación\nLo anterior es la noción intuitiva de las redes neuronales artificiales, en términos matemáticos:\nEl valor neto de entrada a una neurona es la suma de los valores que le llegan, ponderados por el peso de las conexiones, más el sesgo:\n\\[Input = \\sum_{i=1}^{n} x_i w_i + b\\]\nEn lugar de utilizar la sumatoria, este operación usualmente se presenta como un producto matricial, donde \\(X\\) representa el vector de los valores de entrada y \\(W\\) el vector de pesos:\n\\[Input = XW + b\\]"
+  },
+  {
+    "objectID": "slides/lec_week11.html#neurona-continuación-1",
+    "href": "slides/lec_week11.html#neurona-continuación-1",
+    "title": "Redes neuronales artificiales",
+    "section": "Neurona: continuación",
+    "text": "Neurona: continuación\nA este valor se le aplica una función de activación \\(g\\) que lo transforma en lo que se conoce como el valor de activación \\(a\\), que es lo que finalmente sale de la neurona.\n\\[a=g(Input)=g(XW+b)\\]\nPara la capa de entrada, donde únicamente se quiere incorporar el valor de los predictores, la función de activación es la unidad, es decir, sale lo mismo que entra. En la capa de salida, la función de activación utilizada suele ser la identidad para problemas de regresión."
+  },
+  {
+    "objectID": "slides/lec_week11.html#tipos-de-funciones-de-activación",
+    "href": "slides/lec_week11.html#tipos-de-funciones-de-activación",
+    "title": "Redes neuronales artificiales",
+    "section": "Tipos de funciones de activación",
+    "text": "Tipos de funciones de activación\nExisten muchas funciones de activación utilizadas en la práctica, en lo que sigue mencionamos un par de ellas:\n\nRectified linear unit (ReLU)\nSigmoide\nTangente hiperbólica\n\n\nTambién hay otras como: función lineal, gaussiana, linear saturada, etc."
+  },
+  {
+    "objectID": "slides/lec_week11.html#rectified-linear-unit-relu",
+    "href": "slides/lec_week11.html#rectified-linear-unit-relu",
+    "title": "Redes neuronales artificiales",
+    "section": "Rectified linear unit (ReLU)",
+    "text": "Rectified linear unit (ReLU)\nLa función de activación ReLu aplica una transformación no lineal muy simple, activa la neurona solo si el input está por encima de cero. Mientras el valor de entrada está por debajo de cero, el valor de salida es cero, pero cuando es superior, el valor de salida aumenta de forma lineal con el de entrada.\n\\[ReLU(x)=\\max (x,0)\\]\nDe esta forma, la función de activación retiene únicamente los valores positivos y descarta los negativos dándoles una activación de cero."
+  },
+  {
+    "objectID": "slides/lec_week11.html#gráfico-relu",
+    "href": "slides/lec_week11.html#gráfico-relu",
+    "title": "Redes neuronales artificiales",
+    "section": "Gráfico ReLU",
+    "text": "Gráfico ReLU"
+  },
+  {
+    "objectID": "slides/lec_week11.html#rectified-linear-unit-relu-continuación",
+    "href": "slides/lec_week11.html#rectified-linear-unit-relu-continuación",
+    "title": "Redes neuronales artificiales",
+    "section": "Rectified linear unit (ReLU): continuación",
+    "text": "Rectified linear unit (ReLU): continuación\nLa función de activación ReLU es con diferencia la función de activación más empleada por sus buenos resultados en aplicaciones diversas. La razón de esto reside en el comportamiento de su derivada (gradiente), que es cero o constante."
+  },
+  {
+    "objectID": "slides/lec_week11.html#sigmoide",
+    "href": "slides/lec_week11.html#sigmoide",
+    "title": "Redes neuronales artificiales",
+    "section": "Sigmoide",
+    "text": "Sigmoide\nLa función sigmoide transforma valores en la recta real a valores en el rango \\([0, 1]\\):\n\\[sigmoid(x)=\\dfrac{1}{1+\\exp(-x)}\\]"
+  },
+  {
+    "objectID": "slides/lec_week11.html#gráfico-sigmoide",
+    "href": "slides/lec_week11.html#gráfico-sigmoide",
+    "title": "Redes neuronales artificiales",
+    "section": "Gráfico Sigmoide",
+    "text": "Gráfico Sigmoide"
+  },
+  {
+    "objectID": "slides/lec_week11.html#tangente-hiperbólica",
+    "href": "slides/lec_week11.html#tangente-hiperbólica",
+    "title": "Redes neuronales artificiales",
+    "section": "Tangente hiperbólica",
+    "text": "Tangente hiperbólica\nLa función de activación tangente hiperbólica, se comporta de forma similar a la función sigmoide, pero su salida está acotada en el rango \\((-1, 1)\\):\n\\[\\tanh(x)=\\dfrac{1-\\exp(-2x)}{1+\\exp(-2x)}\\]"
+  },
+  {
+    "objectID": "slides/lec_week11.html#gráfico-tangente-hiperbólica",
+    "href": "slides/lec_week11.html#gráfico-tangente-hiperbólica",
+    "title": "Redes neuronales artificiales",
+    "section": "Gráfico tangente hiperbólica",
+    "text": "Gráfico tangente hiperbólica"
+  },
+  {
+    "objectID": "slides/lec_week11.html#sigmoide-continuación",
+    "href": "slides/lec_week11.html#sigmoide-continuación",
+    "title": "Redes neuronales artificiales",
+    "section": "Sigmoide: continuación",
+    "text": "Sigmoide: continuación\nAunque la función de activación sigmoide se utilizó mucho en los inicios de los modelos de redes neuronales artificiales, en la actualidad, suele preferirse la función ReLU.\nUn caso en el que la función de activación sigmoide sigue siendo la función utilizada por defecto es en las neuronas de la capa de salida de los modelos de clasificación binaria, ya que su salida puede interpretarse como probabilidad."
+  },
+  {
+    "objectID": "slides/lec_week11.html#error-cuadrático-medio",
+    "href": "slides/lec_week11.html#error-cuadrático-medio",
+    "title": "Redes neuronales artificiales",
+    "section": "Error cuadrático medio",
+    "text": "Error cuadrático medio\nEl error cuadrático medio (mean squared error, MSE) es la función de coste más utilizada en problemas de regresión. Para una determinada observación \\(i\\), el error cuadrático se calcula como la diferencia al cuadrado entre el valor predicho \\(\\hat{y}\\) y el valor real \\(y\\).\n\\[l^{(i)}(w,b)=\\left( \\widehat{y}^{(i)}-y^{(i)}\\right)^2\\]\nLas funciones de coste suelen escribirse con la notación \\(l(w,b)\\) para hacer referencia a que su valor depende de los pesos y el sesgo del modelo, ya que son estos los que determinan el valor de las predicciones \\(\\widehat{y}^{(i)}\\)."
+  },
+  {
+    "objectID": "slides/lec_week11.html#error-cuadrático-medio-continuación",
+    "href": "slides/lec_week11.html#error-cuadrático-medio-continuación",
+    "title": "Redes neuronales artificiales",
+    "section": "Error cuadrático medio: continuación",
+    "text": "Error cuadrático medio: continuación\nCon frecuencia, esta función de coste se encuentra multiplicada por \\(\\dfrac{1}{2}\\), esto es simplemente por conveniencia matemática para simplificar el cálculo de su derivada.\n\\[l^{(i)}(w,b)=\\dfrac{1}{2}\\left( \\widehat{y}^{(i)}-y^{(i)}\\right)^2\\]\nPara cuantificar el error que comete el modelo todo un conjunto de datos, por ejemplo los de entrenamiento, se promedia el error de todas las \\(N\\) observaciones.\n\\[L(w,b)=\\dfrac{1}{n}\\sum_{i=1}^{n}l^{(i)}(w,b)=\\dfrac{1}{n}\\sum_{i=1}^{n}\\left( \\widehat{y}^{(i)}-y^{(i)}\\right)^{2}\\]\nCuando un modelo se entrena utilizando el error cuadrático medio como función de coste, está aprendiendo a predecir la media de la variable respuesta."
+  },
+  {
+    "objectID": "slides/lec_week11.html#error-medio-absoluto",
+    "href": "slides/lec_week11.html#error-medio-absoluto",
+    "title": "Redes neuronales artificiales",
+    "section": "Error medio absoluto",
+    "text": "Error medio absoluto\nEl error medio absoluto (mean absolute error, MAE) consiste en promediar el error absoluto de las predicciones.\n\\[L(w,b)=\\dfrac{1}{n}\\sum_{i=1}^{n}|\\widehat{y}^{(i)}-y^{(i)}|\\]\nEl error medio absoluto es más robusto frente a outliers que el error cuadrático medio. Esto significa que el entrenamiento del modelo se ve menos influenciado por datos anómalos que pueda haber en el conjunto de entrenamiento. Cuando un modelo se entrena utilizando el error absoluto medio como función de coste, está aprendiendo a predecir la mediana de la variable respuesta."
+  },
+  {
+    "objectID": "slides/lec_week11.html#múltiples-capas-continuación",
+    "href": "slides/lec_week11.html#múltiples-capas-continuación",
+    "title": "Redes neuronales artificiales",
+    "section": "Múltiples capas: continuación",
+    "text": "Múltiples capas: continuación\nCombinando múltiples capas ocultas y funciones de activación no lineales, los modelos de redes pueden aprender prácticamente cualquier patrón. De hecho, está demostrado que, con suficientes neuronas, un MLP es un aproximador universal para cualquier función."
+  },
+  {
+    "objectID": "slides/lec_week11.html#representación-mlp",
+    "href": "slides/lec_week11.html#representación-mlp",
+    "title": "Redes neuronales artificiales",
+    "section": "Representación MLP",
+    "text": "Representación MLP"
+  },
+  {
+    "objectID": "slides/lec_week11.html#backpropagation",
+    "href": "slides/lec_week11.html#backpropagation",
+    "title": "Redes neuronales artificiales",
+    "section": "Backpropagation",
+    "text": "Backpropagation\nBackpropagation es el algoritmo que permite cuantificar la influencia que tiene cada peso y sesgo en las predicciones de la red. Para conseguirlo, hace uso de la regla de la cadena para calcular el gradiente, que no es más que el vector formado por las derivadas parciales de una función.\nEn el caso de las redes, la derivada parcial del error respecto a un parámetro (peso o sesgo) mide cuánta responsabilidad ha tenido ese parámetro en el error cometido. Gracias a esto, se puede identificar qué pesos de la red hay que modificar para mejorarla. El siguiente paso necesario, es determinar cuánto y cómo modificarlos (optimización)."
+  },
+  {
+    "objectID": "slides/lec_week11.html#prepocesamiento-de-variables",
+    "href": "slides/lec_week11.html#prepocesamiento-de-variables",
+    "title": "Redes neuronales artificiales",
+    "section": "Prepocesamiento de variables",
+    "text": "Prepocesamiento de variables\nA la hora de entrenar modelos basados en redes neuronales, es necesario aplicar a los datos, al menos, dos tipos de transformaciones.\n\nBinarización (one hot encoding) de las variables categóricas: La binarización consiste en crear nuevas variables dummy con cada uno de los niveles de las variables cualitativas. Este proceso es el mismo realizado en modelos lineales.\nEstandarización y escalado de variables numéricas: Cuando los predictores son numéricos, la escala en la que se miden, así como la magnitud de su varianza pueden influir en gran medida en el modelo. Si no se igualan de alguna forma los predictores, aquellos que se midan en una escala mayor o que tengan más varianza dominarán el modelo aunque no sean los que más relación tienen con la variable respuesta. Para ello, en general centramos los datos, y estandarizamos o reescalamos entre 0 y 1."
+  },
+  {
+    "objectID": "slides/lec_week11.html#número-y-tamaño-de-capas",
+    "href": "slides/lec_week11.html#número-y-tamaño-de-capas",
+    "title": "Redes neuronales artificiales",
+    "section": "Número y tamaño de capas",
+    "text": "Número y tamaño de capas\nLa arquitectura de una red, el número de capas y el número de neuronas que forman parte de cada capa, determinan en gran medida la complejidad del modelo y con ello su potencial capacidad de aprendizaje.\nLa capa de entrada y salida son sencillas de establecer. La capa de entrada tiene tantas neuronas como predictores y la capa de salida tiene una neurona en problemas de regresión y tantas como clases en problemas de clasificación. En la mayoría de implementaciones, estos valores se establecen automáticamente en función del conjunto de entrenamiento. El usuario suele especificar únicamente el número de capas intermedias (ocultas) y el tamaño de las mismas.\nCuantas más neuronas y capas, mayor la complejidad de las relaciones que puede aprender el modelo. Sin embargo, dado que cada neurona está conectada por pesos al resto de neuronas de las capas adyacentes, el número de parámetros a aprender aumenta y con ello el tiempo de entrenamiento."
+  },
+  {
+    "objectID": "slides/lec_week11.html#learning-rate",
+    "href": "slides/lec_week11.html#learning-rate",
+    "title": "Redes neuronales artificiales",
+    "section": "Learning rate",
+    "text": "Learning rate\nEl learning rate o tasa de aprendizaje establece cuan rápido pueden cambiar los parámetros de un modelo a medida que se optimiza (aprende). Este hiperparámetro es uno de los más complicados de establecer, ya que depende mucho de los datos e interactúa con el resto de hiperparámetros. Si el learning rate es muy grande, el proceso de optimización puede ir saltando de una región a otra sin que el modelo sea capaz de aprender. Si por el contrario, el learning rate es muy pequeño, el proceso de entrenamiento puede tardar demasiado y no llegar a completarse. Algunas de las recomendaciones heurísticas basadas en prueba y error son:\n\nUtilizar un learning rate lo más pequeño posible siempre y cuando el tiempo de entrenamiento no supere las limitaciones temporales disponibles.\nNo utilizar un valor constante de learning rate durante todo el proceso de entrenamiento. Por lo general, utilizar valores mayores al inicio y pequeños al final."
+  },
+  {
+    "objectID": "slides/lec_week11.html#algoritmo-de-optimización",
+    "href": "slides/lec_week11.html#algoritmo-de-optimización",
+    "title": "Redes neuronales artificiales",
+    "section": "Algoritmo de optimización",
+    "text": "Algoritmo de optimización\nEl descenso de gradiente y el descenso de gradiente estocástico fueron de los primeros métodos de optimización utilizados para entrenar modelos de redes neuronales. Ambos utilizan directamente el gradiente para dirigir la optimización. Pronto se vio que esto genera problemas a medida que las redes aumentan de tamaño (neuronas y capas).\nEn muchas regiones del espacio de búsqueda, el gradiente es muy próximo a cero, lo que hace que la optimización quede estancada. Para evitar este problema, se han desarrollado modificaciones del descenso de gradiente capaces de adaptar el learning rate en función del gradiente y subgradiente. De esta forma, el proceso de aprendizaje se ralentiza o acelera dependiendo de las características de la región del espacio de búsqueda en el que se encuentren. Aunque existen multitud de adaptaciones, suele recomendarse:\n\nPara conjuntos de datos pequeños: l-bfgs (limited memory bfgs)\nPara conjuntos de datos grandes: adam o rmsprop (root mean square propagation)\n\n\nLa elección del algoritmo de optimización puede tener un impacto notable en el aprendizaje de los modelos, sobre todo en deep learning."
+  },
+  {
+    "objectID": "slides/lec_week11.html#regularización",
+    "href": "slides/lec_week11.html#regularización",
+    "title": "Redes neuronales artificiales",
+    "section": "Regularización",
+    "text": "Regularización\nLos métodos de regularización tienen el objetivo de reducir el sobreajuste (overfitting) de los modelos. Un modelo con sobreajuste memoriza los datos de entrenamiento pero es incapaz de predecir correctamente nuevas observaciones.\nLos modelos de redes neuronales pueden considerarse como modelos sobre-parametrizados, por lo tanto, las estrategias de regularización son fundamentales.\nDe entre las muchas que existen, destacan la regularización L1 y L2 (weight decay) y el dropout."
+  },
+  {
+    "objectID": "slides/lec_week11.html#ejemplo-continuación",
+    "href": "slides/lec_week11.html#ejemplo-continuación",
+    "title": "Redes neuronales artificiales",
+    "section": "Ejemplo: continuación",
+    "text": "Ejemplo: continuación\n\nlibrary(readxl)\nconcrete_data<- read_excel(\"db/Concrete_Data.xls\")\nnames(concrete_data)<-c(\"cement\",\"slag\",\"ash\",\"water\",\"superplastic\",\n                        \"coarseagg\",\"fineagg\",\"age\",\"strength\")\nnormalize <- function(x) {\nreturn((x - min(x)) / (max(x) - min(x)))\n}\nhead(concrete_data)\n\n# A tibble: 6 × 9\n  cement  slag   ash water superplastic coarseagg fineagg   age strength\n   <dbl> <dbl> <dbl> <dbl>        <dbl>     <dbl>   <dbl> <dbl>    <dbl>\n1   540     0      0   162          2.5     1040     676     28     80.0\n2   540     0      0   162          2.5     1055     676     28     61.9\n3   332.  142.     0   228          0        932     594    270     40.3\n4   332.  142.     0   228          0        932     594    365     41.1\n5   199.  132.     0   192          0        978.    826.   360     44.3\n6   266   114      0   228          0        932     670     90     47.0"
+  },
+  {
+    "objectID": "slides/lec_week11.html#ejemplo-continuación-1",
+    "href": "slides/lec_week11.html#ejemplo-continuación-1",
+    "title": "Redes neuronales artificiales",
+    "section": "Ejemplo: continuación",
+    "text": "Ejemplo: continuación\n\nconcrete_data_norm <- as.data.frame(lapply(concrete_data, normalize))\nsummary(concrete_data_norm$strength)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n 0.0000  0.2663  0.4000  0.4172  0.5457  1.0000 \n\nsummary(concrete_data$strength)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  2.332  23.707  34.443  35.818  46.136  82.599 \n\n\nDebido a que los datos ya están ordenamos aleatoriamente, simplemente dividimos en dos partes de 75 y 25 porciento, respectivamente.\n\nconcrete_train <- concrete_data_norm[1:773, ]\nconcrete_test <- concrete_data_norm[774:1030, ]"
+  },
+  {
+    "objectID": "slides/lec_week11.html#ejemplo-continuación-2",
+    "href": "slides/lec_week11.html#ejemplo-continuación-2",
+    "title": "Redes neuronales artificiales",
+    "section": "Ejemplo: continuación",
+    "text": "Ejemplo: continuación\nEl siguiente modelo sería un simple multilayer feedfoward network\n\nlibrary(neuralnet)\nset.seed(411)\nconcrete_model <- neuralnet(strength ~ cement + slag + \n                            ash + water + superplastic \n                            + coarseagg + fineagg + age,\n                            data = concrete_train)"
+  },
+  {
+    "objectID": "slides/lec_week11.html#ejemplo-continuación-3",
+    "href": "slides/lec_week11.html#ejemplo-continuación-3",
+    "title": "Redes neuronales artificiales",
+    "section": "Ejemplo: continuación",
+    "text": "Ejemplo: continuación\n\nplot(concrete_model, rep=\"best\")"
+  },
+  {
+    "objectID": "slides/lec_week11.html#ejemplo-continuación-4",
+    "href": "slides/lec_week11.html#ejemplo-continuación-4",
+    "title": "Redes neuronales artificiales",
+    "section": "Ejemplo: continuación",
+    "text": "Ejemplo: continuación\n\nmodel_results <- compute(concrete_model, concrete_test[1:8])\npredicted_strength <- model_results$net.result\ncor(predicted_strength, concrete_test$strength)\n\n          [,1]\n[1,] 0.7209429\n\n\nDebido a que es un problema de predicción, no podemos realizar una matriz de confusión para determinar el nivel de precisión"
+  },
+  {
+    "objectID": "slides/lec_week11.html#ejemplo-continuación-5",
+    "href": "slides/lec_week11.html#ejemplo-continuación-5",
+    "title": "Redes neuronales artificiales",
+    "section": "Ejemplo: continuación",
+    "text": "Ejemplo: continuación\nEn el siguiente modelo, ampliaremos la cantidad de neuronas.\n\nconcrete_model2 <- neuralnet(strength ~ cement + slag +\n                               ash + water + superplastic +\n                               coarseagg + fineagg + age,\n                             data = concrete_train, hidden = 5)"
+  },
+  {
+    "objectID": "slides/lec_week11.html#ejemplo-continuación-6",
+    "href": "slides/lec_week11.html#ejemplo-continuación-6",
+    "title": "Redes neuronales artificiales",
+    "section": "Ejemplo: continuación",
+    "text": "Ejemplo: continuación\n\nplot(concrete_model2, rep=\"best\")"
+  },
+  {
+    "objectID": "slides/lec_week11.html#ejemplo-continuación-7",
+    "href": "slides/lec_week11.html#ejemplo-continuación-7",
+    "title": "Redes neuronales artificiales",
+    "section": "Ejemplo: continuación",
+    "text": "Ejemplo: continuación\n\nmodel_results2 <- compute(concrete_model2, concrete_test[1:8])\npredicted_strength2 <- model_results2$net.result\ncor(predicted_strength2, concrete_test$strength)\n\n          [,1]\n[1,] 0.8138362"
+  },
+  {
+    "objectID": "slides/lec_week11.html#ejemplo-continuación-8",
+    "href": "slides/lec_week11.html#ejemplo-continuación-8",
+    "title": "Redes neuronales artificiales",
+    "section": "Ejemplo: continuación",
+    "text": "Ejemplo: continuación\nEn este problema no podemos utilizar una función de activación Rectified linear unit (ReLU) debido a que no tiene derivada en \\(x=0\\). Alternativamente, utilizamos una función de activación llamada softplus o Smooth ReLI\n\nsoftplus <- function(x) { log(1 + exp(x)) }\nconcrete_model3 <- neuralnet(strength ~ cement + slag +\n                               ash + water + superplastic +\n                               coarseagg + fineagg + age,\n                             data = concrete_train,\n                             hidden = c(5, 5), act.fct = softplus)"
+  },
+  {
+    "objectID": "slides/lec_week11.html#ejemplo-continuación-9",
+    "href": "slides/lec_week11.html#ejemplo-continuación-9",
+    "title": "Redes neuronales artificiales",
+    "section": "Ejemplo: continuación",
+    "text": "Ejemplo: continuación\n\nplot(concrete_model3, rep=\"best\")"
+  },
+  {
+    "objectID": "slides/lec_week11.html#ejemplo-continuación-10",
+    "href": "slides/lec_week11.html#ejemplo-continuación-10",
+    "title": "Redes neuronales artificiales",
+    "section": "Ejemplo: continuación",
+    "text": "Ejemplo: continuación\n\nmodel_results3 <- compute(concrete_model3, concrete_test[1:8])\npredicted_strength3 <- model_results3$net.result\ncor(predicted_strength3, concrete_test$strength)\n\n          [,1]\n[1,] 0.6761314\n\nstrengths <- data.frame(actual = concrete_data$strength[774:1030],pred = predicted_strength3)\nhead(strengths, n = 3)\n\n      actual      pred\n774 37.42476 0.4099593\n775 11.46599 0.2406689\n776 22.43555 0.2818004\n\ncor(strengths$pred, strengths$actual)\n\n[1] 0.6761314"
+  },
+  {
+    "objectID": "slides/lec_week11.html#ejemplo-continuación-11",
+    "href": "slides/lec_week11.html#ejemplo-continuación-11",
+    "title": "Redes neuronales artificiales",
+    "section": "Ejemplo: continuación",
+    "text": "Ejemplo: continuación\n\nunnormalize <- function(x) {\nreturn((x * (max(concrete_data$strength)) -\nmin(concrete_data$strength)) + min(concrete_data$strength))\n}\nstrengths$pred_new <- unnormalize(strengths$pred)\nstrengths$error <- strengths$pred_new - strengths$actual\nhead(strengths, n = 3)\n\n      actual      pred pred_new      error\n774 37.42476 0.4099593 33.86232 -3.5624375\n775 11.46599 0.2406689 19.87906  8.4130769\n776 22.43555 0.2818004 23.27650  0.8409468\n\ncor(strengths$pred_new, strengths$actual)\n\n[1] 0.6761314"
   }
 ]
