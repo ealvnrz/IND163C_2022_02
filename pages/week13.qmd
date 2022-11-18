@@ -1,6 +1,6 @@
 ---
 title: "Semana 13"
-subtitle: "Redes convolucionales"
+subtitle: "Redes neuronales convolucionales"
 ---
 
 ## Preparación

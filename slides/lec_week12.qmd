@@ -1,0 +1,358 @@
+---
+title: "Redes neuronales convolucionales"
+subtitle: "IND 163 - 2022/02"
+author: "Eloy Alvarado Narváez"
+institute: "Universidad Técnica Federico Santa María"
+date: 18/11/22
+format: 
+  revealjs:
+    theme: slides.scss
+    touch: true
+    slide-level: 2
+    code-copy: true
+incremental: true
+slide-number: true
+lang: es
+highlight-style: github
+width: 1600
+height: 900
+logo: images/logo_usm.png
+transition: fade
+footer: "IND 163 - Semana 12"
+execute:
+  freeze: auto
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Red Neuronal Convolucional
+
+**Convolutional Neural Networks** o **CNN**, son un tipo especial de redes neuronales para procesar datos que tienen una topología en forma de cuadrícula conocida. Como por ejemplo, series de tiempo, que puedes ser pensados como una malla 1-dimensional que toman datos a intervalos regulares, datos de imagen, que pueden ser pensados como una malla 2-dimensional.
+
+Este tipo de redes neuronales ha sido **muy** exitoso en la industria y aplicaciones generales.
+
+El nombre **red neuronal convolucional** indica que la red utiliza una operación matemática especifica: la **convolución**, esta es un tipo especial de operación lineal.
+
+**Las redes neuronales convolucionales son simplemente redes neuronales que usan convolución en lugar de una multiplicación matricial en al menos una de sus capas**
+
+## Convolución
+
+En su forma general, la convolución es una operación sobre dos funciones con argumentos reales.
+
+Supongamos que estamos rastreando la ubicación de una nave espacial con un sensor láser. Nuestro sensor láser nos entrega una sola salida $x(t)$, la posición de la nave espacial en el tiempo $t$, en donde $x$ y $t$ son valores reales.
+
+Ahora supongamos que nuestro sensor láser es *algo ruidoso*. Para obtener una estimación menos ruidosa de la posición de la nave, podríamos promediar muchas mediciones, siendo las mediciones más recientes más relevantes, por lo que sería un promedio ponderado que otorga más peso a las observaciones más recientes.
+
+## Convolución: continuación
+
+Podemos hacer esto con una función $w(a)$, donde $a$ es la *edad* de la medición. Si deseamos aplicar la operación de ponderación en cada momento, debemos obtener una nueva función $s$ que entregue una estimación suavizada de la posición de la nave:
+
+$$s(t)=\int x(a)w(t-a)da$$ 
+
+Esta operación es llamada **convolución**. La operación de convolución se denota típicamente como:
+
+$$s(t)=(x * w)(t)$$
+
+## Convolución: continuación
+
+En nuestro caso, $w$ necesita ser una función de densidad de probabilidad válida, sino la salida no sería una ponderación. Además, $w$ necesita ser 0 para todos los argumentos negativos, o esta función "*mirará en el futuro*''. Estas limitaciones son particulares de nuestro ejemplo.
+
+En general, la convolución está definida para cualquier función para la que la integral anterior está bien definida, y puede ser ocupada con otros fines.
+
+En este contexto, el primer argumento ($x$) se le llama **input** y el segundo argumento ($w$) se le llama **kernel**, y a la salida se le llama **feature map**.
+
+
+## Convolución: continuación{.small}
+
+En nuestro ejemplo, la idea de que el sensor láser entregue medidas en cada instante de tiempo no es realista, pues trabajamos con una discretización del tiempo, usualmente a tiempos regulares. Así, tendremos:
+
+$$s(t)=(x*w)(t)=\sum_{a=-\infty}^{\infty}x(a)w(t-a)$$
+
+Frecuentemente usamos convoluciones sobre más de un eje en un tiempo especifico. Por ejemplo, si usamos una imagen 2-dimensional $I$ como **input**, probablemente desearemos usar un kernel $K$ 2-dimensional:
+
+$$S(i,j)=(I*K)(i,j)=\sum_m \sum_n I(m,n)K(i-m,j-n)$$
+
+La convolución es **conmutativa**, esto significa que equivalentemente podemos escribir:
+
+$$S(i,j)=(K*I)(i,j)=\sum_m \sum_n I(i-m,j-n)K(m,n)$$
+
+## Motivación
+
+La convolución aprovecha tres ideas importantes que pueden ayudar a mejorar el aprendizaje de una *máquina*:
+
+-   **sparse interactions**
+-   **parameter sharing**
+-   **equivariant representation**
+
+. . .
+
+Además de permitir trabajar con entradas de tamaño variable.
+
+
+## Sparse interaction
+
+Interacciones escasas o sparse interactions (que también se le refiere como **sparse connectivity** o **sparse weights**), viene desde la idea: Las capas de una red neuronal tradicional usan multiplicación de matrices por una matriz de parámetros con un parámetro separado que describe la interacción entre cada unidad de entrada y cada unidad de salida.
+
+Este implica que cada unidad de salida interactúa con cada unidad de entrada. Las redes convolucionales, en cambio, no necesariamente. Este es logrado utilizando **kernels** más pequeños que la entrada.
+
+Por ejemplo, cuando se procesa una imagen, la entrada podría tener millones de pixeles, pero podemos detectar unas pequeñas pero relevantes características, que al interactuar con el *kernel* ocupan sólo cientos de pixeles. Esto implica que tendremos que guardar menos parámetros, que reduce la memoria requerida del modelo y mejora su eficiencia estadística.
+
+
+## Sparse interaction: continuación
+
+En términos más formales, en una red neuronal con $y\in \mathbb{R}^{n}, x\in \mathbb{R}^m$. Necesitamos realizar la multiplicación matricial $y=Wx$ para calcular las *activaciones* para cada capa, en donde cada salida interactúa con cada entrada.
+
+Debido a que las redes convolucionales tienen *interacciones más escasas* al usar *kernels* más pequeños, el calculo de la red pasada de necesitar $O(m\times n)$ a $O(k\times x)$ operaciones.
+
+## Sparse interaction: continuación
+
+
+::: {layout-ncol=2}
+
+![](images/week12/sparse.png){fig-align="center"} 
+
+![](images/week12/sparse2.png){fig-align="center"}
+
+:::
+
+## Sparse interaction: continuación
+
+![](images/week12/sparse3.png){fig-align="center"}
+
+
+## Parameter sharing y equivariance representation
+
+Esta característica hace referencia a usar los mismos parámetros para más de una función de activación, reduciendo así, el número de parámetros a optimizar y mejorando la eficiencia estadística.
+
+Configurando particularmente los parámetros, podemos obtener la propiedad de representación de equivalencia, que refiere a que si las entradas cambian, las salidas cambian **en la misma manera**.
+
+## Ejemplo
+
+Cargamos las librerías de keras y tensorflow
+```{r}
+#| warning: false
+#| echo: true
+library(keras)
+library(tensorflow)
+#tensorflow::install_tensorflow()
+#tensorflow::tf_config()
+```
+
+
+## Ejemplo: continuación
+
+60000 imágenes de entrenamiento y 10000 de prueba de números escritos a mano.
+
+```{r}
+#| echo: true
+mnist <- dataset_mnist()
+x_train <- mnist$train$x
+y_train <- mnist$train$y
+x_test <- mnist$test$x
+y_test <- mnist$test$y
+dim(x_train)
+```
+
+## Ejemplo: continuación
+
+![](images/week12/zip_codes.png){fig-align="center"}
+
+## Ejemplo: continuación
+
+Arreglamos la forma y reescalamos.
+
+```{r}
+#| echo: true
+
+# reshape
+x_train <- array_reshape(x_train, c(nrow(x_train), 784))
+x_test <- array_reshape(x_test, c(nrow(x_test), 784))
+
+# rescale
+x_train <- x_train / 255
+x_test <- x_test / 255
+
+# categorización de la variable respuesta
+
+y_train <- to_categorical(y_train, 10)
+y_test <- to_categorical(y_test, 10)
+```
+
+## Ejemplo: continuación
+
+Definimos el modelo
+
+```{r}
+#| echo: true
+
+model <- keras_model_sequential() 
+model %>% 
+  layer_dense(units = 256, activation = 'relu', input_shape = c(784)) %>% 
+  layer_dropout(rate = 0.4) %>% 
+  layer_dense(units = 128, activation = 'relu') %>%
+  layer_dropout(rate = 0.3) %>%
+  layer_dense(units = 10, activation = 'softmax')
+summary(model)
+```
+
+## Ejemplo: continuación
+
+Compilamos y entrenamos el modelo:
+
+```{r}
+#| echo: true
+#| fig-align: center
+
+model %>% compile(
+  loss = 'categorical_crossentropy',
+  optimizer = optimizer_rmsprop(),
+  metrics = c('accuracy')
+)
+
+history <- model %>% fit(
+  x_train, y_train, 
+  epochs = 30, batch_size = 128, 
+  validation_split = 0.2
+)
+history
+```
+
+## Ejemplo: continuación
+
+```{r}
+#| echo: true
+#| fig-align: center
+
+plot(history)
+```
+
+## Ejemplo: continuación
+
+Evaluamos el modelo en el conjunto de prueba:
+
+```{r}
+#| echo: true
+model %>% evaluate(x_test, y_test)
+```
+
+Generamos predicciones:
+
+```{r}
+#| echo: true
+
+pred <- model %>% predict(x_test) %>% k_argmax()
+```
+
+
+## Ejemplo 2
+
+50000 imágenes de 32x32 pixeles a color clasificado en 10 categorías.
+
+```{r}
+#| echo: true
+#| warning: false
+
+cifar <- dataset_cifar10()
+class_names <- c('airplane', 'automobile', 'bird', 'cat', 'deer',
+               'dog', 'frog', 'horse', 'ship', 'truck')
+
+index <- 1:30
+```
+
+
+## Ejemplo 2: continuación
+
+![](images/week12/cifar.png){fig-align="center"}
+
+## Ejemplo: continuación
+
+
+```{r}
+par(mfcol = c(5,6), mar = rep(1, 4), oma = rep(0.2, 4))
+cifar$train$x[index,,,] %>% 
+  purrr::array_tree(1) %>%
+  purrr::set_names(class_names[cifar$train$y[index] + 1]) %>% 
+  purrr::map(as.raster, max = 255) %>%
+  purrr::iwalk(~{plot(.x); title(.y)})
+```
+
+## Ejemplo 2: continuación
+
+Definimos el modelo
+
+```{r}
+#| echo: true
+model <- keras_model_sequential() %>% 
+  layer_conv_2d(filters = 32, kernel_size = c(3,3), activation = "relu", 
+                input_shape = c(32,32,3)) %>% 
+  layer_max_pooling_2d(pool_size = c(2,2)) %>% 
+  layer_conv_2d(filters = 64, kernel_size = c(3,3), activation = "relu") %>% 
+  layer_max_pooling_2d(pool_size = c(2,2)) %>% 
+  layer_conv_2d(filters = 64, kernel_size = c(3,3), activation = "relu")
+
+summary(model)
+```
+
+## Ejemplo 2: continuación
+
+```{r}
+#| echo: true
+model %>% 
+  layer_flatten() %>% 
+  layer_dense(units = 64, activation = "relu") %>% 
+  layer_dense(units = 10, activation = "softmax")
+summary(model)
+```
+
+## Ejemplo 2: continuación
+
+Compilamos y entrenamos el modelo:
+
+```{r}
+#| echo: true
+#| fig-align: center
+
+model %>% compile(
+  optimizer = "adam",
+  loss = "sparse_categorical_crossentropy",
+  metrics = "accuracy"
+)
+
+history <- model %>% 
+  fit(
+    x = cifar$train$x, y = cifar$train$y,
+    epochs = 10,
+    validation_data = unname(cifar$test),
+    verbose = 2
+  )
+history
+```
+
+## Ejemplo 2: continuación
+
+
+```{r}
+#| echo: true
+#| fig-align: center
+plot(history)
+```
+
+## Ejemplo 2: continuación
+
+```{r}
+#| echo: true
+evaluate(model, cifar$test$x, cifar$test$y, verbose = 0)
+```
+
+
+
+
+# ¿Qué veremos la próxima semana?
+
+- Otros tópicos de ML para industria
+
+# ¿Que deben preparar para la próxima semana?
+
+- Preparar informe escrito de avance de proyecto
+

@@ -1,6 +1,6 @@
 ---
 title: "Semana 11"
-subtitle: "Certamen 2"
+subtitle: "Redes neuronales"
 ---
 
 ## Preparación

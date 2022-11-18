@@ -1,6 +1,6 @@
 ---
 title: "Semana 12"
-subtitle: "Redes neuronales"
+subtitle: "Redes neuronales convolucionales"
 ---
 
 ## Preparación
