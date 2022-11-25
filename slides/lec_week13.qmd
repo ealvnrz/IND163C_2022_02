@@ -1,0 +1,140 @@
+---
+title: "Otros tópicos en Análisis de Negocios"
+subtitle: "IND 163 - 2022/02"
+author: "Eloy Alvarado Narváez"
+institute: "Universidad Técnica Federico Santa María"
+date: 24/11/22
+format: 
+  revealjs:
+    theme: slides.scss
+    touch: true
+    slide-level: 2
+    code-copy: true
+incremental: true
+slide-number: true
+lang: es
+highlight-style: github
+width: 1600
+height: 900
+logo: images/logo_usm.png
+transition: fade
+footer: "IND 163 - Semana 13"
+execute:
+  freeze: auto
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Implementación de ML en la empresa
+
+## High-performance computing
+
+En aplicaciones de *machine learning* en la industria, la cantidad de datos es mucho mayor a la que hemos trabajado a lo largo del curso y la cantidad de procesos que se deben realizar son mayores, por lo que realizar los análisis en computadores locales no es viable ni tampoco **escalable**. Esto quiere decir que, a pesar de que es posible analizar datos localmente, el tiempo necesario se vuelve inviable para las necesidades de la empresa.
+
+Las soluciones a esta problemática se les asigna el término **High-performance computing (HPC)**, que es aplicado cuando es necesario hacer muchos cálculos y se desea obtenerlos lo más rápido posible. En algunos casos se necesito un computador **muy** rápido, en otros el *trabajo* puede ser dividido a lo largo de muchos computadores más pequeños que se enfocan en tareas particulares. Existen también, soluciones intermedias a esta problemática.
+
+## Tipos de HPC
+
+### Supercomputadores
+
+Un *supercomputador* es un computador extremadamente rápido, millones de veces más rápido que un computador personal. Sin embargo, su acceso es bastante restringido, y usualmente son fabricados con alguna tarea particular.
+
+### Computer clusters
+
+Un *grupo de computadores* o *computer cluster* son muchos computadores conectados entre sí, generalmente a través de una red local, y configurados para funcionar bien entre sí en la realización de tareas informáticas. Sin embargo, para que los análisis o códigos puedan ser procesados mediante un grupo de computadores, los algoritmos deben ser explícitamente **paralelizados** o divididos en tareas individuales, para que cada computador pueda realizarlas.
+
+Una tecnología ampliamente utilizada en la industria es **Apache Hadoop**
+
+## Tipos de HPC: continuación
+
+![](images/week13/hadoop.png){fig-align="center"}
+
+## GPU
+
+GPU por sus siglas en inglés de *Graphics processing units* son circuitos diseñados para procesas y manipular imágenes y videos en un computador.
+
+La naturaleza de la manipulación de video ha dado como resultado diseños de GPU que son muy buenos para realizar cálculos altamente paralelizables. De hecho, algunas GPU son tan buenas en *ciertos* tipos de cálculos que se prefieren a las CPU estándar.
+
+Es posible implementar el uso de GPU en R y Python, pero para tener mejores resultados, usualmente los algoritmos son programados en C. Una de las tecnologías dedica a esto es Nvidia CUDA.
+
+## Beneficios de HPC
+
+El único beneficio de HPC es bastante simple: **velocidad**. HPC pueden realizar cálculos mucho más rápido que los computadores personales (también conocidos como *low-performance computing*).
+
+Si se tiene acceso a un HPC, es una opción preferible a tener que esperar que el computador personal realice los cálculos. Gracias a la nube, existe el *Cloud computing*, que permite tener un acceso a HPC fácilmente.
+
+## Como usar un HPC
+
+Usando un supercomputador, cluster de computadores o GPU puede ser bastante similar a usar un computador personal, asumiendo que se sabe como hacer uso de múltiples núcleos o *cores* de una máquina.
+
+En **R**, existe el paquete **multicore** para paralelizar códigos usando múltiples *cores*.
+
+En **Python**, existe la librería **multiprocessing** que realiza la misma función.
+
+Con ambos, es posible especificar el número de núcleos que se desea utilizar, y cada uno tiene alguna noción de compartir objetos e información entre los procesos que se ejecutan en los distintos núcleos
+
+## Cuando usar HPC
+
+Debido a que HPC es más rápido que realizar los cálculos de manera local, la regla es: si se tiene acceso, utilizarlo. Sin embargo, se debe considerar las modificaciones al código que podrían ser significativas, sobre todo en procesos ya establecidos en la empresa.
+
+En términos de implementación desde cero, los costos iniciales de *hardware* suelen ser bastantes altos.
+
+
+## Servicios en la nube
+
+La combinación de computación en la nube e Internet ofrece un nuevo tipo de interacción para científicos y analistas. Permite hardware personalizado *on demand* para cálculos, así como un entorno seguro para datos confidenciales. La computación en la nube evita la necesidad de que cada departamento de cada universidad o institución mantenga su propia computadora de *clusters*.
+
+Según la definición del *National Institute of Standards and Technology* (NIST), la computación en la nube o *cloud computing* es un modelo para permitir el acceso conveniente a la red bajo demanda a un conjunto compartido de recursos informáticos configurables.
+
+Los mayores proveedores de servicios en la nube son en su mayoría grandes empresas de tecnología cuyo negocio principal es otra cosa. Empresas como Amazon, Google y Microsoft ya tenían grandes cantidades de recursos informáticos y de almacenamiento antes de abrirlos al público.
+
+## Tipos de servicios en la nube{.small}
+
+Los servicios ofrecidos suelen ser aproximadamente equivalentes a la funcionalidad de una computadora personal, un grupo de computadoras o una red local. Todos están disponibles en regiones geográficas de todo el mundo, accesibles a través de una conexión en línea y protocolos de conexión estándar, así como, por lo general, una interfaz de navegador web.
+
+### Almacenamiento
+
+Todos los principales proveedores de nube ofrecen servicios de almacenamiento de archivos, generalmente pagados por *gigabyte* por mes. A menudo también hay varios niveles de almacenamiento, y se puede pagar más si desea leer o escribir archivos más rápido.
+
+### Computers
+
+Esta es probablemente la oferta en la nube más sencilla: se puede pagar por hora para acceder a una computadora con especificaciones dadas. Puede elegir la cantidad de núcleos, la cantidad de memoria de la máquina y el tamaño del disco duro.
+
+Se puede arrendar uno grande, y tratarlo como su supercomputadora por un día o una semana. Sin embargo, los mejores computadores cuestan más, naturalmente, pero los precios y tarifas han ido a la baja cada año.
+
+
+## Tipos de servicios en la nube: continuación{.small}
+
+### Bases de datos
+
+Como una extensión del almacenamiento que ofrecen los proveedores de la nube, también existen ofertas de bases de datos nativas de la nube. Esto significa que se puede crear y configurar bases de datos sin saber en qué computadoras o discos se está ejecutando la base de datos.
+
+Este agnosticismo de la máquina puede ahorrar problemas al mantener las bases de datos, porque no se tiene que preocuparse por configurar y mantener el hardware también. Además, las bases de datos pueden escalar casi infinitamente; el proveedor de la nube es el que tiene que preocuparse por cuántas máquinas y cuántos fragmentos están involucrados. El precio usualmente se cobra por cada acceso a la base de datos (lecturas y escrituras), así como por el volumen de datos almacenados.
+
+### Webhosting
+
+El alojamiento web es como alquilar una computadora y luego implementar un servidor web. Si desea implementar un sitio web u otro servidor web, los servicios en la nube pueden ayudar a hacerlo sin preocuparse demasiado por las computadoras individuales y las configuraciones de las máquinas. Por lo general, ofrecen plataformas bajo que, si cumple con sus requisitos y estándares, el servidor web se ejecutará y escalará con el uso naturalmente. 
+
+Por ejemplo, *Amazon Web Services* tiene plataformas para implementar servidores web utilizando *Django* de Python, así como Node.js.
+
+## Beneficios de los servicios en la nube
+
+Hay dos ventajas principales de usar los servicios en la nube, en comparación con el uso de sus propios recursos, especialmente si tiene que comprar los recursos locales. 
+
+Primero, los recursos de la nube **no requieren ningún compromiso**. Se puede pagar solo por la cantidad que se usa, lo que puede bajar los costos si aún no está seguro de cuánta capacidad necesitará.
+
+En segundo lugar, los servicios en la nube tienen una capacidad mucho mayor que cualquier cosa que una empresa pequeña pueda comprar. Si no se está seguro del tamaño del proyecto, los servicios en la nube pueden brindar gran flexibilidad en la cantidad de almacenamiento y potencia de la computadora, entre otras cosas, a las que puede acceder en cualquier momento.
+
+## Herramientas disponibles 
+
+[DTI](https://dti.usm.cl/servicios6/)
+
+# ¿Qué veremos la próxima semana?
+
+- Otros tópicos de ML para industria
+
+# ¿Que deben preparar para la próxima semana?
+
+- Preparar informe escrito final de proyecto
+
