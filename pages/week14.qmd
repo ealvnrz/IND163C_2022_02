@@ -1,6 +1,6 @@
 ---
 title: "Semana 14"
-subtitle: "Bases de datos, Google Cloud y AWS"
+subtitle: "Tidymodels"
 ---
 
 ## Preparación
@@ -15,3 +15,7 @@ subtitle: "Bases de datos, Google Cloud y AWS"
 ```
 
 ## Material adicional
+
+- [Códigos 1](../documents/tidymodels1.R)
+
+- [Códigos 2](../documents/tidymodels2.R)
